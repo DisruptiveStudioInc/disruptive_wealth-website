@@ -1,0 +1,24 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  name: Disruptive
+
+steps:
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'creative-ovh'
+    runOptions: 'inline'
+    inline: |
+      cd /var/www/$(Build.Repository.Name)
+      sudo git reset --hard
+      sudo git pull
+      docker compose run --rm composer install --no-interaction --prefer-dist
+      docker compose up -d disruptive-studio-website
+    readyTimeout: '20000'
+  continueOnError: true
