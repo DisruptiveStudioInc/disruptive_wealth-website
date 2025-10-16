@@ -1,0 +1,31 @@
+services:
+  # Servicio de runtime web (Apache + PHP 8.3)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8585:80"
+    volumes:
+      - ./:/var/www/html
+      - vendor:/var/www/html/vendor
+    depends_on:
+      - composer
+    environment:
+      APP_ENV: dev
+    # Quita el volume en prod y construye la imagen con vendor incluido
+
+  # Servicio de utilería para ejecutar Composer dentro de contenedor
+  composer:
+    image: composer:2
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - vendor:/app/vendor
+      - composer-cache:/tmp
+    command: ["install", "--no-interaction", "--prefer-dist"]
+    profiles: ["tools"]  # se ejecuta bajo perfil tools o como run one-off
+
+volumes:
+  vendor:
+  composer-cache:
