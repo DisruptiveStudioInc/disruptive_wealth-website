@@ -30,7 +30,7 @@ document.fonts.ready.then(() => {
       smartWrap: true,
       onSplit: (self) => {
         return gsap.from(self.words, {
-          yPercent: 50,
+          yPercent: 20,
           autoAlpha: 0,
           stagger: 0.3,
           scrollTrigger: {
