@@ -122,6 +122,7 @@ return [
           'text' => 'Atendidos con resultados satisfactorios para ofrecer un apoyo personalizado.'
         ],
         'item6' => [
+          'number' => '+1 billón',
           'feature' => 'de dólares',
           'text' => 'Vendidos por nuestros clientes gracias a nuestra tecnología exclusiva.'
         ]

@@ -128,6 +128,25 @@ require __DIR__ . '/../layouts/header.php';
   </div>
 </section>
 
+<!-- Stats -->
+<section class="bg-linear-to-t from-white via-surface-50 via-50% to-white">
+  <div class="block-content py-16 lg:py-40">
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.statistics.title') ?></h2>
+    <p class="text-center lg:text-xl text-secondary-200 mb-10 lg:mb-28"><?= $trans('home.statistics.text') ?></p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-md md:max-w-none mx-auto">
+      <?php foreach($content['stats'] as $item): ?>
+        <li class="bg-white rounded-2xl p-4 md:p-6 lg:p-10 drop-shadow-lg drop-shadow-grey-100/10">
+          <h2 class="text-center font-bold mb-4 leading-tight">
+            <span class="block text-7xl lg:text-9xl text-brand-100"><?= $item['number'] ?></span>
+            <span class="block text-3xl lg:text-5xl text-secondary-200"><?= $item['title'] ?></span>
+          </h2>
+          <p class="md:font-light text-xl"><?= $item['text'] ?></p>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+</section>
+
 <!--
 <section class="py-20">
   <div class="container mx-auto px-4">
