@@ -83,7 +83,7 @@ return [
         'text' => 'Integramos creatividad, educación y tecnología para que tu red evolucione sin límites.'
       ]
     ],
-    'we_are' => "Somos los creadores del futuro <span class='text-brand-100'>ahora</span>",
+    'we_are' => "Somos los creadores del futuro, <span class='text-brand-100'>ahora</span>",
     'team' => 'Team Disruptive',
     'team_big' => 'El impulso detrás de la disrupción',
     'team_jobs' => [

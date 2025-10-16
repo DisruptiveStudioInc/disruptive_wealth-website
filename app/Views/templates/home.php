@@ -25,10 +25,10 @@ require __DIR__ . '/../layouts/header.php';
 
 <!-- Discover -->
 <section class="bg-surface-100">
-  <div class="block-content py-12 lg:py-40 min-h-dvh">
-    <h2 class="font-title leading-none uppercase text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.discover') ?></h2>
-    <div class="flex-center stagger-parent">
-      <ul id="discover-tabs" class="space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
+  <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl max-w-[9ch] text-center text-secondary-200 mx-auto mb-4 lg:mb-12 slide-up-words"><?= $trans('home.discover') ?></h2>
+    <div class="flex-center stagger-parent max-lg:flex-col">
+      <ul id="discover-tabs" class="lg:space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
         <?php foreach($content['discover'] as $k => $item): ?>
           <li data-index="<?= $k ?>" class="discover-tab font-semibold rounded-full p-3 pr-4 flex items-center gap-2 leading-none hover:bg-secondary-100 hover:text-white [&.active]:bg-secondary-200 [&.active]:text-white transition-colors <?= $k === 0 ? 'active' : '' ?>">
             <span class="flex-center aspect-square rounded-full size-7 pt-1 text-white bg-brand-100 shrink-0"><?= $k+1; ?></span>
@@ -38,7 +38,7 @@ require __DIR__ . '/../layouts/header.php';
       </ul>
       <svg class="size-20 mx-30 text-secondary-50 slide-up-stagger"><use href="#double-arrow-r"/></svg>
       <div class="relative w-full max-w-xs">
-        <div class="w-full absolute top-0 left-0 -translate-y-1/2">
+        <div class="w-full lg:absolute top-0 left-0 lg:-translate-y-1/2">
           <aritcle
             id="discover-content"
             class="block w-full p-6 bg-brand-100 text-white text-center rounded-2xl slide-up-stagger"
@@ -59,9 +59,9 @@ require __DIR__ . '/../layouts/header.php';
   <section class="l-section w-full bg-secondary-50">
     <div class="block-content min-h-dvh flex-center flex-col text-white">
       <div class="builder-content flex-center flex-col text-center">
-        <p class="uppercase text-5xl mb-2"><?= $trans('home.builder') ?></p>
-        <p class="font-title text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
-        <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
+        <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
+        <p class="font-title text-2xl md:text-3xl lg:text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
+        <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
           <?= $trans('common.learn_more') ?>
         </a>
       </div>
@@ -69,34 +69,40 @@ require __DIR__ . '/../layouts/header.php';
   </section>
 
   <section class="section-about l-section w-full relative overflow-hidden">
-    <div class="block-content min-h-dvh flex items-center">
-      <div class="about-content lg:w-2/5 py-12">
-        <h2 class="font-title uppercase text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
-        <p class="my-6 text-xl"><?= $trans('home.about.text') ?></p>
-        <p class="font-title uppercase text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
+    <div class="block-content min-h-dvh flex max-lg:flex-col max-lg:justify-center lg:items-center">
+      <div class="about-content sm:w-4/5 lg:w-2/5 py-16">
+        <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
+        <p class="my-6 lg:text-xl"><?= $trans('home.about.text') ?></p>
+        <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
       </div>
-      <div class="w-[60vw] absolute left-1/2 top-1/2 -translate-y-1/2">
+      <div class="w-[60vw] lg:absolute left-1/2 top-1/2 translate-y-1/4 lg:-translate-y-1/2">
         <img src="" alt="" class="about-image aspect-video bg-secondary-50 rounded-4xl">
       </div>
     </div>
   </section>
 </div>
 
-<section class="bg-brand-100">
-  <div class="block-content min-h-dvh py-12 lg:py-40">
-    <h2 class="font-title leading-none uppercase text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words"><?= $trans('home.technology') ?></h2>
+<section class="bg-brand-100 w-full overflow-x-hidden">
+  <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col">
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words"><?= $trans('home.technology') ?></h2>
     <div id="tech-swiper" class="swiper flex w-full max-w-screen-md !overflow-visible">
       <div class="swiper-wrapper !h-full">
         <?php foreach($techSlides as $slide): ?>
           <article class="swiper-slide group !h-auto flex ">
             <div class="relative flex-center flex-col h-full text-center bg-secondary-100/80 text-white p-10 rounded-2xl group-[&.swiper-slide-active]:bg-secondary-200 transition-colors">
-              <h2 class="font-title leading-tight uppercase text-5xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
+              <h2 class="font-title leading-tight uppercase text-2xl md:text-3xl lg:text-5xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
               <p class="md:text-xl lg:text-3xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['text'] ?></p>
             </div>
           </article>
         <?php endforeach; ?>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bg-secondary-200 text-white">
+  <div class="block-content py-16 lg:py-40">
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words"><?= $trans('home.we_are') ?></h2>
   </div>
 </section>
 
