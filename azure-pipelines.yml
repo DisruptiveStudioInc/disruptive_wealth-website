@@ -15,11 +15,95 @@ steps:
     sshEndpoint: 'creative-ovh'
     runOptions: 'inline'
     inline: |
+      set -euo pipefail
+
       cd /var/www/$(Build.Repository.Name)
+
+      # Guarda HEAD previo para comparar
+      PREV_HEAD="$(git rev-parse HEAD || echo '')"
+
+      # Sin prompts y reseteo limpio
       sudo git reset --hard
-      sudo git pull
-      docker compose down disruptive-studio-website
-      docker compose run --rm composer install --no-interaction --prefer-dist
-      docker compose up -d disruptive-studio-website
+      sudo git fetch --all --prune
+      sudo git pull --rebase --autostash
+
+      CURR_HEAD="$(git rev-parse HEAD)"
+
+      if [ "${PREV_HEAD}" = "${CURR_HEAD}" ] || [ -z "${PREV_HEAD}" ]; then
+        echo "==> No hay cambios nuevos (o primer despliegue)."
+      fi
+
+      # Lista de archivos cambiados (agregados/modificados/renombrados)
+      CHANGED="$(git diff --name-only --diff-filter=ACMRTUXB "${PREV_HEAD}" "${CURR_HEAD}" || true)"
+      echo "==> Archivos cambiados:"
+      echo "${CHANGED:-<ninguno>}"
+
+      # Flags de cambio
+      changed_composer=false
+      changed_env=false
+      changed_php=false
+      changed_build=false
+
+      # Marca flags según patrones
+      if echo "${CHANGED}" | grep -Eiq '(^|/)(composer\.json|composer\.lock)$'; then
+        changed_composer=true
+      fi
+
+      if echo "${CHANGED}" | grep -Eiq '(^|/)(\.env|app\.env|env/|config/env\.d/)' ; then
+        changed_env=true
+      fi
+
+      if echo "${CHANGED}" | grep -Eiq '\.php$' ; then
+        changed_php=true
+      fi
+
+      if echo "${CHANGED}" | grep -Eiq '(^|/)(Dockerfile|docker-compose(\.prod)?\.ya?ml|.docker/|docker/)' ; then
+        changed_build=true
+      fi
+
+      # El build de imagen se dispara si cambia composer o archivos de build
+      need_rebuild=false
+      if $changed_composer || $changed_build; then
+        need_rebuild=true
+      fi
+
+      # Selecciona archivo compose (prod si existe)
+      COMPOSE_FILE="docker-compose.yml"
+      if [ -f "docker-compose.prod.yml" ]; then
+        COMPOSE_FILE="docker-compose.prod.yml"
+      fi
+
+      SERVICE="disruptive-studio-website"
+
+      echo "==> Compose file: ${COMPOSE_FILE}"
+      echo "==> Service: ${SERVICE}"
+      echo "==> need_rebuild=${need_rebuild} | changed_env=${changed_env} | changed_php=${changed_php}"
+
+      # Asegura que el servicio actual esté arriba (o lo cree si no existe)
+      # Acciones en orden de prioridad
+
+      if $need_rebuild; then
+        echo "==> Detectado cambio en composer o archivos de build → rebuild de imagen y despliegue"
+        # Instala dependencias si usas composer run en server (opcional con multi-stage)
+        # docker compose -f "${COMPOSE_FILE}" run --rm composer install --no-interaction --prefer-dist || true
+
+        docker compose -f "${COMPOSE_FILE}" build --pull
+        docker compose -f "${COMPOSE_FILE}" up -d --no-deps --build "${SERVICE}"
+        exit 0
+      fi
+
+      if $changed_env; then
+        echo "==> Detectado cambio en variables de entorno → aplicar compose up -d"
+        docker compose -f "${COMPOSE_FILE}" up -d "${SERVICE}"
+        exit 0
+      fi
+
+      if $changed_php; then
+        echo "==> Detectado cambio solo en código PHP → restart rápido"
+        docker compose -f "${COMPOSE_FILE}" restart "${SERVICE}"
+        exit 0
+      fi
+
+      echo "==> No se detectaron cambios relevantes para desplegar."
     readyTimeout: '20000'
   continueOnError: true
