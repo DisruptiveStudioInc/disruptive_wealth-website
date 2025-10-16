@@ -1,0 +1,145 @@
+<?php
+$pageTitle = $trans('home.title');
+$heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
+$techSlides = array_merge($content['technologies'], $content['technologies'], $content['technologies']);
+require __DIR__ . '/../layouts/header.php';
+?>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
+  <div class="block-content max-w-screen-lg min-h-dvh flex-center">
+    <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
+      <div class="swiper-wrapper">
+        <?php foreach($heroSlides as $slide): ?>
+          <article class="swiper-slide !w-max group">
+            <div class="relative flex-center flex-col text-center w-max">
+              <h2 class="font-title leading-tight uppercase text-[9vw] opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
+              <p class="absolute top-full left-1/2 -translate-x-1/2 w-full font-semibold md:text-xl lg:text-3xl opacity-0 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['text'] ?></p>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Discover -->
+<section class="bg-surface-100">
+  <div class="block-content py-12 lg:py-40 min-h-dvh">
+    <h2 class="font-title leading-none uppercase text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.discover') ?></h2>
+    <div class="flex-center stagger-parent">
+      <ul id="discover-tabs" class="space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
+        <?php foreach($content['discover'] as $k => $item): ?>
+          <li data-index="<?= $k ?>" class="discover-tab font-semibold rounded-full p-3 pr-4 flex items-center gap-2 leading-none hover:bg-secondary-100 hover:text-white [&.active]:bg-secondary-200 [&.active]:text-white transition-colors <?= $k === 0 ? 'active' : '' ?>">
+            <span class="flex-center aspect-square rounded-full size-7 pt-1 text-white bg-brand-100 shrink-0"><?= $k+1; ?></span>
+            <?= $item['title'] ?>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+      <svg class="size-20 mx-30 text-secondary-50 slide-up-stagger"><use href="#double-arrow-r"/></svg>
+      <div class="relative w-full max-w-xs">
+        <div class="w-full absolute top-0 left-0 -translate-y-1/2">
+          <aritcle
+            id="discover-content"
+            class="block w-full p-6 bg-brand-100 text-white text-center rounded-2xl slide-up-stagger"
+            data-content="<?= htmlspecialchars(json_encode($content['discover']), ENT_QUOTES, 'UTF-8') ?>"
+          >
+            <svg class="size-16 mx-auto mb-4"><use href="#<?= $content['discover'][0]['icon'] ?>"/></svg>
+            <h3 class="font-semibold text-xl mb-2"><?= $content['discover'][0]['title'] ?></h3>
+            <p class=""><?= $content['discover'][0]['text'] ?></p>
+          </aritcle>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Builder & About -->
+<div class="lateral-sections w-[200%] flex">
+  <section class="l-section w-full bg-secondary-50">
+    <div class="block-content min-h-dvh flex-center flex-col text-white">
+      <div class="builder-content flex-center flex-col text-center">
+        <p class="uppercase text-5xl mb-2"><?= $trans('home.builder') ?></p>
+        <p class="font-title text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
+        <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
+          <?= $trans('common.learn_more') ?>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-about l-section w-full relative overflow-hidden">
+    <div class="block-content min-h-dvh flex items-center">
+      <div class="about-content lg:w-2/5 py-12">
+        <h2 class="font-title uppercase text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
+        <p class="my-6 text-xl"><?= $trans('home.about.text') ?></p>
+        <p class="font-title uppercase text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
+      </div>
+      <div class="w-[60vw] absolute left-1/2 top-1/2 -translate-y-1/2">
+        <img src="" alt="" class="about-image aspect-video bg-secondary-50 rounded-4xl">
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="bg-brand-100">
+  <div class="block-content min-h-dvh py-12 lg:py-40">
+    <h2 class="font-title leading-none uppercase text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words"><?= $trans('home.technology') ?></h2>
+    <div id="tech-swiper" class="swiper flex w-full max-w-screen-md !overflow-visible">
+      <div class="swiper-wrapper !h-full">
+        <?php foreach($techSlides as $slide): ?>
+          <article class="swiper-slide group !h-auto flex ">
+            <div class="relative flex-center flex-col h-full text-center bg-secondary-100/80 text-white p-10 rounded-2xl group-[&.swiper-slide-active]:bg-secondary-200 transition-colors">
+              <h2 class="font-title leading-tight uppercase text-5xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
+              <p class="md:text-xl lg:text-3xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['text'] ?></p>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--
+<section class="py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 fade-in">
+      <?= $trans('nav.services') ?>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <?php foreach (array_slice($services, 0, 6) as $service): ?>
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition service-card">
+        <h3 class="text-2xl font-semibold mb-4">
+          <?= htmlspecialchars($service['meta']['slug']) ?>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          <?= htmlspecialchars($service['meta']['meta_description'] ?? '') ?>
+        </p>
+        <a href="<?= serviceRoute($service['meta']['slug'], $currentLang) ?>" class="text-brand-100 font-semibold hover:text-brand-200 transition">
+          <?= $trans('common.learn_more') ?> →
+        </a>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 py-20">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-6 fade-in">
+      <?= $currentLang === 'es' ? '¿Listo para comenzar?' : 'Ready to get started?' ?>
+    </h2>
+    <p class="text-xl text-gray-600 mb-8 fade-in">
+      <?= $currentLang === 'es' ? 'Contáctanos hoy y descubre cómo podemos ayudarte' : 'Contact us today and discover how we can help you' ?>
+    </p>
+    <a href="<?= route('contact', $currentLang, $config['languages']['default']) ?>" class="inline-block bg-brand-100 text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-200 transition">
+      <?= $trans('nav.contact') ?>
+    </a>
+  </div>
+</section>
+      -->
+
+<?php require __DIR__ . '/../layouts/footer.php'; ?>

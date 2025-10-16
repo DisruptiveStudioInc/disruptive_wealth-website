@@ -1,0 +1,165 @@
+<?php
+
+/**
+ * Escape HTML output
+ */
+function e(?string $value): string
+{
+    return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * Alias for htmlspecialchars
+ */
+function esc(?string $value): string
+{
+    return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * Generate URL for a route in the current or specified language
+ */
+function route(string $routeName, string $lang, string $defaultLang = 'es', array $params = []): string
+{
+  static $routes = null;
+
+  // Load routes configuration once
+  if ($routes === null) {
+    $routes = require __DIR__ . '/../config/route-translations.php';
+  }
+
+  // Get the route path in the target language
+  $path = $routes[$routeName][$lang] ?? $routeName;
+
+  // Replace parameters in path (for future use with dynamic routes)
+  foreach ($params as $key => $value) {
+    $path = str_replace('{' . $key . '}', $value, $path);
+  }
+
+  // Build final URL
+  if ($lang === $defaultLang) {
+    return '/' . $path;
+  }
+
+  return '/' . $lang . ($path ? '/' . $path : '');
+}
+
+/**
+ * Generate URL for a service in the current or specified language
+ */
+function serviceRoute(string $serviceSlug, string $lang, string $defaultLang = 'es'): string
+{
+
+  if ($lang === $defaultLang) {
+    return '/' . $serviceSlug;
+  }
+
+  return '/' . $lang . '/' . $serviceSlug;
+}
+
+/**
+ * Get language-switched URL
+ */
+function getLanguageSwitchUrl(string $currentUri, string $currentLang, string $targetLang, string $defaultLang): string
+{
+  // Remove leading slash
+  $path = ltrim($currentUri, '/');
+
+  // Remove current language prefix if present
+  if ($currentLang !== $defaultLang && str_starts_with($path, $currentLang . '/')) {
+    $path = substr($path, strlen($currentLang) + 1);
+  } elseif ($currentLang !== $defaultLang && $path === $currentLang) {
+    $path = '';
+  }
+
+  // Handle root/home
+  if (empty($path)) {
+    return $targetLang === $defaultLang ? '/' : '/' . $targetLang;
+  }
+
+  // Static routes mapping
+  $routeTranslations = require __DIR__ . '/../config/route-translations.php';
+  $staticRoutes = [];
+  foreach ($routeTranslations as $routeName => $langs) {
+    if ($routeName === 'home') {
+      continue;
+    }
+    foreach ($langs as $lang => $translatedPath) {
+      if ($translatedPath !== '') {
+        $staticRoutes[$translatedPath][$lang] = $translatedPath;
+      }
+    }
+  }
+
+  // Check if it's a static route
+  foreach ($staticRoutes as $routes) {
+    if (in_array($path, $routes)) {
+      $translatedPath = $routes[$targetLang] ?? $path;
+      return $targetLang === $defaultLang ? '/' . $translatedPath : '/' . $targetLang . '/' . $translatedPath;
+    }
+  }
+
+  // Try to translate service slug
+  $translatedSlug = \App\Models\Service::getTranslatedSlug($path, $currentLang, $targetLang);
+
+  if ($translatedSlug !== null) {
+    return $targetLang === $defaultLang ? '/' . $translatedSlug : '/' . $targetLang . '/' . $translatedSlug;
+  }
+
+  // Fallback: return path as-is with language prefix
+  return $targetLang === $defaultLang ? '/' . $path : '/' . $targetLang . '/' . $path;
+}
+
+function getNavigationMenu(string $lang, callable $trans): array {
+  $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
+  $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
+  $subSolutions = [];
+  foreach($servicesGrouped as $subcategory => $items){
+    $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
+    $subcat = [
+      'name' => $subcatName,
+      'list' => []
+    ];
+    foreach($items as $item){
+      $subcat['list'][] = [
+        'label' => $item['meta']['meta_title'],
+        'url' => serviceRoute($item['meta']['slug'], $lang)
+      ];
+    }
+    array_push($subSolutions, $subcat);
+  }
+  $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
+  $subIps = \App\Models\Service::getByCategory('ips', $lang);
+  return [
+    [
+      'label' => $trans('nav.home'),
+      'url' => route('home', $lang),
+      'hasSubmenu' => false,
+      'isMegamenu' => false
+    ],
+    [
+      'label' => $trans('nav.essence'),
+      'url' => route('home', $lang).'#essence',
+      'hasSubmenu' => false,
+      'isMegamenu' => false
+    ],
+    [
+      'label' => $trans('nav.solutions'),
+      'hasSubmenu' => true,
+      'isMegamenu' => true,
+      'submenu' => $subSolutions,
+    ],
+    [
+      'label' => $trans('nav.ecosystem'),
+      'hasSubmenu' => true,
+      'isMegamenu' => false,
+      'submenu' => $subEcosystem,
+    ],
+    [
+      'label' => $trans('nav.disruptive_ip'),
+      'hasSubmenu' => true,
+      'isMegamenu' => false,
+      'submenu' => $subIps,
+    ]
+  ];
+}

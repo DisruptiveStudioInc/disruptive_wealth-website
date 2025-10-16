@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Axiforma";
+  src: url("../fonts/Axiforma-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Axiforma";
+  src: url("../fonts/Axiforma-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Axiforma";
+  src: url("../fonts/Axiforma-medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Axiforma";
+  src: url("../fonts/Axiforma-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/Helvetica-Neue-LT-Pro-93-Black-Extended.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Khand";
+  src: url("../fonts/khand-bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant es (&:lang(es));
+@custom-variant en (&:lang(en));
+
+@theme {
+  --breakpoint-lg: 68rem;
+  --breakpoint-2xl: 90rem;
+
+  --color-*: initial;
+  --color-white: oklch(100% 0.0001 259.98);
+  --color-black: oklch(0% 0 0);
+
+  --color-brand-50: oklch(0.668 0.243 277.1); /*#9671FF*/
+  --color-brand-100: oklch(0.566 0.263 278.9); /*#6937FF*/
+  --color-brand-200: oklch(0.525 0.239 278.7); /*#5B2CE9*/
+
+  --color-secondary-50: oklch(0.372 0.045 259.1); /*#2F3A5E*/
+  --color-secondary-100: oklch(0.312 0.045 259.2); /*#23274E*/
+  --color-secondary-200: oklch(0.267 0.041 258.4); /*#1D203D*/
+
+  --color-grey-100: oklch(0.409 0.034 258.7); /*#515766*/
+
+  --color-surface-50: oklch(0.926 0.033 279.6); /*#EDE7FF*/
+  --color-surface-100: oklch(0.951 0.011 259.9); /*#F3F5FA*/
+  --color-surface-300: oklch(0.79 0.07 254); /*#ABB6D2*/
+
+  --color-glow: oklch(0.872 0.091 309.7); /*#ECBCFF*/
+  --color-multi-blue: oklch(0.815 0.116 252.5); /*#A4CBFF*/
+  --color-multi-pink: oklch(0.91 0.07 312.8); /*#F1DAFF*/
+
+  --font-sans: "Axiforma", ui-sans-serif, system-ui, sans-serif;
+  --font-title: "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-khand: "Khand", ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: inherit;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: inherit;
+  --text-base: 1rem;
+  --text-base--line-height: inherit;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: inherit;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: inherit;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: inherit;
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: inherit;
+  --text-4xl: 1.875rem;
+  --text-4xl--line-height: inherit;
+  --text-5xl: 2.25rem;
+  --text-5xl--line-height: inherit;
+  --text-6xl: 2.5rem;
+  --text-6xl--line-height: inherit;
+  --text-7xl: 3rem;
+  --text-7xl--line-height: inherit;
+  --text-8xl: 3.75rem;
+  --text-8xl--line-height: inherit;
+  --text-9xl: 4rem;
+  --text-9xl--line-height: inherit;
+  --text-10xl: 4.5rem;
+  --text-10xl--line-height: inherit;
+  --text-11xl: 5rem;
+  --text-11xl--line-height: inherit;
+  --text-12xl: 6rem;
+  --text-12xl--line-height: inherit;
+  --text-13xl: 7.5rem;
+  --text-13xl--line-height: inherit;
+
+  --leading-tight: 1.2;
+}
+
+@layer components {
+  .block-content {
+    margin-inline: auto;
+    max-width: var(--breakpoint-2xl);
+    padding-inline: --spacing(7);
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: --spacing(2.5) --spacing(4);
+    background-color: var(--color-brand-100);
+    color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    scale: 100%;
+    transition-property: background-color, color, scale, box-shadow;
+    transition-timing-function: var(--default-transition-timing-function);
+    transition-duration: var(--default-transition-duration);
+
+    &:hover {
+      background-color: var(--color-brand-200);
+      scale: 101%;
+    }
+
+    &:active {
+      scale: 98%;
+      box-shadow: var(--shadow-md);
+    }
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@utility transition-grid-rows {
+  transition-property: grid-template-rows;
+  transition-timing-function: var(--default-transition-timing-function);
+  transition-duration: var(--default-transition-duration);
+}
