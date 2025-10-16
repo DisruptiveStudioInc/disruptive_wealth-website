@@ -18,6 +18,7 @@ steps:
       cd /var/www/$(Build.Repository.Name)
       sudo git reset --hard
       sudo git pull
+      docker compose down disruptive-studio-website
       docker compose run --rm composer install --no-interaction --prefer-dist
       docker compose up -d disruptive-studio-website
     readyTimeout: '20000'
