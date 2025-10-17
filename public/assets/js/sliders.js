@@ -92,3 +92,13 @@ const clients2Swiper = new Swiper("#clients2-swiper", {
     reverseDirection: true,
   },
 });
+
+const certificationsSwiper = new Swiper("#certifications-swiper", {
+  ...clientsSliderOps,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    reverseDirection: true,
+  },
+});

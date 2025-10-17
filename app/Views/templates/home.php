@@ -311,4 +311,23 @@ require __DIR__ . '/../layouts/header.php';
   </div>
 </section>
 
+<!-- Certifications -->
+<section class=" bg-linear-to-b from-15% from-brand-100 to-15% to-secondary-100">
+  <div class="block-content max-w-screen-lg pb-16 lg:pb-40">
+    <div class="bg-white rounded-2xl text-center p-4 md:p-8 lg:p-12">
+      <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl mb-4"><?= $trans('home.certifications.title') ?></h2>
+      <p class="lg:text-xl mb-4 lg:mb-8"><?= $trans('home.certifications.text') ?></p>
+      <ul id="certifications-swiper" class="swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">
+        <div class="swiper-wrapper">
+          <?php foreach($constants['certifications'] as $item): ?>
+            <li class="swiper-slide">
+              <img src="/public/images/certifications/<?= $item ?>" alt="certification">
+            </li>
+          <?php endforeach; ?>
+        </div>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <?php require __DIR__ . '/../layouts/footer.php'; ?>
