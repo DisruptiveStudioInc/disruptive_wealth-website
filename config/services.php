@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Language;
+
 return [
   // SERVICES CATEGORY - Blockchain subcategory
   'contratos-inteligentes' => [
@@ -519,12 +521,12 @@ return [
     'es' => [
       'slug' => 'backoffice',
       'meta_title' => 'Backoffice',
-      'meta_description' => 'Descripción SEO del IP 1',
+      'meta_description' =>  Language::trans('ips.backoffice'),
     ],
     'en' => [
       'slug' => 'backoffice',
       'meta_title' => 'Backoffice',
-      'meta_description' => 'SEO description of IP 1',
+      'meta_description' =>  Language::trans('ips.backoffice'),
     ],
   ],
 
@@ -535,12 +537,12 @@ return [
     'es' => [
       'slug' => 'blockchain',
       'meta_title' => 'Blockchain',
-      'meta_description' => 'Descripción SEO del IP 2',
+      'meta_description' => Language::trans('ips.blockchain'),
     ],
     'en' => [
       'slug' => 'blockchain',
       'meta_title' => 'Blockchain',
-      'meta_description' => 'SEO description of IP 2',
+      'meta_description' => Language::trans('ips.blockchain'),
     ],
   ],
 
@@ -551,12 +553,12 @@ return [
     'es' => [
       'slug' => 'tokenization',
       'meta_title' => 'Tokenization',
-      'meta_description' => 'Descripción SEO del IP 3',
+      'meta_description' => Language::trans('ips.tokenization'),
     ],
     'en' => [
       'slug' => 'tokenization',
       'meta_title' => 'Tokenization',
-      'meta_description' => 'SEO description of IP 3',
+      'meta_description' => Language::trans('ips.tokenization'),
     ],
   ],
 
@@ -567,12 +569,12 @@ return [
     'es' => [
       'slug' => 'exchange-otc',
       'meta_title' => 'Exchange OTC',
-      'meta_description' => 'Descripción SEO del IP 4',
+      'meta_description' => Language::trans('ips.exchange'),
     ],
     'en' => [
       'slug' => 'exchange-otc',
       'meta_title' => 'Exchange OTC',
-      'meta_description' => 'SEO description of IP 4',
+      'meta_description' => Language::trans('ips.exchange'),
     ],
   ],
 
@@ -583,12 +585,12 @@ return [
     'es' => [
       'slug' => 'payment-processing',
       'meta_title' => 'Payment Processing',
-      'meta_description' => 'Descripción SEO del IP 5',
+      'meta_description' => Language::trans('ips.processing'),
     ],
     'en' => [
       'slug' => 'payment-processing',
       'meta_title' => 'Payment Processing',
-      'meta_description' => 'SEO description of IP 5',
+      'meta_description' => Language::trans('ips.processing'),
     ],
   ],
 
@@ -599,12 +601,12 @@ return [
     'es' => [
       'slug' => 'wallet',
       'meta_title' => 'Wallet',
-      'meta_description' => 'Descripción SEO del IP 6',
+      'meta_description' => Language::trans('ips.wallet'),
     ],
     'en' => [
       'slug' => 'wallet',
       'meta_title' => 'Wallet',
-      'meta_description' => 'SEO description of IP 6',
+      'meta_description' => Language::trans('ips.wallet'),
     ],
   ],
 
@@ -615,12 +617,12 @@ return [
     'es' => [
       'slug' => 'metaverso',
       'meta_title' => 'Metaverso, VR y XR',
-      'meta_description' => 'Descripción SEO del IP 6',
+      'meta_description' => Language::trans('ips.metaverse'),
     ],
     'en' => [
       'slug' => 'metaverse',
       'meta_title' => 'Metaverse, VR and XR',
-      'meta_description' => 'SEO description of IP 6',
+      'meta_description' => Language::trans('ips.metaverse'),
     ],
   ],
 ];

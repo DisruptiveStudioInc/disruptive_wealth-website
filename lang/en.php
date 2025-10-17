@@ -32,6 +32,17 @@ return [
     'hr' => 'Digital solutions that automate recruitment, training, and human talent development.'
   ],
 
+  // IPs
+  'ips' => [
+    'backoffice' => 'Comprehensive platform to manage networks, commissions, payments, and business performance in real time.',
+    'blockchain' => 'Secure and scalable blockchain solutions that optimize processes, transactions, and global business traceability.',
+    'tokenization' => 'Complete infrastructure to digitize assets and create value ecosystems through secure tokenization.',
+    'exchange' => 'Professional private exchange system for secure, fast operations with maximum global confidentiality.',
+    'payment-processing' => 'Global payment processing with automated, secure technology compatible with multiple digital currencies.',
+    'wallet' => 'Secure digital wallet to store, transfer, and manage digital assets with full autonomy.',
+    'metaverse' => 'Immersive experiences combining VR and XR to enhance connection, presence, and digital innovation.',
+  ],
+
   // Home page
   'home' => [
     'hero' => [

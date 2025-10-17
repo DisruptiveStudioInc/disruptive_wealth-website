@@ -57,32 +57,36 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Builder & About -->
-<div class="lateral-sections w-[200%] flex">
-  <section class="l-section relative w-full bg-secondary-50">
-    <img src="/public/images/home/builders-bg.webp" alt="" class="background">
-    <div class="block-content min-h-dvh flex-center flex-col text-white">
-      <div class="builder-content flex-center flex-col text-center">
-        <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
-        <p class="font-title text-2xl md:text-3xl lg:text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
-        <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
-          <?= $trans('common.learn_more') ?>
-        </a>
-      </div>
-    </div>
-  </section>
+<div class="w-[100vw] overflow-x-hidden">
 
-  <section class="section-about l-section w-full relative overflow-hidden">
-    <div class="block-content min-h-dvh flex max-lg:flex-col max-lg:justify-center lg:items-center">
-      <div class="about-content sm:w-4/5 lg:w-2/5 py-16">
-        <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
-        <p class="my-6 lg:text-xl"><?= $trans('home.about.text') ?></p>
-        <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
+  <div class="lateral-sections w-[200%] flex">
+    <section class="l-section relative w-full bg-secondary-50">
+      <img src="/public/images/home/builders-bg.webp" alt="" class="background">
+      <div class="block-content min-h-dvh flex-center flex-col text-white">
+        <div class="builder-content flex-center flex-col text-center">
+          <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
+          <p class="font-title text-2xl md:text-3xl lg:text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
+          <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
+            <?= $trans('common.learn_more') ?>
+          </a>
+        </div>
       </div>
-      <div class="w-[60vw] lg:absolute left-1/2 top-1/2 translate-y-1/4 lg:-translate-y-1/2">
-        <img src="/public/images/home/about.webp" alt="" class="about-image rounded-4xl">
+    </section>
+
+    <section class="section-about l-section w-full relative overflow-hidden">
+      <div class="block-content min-h-dvh flex max-lg:flex-col max-lg:justify-center lg:items-center">
+        <div class="about-content sm:w-4/5 lg:w-2/5 py-16">
+          <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
+          <p class="my-6 lg:text-xl"><?= $trans('home.about.text') ?></p>
+          <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
+        </div>
+        <div class="w-[60vw] lg:absolute left-1/2 top-1/2 translate-y-1/4 lg:-translate-y-1/2">
+          <img src="/public/images/home/about.webp" alt="" class="about-image rounded-4xl">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+
 </div>
 
 <!-- Tech -->
@@ -211,13 +215,13 @@ require __DIR__ . '/../layouts/header.php';
         </button>
       </nav>
     </div>
-    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[27%] lg:py-34 lg:overflow-x-hidden overflow-y-visible h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
+    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[27%] lg:py-42 lg:overflow-x-hidden overflow-y-visible h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
       <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-end lg:items-center">
         <div class="swiper-wrapper !h-full !overflow-visible">
           <?php foreach($subcategories as $slide): ?>
             <article class="swiper-slide group !h-auto !overflow-visible">
               <div class="relative flex flex-col rounded-2xl h-full bg-secondary-200 p-10 !overflow-visible group-[&.swiper-slide-active]:translate-y-7/20 transition-transform">
-                <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(6))] transition-op-trans duration-300">
+                <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(4))] transition-op-trans duration-300">
                 <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
               </div>
@@ -317,7 +321,7 @@ require __DIR__ . '/../layouts/header.php';
 
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       <?php foreach ($constants['partners'] as $item): ?>
-        <li class="">
+        <li class="bg-white p-2 rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300">
           <img class="" src="/public/images/partners/<?= $item['logo'] ?>" alt="<?= $item['name'] ?>">
         </li>
       <?php endforeach; ?>

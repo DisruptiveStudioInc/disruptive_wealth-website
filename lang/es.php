@@ -32,6 +32,17 @@ return [
     'hr' => 'Soluciones digitales que automatizan reclutamiento, capacitación y desarrollo del talento humano.'
   ],
 
+  // IPs
+  'ips' => [
+    'backoffice' => 'Plataforma integral para administrar redes, comisiones, pagos y rendimiento empresarial en tiempo real.',
+    'blockchain' => 'Soluciones blockchain seguras y escalables que optimizan procesos, transacciones y trazabilidad empresarial global.',
+    'tokenization' => 'Infraestructura completa para digitalizar activos y crear ecosistemas de valor mediante tokenización segura.',
+    'exchange' => 'Sistema profesional de intercambio privado para operaciones seguras, rápidas y con máxima confidencialidad global.',
+    'processing' => 'Procesamiento global de pagos con tecnología automatizada, segura y compatible con divisas digitales múltiples.',
+    'wallet' => 'Billetera digital segura para almacenar, transferir y gestionar activos digitales con autonomía total.',
+    'metaverse' => 'Experiencias inmersivas que combinan VR y XR para elevar conexión, presencia e innovación digital.',
+  ],
+
   // Home page
   'home' => [
     'title' => 'Disruptive Studio',
