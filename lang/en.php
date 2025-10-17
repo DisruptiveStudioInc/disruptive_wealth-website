@@ -12,6 +12,26 @@ return [
     'contact' => 'Contact',
   ],
 
+  // Footer
+  'footer' => [
+    'contact' => 'Contact',
+    'about' => 'About',
+    'services' => 'Services',
+    'privacy' => 'Privacy Policy',
+    'terms' => 'Terms & Policies',
+    'use_terms' => 'Terms Of Use'
+  ],
+
+  // Services Subcategories
+  'servsub' => [
+    'blockchain' => 'Secure and scalable blockchain solutions that optimize transactions, processes, and business traceability.',
+    'custom_software' => 'Custom software focused on efficiency, scalability, and full control of your operations.',
+    'payment_processing' => 'Automated and secure payments for fast, reliable, and transparent global transactions.',
+    'referral_marketing' => 'Intelligent referral systems that drive business growth, retention, and expansion.',
+    'creative_services' => 'Design, strategy, and technology to create digital experiences that connect and convert.',
+    'hr' => 'Digital solutions that automate recruitment, training, and human talent development.'
+  ],
+
   // Home page
   'home' => [
     'hero' => [
@@ -160,17 +180,6 @@ return [
       'title' => 'Certifications',
       'text' => "We don't just talk about technology—we certify it. Every seal we earn proves our commitment to excellence and the trust of those who choose us."
     ]
-  ],
-
-
-  // Footer
-  'footer' => [
-    'contact' => 'Contact',
-    'about' => 'About',
-    'services' => 'Services',
-    'privacy' => 'Privacy Policy',
-    'terms' => 'Terms & Policies',
-    'use_terms' => 'Terms Of Use'
   ],
 
   // Contact page

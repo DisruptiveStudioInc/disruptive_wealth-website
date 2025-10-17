@@ -22,6 +22,16 @@ return [
     'use_terms' => 'Términos de uso'
   ],
 
+  // Services Subcategories
+  'servsub' => [
+    'blockchain' => 'Soluciones blockchain seguras y escalables que optimizan transacciones, procesos y trazabilidad empresarial.',
+    'custom_software' => 'Software personalizado enfocado en eficiencia, escalabilidad y control total de tu operación.',
+    'payment_processing' => 'Pagos automatizados y seguros para transacciones globales rápidas, confiables y transparentes.',
+    'referral_marketing' => 'Sistemas inteligentes de referidos que impulsan crecimiento, retención y expansión empresarial.',
+    'creative_services' => 'Diseño, estrategia y tecnología para crear experiencias digitales que conectan y convierten.',
+    'hr' => 'Soluciones digitales que automatizan reclutamiento, capacitación y desarrollo del talento humano.'
+  ],
+
   // Home page
   'home' => [
     'title' => 'Disruptive Studio',

@@ -22,3 +22,15 @@ const techSwiper = new Swiper("#tech-swiper", {
   autoplay: true,
   initialSlide: 3,
 });
+
+const subcategoriesSwiper = new Swiper("#subcategories-swiper", {
+  speed: 1000,
+  spaceBetween: 20,
+  autoHeight: false,
+  slidesPerView: 1,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".subcategories-button-next",
+    prevEl: ".subcategories-button-prev",
+  },
+});

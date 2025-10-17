@@ -110,6 +110,19 @@ function getLanguageSwitchUrl(string $currentUri, string $currentLang, string $t
   return $targetLang === $defaultLang ? '/' . $path : '/' . $targetLang . '/' . $path;
 }
 
+function getServiceSubcategoryName(string $lang): array{
+  $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
+  $subcatServices = \App\Models\Service::getServiceSubcategories();
+  $subcategories = [];
+  foreach($subcatServices as $item){
+    $subcategories[] = [
+      'name' => $subcategoryLabels[$item][$lang] ?? $item,
+      'description' => $subcategoryLabels[$item]['description'] ?? ''
+    ];
+  }
+  return $subcategories;
+}
+
 function getNavigationMenu(string $lang, callable $trans): array {
   $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
   $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);

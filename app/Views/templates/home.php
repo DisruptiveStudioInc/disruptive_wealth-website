@@ -178,44 +178,37 @@ require __DIR__ . '/../layouts/header.php';
   </div>
 </section>
 
-<!--
-<section class="py-20">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-12 fade-in">
-      <?= $trans('nav.services') ?>
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <?php foreach (array_slice($services, 0, 6) as $service): ?>
-      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition service-card">
-        <h3 class="text-2xl font-semibold mb-4">
-          <?= htmlspecialchars($service['meta']['slug']) ?>
-        </h3>
-        <p class="text-gray-600 mb-4">
-          <?= htmlspecialchars($service['meta']['meta_description'] ?? '') ?>
-        </p>
-        <a href="<?= serviceRoute($service['meta']['slug'], $currentLang) ?>" class="text-brand-100 font-semibold hover:text-brand-200 transition">
-          <?= $trans('common.learn_more') ?> →
-        </a>
+<!-- Services -->
+<section class="bg-brand-100 text-white overflow-x-hidden">
+  <div class="block-content lg:min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-10 lg:gap-0">
+    <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left">
+      <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl slide-up-words"><?= $trans('home.our_services') ?></h2>
+      <p class="lg:text-2xl slide-up"><?= $trans('home.services_text') ?></p>
+      <nav class="flex gap-2 justify-center lg:justify-start">
+        <button class="subcategories-button-prev cursor-pointer text-secondary-100/80 hover:text-white active:text-white [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-opacity">
+          <svg class="size-8 transition-colors"><use href="#arrow-left"/></svg>
+        </button>
+        <button class="subcategories-button-next cursor-pointer text-secondary-100/80 hover:text-white active:text-white [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-opacity">
+          <svg class="size-8 transition-colors"><use href="#arrow-right"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[27%] lg:py-34 lg:overflow-x-hidden overflow-y-visible h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
+      <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-end lg:items-center">
+        <div class="swiper-wrapper !h-full !overflow-visible">
+          <?php foreach($subcategories as $slide): ?>
+            <article class="swiper-slide group !h-auto !overflow-visible">
+              <div class="relative flex flex-col rounded-2xl h-full bg-secondary-200 p-10 !overflow-visible group-[&.swiper-slide-active]:translate-y-7/20 transition-transform">
+                <img src="" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(6))] transition-op-trans duration-300">
+                <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
+                <p class=""><?= $slide['description'] ?></p>
+              </div>
+            </article>
+          <?php endforeach; ?>
+        </div>
       </div>
-      <?php endforeach; ?>
     </div>
   </div>
 </section>
-
-<section class="bg-gray-100 py-20">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold mb-6 fade-in">
-      <?= $currentLang === 'es' ? '¿Listo para comenzar?' : 'Ready to get started?' ?>
-    </h2>
-    <p class="text-xl text-gray-600 mb-8 fade-in">
-      <?= $currentLang === 'es' ? 'Contáctanos hoy y descubre cómo podemos ayudarte' : 'Contact us today and discover how we can help you' ?>
-    </p>
-    <a href="<?= route('contact', $currentLang, $config['languages']['default']) ?>" class="inline-block bg-brand-100 text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-200 transition">
-      <?= $trans('nav.contact') ?>
-    </a>
-  </div>
-</section>
-      -->
 
 <?php require __DIR__ . '/../layouts/footer.php'; ?>

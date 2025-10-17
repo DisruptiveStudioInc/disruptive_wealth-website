@@ -6,6 +6,8 @@ const playNone = "play none none none";
 const playReverse = "play none none reverse";
 
 // Slide in animations
+const slideUp = gsap.utils.toArray(".slide-up");
+console.log(slideUp);
 gsap.utils.toArray(".slide-up").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
