@@ -24,6 +24,7 @@ return [
 
   // Home page
   'home' => [
+    'title' => 'Disruptive Studio',
     'hero' => [
       'slide1' => [
         'title' => 'Crece',

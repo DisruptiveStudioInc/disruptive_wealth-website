@@ -15,10 +15,12 @@ class HomeController extends BaseController
 
     // Get all services for displaying in home page if needed
     $services = Service::getAll($this->language);
+    $ecosystem = Service::getByCategory('ecosystem', $this->language);
 
     return $this->view('home', [
       'content' => $pageContent,
-      'services' => $services
+      'services' => $services,
+      'ecosystem' => $ecosystem
     ]);
   }
 }

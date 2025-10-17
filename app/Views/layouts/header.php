@@ -40,7 +40,7 @@
       <div class="flex items-center lg:shrink-0 border-r border-surface-300 gap-2 lg:gap-4">
         <!-- Logo -->
         <a href="<?= route('home', $currentLang, $config['languages']['default']) ?>" class="text-2xl font-bold text-gray-800">
-          <svg width="127" height="34" class="h-8 lg:h-10 w-auto text-secondary-50"><use href="#disruptive-studio-logo"/></svg>
+          <svg width="379" height="99" class="h-8 lg:h-10 w-auto text-secondary-50"><use href="#disruptive-studio-logo"/></svg>
         </a>
 
         <!-- Language switcher -->

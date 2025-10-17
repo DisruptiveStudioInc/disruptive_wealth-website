@@ -479,18 +479,18 @@ return [
     ],
   ],
 
-  'corspyte' => [
+  'corpsyte' => [
     'category' => 'ecosystem',
     'template' => 'service-type-1',
-    'content_file' => 'corspyte',
+    'content_file' => 'corpsyte',
     'es' => [
-      'slug' => 'corspyte',
-      'meta_title' => 'Corspyte',
+      'slug' => 'corpsyte',
+      'meta_title' => 'Corpsyte',
       'meta_description' => 'Descripción SEO del ecosistema 6',
     ],
     'en' => [
-      'slug' => 'corspyte',
-      'meta_title' => 'Corspyte',
+      'slug' => 'corpsyte',
+      'meta_title' => 'Corpsyte',
       'meta_description' => 'SEO description of ecosystem 6',
     ],
   ],

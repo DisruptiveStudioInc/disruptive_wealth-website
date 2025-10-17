@@ -48,6 +48,7 @@
 @custom-variant en (&:lang(en));
 
 @theme {
+  --breakpoint-xs: 30rem;
   --breakpoint-lg: 68rem;
   --breakpoint-2xl: 90rem;
 
@@ -158,6 +159,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .disr-vertical {
+    --total: 6;
+    --radius: 300px;
+
+    transform: translate(-50%, -50%)
+      rotate(calc(360deg / var(--total) * (var(--i) - 1)))
+      translateY(calc((var(--radius) + var(--r-alt, 0px)) * -1))
+      rotate(calc(-360deg / var(--total) * (var(--i) - 1)));
   }
 }
 
