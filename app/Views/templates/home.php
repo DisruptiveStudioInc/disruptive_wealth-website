@@ -58,7 +58,7 @@ require __DIR__ . '/../layouts/header.php';
 <!-- Builder & About -->
 <div class="lateral-sections w-[200%] flex">
   <section class="l-section relative w-full bg-secondary-50">
-    <img src="/public/images/home/banner.webp" alt="" class="background">
+    <img src="/public/images/home/builders-bg.webp" alt="" class="background">
     <div class="block-content min-h-dvh flex-center flex-col text-white">
       <div class="builder-content flex-center flex-col text-center">
         <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
@@ -150,7 +150,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Ecosystem -->
- <section>
+<section>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
     <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch]"><?= $trans('home.ecosystem.text') ?></p>
@@ -239,6 +239,51 @@ require __DIR__ . '/../layouts/header.php';
       </div>
     </div>
     <div class="ips-pagination !transform-none mx-auto mt-4 [--swiper-pagination-bullet-size:1rem] [--swiper-pagination-color:var(--color-glow)]"></div>
+  </div>
+</section>
+
+<!-- Cases -->
+<section id="cases-section" class="bg-secondary-200 text-brand-100">
+  <div class="block-content py-16">
+    <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-white text-center slide-up-words"><?= $trans('home.cases.title') ?></h2>
+  </div>
+  <?php foreach($content['cases'] as $item): ?>
+    <article class="case lg:hover:bg-brand-100 group transition-colors py-12 lg:py-16 min-h-[30dvh] flex flex-col lg:flex-row items-center relative duration-300 z-1 isolate">
+      <h3 class="lg:absolute lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:pt-4 xl:pt-7 font-title uppercase text-center text-4xl lg:text-[9.5vw] leading-none w-full lg:group-hover:opacity-0 lg:group-hover:pointer-events-none transition-opacity -z-1"><?= $item['name'] ?></h3>
+      <div class="block-content max-w-screen-lg flex flex-col lg:flex-row w-full lg:pointer-events-none lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:translate-y-2 lg:group-hover:translate-y-0 transition-op-trans duration-300">
+        <div class="w-full lg:w-1/2 relative my-6 lg:my-0">
+          <div class="case-image w-1/2 lg:w-4/5 max-w-52 lg:max-w-none lg:absolute lg:top-1/2 left-1/2 lg:-translate-1/2 flex-center p-4 rounded-full aspect-square bg-white drop-shadow-xl drop-shadow-black/40 mx-auto lg:mx-0 z-5">
+            <img src="/public/images/clients/<?= $item['image'] ?>.png" alt="<?= $item['name'] ?>">
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <div class="text-white">
+            <p class="hidden lg:block font-title uppercase leading-tight text-lg lg:text-2xl mb-4"><?= $item['name'] ?></p>
+            <p class="text-lg lg:text-2xl text-center lg:text-left max-w-[40ch] lg:max-w-none mx-auto lg:mx-0"><?= $item['text'] ?></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  <?php endforeach; ?>
+</section>
+
+<!-- Clients -->
+<section>
+  <div class="block-content py-16 lg:py-40">
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.clients.title') ?></h2>
+    <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch]"><?= $trans('home.clients.text') ?></p>
+
+
+  </div>
+</section>
+
+<!-- Clients -->
+<section class="bg-brand-100 text-white">
+  <div class="block-content py-16 lg:py-40">
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words"><?= $trans('home.partners.title') ?></h2>
+    <p class="text-center md:text-lg lg:text-2xl mx-auto max-w-[52ch]"><?= $trans('home.partners.text') ?></p>
+
+
   </div>
 </section>
 

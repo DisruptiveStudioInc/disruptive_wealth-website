@@ -163,10 +163,11 @@ return [
     ],
     'cases' => [
       'title' => 'Case Studies',
-      'item1' => 'From operational complexity to a solid, borderless network.',
-      'item2' => 'From improvised processes to agile, sustainable expansion across multiple countries.',
-      'item3' => 'From constant turnover to loyal, motivated teams that stay.',
-      'item4' => 'From local barriers to smooth international projection.'
+      'darevita' => 'Comprehensive wellness ecosystem: product, brand, legality, and business model created from scratch.',
+      'apolus' => 'iOS/Android app with Web3 wallet, OTC payments, and integrated biometrics.',
+      'doctors_net' => 'iOS/Android mobile app with telemedicine, medical records, e-commerce, and Binah.ai biometrics.',
+      'exma' => 'E-learning platform with courses, certifications, and comprehensive business knowledge management.',
+      'evo' => 'Ecosystem with binary backoffice, automatic repurchase, e-learning, e-commerce, and processing in the U.S.'
     ],
     'clients' => [
       'title' => 'Clients',

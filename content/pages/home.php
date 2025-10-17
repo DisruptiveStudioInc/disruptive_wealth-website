@@ -25,22 +25,22 @@ return[
     [
       'title' => Language::trans('home.discover_list.item1.title'),
       'text' => Language::trans('home.discover_list.item1.text'),
-      'icon' => 'info-circle'
+      'icon' => 'grow'
     ],
     [
       'title' => Language::trans('home.discover_list.item2.title'),
       'text' => Language::trans('home.discover_list.item2.text'),
-      'icon' => 'gear'
+      'icon' => 'smart-ecosystem'
     ],
     [
       'title' => Language::trans('home.discover_list.item3.title'),
       'text' => Language::trans('home.discover_list.item3.text'),
-      'icon' => 'map-marker'
+      'icon' => 'total-impact'
     ],
     [
       'title' => Language::trans('home.discover_list.item4.title'),
       'text' => Language::trans('home.discover_list.item4.text'),
-      'icon' => 'heart-fill'
+      'icon' => 'digital-inteligence'
     ]
   ],
   'technologies' => [
@@ -141,19 +141,28 @@ return[
   'cases' => [
     [
       'name' => 'Darevita',
-      'text' => Language::trans('home.cases.item1')
+      'text' => Language::trans('home.cases.darevita'),
+      'image' => 'clientes-28'
+    ],
+    [
+      'name' => 'Apolus',
+      'text' => Language::trans('home.cases.apolus'),
+      'image' => 'clientes-05'
+    ],
+    [
+      'name' => 'Doctors Net',
+      'text' => Language::trans('home.cases.doctors_net'),
+      'image' => 'clientes-74'
+    ],
+    [
+      'name' => 'EXMA',
+      'text' => Language::trans('home.cases.exma'),
+      'image' => 'clientes-73'
     ],
     [
       'name' => 'EVO',
-      'text' => Language::trans('home.cases.item2')
-    ],
-    [
-      'name' => 'Client 3',
-      'text' => Language::trans('home.cases.item3')
-    ],
-    [
-      'name' => 'Client 4',
-      'text' => Language::trans('home.cases.item4')
+      'text' => Language::trans('home.cases.evo'),
+      'image' => 'clientes-41'
     ]
   ],
   'clients' => [

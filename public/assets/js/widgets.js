@@ -103,8 +103,78 @@ if (discoverTabs && discoverContent) {
     const setContent = () => {
       title.innerHTML = contentData[index].title;
       text.innerHTML = contentData[index].text;
+      icon
+        .querySelector("use")
+        .setAttribute("href", `#${contentData[index].icon}`);
     };
 
     setContent();
   });
+}
+
+// Cases image parallax
+const casesSection = document.getElementById("cases-section");
+const cases = document.querySelectorAll(".case");
+
+if (casesSection && cases.length > 0) {
+  let mouseMoveHandler = null;
+
+  const handleMouseMove = (event) => {
+    const target = event.target.closest(".case");
+    if (!target) return;
+    const image = target.querySelector(".case-image");
+    if (!image) return;
+
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const moveX = (rect.width / 2 - x) / 20;
+    const moveY = (rect.height / 2 - y) / 20;
+
+    image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+    target.addEventListener(
+      "mouseleave",
+      () => {
+        image.style.transform = `translate(0px, 0px)`;
+      },
+      { once: true }
+    );
+  };
+
+  const attachParallax = () => {
+    if (window.innerWidth >= 1088 && !mouseMoveHandler) {
+      mouseMoveHandler = handleMouseMove;
+      casesSection.addEventListener("mousemove", mouseMoveHandler);
+    }
+  };
+
+  const detachParallax = () => {
+    if (mouseMoveHandler) {
+      casesSection.removeEventListener("mousemove", mouseMoveHandler);
+      mouseMoveHandler = null;
+
+      // Reset all images
+      cases.forEach((caseEl) => {
+        const image = caseEl.querySelector(".case-image");
+        if (image) {
+          image.style.transform = "none";
+        }
+      });
+    }
+  };
+
+  const checkViewport = () => {
+    if (window.innerWidth >= 1088) {
+      attachParallax();
+    } else {
+      detachParallax();
+    }
+  };
+
+  // Initial check
+  checkViewport();
+
+  // Listen for resize
+  window.addEventListener("resize", checkViewport);
 }
