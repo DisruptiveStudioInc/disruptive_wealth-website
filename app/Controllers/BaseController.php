@@ -7,7 +7,7 @@ use App\Models\Language;
 
 class BaseController
 {
-  protected string $language = 'es';
+  protected string $language = 'en';
   protected array $config;
   protected array $constants;
 

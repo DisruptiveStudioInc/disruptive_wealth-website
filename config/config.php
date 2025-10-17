@@ -27,7 +27,7 @@ return [
   ],
 
   'languages' => [
-    'default' => 'es',
+    'default' => 'en',
     'available' => ['es', 'en'],
     'names' => [
       'es' => 'Esp',

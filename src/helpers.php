@@ -29,7 +29,7 @@ function split_array_in_half(array $array): array {
 /**
  * Generate URL for a route in the current or specified language
  */
-function route(string $routeName, string $lang, string $defaultLang = 'es', array $params = []): string
+function route(string $routeName, string $lang, string $defaultLang = 'en', array $params = []): string
 {
   static $routes = null;
 
@@ -57,7 +57,7 @@ function route(string $routeName, string $lang, string $defaultLang = 'es', arra
 /**
  * Generate URL for a service in the current or specified language
  */
-function serviceRoute(string $serviceSlug, string $lang, string $defaultLang = 'es'): string
+function serviceRoute(string $serviceSlug, string $lang, string $defaultLang = 'en'): string
 {
 
   if ($lang === $defaultLang) {
