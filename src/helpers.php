@@ -124,8 +124,9 @@ function getServiceSubcategoryName(string $lang): array{
   $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
   $subcatServices = \App\Models\Service::getServiceSubcategories();
   $subcategories = [];
-  foreach($subcatServices as $item){
+  foreach($subcatServices as $key => $item){
     $subcategories[] = [
+      'key' => $item,
       'name' => $subcategoryLabels[$item][$lang] ?? $item,
       'description' => $subcategoryLabels[$item]['description'] ?? ''
     ];

@@ -38,7 +38,7 @@ require __DIR__ . '/../layouts/header.php';
           </li>
         <?php endforeach; ?>
       </ul>
-      <svg class="size-20 mx-30 text-secondary-50 slide-up-stagger"><use href="#double-arrow-r"/></svg>
+      <svg width="473" height="253" class="w-60 mx-8 max-lg:rotate-90 slide-up-stagger"><use href="#tabs-art"/></svg>
       <div class="relative w-full max-w-xs">
         <div class="w-full lg:absolute top-0 left-0 lg:-translate-y-1/2">
           <aritcle
@@ -202,7 +202,7 @@ require __DIR__ . '/../layouts/header.php';
           <?php foreach($subcategories as $slide): ?>
             <article class="swiper-slide group !h-auto !overflow-visible">
               <div class="relative flex flex-col rounded-2xl h-full bg-secondary-200 p-10 !overflow-visible group-[&.swiper-slide-active]:translate-y-7/20 transition-transform">
-                <img src="" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(6))] transition-op-trans duration-300">
+                <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(6))] transition-op-trans duration-300">
                 <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
               </div>
