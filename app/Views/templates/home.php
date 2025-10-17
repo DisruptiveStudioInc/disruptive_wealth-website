@@ -2,6 +2,7 @@
 $pageTitle = $trans('home.title');
 $heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
 $techSlides = array_merge($content['technologies'], $content['technologies'], $content['technologies']);
+list($clients1, $clients2) = split_array_in_half($constants['clients']);
 require __DIR__ . '/../layouts/header.php';
 ?>
 
@@ -268,16 +269,32 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Clients -->
-<section>
-  <div class="block-content py-16 lg:py-40">
+<section class="pb-16 lg:pb-40">
+  <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch]"><?= $trans('home.clients.text') ?></p>
-
-
   </div>
+  <ul id="clients1-swiper" class="swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">
+    <div class="swiper-wrapper">
+      <?php foreach($clients1 as $slide): ?>
+        <li class="swiper-slide">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+        </li>
+      <?php endforeach; ?>
+    </div>
+  </ul>
+  <ul id="clients2-swiper" class="swiper !overflow-visible linear-swiper mask-x-from-85% mask-x-to-95%">
+    <div class="swiper-wrapper">
+      <?php foreach($clients2 as $slide): ?>
+        <li class="swiper-slide">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+        </li>
+      <?php endforeach; ?>
+    </div>
+  </ul>
 </section>
 
-<!-- Clients -->
+<!-- Partners -->
 <section class="bg-brand-100 text-white">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words"><?= $trans('home.partners.title') ?></h2>

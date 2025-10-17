@@ -49,3 +49,46 @@ const ipsSwiper = new Swiper("#ips-swiper", {
     dynamicBullets: true,
   },
 });
+
+const clientsSliderOps = {
+  speed: 9000,
+  spaceBetween: 20,
+  autoHeight: false,
+  slidesPerView: 2,
+  loop: true,
+  initialSlide: 6,
+  freemode: {
+    enabled: true,
+    momentum: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1088: {
+      slidesPerView: 6,
+    },
+  },
+};
+const clients1Swiper = new Swiper("#clients1-swiper", {
+  ...clientsSliderOps,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    reverseDirection: false,
+  },
+});
+
+const clients2Swiper = new Swiper("#clients2-swiper", {
+  ...clientsSliderOps,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    reverseDirection: true,
+  },
+});

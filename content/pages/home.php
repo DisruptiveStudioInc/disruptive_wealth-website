@@ -165,12 +165,6 @@ return[
       'image' => 'clientes-41'
     ]
   ],
-  'clients' => [
-    [
-      'image' => 'a',
-      'alt' => ''
-    ],
-  ],
   'partners' => [
     [
       'image' => 'a',

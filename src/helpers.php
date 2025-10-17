@@ -17,6 +17,16 @@ function esc(?string $value): string
 }
 
 /**
+ * Split array in halfs
+ */
+function split_array_in_half(array $array): array {
+  $midpoint = ceil(count($array) / 2);
+  $first_half = array_slice($array, 0, $midpoint);
+  $second_half = array_slice($array, $midpoint);
+  return [$first_half, $second_half];
+}
+
+/**
  * Generate URL for a route in the current or specified language
  */
 function route(string $routeName, string $lang, string $defaultLang = 'es', array $params = []): string

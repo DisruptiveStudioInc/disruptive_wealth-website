@@ -9,10 +9,12 @@ class BaseController
 {
   protected string $language = 'es';
   protected array $config;
+  protected array $constants;
 
   public function __construct()
   {
     $this->config = require __DIR__ . '/../../config/config.php';
+    $this->constants = require __DIR__ . '/../../config/constants.php';
   }
 
   public function setLanguage(string $language): void
@@ -38,6 +40,9 @@ class BaseController
 
     // Add config to views
     $config = $this->config;
+
+    // Add constants to views
+    $constants = $this->constants;
 
     // Add navigation menu to views
     $navigationMenu = getNavigationMenu($currentLang, $trans);

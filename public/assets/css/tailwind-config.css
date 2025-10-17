@@ -173,6 +173,9 @@
       translateY(calc((var(--radius) + var(--r-alt, 0px)) * -1))
       rotate(calc(-360deg / var(--total) * (var(--i) - 1)));
   }
+  .linear-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
 }
 
 @utility transition-grid-rows {
