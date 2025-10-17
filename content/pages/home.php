@@ -142,27 +142,27 @@ return[
     [
       'name' => 'Darevita',
       'text' => Language::trans('home.cases.darevita'),
-      'image' => 'clientes-28'
+      'image' => 'darevita.webp'
     ],
     [
       'name' => 'Apolus',
       'text' => Language::trans('home.cases.apolus'),
-      'image' => 'clientes-05'
+      'image' => 'apolus.webp'
     ],
     [
       'name' => 'Doctors Net',
       'text' => Language::trans('home.cases.doctors_net'),
-      'image' => 'clientes-74'
+      'image' => 'doctors-net.webp'
     ],
     [
       'name' => 'EXMA',
       'text' => Language::trans('home.cases.exma'),
-      'image' => 'clientes-73'
+      'image' => 'exma.webp'
     ],
     [
       'name' => 'EVO',
       'text' => Language::trans('home.cases.evo'),
-      'image' => 'clientes-41'
+      'image' => 'evo.webp'
     ]
   ],
   'partners' => [

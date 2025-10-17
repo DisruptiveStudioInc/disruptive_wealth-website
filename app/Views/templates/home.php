@@ -254,7 +254,7 @@ require __DIR__ . '/../layouts/header.php';
       <div class="block-content max-w-screen-lg flex flex-col lg:flex-row w-full lg:pointer-events-none lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:translate-y-2 lg:group-hover:translate-y-0 transition-op-trans duration-300">
         <div class="w-full lg:w-1/2 relative my-6 lg:my-0">
           <div class="case-image w-1/2 lg:w-4/5 max-w-52 lg:max-w-none lg:absolute lg:top-1/2 left-1/2 lg:-translate-1/2 flex-center p-4 rounded-full aspect-square bg-white drop-shadow-xl drop-shadow-black/40 mx-auto lg:mx-0 z-5">
-            <img src="/public/images/clients/<?= $item['image'] ?>.png" alt="<?= $item['name'] ?>">
+            <img src="/public/images/study-cases/<?= $item['image'] ?>" alt="<?= $item['name'] ?>">
           </div>
         </div>
         <div class="w-full lg:w-1/2">
@@ -298,8 +298,15 @@ require __DIR__ . '/../layouts/header.php';
 <section class="bg-brand-100 text-white">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words"><?= $trans('home.partners.title') ?></h2>
-    <p class="text-center md:text-lg lg:text-2xl mx-auto max-w-[52ch]"><?= $trans('home.partners.text') ?></p>
+    <p class="text-center md:text-lg lg:text-2xl mx-auto max-w-[52ch] mb-12"><?= $trans('home.partners.text') ?></p>
 
+    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <?php foreach ($constants['partners'] as $item): ?>
+        <li class="">
+          <img class="" src="/public/images/partners/<?= $item['logo'] ?>" alt="<?= $item['name'] ?>">
+        </li>
+      <?php endforeach; ?>
+    </ul>
 
   </div>
 </section>
