@@ -215,6 +215,7 @@ return [
   // Common
   'common' => [
     'read_more' => 'Read more',
+    'view_more' => 'View more',
     'learn_more' => 'Learn more',
     'back' => 'Back',
   ],

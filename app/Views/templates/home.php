@@ -7,7 +7,8 @@ require __DIR__ . '/../layouts/header.php';
 
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
-  <div class="block-content max-w-screen-lg min-h-dvh flex-center">
+  <img src="/public/images/home/hero.webp" alt="" class="background">
+  <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
         <?php foreach($heroSlides as $slide): ?>
@@ -56,7 +57,8 @@ require __DIR__ . '/../layouts/header.php';
 
 <!-- Builder & About -->
 <div class="lateral-sections w-[200%] flex">
-  <section class="l-section w-full bg-secondary-50">
+  <section class="l-section relative w-full bg-secondary-50">
+    <img src="/public/images/home/banner.webp" alt="" class="background">
     <div class="block-content min-h-dvh flex-center flex-col text-white">
       <div class="builder-content flex-center flex-col text-center">
         <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
@@ -76,7 +78,7 @@ require __DIR__ . '/../layouts/header.php';
         <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
       </div>
       <div class="w-[60vw] lg:absolute left-1/2 top-1/2 translate-y-1/4 lg:-translate-y-1/2">
-        <img src="" alt="" class="about-image aspect-video bg-secondary-50 rounded-4xl">
+        <img src="/public/images/home/about.webp" alt="" class="about-image rounded-4xl">
       </div>
     </div>
   </section>
@@ -208,6 +210,35 @@ require __DIR__ . '/../layouts/header.php';
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- IP -->
+<section class="bg-brand-100 text-white">
+  <div class="block-content pt-12 pb-16 lg:pb-40">
+    <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words"><?= $trans('home.ip.title') ?></h2>
+    <p class="lg:text-2xl text-center my-6 slide-up"><?= $trans('home.ip.text') ?></p>
+    <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12"><?= $trans('home.ip.big') ?></p>
+
+    <div id="ips-swiper" data-swiper-autoplay="2000" class="swiper w-full bg-white text-grey-100 rounded-2xl lg:rounded-4xl">
+      <div class="swiper-wrapper">
+        <?php foreach($ips as $slide): ?>
+          <article class="swiper-slide">
+            <div class="p-4 md:p-10 flex flex-col lg:flex-row-reverse items-center">
+              <img src="/public/images/home/about.webp" alt="" class="w-full lg:w-1/2 rounded-2xl">
+              <div class="w-full lg:w-1/2 lg:pr-10 text-center lg:text-left mt-4 md:mt-10 lg:mt-0">
+                <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl"><?= $slide['meta']['meta_title'] ?></h2>
+                <p class="lg:text-xl mb-4"><?= $slide['meta']['meta_description'] ?></p>
+                <a href="<?= serviceRoute($slide['key'], $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 mx-auto lg:mx-0 hover:bg-brand-200 transition-colors">
+                  <?= $trans('common.view_more') ?>
+                </a>
+              </div>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <div class="ips-pagination !transform-none mx-auto mt-4 [--swiper-pagination-bullet-size:1rem] [--swiper-pagination-color:var(--color-glow)]"></div>
   </div>
 </section>
 

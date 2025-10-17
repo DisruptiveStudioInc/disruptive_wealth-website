@@ -17,12 +17,14 @@ class HomeController extends BaseController
     $services = Service::getAll($this->language);
     $ecosystem = Service::getByCategory('ecosystem', $this->language);
     $subcatServices = getServiceSubcategoryName($this->language);
+    $disrIps = Service::getByCategory('ips', $this->language);
 
     return $this->view('home', [
       'content' => $pageContent,
       'services' => $services,
       'ecosystem' => $ecosystem,
-      'subcategories' => $subcatServices
+      'subcategories' => $subcatServices,
+      'ips' => $disrIps
     ]);
   }
 }

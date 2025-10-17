@@ -34,3 +34,18 @@ const subcategoriesSwiper = new Swiper("#subcategories-swiper", {
     prevEl: ".subcategories-button-prev",
   },
 });
+
+const ipsSwiper = new Swiper("#ips-swiper", {
+  speed: 1000,
+  spaceBetween: 20,
+  autoHeight: false,
+  slidesPerView: 1,
+  loopAdditionalSlides: true,
+  loop: true,
+  autoplay: true,
+  pagination: {
+    el: ".ips-pagination",
+    type: "bullets",
+    dynamicBullets: true,
+  },
+});
