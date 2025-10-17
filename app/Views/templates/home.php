@@ -164,12 +164,27 @@ require __DIR__ . '/../layouts/header.php';
           <p class="font-light leading-tight text-center text-lg md:text:xl lg:text-3xl xl:text-4xl"><?= $trans('home.ecosystem.circle') ?></p>
         </div>
       </div>
-      <ul class="[--radius:240px] lg:[--radius:340px] max-lg:grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5" style="--total:<?= count($ecosystem); ?>">
+      <ul class="[--radius:240px] lg:[--radius:300px] max-lg:grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5" style="--total:<?= count($ecosystem); ?>">
         <?php foreach($ecosystem as $k => $item): ?>
-          <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none" style="--i:<?= $k+1; ?><?= ($k === 0 || $k === 3) ? ';--r-alt:-40px' : '' ?>">
+          <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none" style="--i:<?= $k+1; ?>
+            <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-10px' : '' ?>"
+          >
             <a href="<?= serviceRoute($item['key'], $currentLang) ?>">
               <div class="bg-white rounded-2xl px-5 py-4 drop-shadow-lg drop-shadow-grey-100/10 origin-center hover:ring-3 ring-brand-100 transition-shadow">
-                <svg width="379" height="99" class="h-10 lg:h-13 w-auto"><use href="#disruptive-<?= $item['key'] ?>-logo" /></svg>
+                <svg width="379" height="99" class="h-10 lg:h-13 w-auto">
+                  <use href="#disruptive-<?= $item['key'] ?>-logo" />
+                  <?php if($item['key'] === 'corpsyte'): ?>
+                  <defs>
+                    <linearGradient id="linear_grad_corpsyte" x1="67.6632" y1="94.8276" x2="67.6632" y2="27.4456" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#16A9F3"/>
+                      <stop offset="1" stop-color="#11E6D0"/>
+                    </linearGradient>
+                    <mask id="mask_corpsyte" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="45" y="27" width="45" height="68">
+                      <path d="M78.5814 27.4448C72.3886 27.4448 67.3602 32.4727 67.3602 38.6912V72.3573C67.3602 84.5819 57.627 94.4994 45.498 94.8272C53.4585 94.7083 60.9101 92.5452 67.3602 88.8182C74.1812 84.8619 79.8624 79.1807 83.8216 72.3573C87.6395 65.7684 89.8278 58.0851 89.8278 49.9124V27.4448H78.5814Z" fill="white"/>
+                    </mask>
+                  </defs>
+                  <?php endif; ?>
+                </svg>
               </div>
             </a>
           </li>

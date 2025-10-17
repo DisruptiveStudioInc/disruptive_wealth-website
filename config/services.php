@@ -495,6 +495,22 @@ return [
     ],
   ],
 
+  'logistics' => [
+    'category' => 'ecosystem',
+    'template' => 'service-type-1',
+    'content_file' => 'logistics',
+    'es' => [
+      'slug' => 'logistics',
+      'meta_title' => 'Logistics',
+      'meta_description' => 'Descripción SEO del ecosistema 6',
+    ],
+    'en' => [
+      'slug' => 'logistics',
+      'meta_title' => 'Logistics',
+      'meta_description' => 'SEO description of ecosystem 6',
+    ],
+  ],
+
   // IPs CATEGORY (no subcategories)
   'backoffice' => [
     'category' => 'ips',

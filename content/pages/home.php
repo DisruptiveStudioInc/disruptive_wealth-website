@@ -76,32 +76,32 @@ return[
   ],
   'stats' => [
     [
-      'number' => '+5',
+      'number' => '7+',
       'title' => Language::trans('home.statistics.list.item1.feature'),
       'text' => Language::trans('home.statistics.list.item1.text')
     ],
     [
-      'number' => '+16',
+      'number' => '16+',
       'title' => Language::trans('home.statistics.list.item2.feature'),
       'text' => Language::trans('home.statistics.list.item2.text')
     ],
     [
-      'number' => '+100',
+      'number' => '100+',
       'title' => Language::trans('home.statistics.list.item3.feature'),
       'text' => Language::trans('home.statistics.list.item3.text')
     ],
     [
-      'number' => Language::trans('home.statistics.list.item4.number'),
+      'number' => '500k+',
       'title' => Language::trans('home.statistics.list.item4.feature'),
       'text' => Language::trans('home.statistics.list.item4.text')
     ],
     [
-      'number' => '+400',
+      'number' => '500+',
       'title' => Language::trans('home.statistics.list.item5.feature'),
       'text' => Language::trans('home.statistics.list.item5.text')
     ],
     [
-      'number' => Language::trans('home.statistics.list.item6.number'),
+      'number' => '1b+',
       'title' => Language::trans('home.statistics.list.item6.feature'),
       'text' => Language::trans('home.statistics.list.item6.text')
     ]
