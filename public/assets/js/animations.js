@@ -69,7 +69,6 @@ gsap.fromTo(
 
 // Slide in animations
 const slideUp = gsap.utils.toArray(".slide-up");
-console.log(slideUp);
 gsap.utils.toArray(".slide-up").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
@@ -198,3 +197,158 @@ export const flipTabContent = gsap.to("#discover-content", {
     }
   },
 });
+
+// Ecosystem verticals animation
+const disrVerticals = document.querySelectorAll(".disr-vertical");
+const ecosystemCircle = document.getElementById("ecosystem-circle");
+const circleExpansions = document.querySelectorAll(".circle-expansion");
+
+if (disrVerticals.length && ecosystemCircle) {
+  gsap.fromTo(
+    disrVerticals,
+    {
+      "--radius": "0px",
+      opacity: 0,
+    },
+    {
+      "--radius": "360px",
+      opacity: 1,
+      duration: 0.5,
+      delay: 0.1,
+      ease: "power1.in",
+      scrollTrigger: {
+        trigger: ecosystemCircle,
+        start: "top center",
+        end: "top center",
+        toggleActions: playReverse,
+      },
+    }
+  );
+
+  // Ecosystem hover magnetic effect
+  let magneticEffectActive = false;
+  let magneticListeners = [];
+
+  function initMagneticEffect() {
+    const disrVerticals = document.querySelectorAll(".disr-vertical");
+    const ecosystemCircle = document.getElementById("ecosystem-circle");
+    const innerCircle = document.querySelector(".circle-expansion.w-3\\/10");
+    const verticalsList = document.getElementById("disr-verticals");
+
+    if (
+      !disrVerticals.length ||
+      !ecosystemCircle ||
+      !innerCircle ||
+      !verticalsList
+    )
+      return;
+
+    const isDesktop = window.innerWidth >= 1088;
+
+    if (isDesktop && !magneticEffectActive) {
+      // Activate magnetic effect
+      magneticEffectActive = true;
+
+      disrVerticals.forEach((vertical) => {
+        const mouseEnterHandler = () => {
+          const verticalRect = vertical.getBoundingClientRect();
+          const circleRect = ecosystemCircle.getBoundingClientRect();
+
+          // Calculate center points
+          const verticalCenterX = verticalRect.left + verticalRect.width / 2;
+          const verticalCenterY = verticalRect.top + verticalRect.height / 2;
+          const circleCenterX = circleRect.left + circleRect.width / 2;
+          const circleCenterY = circleRect.top + circleRect.height / 2;
+
+          // Calculate distance to move
+          const deltaX = (verticalCenterX - circleCenterX) * 0.25;
+          const deltaY = (verticalCenterY - circleCenterY) * 0.25;
+
+          // Main circle moves more
+          gsap.to(ecosystemCircle, {
+            x: deltaX,
+            y: deltaY,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+
+          // Inner circle moves less (giving depth)
+          gsap.to(innerCircle, {
+            x: deltaX * 0.5,
+            y: deltaY * 0.5,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        };
+
+        vertical.addEventListener("mouseenter", mouseEnterHandler);
+        magneticListeners.push({
+          element: vertical,
+          handler: mouseEnterHandler,
+          type: "mouseenter",
+        });
+      });
+
+      const mouseLeaveHandler = () => {
+        gsap.to([ecosystemCircle, innerCircle], {
+          x: 0,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+      };
+
+      verticalsList.addEventListener("mouseleave", mouseLeaveHandler);
+      magneticListeners.push({
+        element: verticalsList,
+        handler: mouseLeaveHandler,
+        type: "mouseleave",
+      });
+    } else if (!isDesktop && magneticEffectActive) {
+      // Deactivate magnetic effect
+      magneticEffectActive = false;
+
+      // Remove all listeners
+      magneticListeners.forEach(({ element, handler, type }) => {
+        element.removeEventListener(type, handler);
+      });
+      magneticListeners = [];
+
+      // Reset positions
+      gsap.set([ecosystemCircle, innerCircle], { x: 0, y: 0 });
+    }
+  }
+
+  // Initialize on load
+  initMagneticEffect();
+
+  // Reinitialize on resize with debounce
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initMagneticEffect, 150);
+  });
+}
+
+if (circleExpansions.length && ecosystemCircle) {
+  gsap.fromTo(
+    circleExpansions,
+    {
+      scale: 0,
+      opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ecosystemCircle,
+        start: "top center",
+        end: "top center",
+        toggleActions: playReverse,
+      },
+    }
+  );
+}

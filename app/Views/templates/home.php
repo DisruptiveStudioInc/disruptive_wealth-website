@@ -178,20 +178,20 @@ require __DIR__ . '/../layouts/header.php';
 <section>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
-    <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch]"><?= $trans('home.ecosystem.text') ?></p>
+    <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch] slide-up"><?= $trans('home.ecosystem.text') ?></p>
 
-    <div class="flex-center flex-col my-10 lg:my-28 relative pt-12 lg:py-30">
+    <div class="flex-center flex-col my-10 lg:my-28 relative pt-12 lg:py-36">
       <div class="flex-center relative w-full mb-10 lg:mb-0">
-        <div class="absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-2/5 bg-brand-100/10"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-3/10 bg-brand-100/10"></div>
-        <div class="relative flex-center bg-brand-100 text-white aspect-square rounded-full p-4 w-1/5 min-w-41">
+        <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-2/5 bg-brand-100/10"></div>
+        <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-3/10 bg-brand-100/10"></div>
+        <div id="ecosystem-circle" class="relative flex-center bg-brand-100 text-white aspect-square rounded-full p-4 w-1/5 min-w-41 z-2">
           <p class="font-light leading-tight text-center text-lg md:text:xl lg:text-3xl xl:text-4xl"><?= $trans('home.ecosystem.circle') ?></p>
         </div>
       </div>
-      <ul class="[--radius:240px] lg:[--radius:300px] max-lg:grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5" style="--total:<?= count($ecosystem); ?>">
+      <ul id="disr-verticals" class="[--radius:380px] max-lg:grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5" style="--total:<?= count($ecosystem); ?>">
         <?php foreach($ecosystem as $k => $item): ?>
           <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none" style="--i:<?= $k+1; ?>
-            <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-10px' : '' ?>"
+            <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-60px' : '' ?>"
           >
             <a href="<?= serviceRoute($item['key'], $currentLang) ?>">
               <div class="bg-white rounded-2xl px-5 py-4 drop-shadow-lg drop-shadow-grey-100/10 origin-center hover:ring-3 ring-brand-100 transition-shadow">
