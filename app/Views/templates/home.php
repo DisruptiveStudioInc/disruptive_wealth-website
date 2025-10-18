@@ -74,7 +74,8 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Builder & About -->
-<div data-nav-index="2" id="essence" class="nav-section w-[100vw] overflow-x-hidden">
+<div data-nav-index="2" class="nav-section relative w-[100vw] overflow-x-hidden">
+  <span id="essence" class="absolute top-0 left-0 size-0"></span>
 
   <div class="lateral-sections w-[200%] flex overflow-x-hidden">
     <section class="l-section relative w-full bg-secondary-50">
@@ -287,7 +288,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Cases -->
-<section data-nav-index="10" id="cases-section" class="nav-section bg-secondary-200 text-brand-100">
+<section data-nav-index="10" class="nav-section cases-section bg-secondary-200 text-brand-100">
   <div class="block-content py-16">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-white text-center slide-up-words"><?= $trans('home.cases.title') ?></h2>
   </div>

@@ -180,9 +180,8 @@ if (discoverTabs && discoverContent) {
     }, 1200);
   });
 }
-
 // Cases image parallax
-const casesSection = document.getElementById("cases-section");
+const casesSection = document.querySelector(".cases-section");
 const cases = document.querySelectorAll(".case");
 
 if (casesSection && cases.length > 0) {
