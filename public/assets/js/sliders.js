@@ -73,7 +73,7 @@ const clientsSliderOps = {
     },
   },
 };
-const clients1Swiper = new Swiper("#clients1-swiper", {
+const clients1Swiper = new Swiper(".clients-odd-swiper", {
   ...clientsSliderOps,
   autoplay: {
     delay: 0,
@@ -83,7 +83,7 @@ const clients1Swiper = new Swiper("#clients1-swiper", {
   },
 });
 
-const clients2Swiper = new Swiper("#clients2-swiper", {
+const clients2Swiper = new Swiper(".clients-even-swiper", {
   ...clientsSliderOps,
   autoplay: {
     delay: 0,

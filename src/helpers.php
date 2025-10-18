@@ -27,6 +27,21 @@ function split_array_in_half(array $array): array {
 }
 
 /**
+ * Split array in four parts
+ */
+function split_array_in_quarters(array $array): array {
+  $count = count($array);
+  $quarter_size = ceil($count / 4);
+
+  $first_quarter = array_slice($array, 0, $quarter_size);
+  $second_quarter = array_slice($array, $quarter_size, $quarter_size);
+  $third_quarter = array_slice($array, $quarter_size * 2, $quarter_size);
+  $fourth_quarter = array_slice($array, $quarter_size * 3);
+
+  return [$first_quarter, $second_quarter, $third_quarter, $fourth_quarter];
+}
+
+/**
  * Generate URL for a route in the current or specified language
  */
 function route(string $routeName, string $lang, string $defaultLang = 'en', array $params = []): string
