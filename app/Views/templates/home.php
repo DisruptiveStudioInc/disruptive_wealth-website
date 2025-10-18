@@ -9,6 +9,7 @@ require __DIR__ . '/../layouts/header.php';
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
   <img src="/public/images/home/hero.webp" alt="" class="background">
+  <div class="background bg-black/20"></div>
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
@@ -57,9 +58,9 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Builder & About -->
-<div class="w-[100vw] overflow-x-hidden">
+<div id="essence" class="w-[100vw] overflow-x-hidden">
 
-  <div class="lateral-sections w-[200%] flex">
+  <div class="lateral-sections w-[200%] flex overflow-x-hidden">
     <section class="l-section relative w-full bg-secondary-50">
       <img src="/public/images/home/builders-bg.webp" alt="" class="background">
       <div class="block-content min-h-dvh flex-center flex-col text-white">
@@ -201,11 +202,11 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Services -->
-<section class="bg-brand-100 text-white overflow-x-hidden">
+<section class="bg-brand-100 text-white w-full overflow-x-hidden">
   <div class="block-content lg:min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-10 lg:gap-0">
     <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl slide-up-words"><?= $trans('home.our_services') ?></h2>
-      <p class="lg:text-2xl slide-up"><?= $trans('home.services_text') ?></p>
+      <p class="lg:text-2xl slide-up mb-6"><?= $trans('home.services_text') ?></p>
       <nav class="flex gap-2 justify-center lg:justify-start">
         <button class="subcategories-button-prev cursor-pointer text-secondary-100/80 hover:text-white active:text-white [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-opacity">
           <svg class="size-8 transition-colors"><use href="#arrow-left"/></svg>
@@ -288,7 +289,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Clients -->
-<section class="pb-16 lg:pb-40">
+<section class="pb-16 lg:pb-40 overflow-x-hidden">
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch]"><?= $trans('home.clients.text') ?></p>
@@ -333,7 +334,7 @@ require __DIR__ . '/../layouts/header.php';
 <!-- Certifications -->
 <section class=" bg-linear-to-b from-15% from-brand-100 to-15% to-secondary-100">
   <div class="block-content max-w-screen-lg pb-16 lg:pb-40">
-    <div class="bg-white rounded-2xl text-center p-4 md:p-8 lg:p-12">
+    <div class="bg-white rounded-2xl text-center p-4 md:p-8 lg:p-12 overflow-x-hidden">
       <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl mb-4"><?= $trans('home.certifications.title') ?></h2>
       <p class="lg:text-xl mb-4 lg:mb-8"><?= $trans('home.certifications.text') ?></p>
       <ul id="certifications-swiper" class="swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">

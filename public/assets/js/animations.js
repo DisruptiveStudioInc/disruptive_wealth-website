@@ -5,67 +5,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const playNone = "play none none none";
 const playReverse = "play none none reverse";
 
-// Slide in animations
-const slideUp = gsap.utils.toArray(".slide-up");
-console.log(slideUp);
-gsap.utils.toArray(".slide-up").forEach((element) => {
-  gsap.from(element, {
-    scrollTrigger: {
-      trigger: element,
-      start: "top 80%",
-      end: "top 50%",
-      scrub: true,
-      toggleActions: playReverse,
-    },
-    opacity: 0,
-    y: 30,
-    // duration: 0.8,
-    // ease: "power2.out",
-  });
-});
-
-document.fonts.ready.then(() => {
-  gsap.utils.toArray(".slide-up-words").forEach((element) => {
-    SplitText.create(element, {
-      type: "words",
-      autoSplit: true,
-      smartWrap: true,
-      onSplit: (self) => {
-        return gsap.from(self.words, {
-          yPercent: 20,
-          autoAlpha: 0,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-            toggleActions: playReverse,
-          },
-        });
-      },
-    });
-  });
-});
-
-gsap.utils.toArray(".stagger-parent").forEach((container) => {
-  const elements = container.querySelectorAll(".slide-up-stagger");
-  gsap.from(elements, {
-    scrollTrigger: {
-      trigger: container,
-      start: "top 80%",
-      end: "top 50%",
-      scrub: true,
-      toggleActions: playReverse,
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.2,
-    // duration: 0.8,
-    // ease: "power2.out",
-  });
-});
-
 // Lateral sections
 const sections = gsap.utils.toArray(".lateral-sections .l-section");
 
@@ -127,3 +66,64 @@ gsap.fromTo(
     },
   }
 );
+
+// Slide in animations
+const slideUp = gsap.utils.toArray(".slide-up");
+console.log(slideUp);
+gsap.utils.toArray(".slide-up").forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: true,
+      toggleActions: playReverse,
+    },
+    opacity: 0,
+    y: 30,
+    // duration: 0.8,
+    // ease: "power2.out",
+  });
+});
+
+document.fonts.ready.then(() => {
+  gsap.utils.toArray(".slide-up-words").forEach((element) => {
+    SplitText.create(element, {
+      type: "words",
+      autoSplit: true,
+      smartWrap: true,
+      onSplit: (self) => {
+        return gsap.from(self.words, {
+          yPercent: 20,
+          autoAlpha: 0,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+            toggleActions: playReverse,
+          },
+        });
+      },
+    });
+  });
+});
+
+gsap.utils.toArray(".stagger-parent").forEach((container) => {
+  const elements = container.querySelectorAll(".slide-up-stagger");
+  gsap.from(elements, {
+    scrollTrigger: {
+      trigger: container,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: true,
+      toggleActions: playReverse,
+    },
+    opacity: 0,
+    y: 30,
+    stagger: 0.2,
+    // duration: 0.8,
+    // ease: "power2.out",
+  });
+});

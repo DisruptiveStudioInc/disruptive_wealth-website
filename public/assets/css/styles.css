@@ -804,6 +804,27 @@
       border-color: color-mix(in oklab, var(--color-surface-300) 40%, transparent);
     }
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-black\/20 {
+    background-color: color-mix(in srgb, oklch(0% 0 0) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
+    }
+  }
+  .bg-black\/30 {
+    background-color: color-mix(in srgb, oklch(0% 0 0) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
+  }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, oklch(0% 0 0) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
   .bg-brand-100 {
     background-color: var(--color-brand-100);
   }
@@ -1887,9 +1908,19 @@
       width: calc(2/5 * 100%);
     }
   }
+  .lg\:w-3\/5 {
+    @media (width >= 68rem) {
+      width: calc(3/5 * 100%);
+    }
+  }
   .lg\:w-4\/5 {
     @media (width >= 68rem) {
       width: calc(4/5 * 100%);
+    }
+  }
+  .lg\:w-\[200\%\] {
+    @media (width >= 68rem) {
+      width: 200%;
     }
   }
   .lg\:w-full {
