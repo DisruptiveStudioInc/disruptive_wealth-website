@@ -1951,6 +1951,11 @@
       margin-block: calc(var(--spacing) * 0);
     }
   }
+  .lg\:my-4 {
+    @media (width >= 68rem) {
+      margin-block: calc(var(--spacing) * 4);
+    }
+  }
   .lg\:my-6 {
     @media (width >= 68rem) {
       margin-block: calc(var(--spacing) * 6);
@@ -2050,6 +2055,11 @@
   .lg\:w-2\/5 {
     @media (width >= 68rem) {
       width: calc(2/5 * 100%);
+    }
+  }
+  .lg\:w-3\/10 {
+    @media (width >= 68rem) {
+      width: calc(3/10 * 100%);
     }
   }
   .lg\:w-4\/5 {

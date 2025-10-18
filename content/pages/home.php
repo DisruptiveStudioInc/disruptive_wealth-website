@@ -61,22 +61,193 @@ return[
       'text' => Language::trans('home.tech_list.item3.text')
     ]
   ],
-  'team' => [
+  'team_members' => [
     [
-      'name' => 'Daniel Cruz',
+      'name' => 'Daniel',
       'job' => Language::trans('home.team_jobs.ceo'),
-      'text' => Language::trans('home.team_description.daniel')
+      'description' => Language::trans('home.team_description.daniel'),
+      'image' => 'daniel.webp'
     ],
     [
-      'name' => 'Geovanni Alvarado',
+      'name' => 'Geo',
       'job' => Language::trans('home.team_jobs.cto'),
-      'text' => Language::trans('home.team_description.geovanni')
+      'description' => Language::trans('home.team_description.geo'),
+      'image' => 'geo.webp'
     ],
     [
-      'name' => 'Eduardo Maldonado',
-      'job' => Language::trans('home.team_jobs.lawyer'),
-      'text' => Language::trans('home.team_description.eduardo')
-    ]
+      'name' => 'Karen',
+      'job' => Language::trans('home.team_jobs.cfo'),
+      'description' => Language::trans('home.team_description.karen'),
+      'image' => 'karen.webp'
+    ],
+    [
+      'name' => 'Lalo',
+      'job' => Language::trans('home.team_jobs.cpco'),
+      'description' => Language::trans('home.team_description.lalo'),
+      'image' => 'lalo.webp'
+    ],
+    [
+      'name' => 'Fer',
+      'job' => Language::trans('home.team_jobs.cmo'),
+      'description' => Language::trans('home.team_description.fer'),
+      'image' => 'fer.webp'
+    ],
+    [
+      'name' => 'Refugio',
+      'job' => Language::trans('home.team_jobs.csgo'),
+      'description' => Language::trans('home.team_description.refugio'),
+      'image' => 'refugio.webp'
+    ],
+    [
+      'name' => 'Nestor',
+      'job' => Language::trans('home.team_jobs.software_arch_lead'),
+      'description' => Language::trans('home.team_description.nestor'),
+      'image' => 'nestor.webp'
+    ],
+    [
+      'name' => 'Ramon',
+      'job' => Language::trans('home.team_jobs.cloud_infra_specialist'),
+      'description' => Language::trans('home.team_description.ramon'),
+      'image' => 'ramon.webp'
+    ],
+    [
+      'name' => 'Gabriela',
+      'job' => Language::trans('home.team_jobs.head_quality_engineering'),
+      'description' => Language::trans('home.team_description.gabriela'),
+      'image' => 'gabriela.webp'
+    ],
+    [
+      'name' => 'Yubelkis',
+      'job' => Language::trans('home.team_jobs.lead_qa_architect'),
+      'description' => Language::trans('home.team_description.yubelkis'),
+      'image' => 'yubelkis.webp'
+    ],
+    [
+      'name' => 'Maria Paola',
+      'job' => Language::trans('home.team_jobs.perf_security_tester'),
+      'description' => Language::trans('home.team_description.maria_paola'),
+      'image' => 'maria_paola.webp'
+    ],
+    [
+      'name' => 'Walter',
+      'job' => Language::trans('home.team_jobs.head_engineering_excellence'),
+      'description' => Language::trans('home.team_description.walter'),
+      'image' => 'walter.webp'
+    ],
+    // [
+    //   'name' => 'Ilyra',
+    //   'job' => Language::trans('home.team_jobs.ai_integrations_specialist'),
+    //   'description' => Language::trans('home.team_description.ilyra'),
+    //   'image' => 'ilyra.webp'
+    // ],
+    [
+      'name' => 'Carlos Ramirez',
+      'job' => Language::trans('home.team_jobs.head_delivery_pmo'),
+      'description' => Language::trans('home.team_description.carlos_ramirez'),
+      'image' => 'carlos_ramirez.webp'
+    ],
+    [
+      'name' => 'Jair',
+      'job' => Language::trans('home.team_jobs.code_quality_architect'),
+      'description' => Language::trans('home.team_description.jair'),
+      'image' => 'jair.webp'
+    ],
+    [
+      'name' => 'Jesus Elias',
+      'job' => Language::trans('home.team_jobs.fullstack_strategy_lead'),
+      'description' => Language::trans('home.team_description.jesus_elias'),
+      'image' => 'jesus_elias.webp'
+    ],
+    // [
+    //   'name' => 'Ulises',
+    //   'job' => Language::trans('home.team_jobs.perf_optimization_lead'),
+    //   'description' => Language::trans('home.team_description.ulises'),
+    //   'image' => 'ulises.webp'
+    // ],
+    [
+      'name' => 'Mariano',
+      'job' => Language::trans('home.team_jobs.blockchain_architect'),
+      'description' => Language::trans('home.team_description.mariano'),
+      'image' => 'mariano.webp'
+    ],
+    [
+      'name' => 'Rommer',
+      'job' => Language::trans('home.team_jobs.lead_fullstack_architect'),
+      'description' => Language::trans('home.team_description.rommer'),
+      'image' => 'rommer.webp'
+    ],
+    [
+      'name' => 'Jesus Torres',
+      'job' => Language::trans('home.team_jobs.crypto_infra_architect'),
+      'description' => Language::trans('home.team_description.jesus_torres'),
+      'image' => 'jesus_torres.webp'
+    ],
+    [
+      'name' => 'Gabriel',
+      'job' => Language::trans('home.team_jobs.learning_experience_architect'),
+      'description' => Language::trans('home.team_description.gabriel'),
+      'image' => 'gabriel.webp'
+    ],
+    [
+      'name' => 'Diego',
+      'job' => Language::trans('home.team_jobs.business_reengineering_lead'),
+      'description' => Language::trans('home.team_description.diego'),
+      'image' => 'diego.webp'
+    ],
+    [
+      'name' => 'Kamila',
+      'job' => Language::trans('home.team_jobs.learning_innovation_specialist'),
+      'description' => Language::trans('home.team_description.kamila'),
+      'image' => 'kamila.webp'
+    ],
+    [
+      'name' => 'Randy',
+      'job' => Language::trans('home.team_jobs.customer_insights_specialist'),
+      'description' => Language::trans('home.team_description.randy'),
+      'image' => 'randy.webp'
+    ],
+    [
+      'name' => 'Viri',
+      'job' => Language::trans('home.team_jobs.customer_experience_specialist'),
+      'description' => Language::trans('home.team_description.viri'),
+      'image' => 'viri.webp'
+    ],
+    [
+      'name' => 'Mauxi',
+      'job' => Language::trans('home.team_jobs.head_human_capital'),
+      'description' => Language::trans('home.team_description.mauxi'),
+      'image' => 'mauxi.webp'
+    ],
+    [
+      'name' => 'Eli',
+      'job' => Language::trans('home.team_jobs.creative_strategy_director'),
+      'description' => Language::trans('home.team_description.eli'),
+      'image' => 'eli.webp'
+    ],
+    [
+      'name' => 'Meny',
+      'job' => Language::trans('home.team_jobs.art_direction_lead'),
+      'description' => Language::trans('home.team_description.meny'),
+      'image' => 'meny.webp'
+    ],
+    [
+      'name' => 'Dani',
+      'job' => Language::trans('home.team_jobs.digital_design_lead'),
+      'description' => Language::trans('home.team_description.dani'),
+      'image' => 'dani.webp'
+    ],
+    [
+      'name' => 'Sebas',
+      'job' => Language::trans('home.team_jobs.brand_identity_designer'),
+      'description' => Language::trans('home.team_description.sebas'),
+      'image' => 'sebas.webp'
+    ],
+    [
+      'name' => 'Dillan',
+      'job' => Language::trans('home.team_jobs.creative_content_strategist'),
+      'description' => Language::trans('home.team_description.dillan'),
+      'image' => 'dillan.webp'
+    ],
   ],
   'stats' => [
     [

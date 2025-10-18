@@ -140,14 +140,14 @@ require __DIR__ . '/../layouts/header.php';
   <div class="block-content py-16 lg:py-40">
     <p class="font-title uppercase text-brand-100 text-4xl text-center mb-6 slide-up"><?= $trans('home.team') ?></p>
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-12xl xl:text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.team_big') ?></h2>
-    <ul class="flex-center max-lg:flex-wrap gap-4 lg:gap-7 stagger-parent max-w-md md:max-w-none mx-auto">
-      <?php foreach($content['team'] as $item): ?>
-        <li class="relative aspect-member flex items-end slide-up-stagger w-full md:w-[calc(50%_-_--spacing(2))] lg:w-full drop-shadow-xl drop-shadow-grey-100/50 rounded-2xl after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-black/60 after:from-20% after:to-black/0 after:to-60% after:mix-blend-multiply overflow-hidden">
-          <img src="/public/images/<?= 'daniel-cruz' ?>.png" alt="<?= $item['name'] ?>" class="background">
+    <ul class="flex-center flex-wrap gap-7 stagger-parent max-w-md md:max-w-none mx-auto">
+      <?php foreach($content['team_members'] as $item): ?>
+        <li class="relative aspect-member flex items-end slide-up-stagger w-full md:w-[calc(50%_-_--spacing(2))] lg:w-3/10 drop-shadow-xl drop-shadow-grey-100/50 rounded-2xl after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-black/60 after:from-20% after:to-black/0 after:to-60% after:mix-blend-multiply overflow-hidden">
+          <img src="/public/images/team/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="background">
           <div class="relative p-4 md:p-6 xl:p-10 text-white z-1">
             <h3 class="font-title text-lg lg:text-xl"><?= $item['name'] ?></h3>
-            <p class="my-2 lg:my-6"><?= $item['job'] ?></p>
-            <p class="hidden sm:block"><?= $item['text'] ?></p>
+            <p class="my-2 lg:my-4"><?= $item['job'] ?></p>
+            <p class="hidden sm:block"><?= $item['description'] ?></p>
           </div>
         </li>
       <?php endforeach; ?>
