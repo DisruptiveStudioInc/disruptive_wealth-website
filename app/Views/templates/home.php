@@ -222,10 +222,10 @@ require __DIR__ . '/../layouts/header.php';
 
 <!-- Services -->
 <section class="bg-brand-100 text-white w-full overflow-x-hidden">
-  <div class="block-content lg:min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-10 lg:gap-0">
+  <div class="block-content lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-4 lg:gap-0">
     <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl slide-up-words"><?= $trans('home.our_services') ?></h2>
-      <p class="lg:text-2xl slide-up mb-6"><?= $trans('home.services_text') ?></p>
+      <p class="lg:text-2xl lg:en:max-w-[32ch] slide-up mb-6"><?= $trans('home.services_text') ?></p>
       <nav class="flex gap-2 justify-center lg:justify-start">
         <button class="subcategories-button-prev cursor-pointer text-secondary-100/80 hover:text-white active:text-white [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-opacity">
           <svg class="size-8 transition-colors"><use href="#arrow-left"/></svg>
@@ -235,16 +235,16 @@ require __DIR__ . '/../layouts/header.php';
         </button>
       </nav>
     </div>
-    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[27%] lg:py-42 lg:overflow-x-hidden overflow-y-visible h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
+    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[18%] lg:overflow-x-hidden h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
       <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-end lg:items-center">
         <div class="swiper-wrapper !h-full !overflow-visible">
           <?php foreach($subcategories as $slide): ?>
-            <article class="swiper-slide group !h-auto !overflow-visible">
-              <div class="relative flex flex-col rounded-2xl h-full bg-secondary-200 p-10 !overflow-visible group-[&.swiper-slide-active]:translate-y-7/20 transition-transform">
-                <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="aspect-video w-full absolute top-0 left-0 rounded-2xl bg-grey-100 opacity-0 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:-translate-y-[calc(100%_-_--spacing(4))] transition-op-trans duration-300">
+            <article class="swiper-slide group h-auto flex items-end pt-53.5 lg:pt-65.5">
+              <div class="relative flex flex-col rounded-2xl h-full p-10 bg-secondary-200 -translate-y-1/2 lg:-translate-y-3/5 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:rounded-t-none transition-transform">
                 <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
               </div>
+              <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="absolute object-cover top-0 left-0 w-full h-56 lg:h-68 rounded-2xl bg-grey-100 opacity-0 translate-y-1/2 -mb-56 lg:-mb-68 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:translate-y-0 transition-op-trans duration-300">
             </article>
           <?php endforeach; ?>
         </div>
@@ -260,7 +260,7 @@ require __DIR__ . '/../layouts/header.php';
     <p class="lg:text-2xl text-center my-6 slide-up"><?= $trans('home.ip.text') ?></p>
     <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12"><?= $trans('home.ip.big') ?></p>
 
-    <div id="ips-swiper" data-swiper-autoplay="2000" class="swiper w-full bg-white text-grey-100 rounded-2xl lg:rounded-4xl">
+    <div id="ips-swiper" data-swiper-autoplay="2000" class="swiper w-full bg-white text-grey-100 rounded-3xl md:rounded-4xl max-w-xl lg:max-w-none">
       <div class="swiper-wrapper">
         <?php foreach($ips as $slide): ?>
           <article class="swiper-slide">
