@@ -1,3 +1,5 @@
+import { ballDownAnim, ballUpAnim, flipTabContent } from "./animations.js";
+
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileCloseMenuButton = document.getElementById("close-mobile-button");
@@ -95,20 +97,25 @@ if (discoverTabs && discoverContent) {
     const contentData = JSON.parse(discoverContent.dataset.content);
     if (!contentData) return;
     const index = trigger.dataset.index;
+    const svgAnim = trigger.dataset.animation;
 
-    const icon = discoverContent.querySelector("svg");
+    const icon = discoverContent.querySelector("svg use");
     const title = discoverContent.querySelector("h3");
     const text = discoverContent.querySelector("p");
 
     const setContent = () => {
       title.innerHTML = contentData[index].title;
       text.innerHTML = contentData[index].text;
-      icon
-        .querySelector("use")
-        .setAttribute("href", `#${contentData[index].icon}`);
+      icon.setAttribute("href", `#${contentData[index].icon}`);
     };
 
-    setContent();
+    svgAnim === "up" ? ballUpAnim.restart() : ballDownAnim.restart();
+    setTimeout(() => {
+      flipTabContent.restart();
+    }, 1000);
+    setTimeout(() => {
+      setContent();
+    }, 1200);
   });
 }
 

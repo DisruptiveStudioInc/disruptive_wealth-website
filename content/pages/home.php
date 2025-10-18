@@ -25,22 +25,26 @@ return[
     [
       'title' => Language::trans('home.discover_list.item1.title'),
       'text' => Language::trans('home.discover_list.item1.text'),
-      'icon' => 'grow'
+      'icon' => 'grow',
+      'animation' => 'up'
     ],
     [
       'title' => Language::trans('home.discover_list.item2.title'),
       'text' => Language::trans('home.discover_list.item2.text'),
-      'icon' => 'smart-ecosystem'
+      'icon' => 'smart-ecosystem',
+      'animation' => 'up'
     ],
     [
       'title' => Language::trans('home.discover_list.item3.title'),
       'text' => Language::trans('home.discover_list.item3.text'),
-      'icon' => 'total-impact'
+      'icon' => 'total-impact',
+      'animation' => 'down'
     ],
     [
       'title' => Language::trans('home.discover_list.item4.title'),
       'text' => Language::trans('home.discover_list.item4.text'),
-      'icon' => 'digital-inteligence'
+      'icon' => 'digital-inteligence',
+      'animation' => 'down'
     ]
   ],
   'technologies' => [

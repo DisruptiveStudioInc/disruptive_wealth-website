@@ -1,5 +1,5 @@
 // GSAP Animations
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
 
 // toggles animations
 const playNone = "play none none none";
@@ -126,4 +126,75 @@ gsap.utils.toArray(".stagger-parent").forEach((container) => {
     // duration: 0.8,
     // ease: "power2.out",
   });
+});
+
+// Discover tabs svgs
+export const ballUpAnim = gsap.fromTo(
+  "#ball-up",
+  {
+    opacity: 0,
+  },
+  {
+    motionPath: {
+      path: "#motion-up",
+      align: "#motion-up",
+      alignOrigin: [0.5, 0.5],
+      autoRotate: true,
+    },
+    transformOrigin: "50% 50%",
+    opacity: 0,
+    keyframes: {
+      "3%": { opacity: 1 },
+      "97%": { opacity: 1 },
+      "100%": { opacity: 0 },
+    },
+    duration: 1,
+    ease: "power1.inOut",
+    paused: true,
+  }
+);
+export const ballDownAnim = gsap.fromTo(
+  "#ball-down",
+  {
+    opacity: 0,
+  },
+  {
+    motionPath: {
+      path: "#motion-down",
+      align: "#motion-down",
+      alignOrigin: [0.5, 0.5],
+      autoRotate: true,
+    },
+    transformOrigin: "50% 50%",
+    opacity: 0,
+    keyframes: {
+      "3%": { opacity: 1 },
+      "97%": { opacity: 1 },
+      "100%": { opacity: 0 },
+    },
+    duration: 1,
+    ease: "power2.inOut",
+    paused: true,
+  }
+);
+export const flipTabContent = gsap.to("#discover-content", {
+  rotateY: 360,
+  transformOrigin: "50% 50%",
+  keyframes: {
+    "50%": { scale: 1.2 },
+    "100%": { scale: 1 },
+  },
+  duration: 0.7,
+  ease: "power2.inOut",
+  paused: true,
+  onUpdate: function () {
+    const progress = this.progress();
+    const content = document.querySelector("#discover-content-wrap");
+    // Hide content when card is perpendicular (between 25% and 75%)
+    if (progress > 0.25 && progress < 0.75) {
+      content.style.opacity = "0";
+    } else {
+      content.style.opacity = "1";
+    }
+  },
 });
