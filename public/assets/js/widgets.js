@@ -64,6 +64,68 @@ if (langSwitchers.length > 0) {
   });
 }
 
+// Side navigation for sections
+const lateralDots = document.getElementById("lat-nav-dots");
+const lateralUp = document.getElementById("lat-nav-up");
+const lateralDown = document.getElementById("lat-nav-down");
+const navSections = document.querySelectorAll(".nav-section");
+
+if (lateralDots && lateralUp && lateralDown && navSections.length > 0) {
+  let currentSectionIndex = 0;
+  const dotElements = [];
+
+  navSections.forEach((innerSection, index) => {
+    const sectionIndex = innerSection.dataset.navIndex;
+    if (!sectionIndex) return;
+    innerSection.id = `inner-section-${sectionIndex}`;
+    const li = document.createElement("li");
+    const anchor = document.createElement("a");
+    anchor.className =
+      "lat-nav-dot block size-2 rounded-full bg-white hover:bg-brand-100 border border-white transition-colors [&.current]:bg-brand-100";
+    anchor.href = `#inner-section-${sectionIndex}`;
+    li.appendChild(anchor);
+    lateralDots.appendChild(li);
+    dotElements.push(anchor);
+  });
+
+  const optionsNavObserver = {
+    rootMargin: `-64px 0px -${window.innerHeight - 104}px 0px`,
+    threshold: 0,
+  };
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = Array.from(navSections).indexOf(entry.target);
+        if (index !== -1) {
+          currentSectionIndex = index;
+          updateActiveDot(index);
+        }
+      }
+    });
+  }, optionsNavObserver);
+
+  navSections.forEach((section) => {
+    navObserver.observe(section);
+  });
+
+  function updateActiveDot(index) {
+    dotElements.forEach((dot, i) => {
+      dot.classList.toggle("current", i === index);
+    });
+  }
+
+  function navigateToSection(direction) {
+    const targetIndex = currentSectionIndex + direction;
+    if (targetIndex >= 0 && targetIndex < navSections.length) {
+      navSections[targetIndex].scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  lateralUp.addEventListener("click", () => navigateToSection(-1));
+  lateralDown.addEventListener("click", () => navigateToSection(1));
+}
+
 // Accordion toggle
 const accordionContainers = document.querySelectorAll(".accordion-container");
 

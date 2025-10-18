@@ -107,7 +107,7 @@ return [
     ],
     'we_are' => "We are the creators of the future, <span class='text-brand-100'>now</span>",
     'team' => 'Team Disruptive',
-    'team_big' => 'The drive behind disruption',
+    'team_big' => 'Management team',
     'team_jobs' => [
       'ceo' => 'Chief Executive Officer (CEO)',
       'cto' => 'Chief Technology Officer (CTO)',
@@ -247,7 +247,7 @@ return [
     ],
     'certifications' => [
       'title' => 'Certifications',
-      'text' => "We don't just talk about technology—we certify it. Every seal we earn proves our commitment to excellence and the trust of those who choose us."
+      'text' => "Over 40 certifications"
     ]
   ],
 

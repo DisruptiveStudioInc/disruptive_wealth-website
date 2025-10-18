@@ -4,12 +4,11 @@ $heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
 $techSlides = array_merge($content['technologies'], $content['technologies'], $content['technologies']);
 list($clients1, $clients2) = split_array_in_half($constants['clients']);
 require __DIR__ . '/../layouts/header.php';
+include __DIR__ . '/../components/sideDotsNavigation.php';
 ?>
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
-  <img src="/public/images/home/hero.webp" alt="" class="background">
-  <div class="background bg-black/20"></div>
+<section data-nav-index="0" class="nav-section bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
@@ -27,7 +26,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Discover -->
-<section class="bg-surface-100">
+<section data-nav-index="1" class="nav-section bg-surface-100">
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl max-w-[9ch] text-center text-secondary-200 mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
@@ -75,11 +74,12 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Builder & About -->
-<div id="essence" class="w-[100vw] overflow-x-hidden">
+<div data-nav-index="2" id="essence" class="nav-section w-[100vw] overflow-x-hidden">
 
   <div class="lateral-sections w-[200%] flex overflow-x-hidden">
     <section class="l-section relative w-full bg-secondary-50">
-      <img src="/public/images/home/builders-bg.webp" alt="" class="background">
+      <img src="/public/images/home/hero.webp" alt="" class="background">
+      <div class="background bg-black/40"></div>
       <div class="block-content min-h-dvh flex-center flex-col text-white">
         <div class="builder-content flex-center flex-col text-center">
           <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
@@ -110,7 +110,7 @@ require __DIR__ . '/../layouts/header.php';
 </div>
 
 <!-- Tech -->
-<section class="bg-brand-100 w-full overflow-x-hidden">
+<section data-nav-index="3" class="nav-section bg-brand-100 w-full overflow-x-hidden">
   <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words"><?= $trans('home.technology') ?></h2>
     <div id="tech-swiper" class="swiper flex w-full max-w-screen-md !overflow-visible">
@@ -129,14 +129,14 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Banner -->
-<section class="bg-secondary-200 text-white">
+<section data-nav-index="4" class="nav-section bg-secondary-200 text-white">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words"><?= $trans('home.we_are') ?></h2>
   </div>
 </section>
 
 <!-- Team -->
-<section>
+<section data-nav-index="5" class="nav-section">
   <div class="block-content py-16 lg:py-40">
     <p class="font-title uppercase text-brand-100 text-4xl text-center mb-6 slide-up"><?= $trans('home.team') ?></p>
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-12xl xl:text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.team_big') ?></h2>
@@ -156,7 +156,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Stats -->
-<section class="bg-linear-to-t from-white via-surface-50 via-50% to-white">
+<section data-nav-index="6" class="nav-section bg-linear-to-t from-white via-surface-50 via-50% to-white">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.statistics.title') ?></h2>
     <p class="text-center lg:text-xl text-secondary-200 mb-10 lg:mb-28"><?= $trans('home.statistics.text') ?></p>
@@ -175,7 +175,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Ecosystem -->
-<section>
+<section data-nav-index="7" class="nav-section">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
     <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch] slide-up"><?= $trans('home.ecosystem.text') ?></p>
@@ -221,12 +221,12 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Services -->
-<section class="bg-brand-100 text-white w-full overflow-x-hidden">
+<section data-nav-index="8" class="nav-section bg-brand-100 text-white w-full overflow-x-hidden">
   <div class="block-content lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-4 lg:gap-0">
     <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl slide-up-words"><?= $trans('home.our_services') ?></h2>
-      <p class="lg:text-2xl lg:en:max-w-[32ch] slide-up mb-6"><?= $trans('home.services_text') ?></p>
-      <nav class="flex gap-2 justify-center lg:justify-start">
+      <p class="lg:text-2xl lg:en:max-w-[32ch] slide-up mb-6 slide-up"><?= $trans('home.services_text') ?></p>
+      <nav class="flex gap-2 justify-center lg:justify-start slide-up">
         <button class="subcategories-button-prev cursor-pointer text-secondary-100/80 hover:text-white active:text-white [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-opacity">
           <svg class="size-8 transition-colors"><use href="#arrow-left"/></svg>
         </button>
@@ -254,7 +254,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- IP -->
-<section class="bg-brand-100 text-white">
+<section data-nav-index="9" class="nav-section bg-brand-100 text-white">
   <div class="block-content pt-12 pb-16 lg:pb-40">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words"><?= $trans('home.ip.title') ?></h2>
     <p class="lg:text-2xl text-center my-6 slide-up"><?= $trans('home.ip.text') ?></p>
@@ -283,7 +283,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Cases -->
-<section id="cases-section" class="bg-secondary-200 text-brand-100">
+<section data-nav-index="10" id="cases-section" class="nav-section bg-secondary-200 text-brand-100">
   <div class="block-content py-16">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-white text-center slide-up-words"><?= $trans('home.cases.title') ?></h2>
   </div>
@@ -308,7 +308,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Clients -->
-<section class="pb-16 lg:pb-40 overflow-x-hidden">
+<section data-nav-index="11" class="nav-section pb-16 lg:pb-40 overflow-x-hidden">
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch]"><?= $trans('home.clients.text') ?></p>
@@ -334,7 +334,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Partners -->
-<section class="bg-brand-100 text-white">
+<section data-nav-index="12" class="nav-section bg-brand-100 text-white">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words"><?= $trans('home.partners.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl mx-auto max-w-[52ch] mb-12"><?= $trans('home.partners.text') ?></p>
@@ -351,7 +351,7 @@ require __DIR__ . '/../layouts/header.php';
 </section>
 
 <!-- Certifications -->
-<section class=" bg-linear-to-b from-15% from-brand-100 to-15% to-secondary-100">
+<section data-nav-index="13" class="nav-section bg-linear-to-b from-15% from-brand-100 to-15% to-secondary-100">
   <div class="block-content max-w-screen-lg pb-16 lg:pb-40">
     <div class="bg-white rounded-2xl text-center p-4 md:p-8 lg:p-12 overflow-x-hidden">
       <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl mb-4"><?= $trans('home.certifications.title') ?></h2>
