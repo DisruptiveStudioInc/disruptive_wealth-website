@@ -116,6 +116,25 @@
   --leading-tight: 1.2;
 
   --aspect-member: 9/11;
+
+  --animate-cycle: fadeCycle 40s var(--cycle-delay, 0s) infinite;
+  @keyframes fadeCycle {
+    from {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }
 
 @layer components {

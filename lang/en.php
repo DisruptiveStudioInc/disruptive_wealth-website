@@ -140,6 +140,12 @@ return [
       'digital_design_lead' => 'Digital Design Lead',
       'brand_identity_designer' => 'Brand Identity Designer',
       'creative_content_strategist' => 'Creative Content Strategist',
+      'financial_operations_manager' => 'Financial Operations Manager',
+      'financial_performance_manager' => 'Financial Performance Manager',
+      'qa_strategy_lead' => 'Quality Assurance Strategy Lead',
+      'client_onboarding_experience_director' => 'Client Onboarding & Experience Director',
+      'head_logistics' => 'Head of Logistics',
+      'logistics_operations_lead' => 'Logistics Operations Lead'
     ],
     'team_description' => [
       'daniel' => "Defines the strategic vision and leads the company's global expansion.",
@@ -170,9 +176,15 @@ return [
       'mauxi' => "Designs talent management models tailored to each organization's stage and objectives.",
       'eli' => 'Transforms business goals into visual and conceptual narratives that inspire action.',
       'meny' => "Defines the visual aesthetic and creative guidelines that shape each brand's identity.",
-      'dani' => 'Designs intuitive, visually striking digital experiences across web and mobile platforms.',
-      'sebas' => "Builds visual systems that reflect each brand's personality, values, and projection.",
-      'dillan' => 'Plans and develops intelligent content aligned with strategy, audience, and conversion.'
+      'sebas' => 'Designs intuitive, visually striking digital experiences across web and mobile platforms.',
+      'dani' => "Builds visual systems that reflect each brand's personality, values, and projection.",
+      'dillan' => 'Plans and develops intelligent content aligned with strategy, audience, and conversion.',
+      'antonio' => 'Supervises accounting processes, cash flows, and budget control with precision and transparency.',
+      'victor' => 'Analyzes key profitability, efficiency, and margin indicators to optimize operations.',
+      'gustavo' => 'Defines testing methodologies and standards tailored to each client, technology, and product.',
+      'kenia' => 'Orchestrates the onboarding process, ensuring each client understands, trusts, and feels supported.',
+      'jose_duarte' => 'Designs customized logistics models that integrate operations, technology, and customer experience.',
+      'paola_duarte' => 'Coordinates the daily execution of the supply chain, ensuring accuracy, speed, and complete control.'
     ],
     'statistics' => [
       'title' => 'Every number is a success story',

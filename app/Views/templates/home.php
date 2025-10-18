@@ -5,10 +5,11 @@ $techSlides = array_merge($content['technologies'], $content['technologies'], $c
 list($clients1, $clients2, $clients3, $clients4) = split_array_in_quarters($constants['clients']);
 require __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/sideDotsNavigation.php';
+include __DIR__ . '/../components/fixedBackground.php';
 ?>
 
 <!-- Hero Section -->
-<section data-nav-index="0" class="nav-section bg-gradient-to-r from-brand-100 to-brand-200 text-white w-full overflow-x-hidden">
+<section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
@@ -94,7 +95,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       </div>
     </section>
 
-    <section class="section-about l-section w-full relative overflow-hidden">
+    <section class="section-about l-section w-full relative bg-white/60 backdrop-blur-sm overflow-hidden">
       <div class="block-content min-h-dvh flex max-lg:flex-col max-lg:justify-center lg:items-center">
         <div class="about-content sm:w-4/5 lg:w-2/5 py-16">
           <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
@@ -137,7 +138,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Team -->
-<section data-nav-index="5" class="nav-section">
+<section data-nav-index="5" class="nav-section bg-white/60 backdrop-blur-sm">
   <div class="block-content py-16 lg:py-40">
     <p class="font-title uppercase text-brand-100 text-4xl text-center mb-6 slide-up"><?= $trans('home.team') ?></p>
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-12xl xl:text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.team_big') ?></h2>
@@ -180,7 +181,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Ecosystem -->
-<section data-nav-index="7" class="nav-section">
+<section data-nav-index="7" class="nav-section bg-white/60 backdrop-blur-sm">
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
     <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch] slide-up"><?= $trans('home.ecosystem.text') ?></p>
@@ -313,7 +314,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Clients -->
-<section data-nav-index="11" class="nav-section pb-16 lg:pb-40 overflow-x-hidden">
+<section data-nav-index="11" class="nav-section pb-16 lg:pb-40 overflow-x-hidden bg-white/60 backdrop-blur-sm">
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch]"><?= $trans('home.clients.text') ?></p>
