@@ -135,6 +135,13 @@ return [
     [ 'name' => 'Figma', 'logo' => 'partner-21.png' ],
     [ 'name' => 'Deftship', 'logo' => 'partner-22.png' ],
     [ 'name' => 'Digital Ocean', 'logo' => 'partner-23.png' ],
+    [ 'name' => 'Authorize.net', 'logo' => 'partner-24.png' ],
+    [ 'name' => 'Blender', 'logo' => 'partner-25.png' ],
+    [ 'name' => 'i-payout', 'logo' => 'partner-26.png' ],
+    [ 'name' => 'Meta', 'logo' => 'partner-27.png' ],
+    [ 'name' => 'Open AI', 'logo' => 'partner-28.png' ],
+    [ 'name' => 'Windsor.ai', 'logo' => 'partner-29.png' ],
+    [ 'name' => 'YouTube', 'logo' => 'partner-30.png' ]
   ],
 
   'social_media' => [
