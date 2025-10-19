@@ -151,7 +151,10 @@ return [
       'qa_strategy_lead' => 'Quality Assurance Strategy Lead',
       'client_onboarding_experience_director' => 'Client Onboarding & Experience Director',
       'head_logistics' => 'Head of Logistics',
-      'logistics_operations_lead' => 'Logistics Operations Lead'
+      'logistics_operations_lead' => 'Logistics Operations Lead',
+      'sales_strategy_lead' => 'Sales Strategy Lead',
+      'legal_strategy_lead' => 'Legal Strategy Lead',
+      'content_production_lead' => 'Content Production Lead'
     ],
     'team_description' => [
       'daniel' => "Defines the strategic vision and leads the company's global expansion.",
@@ -190,7 +193,10 @@ return [
       'gustavo' => 'Defines testing methodologies and standards tailored to each client, technology, and product.',
       'kenia' => 'Orchestrates the onboarding process, ensuring each client understands, trusts, and feels supported.',
       'jose_duarte' => 'Designs customized logistics models that integrate operations, technology, and customer experience.',
-      'paola_duarte' => 'Coordinates the daily execution of the supply chain, ensuring accuracy, speed, and complete control.'
+      'paola_duarte' => 'Coordinates the daily execution of the supply chain, ensuring accuracy, speed, and complete control.',
+      'diego_arevalo' => "Defines commercial strategies and aligns sales objectives with the company's strategic goals.",
+      'ana' => 'Designs legal and contractual frameworks that ensure growth, protection, and operational stability.',
+      'jose_maria' => 'Coordinates audiovisual execution with a focus on efficiency, storytelling, and creative return.'
     ],
     'statistics' => [
       'title' => 'Every number is a success story',

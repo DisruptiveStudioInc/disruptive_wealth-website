@@ -152,6 +152,9 @@ return [
       'client_onboarding_experience_director' => 'Client Onboarding & Experience Director',
       'head_logistics' => 'Head of Logistics',
       'logistics_operations_lead' => 'Logistics Operations Lead',
+      'sales_strategy_lead' => 'Sales Strategy Lead',
+      'legal_strategy_lead' => 'Legal Strategy Lead',
+      'content_production_lead' => 'Content Production Lead'
     ],
     'team_description' => [
       'daniel' => 'Define la visión estratégica y lidera la expansión global de la compañía.',
@@ -190,7 +193,10 @@ return [
       'gustavo' => 'Define metodologías y estándares de prueba adaptados a cada cliente, tecnología y producto.',
       'kenia' => 'Orquesta el proceso de incorporación, asegurando que cada cliente entienda, confíe y se sienta acompañado.',
       'jose_duarte' => 'Diseña modelos logísticos personalizados que integran operaciones, tecnología y experiencia del cliente.',
-      'paola_duarte' => 'Coordina la ejecución diaria de la cadena de suministro, garantizando precisión, velocidad y control total.'
+      'paola_duarte' => 'Coordina la ejecución diaria de la cadena de suministro, garantizando precisión, velocidad y control total.',
+      'diego_arevalo' => 'Define estrategias comerciales y alinea objetivos de venta con las metas estratégicas del negocio.',
+      'ana' => 'Diseña marcos legales y contractuales que aseguran crecimiento, protección y estabilidad operativa.',
+      'jose_maria' => 'Coordina la ejecución audiovisual con enfoque en eficiencia, storytelling y retorno creativo.'
     ],
     'statistics' => [
       'title' => 'Cada número es una historia de éxito',
