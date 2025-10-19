@@ -241,3 +241,17 @@ function getNavigationMenu(string $lang, callable $trans): array {
     ],
   ];
 }
+
+function generateBackground(string $fileName, int $amount): void{
+  $duration = $amount * 10;
+  $images = range(1, $amount);
+
+  echo "<div class='absolute -z-1 w-full h-full top-0 left-0'>";
+  foreach($images as $index => $item) {
+    $delay = $index * 10;
+    echo $index===0 ?
+      "<img class='background' src='/public/images/background/{$fileName}-0{$item}.webp' alt='' loading='lazy'>":
+      "<img class='background opacity-0 animate-cycle [--cycle-duration:{$duration}s] [--cycle-delay:{$delay}s]' src='/public/images/background/{$fileName}-0{$item}.webp' alt='' loading='lazy'>";
+  }
+  echo "</div>";
+}

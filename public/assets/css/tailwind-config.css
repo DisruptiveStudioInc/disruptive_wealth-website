@@ -117,7 +117,8 @@
 
   --aspect-member: 9/11;
 
-  --animate-cycle: fadeCycle 50s var(--cycle-delay, 0s) infinite;
+  --animate-cycle: fadeCycle var(--cycle-duration, 40s) var(--cycle-delay, 0s)
+    infinite;
   --animate-textbg: moveTextBg 4s linear infinite;
   @keyframes fadeCycle {
     from {
