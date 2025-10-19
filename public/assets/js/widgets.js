@@ -65,27 +65,17 @@ if (langSwitchers.length > 0) {
 }
 
 // Side navigation for sections
-const lateralDots = document.getElementById("lat-nav-dots");
 const lateralUp = document.getElementById("lat-nav-up");
 const lateralDown = document.getElementById("lat-nav-down");
 const navSections = document.querySelectorAll(".nav-section");
 
-if (lateralDots && lateralUp && lateralDown && navSections.length > 0) {
+if (lateralUp && lateralDown && navSections.length > 0) {
   let currentSectionIndex = 0;
-  const dotElements = [];
 
   navSections.forEach((innerSection, index) => {
     const sectionIndex = innerSection.dataset.navIndex;
     if (!sectionIndex) return;
     innerSection.id = `inner-section-${sectionIndex}`;
-    const li = document.createElement("li");
-    const anchor = document.createElement("a");
-    anchor.className =
-      "lat-nav-dot block size-2 rounded-full bg-white hover:bg-brand-100 border border-white transition-colors [&.current]:bg-brand-100";
-    anchor.href = `#inner-section-${sectionIndex}`;
-    li.appendChild(anchor);
-    lateralDots.appendChild(li);
-    dotElements.push(anchor);
   });
 
   const optionsNavObserver = {
@@ -99,7 +89,6 @@ if (lateralDots && lateralUp && lateralDown && navSections.length > 0) {
         const index = Array.from(navSections).indexOf(entry.target);
         if (index !== -1) {
           currentSectionIndex = index;
-          updateActiveDot(index);
         }
       }
     });
@@ -108,12 +97,6 @@ if (lateralDots && lateralUp && lateralDown && navSections.length > 0) {
   navSections.forEach((section) => {
     navObserver.observe(section);
   });
-
-  function updateActiveDot(index) {
-    dotElements.forEach((dot, i) => {
-      dot.classList.toggle("current", i === index);
-    });
-  }
 
   function navigateToSection(direction) {
     const targetIndex = currentSectionIndex + direction;
