@@ -29,7 +29,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section bg-surface-100">
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl max-w-[9ch] text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-10xl xl:text-11xl text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
       <ul id="discover-tabs" class="lg:space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
         <?php foreach($content['discover'] as $k => $item): ?>
@@ -157,15 +157,15 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Stats -->
 <section data-nav-index="7" class="nav-section bg-linear-to-t from-white via-surface-50 via-50% to-white">
   <div class="block-content py-16 lg:py-32 xl:py-40">
-    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-3xl lg:text-4xl xl:text-6xl mb-6 lg:mb-16 slide-up-words-black"><?= $trans('home.statistics.title') ?></h2>
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-3xl lg:text-5xl xl:text-[2.85vw] mb-6 lg:mb-16 slide-up-words-black"><?= $trans('home.statistics.title') ?></h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-md md:max-w-none mx-auto">
       <?php foreach($content['stats'] as $item): ?>
         <li class="bg-white rounded-2xl p-4 md:p-6 lg:p-7 drop-shadow-lg drop-shadow-grey-100/10">
-          <h2 class="text-center font-bold mb-4 leading-tight">
-            <span class="block text-6xl lg:text-8xl text-brand-100"><?= $item['number'] ?></span>
-            <span class="block text-2xl lg:text-4xl text-secondary-200 text-pretty"><?= $item['title'] ?></span>
-          </h2>
-          <p class="md:font-light text-xl"><?= $item['text'] ?></p>
+          <h3 class="text-center font-bold mb-4 leading-tight">
+            <span class="block text-4xl lg:text-6xl text-brand-100"><?= $item['number'] ?></span>
+            <span class="block text-lg lg:text-2xl text-secondary-200"><?= $item['title'] ?></span>
+          </h3>
+          <p class="text-center md:font-light text-lg text-balance"><?= $item['text'] ?></p>
         </li>
       <?php endforeach; ?>
     </ul>
