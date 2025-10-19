@@ -117,8 +117,8 @@
 
   --aspect-member: 9/11;
 
-  --animate-cycle: fadeCycle 40s var(--cycle-delay, 0s) infinite;
-  --animate-textbg: moveTextBg 25s ease-in-out infinite;
+  --animate-cycle: fadeCycle 50s var(--cycle-delay, 0s) infinite;
+  --animate-textbg: moveTextBg 4s linear infinite;
   @keyframes fadeCycle {
     from {
       opacity: 0;
@@ -204,16 +204,16 @@
   .bg-text-white {
     --bg-y: 50%;
     background-image: url(../../images/background/light-grad.webp);
-    background-size: 200%;
+    background-size: "1440px";
     background-repeat: none;
     background-position: 0% var(--bg-y);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.1);
     animation: var(--animate-textbg);
   }
   .bg-text-black {
-    --bg-y: 80%;
-    background-image: url(../../images/background/dark-grad2.webp);
-    background-size: 200%;
+    --bg-y: 60%;
+    background-image: url(../../images/background/dark-txt-fx.webp);
+    background-size: "1440px";
     background-repeat: none;
     background-position: 0% var(--bg-y);
     color: rgba(0, 0, 0, 0.2);
@@ -239,6 +239,16 @@
   transition-duration: var(--default-transition-duration);
 }
 
+@utility transition-op-colors {
+  transition-property: opacity, colors, background-color;
+  transition-timing-function: var(--default-transition-timing-function);
+  transition-duration: var(--default-transition-duration);
+}
+
 .banner-text .bg-text-white.word8 {
   color: --alpha(var(--color-brand-100) / 95%);
+}
+.solutions-title .bg-text-white.word1 {
+  padding-top: 8.5%;
+  padding-bottom: 1.2%;
 }

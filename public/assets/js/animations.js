@@ -232,14 +232,14 @@ if (techSection && techTitle && techCards.length > 0) {
     );
   });
 
-  // techTl.to(
-  //   techTitle,
-  //   {
-  //     autoAlpha: 1,
-  //     duration: 0.5,
-  //   },
-  //   "+=0.1"
-  // );
+  techTl.to(
+    techTitle,
+    {
+      autoAlpha: 1,
+      duration: 0.5,
+    },
+    "+=0.1"
+  );
 }
 
 // Ecosystem verticals animation

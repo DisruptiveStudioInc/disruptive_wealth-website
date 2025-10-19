@@ -19,7 +19,8 @@ return [
     'services' => 'Services',
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms & Policies',
-    'use_terms' => 'Terms Of Use'
+    'use_terms' => 'Terms Of Use',
+    'legal_small' => 'All trademarks, logos, and brand names are the property of their respective owners. Their use on this site is for identification and reference purposes only and does not imply any affiliation, sponsorship, or endorsement.'
   ],
 
   // Services Subcategories
@@ -84,7 +85,8 @@ return [
       ]
     ],
     'builder' => "We don't just build systems,",
-    'builder_big' => 'We create futures: strategy, innovation, and experiences that transform your business.',
+    'builder_big' => 'We create the future:',
+    'builder_text' => 'Strategy, innovation, and experiences that transform your business.',
     'about' => [
       'title' => 'About',
       'text' => "At Disruptive, we don't follow trends—we create them. We design a technological ecosystem that integrates software, blockchain, payments, marketing, talent, and creativity so your project can evolve with strength, clarity, and a global vision.",
@@ -234,7 +236,7 @@ return [
         'corpsyte' => 'Take the first step with tailored solutions that drive your vision and business growth.'
       ]
     ],
-    'our_services' => 'Our solutions',
+    'our_services' => "<span class='lg:text-[10.5rem] lg:leading-[0.4]'>Our</span> solutions",
     'services_text' => "It's not just software, it's a digital mind that evolves with you and your vision.",
     'ip' => [
       'title' => 'Disruptive IP',

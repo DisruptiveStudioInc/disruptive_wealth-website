@@ -19,7 +19,8 @@ return [
     'services' => 'Servicios',
     'privacy' => 'Políticas de privacidad',
     'terms' => 'Términos y condiciones',
-    'use_terms' => 'Términos de uso'
+    'use_terms' => 'Términos de uso',
+    'legal_small' => 'Todas las marcas registradas, logotipos y nombres comerciales son propiedad de sus respectivos dueños. Su uso en este sitio es únicamente con fines de identificación y referencia, y no implica ninguna afiliación, patrocinio ni respaldo.'
   ],
 
   // Services Subcategories
@@ -84,7 +85,8 @@ return [
       ]
     ],
     'builder' => 'No solo construimos sistemas,',
-    'builder_big' => 'Creamos futuros: estrategia, innovación y experiencias que transforman tu negocio.',
+    'builder_big' => 'Creamos el futuro:',
+    'builder_text' => 'Estrategia, innovación y experiencias que transforman tu negocio.',
     'about' => [
       'title' => 'About',
       'text' => 'En Disruptive no seguimos tendencias, las creamos. Diseñamos un ecosistema tecnológico que integra software, blockchain, pagos, marketing, talento y creatividad para que tu proyecto evolucione con fuerza, claridad y visión global.',
