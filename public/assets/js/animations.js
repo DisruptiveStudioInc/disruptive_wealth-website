@@ -180,6 +180,68 @@ export const flipTabContent = gsap.to("#discover-content", {
   },
 });
 
+// Techs cards animation
+const techSection = document.querySelector(".tech-section");
+const techTitle = document.querySelector(".tech-title");
+const techCards = document.querySelectorAll(".tech-card");
+
+if (techSection && techTitle && techCards.length > 0) {
+  const techTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: techSection,
+      start: "top top",
+      end: `+=${techCards.length * 100}%`,
+      pin: true,
+      scrub: 1,
+      anticipatePin: true,
+    },
+  });
+
+  const techTitleSplit = SplitText.create(techTitle, {
+    type: "words",
+    autoSplit: true,
+    smartWrap: true,
+    wordsClass: "bg-clip-text bg-text-white pt-2",
+  });
+
+  techTl.from(
+    techTitleSplit.words,
+    {
+      yPercent: 20,
+      autoAlpha: 0,
+      stagger: 0.3,
+      duration: 2,
+    },
+    0
+  );
+
+  techCards.forEach((card, index) => {
+    gsap.set(card, {
+      y: "70vh",
+    });
+    const cardStart = 2 + index * 0.8; // Start after title, staggered
+
+    techTl.to(
+      card,
+      {
+        y: "-140vh",
+        duration: 3,
+        ease: "none",
+      },
+      cardStart
+    );
+  });
+
+  // techTl.to(
+  //   techTitle,
+  //   {
+  //     autoAlpha: 1,
+  //     duration: 0.5,
+  //   },
+  //   "+=0.1"
+  // );
+}
+
 // Ecosystem verticals animation
 const disrVerticals = document.querySelectorAll(".disr-vertical");
 const ecosystemCircle = document.getElementById("ecosystem-circle");
@@ -193,7 +255,7 @@ if (disrVerticals.length && ecosystemCircle) {
       opacity: 0,
     },
     {
-      "--radius": "360px",
+      "--radius": "340px",
       opacity: 1,
       duration: 0.5,
       delay: 0.1,
@@ -204,6 +266,7 @@ if (disrVerticals.length && ecosystemCircle) {
         end: "top center",
         toggleActions: playReverse,
       },
+      onStart: () => console.log("started"),
     }
   );
 

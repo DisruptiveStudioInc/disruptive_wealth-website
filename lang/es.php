@@ -219,7 +219,7 @@ return [
       ]
     ],
     'ecosystem' => [
-      'title' => 'Ecosystem',
+      'title' => 'Disruptive Ecosystem',
       'text' => 'Nuestro ecosistema no solo resuelve necesidades, abre caminos. Integra lo esencial para escalar, conecta lo que parecía disperso y convierte a cualquier organización en una potencia global.',
       'circle' => "Un ecosistema, <span class='font-bold'>muchas habilidades</span>",
       'big' => 'Explora cómo cada área puede transformar tu negocio.',
@@ -234,7 +234,7 @@ return [
         'corpsyte' => 'Da el primer paso con soluciones personalizadas que impulsan tu visión y crecimiento empresarial.'
       ]
     ],
-    'our_services' => 'Nuestro servicios',
+    'our_services' => 'Nuestras soluciones',
     'services_text' => 'No es solo software, es una mente digital que evoluciona contigo y tu visión.',
     'ip' => [
       'title' => 'Disruptive IP',

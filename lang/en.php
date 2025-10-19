@@ -219,7 +219,7 @@ return [
       ]
     ],
     'ecosystem' => [
-      'title' => 'Ecosystem',
+      'title' => 'Disruptive Ecosystem',
       'text' => "Our ecosystem doesn't just solve needs—it opens paths. It integrates what's essential to scale, connects what once seemed dispersed, and turns any organization into a global powerhouse.",
       'circle' => "One ecosystem, <span class='font-bold'>many skills</span>",
       'big' => 'Explore how each area can transform your business.',
@@ -234,7 +234,7 @@ return [
         'corpsyte' => 'Take the first step with tailored solutions that drive your vision and business growth.'
       ]
     ],
-    'our_services' => 'Our services',
+    'our_services' => 'Our solutions',
     'services_text' => "It's not just software, it's a digital mind that evolves with you and your vision.",
     'ip' => [
       'title' => 'Disruptive IP',

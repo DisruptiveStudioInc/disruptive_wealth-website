@@ -1,8 +1,8 @@
 <?php
 $pageTitle = $trans('home.title');
 $heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
-$techSlides = array_merge($content['technologies'], $content['technologies'], $content['technologies']);
-list($clients1, $clients2, $clients3, $clients4) = split_array_in_quarters($constants['clients']);
+list($clients1, $clients2, $clients3) = split_array_in_thirds($constants['clients']);
+list($certifications1, $certifications2) = split_array_in_half($constants['certifications']);
 require __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/sideDotsNavigation.php';
 include __DIR__ . '/../components/fixedBackground.php';
@@ -76,6 +76,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- Builder -->
 <section data-nav-index="2" class="nav-section relative w-full bg-secondary-50">
+  <span class="absolute top-0 left-0 size-0" id="essence"></span>
   <img src="/public/images/home/hero.webp" alt="" class="background" loading="lazy">
   <div class="background bg-black/40"></div>
   <div class="block-content min-h-dvh flex-center flex-col text-white">
@@ -101,27 +102,28 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Tech -->
-<section data-nav-index="4" class="nav-section bg-brand-100 w-full overflow-x-hidden">
-  <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col">
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words-white"><?= $trans('home.technology') ?></h2>
-    <div id="tech-swiper" class="swiper flex w-full max-w-screen-md !overflow-visible">
-      <div class="swiper-wrapper !h-full">
-        <?php foreach($techSlides as $slide): ?>
-          <article class="swiper-slide group !h-auto flex ">
-            <div class="relative flex-center flex-col h-full text-center bg-secondary-100/80 text-white p-10 rounded-2xl group-[&.swiper-slide-active]:bg-secondary-200 transition-colors">
-              <h2 class="font-title leading-tight uppercase text-2xl md:text-3xl lg:text-5xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
-              <p class="md:text-xl lg:text-3xl opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['text'] ?></p>
-            </div>
+<section data-nav-index="4" class="nav-section tech-section relative bg-brand-100 h-dvh w-full overflow-hidden">
+  <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col overflow-hidden">
+    <h2 class="tech-title font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white slide-up-words-white"><?= $trans('home.technology') ?></h2>
+    <div class="w-full mx-auto">
+      <?php foreach($content['technologies'] as $k => $slide): ?>
+        <div class="absolute top-1/2 left-1/2 -translate-1/2 max-w-9/20">
+          <article class="tech-card flex-center flex-col text-center bg-secondary-200 text-white p-10 rounded-2xl
+          <?= $k===1 ? '-translate-x-1/4' : '' ?>
+          <?= $k===2 ? 'translate-x-1/2' : '' ?>
+          ">
+            <h2 class="font-title leading-tight uppercase text-2xl md:text-3xl lg:text-8xl "><?= $slide['title'] ?></h2>
+            <p class="lg:font-light md:text-xl lg:text-2xl"><?= $slide['text'] ?></p>
           </article>
-        <?php endforeach; ?>
-      </div>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
 <!-- Banner -->
 <section data-nav-index="5" class="nav-section bg-secondary-200 text-white">
-  <div class="block-content py-16 lg:py-40">
+  <div class="block-content min-h-dvh py-16 lg:py-40 flex items-center">
     <h2 class="banner-text font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words-white"><?= $trans('home.we_are') ?></h2>
   </div>
 </section>
@@ -129,8 +131,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Team -->
 <section data-nav-index="6" class="nav-section bg-white/60 backdrop-blur-sm">
   <div class="block-content py-16 lg:py-40">
-    <p class="font-title uppercase text-brand-100 text-4xl text-center mb-6 slide-up"><?= $trans('home.team') ?></p>
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-12xl xl:text-13xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.team_big') ?></h2>
+    <h2 class="font-title leading-none uppercase text-4xl md:text-7xl lg:text-9xl xl:text-11xl text-center text-secondary-200 mb-4 lg:mb-12 slide-up-words"><?= $trans('home.team_big') ?></h2>
     <ul class="flex-center flex-wrap gap-7">
       <?php foreach($content['team_members'] as $item): ?>
         <li class="relative group aspect-member flex items-end w-full xs:w-[calc(50%_-_--spacing(3.5))] md:w-[calc(30%_-_--spacing(3.5))] lg:w-[calc(19%_-_--spacing(3.5))] drop-shadow-xl drop-shadow-grey-100/50 rounded-2xl after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-black/60 after:from-20% after:to-black/0 after:to-60% after:mix-blend-multiply overflow-hidden">
@@ -152,15 +153,14 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- Stats -->
 <section data-nav-index="7" class="nav-section bg-linear-to-t from-white via-surface-50 via-50% to-white">
-  <div class="block-content py-16 lg:py-40">
-    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.statistics.title') ?></h2>
-    <p class="text-center lg:text-xl text-secondary-200 mb-10 lg:mb-28"><?= $trans('home.statistics.text') ?></p>
+  <div class="block-content py-16 lg:py-32 xl:py-40">
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-secondary-200 mb-6 lg:mb-16 slide-up-words"><?= $trans('home.statistics.title') ?></h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-md md:max-w-none mx-auto">
       <?php foreach($content['stats'] as $item): ?>
-        <li class="bg-white rounded-2xl p-4 md:p-6 lg:p-10 drop-shadow-lg drop-shadow-grey-100/10">
+        <li class="bg-white rounded-2xl p-4 md:p-6 lg:p-7 drop-shadow-lg drop-shadow-grey-100/10">
           <h2 class="text-center font-bold mb-4 leading-tight">
-            <span class="block text-7xl lg:text-9xl text-brand-100"><?= $item['number'] ?></span>
-            <span class="block text-3xl lg:text-5xl text-secondary-200"><?= $item['title'] ?></span>
+            <span class="block text-6xl lg:text-8xl text-brand-100"><?= $item['number'] ?></span>
+            <span class="block text-2xl lg:text-4xl text-secondary-200 text-pretty"><?= $item['title'] ?></span>
           </h2>
           <p class="md:font-light text-xl"><?= $item['text'] ?></p>
         </li>
@@ -171,11 +171,10 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- Ecosystem -->
 <section data-nav-index="8" class="nav-section bg-white/60 backdrop-blur-sm">
-  <div class="block-content py-16 lg:py-40">
-    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
-    <p class="text-center lg:text-xl text-secondary-200 mx-auto max-w-[72ch] slide-up"><?= $trans('home.ecosystem.text') ?></p>
+  <div class="block-content py-16 lg:py-32">
+    <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-7xl xl:text-9xl text-secondary-200 lg:mb-4 slide-up-words"><?= $trans('home.ecosystem.title') ?></h2>
 
-    <div class="flex-center flex-col my-10 lg:my-28 relative pt-12 lg:py-36">
+    <div class="flex-center flex-col my-10 relative pt-12 lg:py-40">
       <div class="flex-center relative w-full mb-10 lg:mb-0">
         <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-2/5 bg-brand-100/10"></div>
         <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-3/10 bg-brand-100/10"></div>
@@ -185,10 +184,12 @@ include __DIR__ . '/../components/fixedBackground.php';
       </div>
       <ul id="disr-verticals" class="[--radius:380px] max-lg:grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5" style="--total:<?= count($ecosystem); ?>">
         <?php foreach($ecosystem as $k => $item): ?>
-          <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none" style="--i:<?= $k+1; ?>
+          <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none hover:z-3" style="--i:<?= $k+1; ?>
             <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-60px' : '' ?>"
           >
-            <a href="<?= serviceRoute($item['key'], $currentLang) ?>">
+            <a href="<?= serviceRoute($item['key'], $currentLang) ?>"
+              class="block <?= $k === 3 ? 'translate-x-2' : '' ?> <?= $k === 4 ? '-translate-x-2' : '' ?>"
+            >
               <div class="bg-white rounded-2xl px-5 py-4 drop-shadow-lg drop-shadow-grey-100/10 origin-center hover:ring-3 ring-brand-100 transition-shadow">
                 <svg width="379" height="99" class="h-10 lg:h-13 w-auto">
                   <use href="#disruptive-<?= $item['key'] ?>-logo" />
@@ -211,7 +212,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       </ul>
     </div>
 
-    <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl text-secondary-200 mx-auto max-w-[24ch]"><?= $trans('home.ecosystem.big') ?></p>
+    <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl text-secondary-200"><?= $trans('home.ecosystem.big') ?></p>
   </div>
 </section>
 
@@ -279,12 +280,12 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- Cases -->
 <section data-nav-index="11" class="nav-section cases-section bg-secondary-200 text-brand-100">
-  <div class="block-content py-16">
-    <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-white text-center slide-up-words"><?= $trans('home.cases.title') ?></h2>
+  <div class="block-content py-16 lg:py-24">
+    <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-11xl xl:text-13xl text-white text-center slide-up-words"><?= $trans('home.cases.title') ?></h2>
   </div>
   <?php foreach($content['cases'] as $item): ?>
     <article class="case lg:hover:bg-brand-100 group transition-colors py-12 lg:py-16 min-h-[30dvh] flex flex-col lg:flex-row items-center relative duration-300 z-1 isolate">
-      <h3 class="lg:absolute lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:pt-4 xl:pt-7 font-title uppercase text-center text-4xl lg:text-[9.5vw] leading-none w-full lg:group-hover:opacity-0 lg:group-hover:pointer-events-none transition-opacity -z-1"><?= $item['name'] ?></h3>
+      <h3 class="lg:absolute lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:pt-4 xl:pt-7 font-title uppercase text-center text-4xl lg:text-[6vw] leading-none w-full lg:group-hover:opacity-0 lg:group-hover:pointer-events-none transition-opacity -z-1"><?= $item['name'] ?></h3>
       <div class="block-content max-w-screen-lg flex flex-col lg:flex-row w-full lg:pointer-events-none lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:translate-y-2 lg:group-hover:translate-y-0 transition-op-trans duration-300">
         <div class="w-full lg:w-1/2 relative my-6 lg:my-0">
           <div class="case-image w-1/2 lg:w-4/5 max-w-52 lg:max-w-none lg:absolute lg:top-1/2 left-1/2 lg:-translate-1/2 flex-center p-4 rounded-full aspect-square bg-white drop-shadow-xl drop-shadow-black/40 mx-auto lg:mx-0 z-5">
@@ -335,15 +336,6 @@ include __DIR__ . '/../components/fixedBackground.php';
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul id="clients4-swiper" class="clients-even-swiper swiper !overflow-visible linear-swiper mask-x-from-85% mask-x-to-95%">
-    <div class="swiper-wrapper">
-      <?php foreach($clients4 as $slide): ?>
-        <li class="swiper-slide">
-          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
-        </li>
-      <?php endforeach; ?>
-    </div>
-  </ul>
 </section>
 
 <!-- Partners -->
@@ -364,22 +356,29 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Certifications -->
-<section data-nav-index="14" class="nav-section bg-linear-to-b from-15% from-brand-100 to-15% to-secondary-100">
-  <div class="block-content max-w-screen-lg pb-16 lg:pb-40">
-    <div class="bg-white rounded-2xl text-center p-4 md:p-8 lg:p-12 overflow-x-hidden">
-      <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl mb-4"><?= $trans('home.certifications.title') ?></h2>
-      <p class="lg:text-xl mb-4 lg:mb-8"><?= $trans('home.certifications.text') ?></p>
-      <ul id="certifications-swiper" class="swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">
-        <div class="swiper-wrapper">
-          <?php foreach($constants['certifications'] as $item): ?>
-            <li class="swiper-slide">
-              <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
-            </li>
-          <?php endforeach; ?>
-        </div>
-      </ul>
-    </div>
+<section data-nav-index="14" class="nav-section min-h-dvh bg-white py-16 flex-center flex-col">
+  <div class="text-center px-7 pb-20">
+    <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-6xl lg:text-9xl xl:text-11xl"><?= $trans('home.certifications.title') ?></h2>
+    <p class="md:text-lg lg:text-2xl"><?= $trans('home.certifications.text') ?></p>
   </div>
+  <ul class="certifications1 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90%">
+    <div class="swiper-wrapper">
+      <?php foreach($certifications1 as $item): ?>
+        <li class="swiper-slide">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
+        </li>
+      <?php endforeach; ?>
+    </div>
+  </ul>
+  <ul class="certifications2 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90%">
+    <div class="swiper-wrapper">
+      <?php foreach($certifications2 as $item): ?>
+        <li class="swiper-slide">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
+        </li>
+      <?php endforeach; ?>
+    </div>
+  </ul>
 </section>
 
 <?php require __DIR__ . '/../layouts/footer.php'; ?>

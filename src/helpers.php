@@ -27,6 +27,24 @@ function split_array_in_half(array $array): array {
 }
 
 /**
+ * Split array in 3 parts
+ */
+function split_array_in_thirds(array $array): array {
+  $total = count($array);
+  if ($total === 0) {
+    return [[], [], []];
+  }
+
+  $part_size = ceil($total / 3);
+
+  $first_part = array_slice($array, 0, $part_size);
+  $second_part = array_slice($array, $part_size, $part_size);
+  $third_part = array_slice($array, $part_size * 2);
+
+  return [$first_part, $second_part, $third_part];
+}
+
+/**
  * Split array in four parts
  */
 function split_array_in_quarters(array $array): array {

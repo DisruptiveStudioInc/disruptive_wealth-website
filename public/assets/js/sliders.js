@@ -95,8 +95,42 @@ const clients2Swiper = new Swiper(".clients-even-swiper", {
   },
 });
 
-const certificationsSwiper = new Swiper("#certifications-swiper", {
-  ...clientsSliderOps,
+const certificatesSliderOps = {
+  speed: 9000,
+  spaceBetween: 20,
+  autoHeight: false,
+  slidesPerView: 3,
+  loop: true,
+  initialSlide: 6,
+  freemode: {
+    enabled: true,
+    momentum: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 6,
+    },
+    1088: {
+      slidesPerView: 8,
+    },
+  },
+};
+
+const certifications1Swiper = new Swiper(".certifications1", {
+  ...certificatesSliderOps,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    reverseDirection: false,
+  },
+});
+
+const certifications2Swiper = new Swiper(".certifications2", {
+  ...certificatesSliderOps,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
