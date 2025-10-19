@@ -1,8 +1,12 @@
 <nav class="hidden lg:flex flex-col items-center gap-4 fixed right-2 top-[calc(50%_+_--spacing(16))] -translate-y-1/2 z-10">
-  <button id="lat-nav-up" class="lat-button p-2 cursor-pointer rounded-full bg-secondary-200/80 text-white backdrop-blur-lg hover:bg-secondary-100 transition-colors">
-    <svg class="size-8"><use href="#arrow-up"/></svg>
+  <button id="lat-nav-up" class="lat-button group p-1 cursor-pointer rounded-full text-brand-50 hover:text-secondary-200 opacity-70 hover:opacity-100 active:opacity-100 transition-opacity duration-300">
+    <svg class="w-10 h-auto drop-shadow-sm drop-shadow-brand-100 transition-colors" width="18" height="32" fill="none">
+      <use href="#arrows-nav-up"/>
+    </svg>
   </button>
-  <button id="lat-nav-down" class="lat-button p-2 cursor-pointer rounded-full bg-secondary-200/80 text-white backdrop-blur-md hover:bg-secondary-100 transition-colors">
-    <svg class="size-8"><use href="#arrow-down"/></svg>
+  <button id="lat-nav-down" class="lat-button group p-1 cursor-pointer rounded-full text-brand-50 hover:text-secondary-200 opacity-70 hover:opacity-100 active:opacity-100 transition-opacity duration-300">
+    <svg class="w-10 h-auto drop-shadow-sm drop-shadow-brand-100 transition-colors" width="18" height="32" fill="none">
+      <use href="#arrows-nav-down"/>
+    </svg>
   </button>
 </nav>
