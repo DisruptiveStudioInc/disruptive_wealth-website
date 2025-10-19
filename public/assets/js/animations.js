@@ -5,68 +5,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
 const playNone = "play none none none";
 const playReverse = "play none none reverse";
 
-// Lateral sections
-const sections = gsap.utils.toArray(".lateral-sections .l-section");
-
-const scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none", // <-- IMPORTANT!
-  scrollTrigger: {
-    trigger: ".lateral-sections",
-    pin: true,
-    scrub: 0.1,
-    end: "+=3000",
-  },
-});
-
-const builderContent = document.querySelector(".builder-content");
-gsap.from(builderContent.children, {
-  y: 40,
-  opacity: 0,
-  stagger: 0.4,
-  scrollTrigger: {
-    trigger: builderContent,
-    start: "top 85%",
-    end: "top 40%",
-    scrub: 0.1,
-    toggleActions: playReverse,
-  },
-});
-
-const aboutText = document.querySelector(".about-content");
-gsap.from(aboutText.children, {
-  x: 40,
-  opacity: 0,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: aboutText,
-    start: "left 40%",
-    end: "left 20%",
-    scrub: true,
-    toggleActions: playReverse,
-    containerAnimation: scrollTween,
-  },
-});
-
-const aboutImage = document.querySelector(".about-image");
-gsap.fromTo(
-  aboutImage,
-  {
-    yPercent: 100,
-  },
-  {
-    yPercent: -20,
-    scrollTrigger: {
-      trigger: ".section-about",
-      start: "left 50%",
-      end: "left left",
-      scrub: true,
-      toggleActions: playReverse,
-      containerAnimation: scrollTween,
-    },
-  }
-);
-
 // Slide in animations
 const slideUp = gsap.utils.toArray(".slide-up");
 gsap.utils.toArray(".slide-up").forEach((element) => {
