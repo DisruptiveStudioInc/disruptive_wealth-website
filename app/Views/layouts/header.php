@@ -56,7 +56,7 @@
       <!-- Desktop Navigation -->
       <?php include(__DIR__.'/../components/navDesktop.php') ?>
 
-      <a href="<?= route('contact', $currentLang) ?>" class="button self-center rounded-lg font-bold hidden lg:flex">
+      <a href="<?= route('contact', $currentLang) ?>" class="button self-center shrink-0 rounded-lg font-bold hidden lg:flex">
         <?= $trans('nav.contact') ?>
       </a>
     </div>

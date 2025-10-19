@@ -4,12 +4,16 @@ return [
   // Navigation
   'nav' => [
     'home' => 'Home',
+    'about' => 'About',
     'essence' => 'Essence',
+    'team' => 'Team',
     'solutions' => 'Solutions',
     'services' => 'Services',
     'ecosystem' => 'Ecosystem',
-    'disruptive_ip' => 'Disruptive IP',
-    'contact' => 'Contact',
+    'disruptive_ip' => 'Our IP',
+    'case_studies' => 'Case Studies',
+    'certifications' => 'Certifications',
+    'contact' => 'Contact Us',
   ],
 
   // Footer

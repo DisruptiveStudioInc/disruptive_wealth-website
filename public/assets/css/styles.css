@@ -753,6 +753,9 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-end {
+    justify-content: flex-end;
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -2547,6 +2550,12 @@
     @media (width >= 80rem) {
       font-size: var(--text-13xl);
       line-height: var(--tw-leading, var(--text-13xl--line-height));
+    }
+  }
+  .xl\:text-base {
+    @media (width >= 80rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .xl\:text-sm {

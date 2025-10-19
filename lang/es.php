@@ -4,11 +4,15 @@ return [
   // Navigation
   'nav' => [
     'home' => 'Inicio',
+    'about' => 'Nosotros',
     'essence' => 'Esencia',
+    'team' => 'Equipo',
     'solutions' => 'Soluciones',
     'services' => 'Servicios',
     'ecosystem' => 'Ecosistema',
-    'disruptive_ip' => 'Disruptive IP',
+    'disruptive_ip' => 'Nuestro IP',
+    'case_studies' => 'Casos de estudio',
+    'certifications' => 'Certificaciones',
     'contact' => 'Contacto',
   ],
 

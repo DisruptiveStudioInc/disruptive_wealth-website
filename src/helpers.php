@@ -189,8 +189,8 @@ function getNavigationMenu(string $lang, callable $trans): array {
   $subIps = \App\Models\Service::getByCategory('ips', $lang);
   return [
     [
-      'label' => $trans('nav.home'),
-      'url' => route('home', $lang),
+      'label' => $trans('nav.about'),
+      'url' => route('home', $lang).'#about',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
@@ -201,22 +201,43 @@ function getNavigationMenu(string $lang, callable $trans): array {
       'isMegamenu' => false
     ],
     [
-      'label' => $trans('nav.solutions'),
-      'hasSubmenu' => true,
-      'isMegamenu' => true,
-      'submenu' => $subSolutions,
+      'label' => $trans('nav.team'),
+      'url' => route('home', $lang).'#team',
+      'hasSubmenu' => false,
+      'isMegamenu' => false
     ],
     [
       'label' => $trans('nav.ecosystem'),
-      'hasSubmenu' => true,
+      'url' => route('home', $lang).'#ecosystem',
+      'hasSubmenu' => false,
       'isMegamenu' => false,
-      'submenu' => $subEcosystem,
+      // 'submenu' => $subEcosystem,
+    ],
+    [
+      'label' => $trans('nav.solutions'),
+      'url' => route('home', $lang).'#solutions',
+      'hasSubmenu' => false,
+      'isMegamenu' => false,
+      // 'submenu' => $subSolutions,
     ],
     [
       'label' => $trans('nav.disruptive_ip'),
-      'hasSubmenu' => true,
+      'url' => route('home', $lang).'#solutions',
+      'hasSubmenu' => false,
       'isMegamenu' => false,
-      'submenu' => $subIps,
-    ]
+      // 'submenu' => $subIps,
+    ],
+    [
+      'label' => $trans('nav.case_studies'),
+      'url' => route('home', $lang).'#case_studies',
+      'hasSubmenu' => false,
+      'isMegamenu' => false
+    ],
+    [
+      'label' => $trans('nav.certifications'),
+      'url' => route('home', $lang).'#certifications',
+      'hasSubmenu' => false,
+      'isMegamenu' => false
+    ],
   ];
 }
