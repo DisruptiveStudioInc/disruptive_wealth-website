@@ -250,6 +250,9 @@
   color: --alpha(var(--color-brand-100) / 95%);
 }
 .solutions-title .bg-text-white.word1 {
-  padding-top: 8.5%;
+  padding-top: 8%;
   padding-bottom: 1.2%;
+  @media (width >= theme(--breakpoint-lg)) {
+    padding-top: 12%;
+  }
 }

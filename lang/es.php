@@ -252,7 +252,10 @@ return [
         'corpsyte' => 'Da el primer paso con soluciones personalizadas que impulsan tu visión y crecimiento empresarial.'
       ]
     ],
-    'our_services' => 'Nuestras soluciones',
+    'our_services' => [
+      'first' => 'Nuestras',
+      'second' => 'soluciones'
+    ],
     'services_text' => 'No es solo software, es una mente digital que evoluciona contigo y tu visión.',
     'ip' => [
       'title' => 'Disruptive IP',

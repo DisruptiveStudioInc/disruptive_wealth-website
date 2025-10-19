@@ -252,7 +252,10 @@ return [
         'corpsyte' => 'Take the first step with tailored solutions that drive your vision and business growth.'
       ]
     ],
-    'our_services' => "<span class='lg:text-[10.5rem] lg:leading-[0.4]'>Our</span> solutions",
+    'our_services' => [
+      'first' => 'Our',
+      'second' => 'solutions'
+    ],
     'services_text' => "It's not just software, it's a digital mind that evolves with you and your vision.",
     'ip' => [
       'title' => 'Disruptive IP',
