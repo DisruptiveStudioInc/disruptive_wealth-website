@@ -80,7 +80,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
   <div class="lateral-sections w-[200%] flex overflow-x-hidden">
     <section class="l-section relative w-full bg-secondary-50">
-      <img src="/public/images/home/hero.webp" alt="" class="background">
+      <img src="/public/images/home/hero.webp" alt="" class="background" loading="lazy">
       <div class="background bg-black/40"></div>
       <div class="block-content min-h-dvh flex-center flex-col text-white">
         <div class="builder-content flex-center flex-col text-center">
@@ -103,7 +103,7 @@ include __DIR__ . '/../components/fixedBackground.php';
           <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
         </div>
         <div class="w-[60vw] lg:absolute left-1/2 top-1/2 translate-y-1/4 lg:-translate-y-1/2">
-          <img src="/public/images/home/about.webp" alt="" class="about-image rounded-4xl">
+          <img src="/public/images/home/about.webp" alt="" class="about-image rounded-4xl" loading="lazy">
         </div>
       </div>
     </section>
@@ -145,7 +145,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <ul class="flex-center flex-wrap gap-7">
       <?php foreach($content['team_members'] as $item): ?>
         <li class="relative group aspect-member flex items-end w-full xs:w-[calc(50%_-_--spacing(3.5))] md:w-[calc(30%_-_--spacing(3.5))] lg:w-[calc(19%_-_--spacing(3.5))] drop-shadow-xl drop-shadow-grey-100/50 rounded-2xl after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-black/60 after:from-20% after:to-black/0 after:to-60% after:mix-blend-multiply overflow-hidden">
-          <img src="/public/images/team/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="background">
+          <img src="/public/images/team/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="background" loading="lazy">
           <div class="relative p-4 xl:p-6 text-white z-1">
             <h3 class="font-title text-lg xl:text-xl"><?= $item['name'] ?></h3>
             <p class="text-base xs:text-xs lg:text-base"><?= $item['job'] ?></p>
@@ -250,7 +250,7 @@ include __DIR__ . '/../components/fixedBackground.php';
                 <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
               </div>
-              <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" class="absolute object-cover top-0 left-0 w-full h-56 lg:h-68 rounded-2xl bg-grey-100 opacity-0 translate-y-1/2 -mb-56 lg:-mb-68 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:translate-y-0 transition-op-trans duration-300">
+              <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" loading="lazy" class="absolute object-cover top-0 left-0 w-full h-56 lg:h-68 rounded-2xl bg-grey-100 opacity-0 translate-y-1/2 -mb-56 lg:-mb-68 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:translate-y-0 transition-op-trans duration-300">
             </article>
           <?php endforeach; ?>
         </div>
@@ -271,7 +271,7 @@ include __DIR__ . '/../components/fixedBackground.php';
         <?php foreach($ips as $slide): ?>
           <article class="swiper-slide">
             <div class="p-4 md:p-10 flex flex-col lg:flex-row-reverse items-center">
-              <img src="/public/images/home/about.webp" alt="" class="w-full lg:w-1/2 rounded-2xl">
+              <img src="/public/images/home/about.webp" alt="" loading="lazy" class="w-full lg:w-1/2 rounded-2xl">
               <div class="w-full lg:w-1/2 lg:pr-10 text-center lg:text-left mt-4 md:mt-10 lg:mt-0">
                 <h2 class="font-title leading-tight uppercase text-secondary-200 text-2xl md:text-4xl lg:text-6xl"><?= $slide['meta']['meta_title'] ?></h2>
                 <p class="lg:text-xl mb-4"><?= $slide['meta']['meta_description'] ?></p>
@@ -299,7 +299,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <div class="block-content max-w-screen-lg flex flex-col lg:flex-row w-full lg:pointer-events-none lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:translate-y-2 lg:group-hover:translate-y-0 transition-op-trans duration-300">
         <div class="w-full lg:w-1/2 relative my-6 lg:my-0">
           <div class="case-image w-1/2 lg:w-4/5 max-w-52 lg:max-w-none lg:absolute lg:top-1/2 left-1/2 lg:-translate-1/2 flex-center p-4 rounded-full aspect-square bg-white drop-shadow-xl drop-shadow-black/40 mx-auto lg:mx-0 z-5">
-            <img src="/public/images/study-cases/<?= $item['image'] ?>" alt="<?= $item['name'] ?>">
+            <img src="/public/images/study-cases/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" loading="lazy">
           </div>
         </div>
         <div class="w-full lg:w-1/2">
@@ -323,7 +323,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <div class="swiper-wrapper">
       <?php foreach($clients1 as $slide): ?>
         <li class="swiper-slide">
-          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
@@ -332,7 +332,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <div class="swiper-wrapper">
       <?php foreach($clients2 as $slide): ?>
         <li class="swiper-slide">
-          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
@@ -341,7 +341,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <div class="swiper-wrapper">
       <?php foreach($clients3 as $slide): ?>
         <li class="swiper-slide">
-          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
@@ -350,7 +350,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <div class="swiper-wrapper">
       <?php foreach($clients4 as $slide): ?>
         <li class="swiper-slide">
-          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
@@ -366,7 +366,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       <?php foreach ($constants['partners'] as $item): ?>
         <li class="bg-white p-2 rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300">
-          <img class="" src="/public/images/partners/<?= $item['logo'] ?>" alt="<?= $item['name'] ?>">
+          <img class="" src="/public/images/partners/<?= $item['logo'] ?>" alt="<?= $item['name'] ?>" loading="lazy">
         </li>
       <?php endforeach; ?>
     </ul>
@@ -384,7 +384,7 @@ include __DIR__ . '/../components/fixedBackground.php';
         <div class="swiper-wrapper">
           <?php foreach($constants['certifications'] as $item): ?>
             <li class="swiper-slide">
-              <img src="/public/images/certifications/<?= $item ?>" alt="certification">
+              <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
             </li>
           <?php endforeach; ?>
         </div>
