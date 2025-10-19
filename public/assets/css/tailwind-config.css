@@ -212,11 +212,11 @@
   }
   .bg-text-black {
     --bg-y: 60%;
-    background-image: url(../../images/background/dark-txt-fx.webp);
+    background-image: url(../../images/background/dark-text.webp);
     background-size: "1440px";
     background-repeat: none;
     background-position: 0% var(--bg-y);
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0);
     animation: var(--animate-textbg);
   }
 }

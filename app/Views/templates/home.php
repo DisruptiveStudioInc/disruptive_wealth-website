@@ -237,15 +237,14 @@ include __DIR__ . '/../components/fixedBackground.php';
       </nav>
     </div>
     <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[18%] lg:overflow-x-hidden h-full max-lg:min-h-110 max-w-lg lg:max-w-none flex items-end">
-      <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-end lg:items-center">
-        <div class="swiper-wrapper !h-full !overflow-visible">
-          <?php foreach($subcategories as $slide): ?>
-            <article class="swiper-slide group h-auto flex items-end pt-53.5 lg:pt-65.5">
-              <div class="relative flex flex-col rounded-2xl h-full p-10 bg-secondary-200 -translate-y-1/2 lg:-translate-y-3/5 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:rounded-t-none transition-transform">
-                <h2 class="font-title leading-tight uppercase text-xl mb-4"><?= $slide['name'] ?></h2>
+      <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-center">
+        <div class="swiper-wrapper !h-full !overflow-visible items-center">
+          <?php foreach($content['solutions'] as $slide): ?>
+            <article class="swiper-slide group h-auto flex">
+              <div class="relative flex flex-col rounded-2xl h-full p-10 bg-secondary-200 transition-transform">
+                <h2 class="font-title leading-tight uppercase text-xl lg:text-5xl mb-4"><?= $slide[$currentLang] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
               </div>
-              <img src="/public/images/services/subcategories/<?= $slide['key'] ?>.webp" alt="cover" loading="lazy" class="absolute object-cover top-0 left-0 w-full h-56 lg:h-68 rounded-2xl bg-grey-100 opacity-0 translate-y-1/2 -mb-56 lg:-mb-68 group-[&.swiper-slide-active]:opacity-100 group-[&.swiper-slide-active]:translate-y-0 transition-op-trans duration-300">
             </article>
           <?php endforeach; ?>
         </div>

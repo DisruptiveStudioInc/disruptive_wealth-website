@@ -394,17 +394,61 @@ return[
       'image' => 'evo.webp'
     ]
   ],
-  'partners' => [
+  'solutions' => [
     [
-      'image' => 'a',
-      'alt' => ''
-    ]
-  ],
-  'certifications' => [
+      'es' => 'Marketing de referidos',
+      'en' => 'Referral marketing',
+      'description' => Language::trans('servsub.referral_marketing')
+    ],
     [
-      'name' => '',
-      'image' => '',
-      'link' => ''
+      'es' => 'Desarrollo Blockchain',
+      'en' => 'Blockchain development',
+      'description' => Language::trans('servsub.blockchain')
+    ],
+    [
+      'es' => 'Servicios personalizados',
+      'en' => 'Custom services',
+      'description' => Language::trans('servsub.custom_software')
+    ],
+    [
+      'es' => 'Servicios creativos',
+      'en' => 'Creative services',
+      'description' => Language::trans('servsub.creative_services')
+    ],
+    [
+      'es' => 'Servicios de logística',
+      'en' => 'Logistic services',
+      'description' => Language::trans('servsub.logistic_services')
+    ],
+    [
+      'es' => 'Servicios financieros',
+      'en' => 'Finance services',
+      'description' => Language::trans('servsub.finance_services')
+    ],
+    [
+      'es' => 'Servicios legales',
+      'en' => 'Legal and compliance services',
+      'description' => Language::trans('servsub.finance_services')
+    ],
+    [
+      'es' => 'Servicios de procesamiento de pagos',
+      'en' => 'Payment processing services',
+      'description' => Language::trans('servsub.payment_processing')
+    ],
+    [
+      'es' => 'Servicios de RR.HH.',
+      'en' => 'HR Services',
+      'description' => Language::trans('servsub.hr')
+    ],
+    [
+      'es' => 'Servicios de manofactura',
+      'en' => 'Manufacturing Services',
+      'description' => Language::trans('servsub.manufacturing')
+    ],
+    [
+      'es' => 'Servicios de CS',
+      'en' => 'CS Services',
+      'description' => Language::trans('servsub.cs')
     ],
   ]
 ];
