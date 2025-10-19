@@ -1954,6 +1954,16 @@
       width: calc(30% - calc(var(--spacing) * 3.5));
     }
   }
+  .md\:w-\[calc\(50\%_-_--spacing\(2\)\)\] {
+    @media (width >= 48rem) {
+      width: calc(50% - calc(var(--spacing) * 2));
+    }
+  }
+  .md\:w-\[calc\(50\%_-_--spacing\(3\)\)\] {
+    @media (width >= 48rem) {
+      width: calc(50% - calc(var(--spacing) * 3));
+    }
+  }
   .md\:max-w-none {
     @media (width >= 48rem) {
       max-width: none;
@@ -1979,9 +1989,24 @@
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
+  .md\:rounded-2xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .md\:rounded-3xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-3xl);
+    }
+  }
   .md\:rounded-4xl {
     @media (width >= 48rem) {
       border-radius: var(--radius-4xl);
+    }
+  }
+  .md\:p-5 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 5);
     }
   }
   .md\:p-6 {
@@ -1989,9 +2014,20 @@
       padding: calc(var(--spacing) * 6);
     }
   }
+  .md\:p-7 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 7);
+    }
+  }
   .md\:p-10 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .md\:text-3xl {
@@ -2173,6 +2209,16 @@
       width: calc(1/2 * 100%);
     }
   }
+  .lg\:w-2\/5 {
+    @media (width >= 68rem) {
+      width: calc(2/5 * 100%);
+    }
+  }
+  .lg\:w-3\/5 {
+    @media (width >= 68rem) {
+      width: calc(3/5 * 100%);
+    }
+  }
   .lg\:w-4\/5 {
     @media (width >= 68rem) {
       width: calc(4/5 * 100%);
@@ -2186,6 +2232,26 @@
   .lg\:w-\[calc\(19\%_-_--spacing\(3\.5\)\)\] {
     @media (width >= 68rem) {
       width: calc(19% - calc(var(--spacing) * 3.5));
+    }
+  }
+  .lg\:w-\[calc\(24\%_-_--spacing\(4\)\)\] {
+    @media (width >= 68rem) {
+      width: calc(24% - calc(var(--spacing) * 4));
+    }
+  }
+  .lg\:w-\[calc\(25\%_-_--spacing\(4\)\)\] {
+    @media (width >= 68rem) {
+      width: calc(25% - calc(var(--spacing) * 4));
+    }
+  }
+  .lg\:w-\[calc\(25\%_-_--spacing\(6\)\)\] {
+    @media (width >= 68rem) {
+      width: calc(25% - calc(var(--spacing) * 6));
+    }
+  }
+  .lg\:w-\[calc\(30\%_-_--spacing\(4\)\)\] {
+    @media (width >= 68rem) {
+      width: calc(30% - calc(var(--spacing) * 4));
     }
   }
   .lg\:max-w-\[48ch\] {
@@ -2334,6 +2400,11 @@
       padding-block: calc(var(--spacing) * 16);
     }
   }
+  .lg\:py-20 {
+    @media (width >= 68rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
   .lg\:py-24 {
     @media (width >= 68rem) {
       padding-block: calc(var(--spacing) * 24);
@@ -2464,6 +2535,12 @@
     @media (width >= 68rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .lg\:text-lg {
+    @media (width >= 68rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .lg\:text-xl {

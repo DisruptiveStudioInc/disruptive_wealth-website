@@ -257,12 +257,28 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- IP -->
 <section data-nav-index="10" class="nav-section relative bg-brand-100 text-white">
   <span class="absolute top-0 left-0 size-0" id="our-ip"></span>
-  <div class="block-content pt-12 pb-16 lg:pb-40">
+  <div class="block-content min-h-dvh py-16 lg:py-20 flex flex-col justify-center">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words-white"><?= $trans('home.ip.title') ?></h2>
-    <p class="lg:text-2xl text-center my-6 slide-up"><?= $trans('home.ip.text') ?></p>
-    <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.big') ?></p>
+    <p class="lg:text-2xl text-center mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.text') ?></p>
+    <!-- <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.big') ?></p> -->
 
-    <div id="ips-swiper" data-swiper-autoplay="2000" class="swiper w-full bg-white text-grey-100 rounded-3xl md:rounded-4xl max-w-xl lg:max-w-none">
+    <div class="flex justify-center flex-wrap gap-6">
+      <?php foreach($ips as $slide): ?>
+        <article class="w-full md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(25%_-_--spacing(6))] p-4 md:p-5 flex-center flex-col bg-white text-grey-100 rounded-xl md:rounded-2xl">
+          <img src="/public/images/services/ips/<?= $slide['key'] ?>.svg" alt="" loading="lazy" class="w-full lg:w-2/5 mb-4">
+          <div class="w-full">
+            <h2 class="font-title leading-tight uppercase text-secondary-200 text-xl md:text-2xl lg:text-2xl mb-2"><?= $slide['meta']['meta_title'] ?></h2>
+            <p class="text-xs"><?= $slide['meta']['meta_description'] ?></p>
+          </div>
+          <?php if(false): ?>
+            <a href="<?= serviceRoute($slide['key'], $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 mt-4 mx-auto lg:mx-0 hover:bg-brand-200 transition-colors">
+              <?= $trans('common.view_more') ?>
+            </a>
+          <?php endif; ?>
+        </article>
+      <?php endforeach; ?>
+    </div>
+    <!-- <div id="ips-swiper" data-swiper-autoplay="2000" class="swiper w-full bg-white text-grey-100 rounded-3xl md:rounded-4xl max-w-xl lg:max-w-none">
       <div class="swiper-wrapper">
         <?php foreach($ips as $slide): ?>
           <article class="swiper-slide">
@@ -280,7 +296,7 @@ include __DIR__ . '/../components/fixedBackground.php';
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="ips-pagination !transform-none mx-auto mt-4 [--swiper-pagination-bullet-size:1rem] [--swiper-pagination-color:var(--color-glow)]"></div>
+    <div class="ips-pagination !transform-none mx-auto mt-4 [--swiper-pagination-bullet-size:1rem] [--swiper-pagination-color:var(--color-glow)]"></div> -->
   </div>
 </section>
 
