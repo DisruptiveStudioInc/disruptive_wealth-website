@@ -11,7 +11,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/assets/css/styles-force-2.css">
+  <link rel="stylesheet" href="/public/assets/css/styles-force2.css">
 
   <?php if (!empty($includeRecaptcha)): ?>
     <!-- reCAPTCHA v3 -->
