@@ -37,15 +37,15 @@
 <body class="bg-white text-grey-100 antialiased overflow-x-hidden">
 <header class="bg-white border-b border-surface-300 w-full fixed top-0 left-0 z-50">
   <nav class="w-full">
-    <div class="flex justify-between items-center lg:items-stretch gap-4 w-full px-7">
-      <div class="flex items-center lg:shrink-0 border-r border-surface-300 gap-2 lg:gap-4">
+    <div class="flex justify-between items-center lg:items-stretch gap-4 lg:es:gap-2 w-full px-7">
+      <div class="flex items-center lg:shrink-0 border-r border-surface-300 gap-2 lg:gap-4 lg:es:gap-2">
         <!-- Logo -->
         <a href="<?= route('home', $currentLang, $config['languages']['default']) ?>" class="text-2xl font-bold text-gray-800">
-          <svg width="379" height="99" class="h-8 lg:h-10 w-auto text-secondary-50"><use href="#disruptive-studio-logo"/></svg>
+          <svg width="100" height="100" class="h-8 lg:h-10 w-auto"><use href="#disruptive-favicon"/></svg>
         </a>
 
         <!-- Language switcher -->
-        <?php include(__DIR__.'/../components/langSwitcher.php') ?>
+        <?php include(__DIR__.'/../components/langSwitcherIcon.php') ?>
       </div>
 
       <!-- Mobile menu button -->
@@ -56,7 +56,7 @@
       <!-- Desktop Navigation -->
       <?php include(__DIR__.'/../components/navDesktop.php') ?>
 
-      <a href="<?= route('contact', $currentLang) ?>" class="button self-center shrink-0 rounded-lg font-bold hidden lg:flex">
+      <a href="<?= route('contact', $currentLang) ?>" class="button self-center shrink-0 rounded-lg font-bold hidden lg:flex lg:es:text-sm xl:es:text-base">
         <?= $trans('nav.contact') ?>
       </a>
     </div>

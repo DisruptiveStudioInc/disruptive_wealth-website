@@ -76,7 +76,6 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- Builder -->
 <section data-nav-index="2" class="nav-section relative w-full bg-secondary-50">
-  <span class="absolute top-0 left-0 size-0" id="essence"></span>
   <img src="/public/images/home/hero.webp" alt="" class="background" loading="lazy">
   <div class="background bg-black/40"></div>
   <div class="block-content min-h-dvh flex-center flex-col text-white">
@@ -95,6 +94,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
 <!-- About -->
 <section data-nav-index="3" class="nav-section section-about l-section w-full relative bg-white/20 backdrop-blur-sm overflow-hidden">
+  <span class="absolute top-0 left-0 size-0" id="about"></span>
   <div class="block-content about-content min-h-dvh flex-center flex-col text-center">
     <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-13xl leading-none pl-0.5 slide-up-words-black"><?= $trans('home.about.title') ?></h2>
     <p class="max-w-[46ch] mx-auto my-6 lg:text-xl slide-up"><?= $trans('home.about.text') ?></p>
@@ -123,14 +123,16 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Banner -->
-<section data-nav-index="5" class="nav-section bg-secondary-200 text-white">
+<section data-nav-index="5" class="nav-section relative bg-secondary-200 text-white">
+  <span class="absolute top-0 left-0 size-0" id="essence"></span>
   <div class="block-content min-h-dvh py-16 lg:py-40 flex items-center">
     <h2 class="banner-text font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words-white"><?= $trans('home.we_are') ?></h2>
   </div>
 </section>
 
 <!-- Team -->
-<section data-nav-index="6" class="nav-section bg-white/20 backdrop-blur-sm">
+<section data-nav-index="6" class="nav-section relative bg-white/20 backdrop-blur-sm">
+  <span class="absolute top-0 left-0 size-0" id="team"></span>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title leading-none uppercase text-4xl md:text-7xl lg:text-9xl xl:text-11xl text-center mb-4 lg:mb-12 slide-up-words-black"><?= $trans('home.team_big') ?></h2>
     <ul class="flex-center flex-wrap gap-7">
@@ -171,7 +173,8 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Ecosystem -->
-<section data-nav-index="8" class="nav-section bg-white/60 backdrop-blur-sm">
+<section data-nav-index="8" class="nav-section relative bg-white/60 backdrop-blur-sm">
+  <span class="absolute top-0 left-0 size-0" id="ecosystem"></span>
   <div class="block-content py-16 lg:py-32">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-6xl lg:text-7xl xl:text-9xl lg:mb-4 slide-up-words-black"><?= $trans('home.ecosystem.title') ?></h2>
 
@@ -189,7 +192,7 @@ include __DIR__ . '/../components/fixedBackground.php';
             <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-60px' : '' ?>"
           >
             <a href="<?= serviceRoute($item['key'], $currentLang) ?>"
-              class="block <?= $k === 3 ? 'translate-x-2' : '' ?> <?= $k === 4 ? '-translate-x-2' : '' ?>"
+              class="block <?= $k === 3 ? 'lg:translate-x-2' : '' ?> <?= $k === 4 ? 'lg:-translate-x-2' : '' ?>"
             >
               <div class="bg-white rounded-2xl px-5 py-4 drop-shadow-lg drop-shadow-grey-100/10 origin-center hover:ring-3 ring-brand-100 transition-shadow">
                 <svg width="379" height="99" class="h-10 lg:h-13 w-auto">
@@ -218,7 +221,8 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Services -->
-<section data-nav-index="9" class="nav-section bg-brand-100 text-white w-full overflow-x-hidden">
+<section data-nav-index="9" class="nav-section relative bg-brand-100 text-white w-full overflow-x-hidden">
+  <span class="absolute top-0 left-0 size-0" id="solutions"></span>
   <div class="block-content min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-4 lg:gap-0">
     <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="solutions-title font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl lg:en:mt-16 slide-up-words-white"><?= $trans('home.our_services') ?></h2>
@@ -251,7 +255,8 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- IP -->
-<section data-nav-index="10" class="nav-section bg-brand-100 text-white">
+<section data-nav-index="10" class="nav-section relative bg-brand-100 text-white">
+  <span class="absolute top-0 left-0 size-0" id="our-ip"></span>
   <div class="block-content pt-12 pb-16 lg:pb-40">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words-white"><?= $trans('home.ip.title') ?></h2>
     <p class="lg:text-2xl text-center my-6 slide-up"><?= $trans('home.ip.text') ?></p>
@@ -280,7 +285,8 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Cases -->
-<section data-nav-index="11" class="nav-section cases-section bg-secondary-200 text-brand-100">
+<section data-nav-index="11" class="nav-section relative cases-section bg-secondary-200 text-brand-100">
+  <span class="absolute top-0 left-0 size-0" id="case_studies"></span>
   <div class="block-content py-16 lg:py-24">
     <h2 class="font-title uppercase leading-tight text-2xl md:text-6xl lg:text-11xl xl:text-13xl text-white text-center slide-up-words-white"><?= $trans('home.cases.title') ?></h2>
   </div>
@@ -357,7 +363,8 @@ include __DIR__ . '/../components/fixedBackground.php';
 </section>
 
 <!-- Certifications -->
-<section data-nav-index="14" class="nav-section min-h-dvh bg-white py-16 flex-center flex-col">
+<section data-nav-index="14" class="nav-section relative min-h-dvh bg-white py-16 flex-center flex-col overflow-x-hidden">
+  <span class="absolute top-0 left-0 size-0" id="certifications"></span>
   <div class="text-center px-7 pb-20">
     <h2 class="font-title leading-tight uppercase text-2xl md:text-6xl lg:text-9xl xl:text-11xl slide-up-words-black"><?= $trans('home.certifications.title') ?></h2>
     <p class="md:text-lg lg:text-2xl slide-up"><?= $trans('home.certifications.text') ?></p>

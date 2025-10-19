@@ -14,7 +14,7 @@ class ContactController extends BaseController
   public function index(Request $request): Response
   {
     return $this->view('contact', [
-      'includeRecaptcha' => true
+      'includeRecaptcha' => false
     ]);
   }
 
