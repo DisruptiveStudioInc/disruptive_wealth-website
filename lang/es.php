@@ -34,7 +34,13 @@ return [
     'payment_processing' => 'Pagos automatizados y seguros para transacciones globales rápidas, confiables y transparentes.',
     'referral_marketing' => 'Sistemas inteligentes de referidos que impulsan crecimiento, retención y expansión empresarial.',
     'creative_services' => 'Diseño, estrategia y tecnología para crear experiencias digitales que conectan y convierten.',
-    'hr' => 'Soluciones digitales que automatizan reclutamiento, capacitación y desarrollo del talento humano.'
+    'hr' => 'Soluciones digitales que automatizan reclutamiento, capacitación y desarrollo del talento humano.',
+    'custom_services' => 'Soluciones tecnológicas personalizadas para optimizar procesos, integrar sistemas y escalar operaciones empresariales.',
+    'logistic_services' => 'Gestión logística integral con control de inventarios, distribución estratégica y cadena de suministro eficiente.',
+    'finance_services' => 'Estrategia financiera integral enfocada en administración de capital, rentabilidad y crecimiento empresarial.',
+    'legal_services' => 'Gestión legal y regulatoria que garantiza cumplimiento normativo, transparencia y seguridad empresarial integral.',
+    'manufacturing' => 'Producción inteligente y personalizada que optimiza procesos, calidad, escalabilidad y eficiencia industrial global.',
+    'cs' => 'Atención al cliente profesional con soporte multicanal, gestión eficiente y experiencia personalizada continua.'
   ],
 
   // IPs

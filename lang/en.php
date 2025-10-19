@@ -34,7 +34,13 @@ return [
     'payment_processing' => 'Automated and secure payments for fast, reliable, and transparent global transactions.',
     'referral_marketing' => 'Intelligent referral systems that drive business growth, retention, and expansion.',
     'creative_services' => 'Design, strategy, and technology to create digital experiences that connect and convert.',
-    'hr' => 'Digital solutions that automate recruitment, training, and human talent development.'
+    'hr' => 'Digital solutions that automate recruitment, training, and human talent development.',
+    'custom_services' => 'Customized technological solutions to optimize processes, integrate systems, and scale business operations.',
+    'logistic_services' => 'Comprehensive logistics management with inventory control, strategic distribution, and an efficient supply chain.',
+    'finance_services' => 'Comprehensive financial strategy focused on capital management, profitability, and business growth.',
+    'legal_services' => 'Legal and regulatory management that ensures compliance, transparency, and comprehensive business security.',
+    'manufacturing' => 'Smart and customized production that optimizes processes, quality, scalability, and global industrial efficiency.',
+    'cs' => 'Professional customer service with multichannel support, efficient management, and a continuous personalized experience.'
   ],
 
   // IPs

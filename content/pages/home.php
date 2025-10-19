@@ -408,7 +408,7 @@ return[
     [
       'es' => 'Servicios personalizados',
       'en' => 'Custom services',
-      'description' => Language::trans('servsub.custom_software')
+      'description' => Language::trans('servsub.custom_services')
     ],
     [
       'es' => 'Servicios creativos',
@@ -428,7 +428,7 @@ return[
     [
       'es' => 'Servicios legales',
       'en' => 'Legal and compliance services',
-      'description' => Language::trans('servsub.finance_services')
+      'description' => Language::trans('servsub.legal_services')
     ],
     [
       'es' => 'Servicios de procesamiento de pagos',
