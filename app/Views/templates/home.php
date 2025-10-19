@@ -9,14 +9,14 @@ include __DIR__ . '/../components/fixedBackground.php';
 ?>
 
 <!-- Hero Section -->
-<section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
+<section data-nav-index="0" class="nav-section relative text-secondary-200 w-full overflow-x-hidden">
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
         <?php foreach($heroSlides as $slide): ?>
           <article class="swiper-slide !w-max group">
             <div class="relative flex-center flex-col text-center w-max">
-              <h2 class="font-title leading-tight uppercase text-[9vw] opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
+              <h2 class="font-title leading-tight uppercase bg-clip-text bg-text-black text-[9vw] opacity-30 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['title'] ?></h2>
               <p class="absolute top-full left-1/2 -translate-x-1/2 w-full font-semibold md:text-xl lg:text-3xl opacity-0 group-[&.swiper-slide-active]:opacity-100 transition-opacity"><?= $slide['text'] ?></p>
             </div>
           </article>
@@ -29,7 +29,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section bg-surface-100">
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl max-w-[9ch] text-center text-secondary-200 mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words"><?= $trans('home.discover') ?></h2>
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl max-w-[9ch] text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
       <ul id="discover-tabs" class="lg:space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
         <?php foreach($content['discover'] as $k => $item): ?>
@@ -85,7 +85,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <div class="block-content min-h-dvh flex-center flex-col text-white">
         <div class="builder-content flex-center flex-col text-center">
           <p class="uppercase md:text-lg lg:text-5xl mb-2"><?= $trans('home.builder') ?></p>
-          <p class="font-title text-2xl md:text-3xl lg:text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
+          <p class="font-title bg-clip-text bg-text-white text-white/30 text-2xl md:text-3xl lg:text-7xl leading-tight uppercase mb-8"><?= $trans('home.builder_big') ?></p>
           <?php if(false): ?>
             <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors">
               <?= $trans('common.learn_more') ?>
@@ -98,7 +98,7 @@ include __DIR__ . '/../components/fixedBackground.php';
     <section class="section-about l-section w-full relative bg-white/60 backdrop-blur-sm overflow-hidden">
       <div class="block-content min-h-dvh flex max-lg:flex-col max-lg:justify-center lg:items-center">
         <div class="about-content sm:w-4/5 lg:w-2/5 py-16">
-          <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none text-secondary-200"><?= $trans('home.about.title') ?></h2>
+          <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-11xl leading-none bg-clip-text bg-text-black pt-2 pl-0.5"><?= $trans('home.about.title') ?></h2>
           <p class="my-6 lg:text-xl"><?= $trans('home.about.text') ?></p>
           <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight text-secondary-200"><?= $trans('home.about.big') ?></p>
         </div>
@@ -114,7 +114,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Tech -->
 <section data-nav-index="3" class="nav-section bg-brand-100 w-full overflow-x-hidden">
   <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col">
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words"><?= $trans('home.technology') ?></h2>
+    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white mb-4 lg:mb-12 slide-up-words-white"><?= $trans('home.technology') ?></h2>
     <div id="tech-swiper" class="swiper flex w-full max-w-screen-md !overflow-visible">
       <div class="swiper-wrapper !h-full">
         <?php foreach($techSlides as $slide): ?>
@@ -133,7 +133,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Banner -->
 <section data-nav-index="4" class="nav-section bg-secondary-200 text-white">
   <div class="block-content py-16 lg:py-40">
-    <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words"><?= $trans('home.we_are') ?></h2>
+    <h2 class="banner-text font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl slide-up-words-white"><?= $trans('home.we_are') ?></h2>
   </div>
 </section>
 

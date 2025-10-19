@@ -118,6 +118,7 @@
   --aspect-member: 9/11;
 
   --animate-cycle: fadeCycle 40s var(--cycle-delay, 0s) infinite;
+  --animate-textbg: moveTextBg 25s ease-in-out infinite;
   @keyframes fadeCycle {
     from {
       opacity: 0;
@@ -133,6 +134,14 @@
     }
     to {
       opacity: 0;
+    }
+  }
+  @keyframes moveTextBg {
+    from {
+      background-position: 0% var(--bg-y, 50%);
+    }
+    from {
+      background-position: 100% var(--bg-y, 50%);
     }
   }
 }
@@ -192,6 +201,24 @@
   .linear-swiper .swiper-wrapper {
     transition-timing-function: linear !important;
   }
+  .bg-text-white {
+    --bg-y: 50%;
+    background-image: url(../../images/background/light-grad.webp);
+    background-size: 200%;
+    background-repeat: none;
+    background-position: 0% var(--bg-y);
+    color: rgba(255, 255, 255, 0.6);
+    animation: var(--animate-textbg);
+  }
+  .bg-text-black {
+    --bg-y: 80%;
+    background-image: url(../../images/background/dark-grad2.webp);
+    background-size: 200%;
+    background-repeat: none;
+    background-position: 0% var(--bg-y);
+    color: rgba(0, 0, 0, 0.2);
+    animation: var(--animate-textbg);
+  }
 }
 
 @utility transition-grid-rows {
@@ -210,4 +237,8 @@
   transition-property: opacity, margin;
   transition-timing-function: var(--default-transition-timing-function);
   transition-duration: var(--default-transition-duration);
+}
+
+.banner-text .bg-text-white.word8 {
+  color: --alpha(var(--color-brand-100) / 80%);
 }

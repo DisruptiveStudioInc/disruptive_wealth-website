@@ -1,14 +1,16 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
 const heroSwiper = new Swiper("#hero-swiper", {
-  speed: 1000,
+  speed: 800,
   spaceBetween: 10,
   slidesPerView: "auto",
   centeredSlides: true,
   loopAdditionalSlides: true,
   loop: true,
   initialSlide: 4,
-  autoplay: true,
+  autoplay: {
+    delay: 800,
+  },
 });
 
 const techSwiper = new Swiper("#tech-swiper", {

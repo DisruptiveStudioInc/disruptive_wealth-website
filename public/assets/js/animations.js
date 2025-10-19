@@ -107,6 +107,50 @@ document.fonts.ready.then(() => {
       },
     });
   });
+  gsap.utils.toArray(".slide-up-words-black").forEach((element) => {
+    SplitText.create(element, {
+      type: "words",
+      autoSplit: true,
+      smartWrap: true,
+      wordsClass: "bg-clip-text bg-text-black pt-2",
+      onSplit: (self) => {
+        return gsap.from(self.words, {
+          yPercent: 20,
+          autoAlpha: 0,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+            toggleActions: playReverse,
+          },
+        });
+      },
+    });
+  });
+  gsap.utils.toArray(".slide-up-words-white").forEach((element) => {
+    SplitText.create(element, {
+      type: "words",
+      autoSplit: true,
+      smartWrap: true,
+      wordsClass: "bg-clip-text bg-text-white pt-2 word++",
+      onSplit: (self) => {
+        return gsap.from(self.words, {
+          yPercent: 20,
+          autoAlpha: 0,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+            toggleActions: playReverse,
+          },
+        });
+      },
+    });
+  });
 });
 
 gsap.utils.toArray(".stagger-parent").forEach((container) => {
