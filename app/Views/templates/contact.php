@@ -105,7 +105,7 @@ require __DIR__ . '/../layouts/header.php';
 // Contact form configuration
 window.contactConfig = {
   recaptchaSiteKey: '<?= $config['recaptcha']['site_key'] ?>',
-  submitUrl: '/<?= $currentLang === 'en' ? 'en/' : '' ?><?= $currentLang === 'en' ? 'contact' : 'contacto' ?>',
+  submitUrl: '/<?= $currentLang === 'es' ? 'es/' : '' ?><?= $currentLang === 'es' ? 'contacto' : 'contact' ?>',
   language: '<?= $currentLang ?>'
 };
 
