@@ -81,7 +81,7 @@ include __DIR__ . '/../components/fixedBackground.php';
   <div class="block-content min-h-dvh flex-center flex-col text-white">
     <div class="stagger-parent flex-center flex-col text-center">
       <p class="uppercase md:text-lg lg:text-5xl mb-2 slide-up-stagger"><?= $trans('home.builder') ?></p>
-      <p class="font-title bg-clip-text bg-text-white text-2xl md:text-3xl lg:text-[5vw] leading-tight uppercase slide-up-stagger"><?= $trans('home.builder_big') ?></p>
+      <h2 class="font-title bg-clip-text bg-text-white pt-2 text-2xl md:text-3xl lg:text-[8vw] leading-none uppercase slide-up-stagger"><?= $trans('home.builder_big') ?></h2>
       <p class="font-title bg-clip-text bg-text-white text-2xl md:text-3xl lg:text-5xl leading-tight uppercase slide-up-stagger"><?= $trans('home.builder_text') ?></p>
       <?php if(false): ?>
         <a href="<?= route('contact', $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 hover:bg-brand-200 transition-colors slide-up-stagger">
@@ -105,7 +105,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 <!-- Tech -->
 <section data-nav-index="4" class="nav-section tech-section relative bg-brand-100 h-dvh w-full overflow-hidden">
   <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col overflow-hidden">
-    <h2 class="tech-title font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center text-white slide-up-words-white"><?= $trans('home.technology') ?></h2>
+    <h2 class="tech-title font-title leading-none uppercase text-4xl md:text-10xl lg:text-13xl text-center slide-up-words-white"><?= $trans('home.technology') ?></h2>
     <div class="w-full mx-auto">
       <?php foreach($content['technologies'] as $k => $slide): ?>
         <div class="absolute top-1/2 left-1/2 -translate-1/2 max-w-9/20">

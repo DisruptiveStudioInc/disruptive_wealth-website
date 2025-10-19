@@ -181,6 +181,7 @@ export const flipTabContent = gsap.to("#discover-content", {
 });
 
 // Techs cards animation
+// Techs cards animation
 const techSection = document.querySelector(".tech-section");
 const techTitle = document.querySelector(".tech-title");
 const techCards = document.querySelectorAll(".tech-card");
@@ -197,29 +198,12 @@ if (techSection && techTitle && techCards.length > 0) {
     },
   });
 
-  const techTitleSplit = SplitText.create(techTitle, {
-    type: "words",
-    autoSplit: true,
-    smartWrap: true,
-    wordsClass: "bg-clip-text bg-text-white pt-2",
-  });
-
-  techTl.from(
-    techTitleSplit.words,
-    {
-      yPercent: 20,
-      autoAlpha: 0,
-      stagger: 0.3,
-      duration: 2,
-    },
-    0
-  );
-
   techCards.forEach((card, index) => {
     gsap.set(card, {
       y: "70vh",
+      opacity: 0,
     });
-    const cardStart = 2 + index * 0.8; // Start after title, staggered
+    const cardStart = index * 0.8;
 
     techTl.to(
       card,
@@ -227,19 +211,21 @@ if (techSection && techTitle && techCards.length > 0) {
         y: "-140vh",
         duration: 3,
         ease: "none",
+        onStart: () => {
+          gsap.to(card, { opacity: 1, duration: 0.3 });
+        },
+        onUpdate: function () {
+          // Fade out as it exits
+          const progress = this.progress();
+          if (progress > 0.7) {
+            const fadeProgress = (progress - 0.7) / 0.3;
+            gsap.set(card, { opacity: 1 - fadeProgress });
+          }
+        },
       },
       cardStart
     );
   });
-
-  techTl.to(
-    techTitle,
-    {
-      autoAlpha: 1,
-      duration: 0.5,
-    },
-    "+=0.1"
-  );
 }
 
 // Ecosystem verticals animation

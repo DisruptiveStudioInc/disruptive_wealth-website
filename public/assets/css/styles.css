@@ -2482,6 +2482,16 @@
       font-size: 6vw;
     }
   }
+  .lg\:text-\[7vw\] {
+    @media (width >= 68rem) {
+      font-size: 7vw;
+    }
+  }
+  .lg\:text-\[8vw\] {
+    @media (width >= 68rem) {
+      font-size: 8vw;
+    }
+  }
   .lg\:text-\[10\.5rem\] {
     @media (width >= 68rem) {
       font-size: 10.5rem;
