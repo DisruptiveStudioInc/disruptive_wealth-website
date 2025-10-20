@@ -87,6 +87,10 @@ if (lateralUp && lateralDown && navSections.length > 0) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const index = Array.from(navSections).indexOf(entry.target);
+        const isFirst = index === 0;
+        const isLast = index === navSections.length - 1;
+        lateralUp.classList.toggle("!opacity-0", isFirst);
+        lateralDown.classList.toggle("!opacity-0", isLast);
         if (index !== -1) {
           currentSectionIndex = index;
         }

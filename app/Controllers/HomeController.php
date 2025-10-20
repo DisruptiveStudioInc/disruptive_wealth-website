@@ -24,7 +24,8 @@ class HomeController extends BaseController
       'services' => $services,
       'ecosystem' => $ecosystem,
       'subcategories' => $subcatServices,
-      'ips' => $disrIps
+      'ips' => $disrIps,
+      'hasSnapScroll' => true
     ]);
   }
 }
