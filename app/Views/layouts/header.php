@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/public/assets/css/styles.css">
 
+  <?php if (!empty($hasTextTexture)): ?>
+    <link rel="preload" as="image" href="/public/images/background/light-grad.webp">
+  <?php endif; ?>
+
   <?php if (!empty($includeRecaptcha)): ?>
     <!-- reCAPTCHA v3 -->
     <script src="https://www.google.com/recaptcha/api.js?render=<?= $config['recaptcha']['site_key'] ?>"></script>

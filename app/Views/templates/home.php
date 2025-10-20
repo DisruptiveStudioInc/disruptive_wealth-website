@@ -10,7 +10,12 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Hero Section -->
 <section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
-  <?php generateBackground('black-g1',3); ?>
+  <div class="aboslute -z-1 w-full h-full top-0 left-0">
+    <img class="background" src="/public/images/background/black-g1-01.webp" alt="" loading="eager" fetchpriority="high">
+    <img class="background opacity-0 animate-cycle [--cycle-duration:30s] [--cycle-delay:10s]" src="/public/images/background/black-g1-02.webp" alt="" loading="eager">
+    <img class="background opacity-0 animate-cycle [--cycle-duration:30s] [--cycle-delay:20s]" src="/public/images/background/black-g1-03.webp" alt="" loading="lazy">
+  </div>
+  <?php #generateBackground('black-g1',3); ?>
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
@@ -29,7 +34,12 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section relative">
-  <?php generateBackground('white-g1',3); ?>
+  <div class="aboslute -z-1 w-full h-full top-0 left-0">
+    <img class="background" src="/public/images/background/white-g1-01.webp" alt="" loading="eager" fetchpriority="high">
+    <img class="background opacity-0 animate-cycle [--cycle-duration:30s] [--cycle-delay:10s]" src="/public/images/background/white-g1-02.webp" alt="" loading="lazy">
+    <img class="background opacity-0 animate-cycle [--cycle-duration:30s] [--cycle-delay:20s]" src="/public/images/background/white-g1-03.webp" alt="" loading="lazy">
+  </div>
+  <?php #generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-10xl xl:text-11xl text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
@@ -143,7 +153,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <ul class="flex-center flex-wrap gap-7">
       <?php foreach($content['team_members'] as $item): ?>
         <li class="relative group aspect-member flex items-end w-full xs:w-[calc(50%_-_--spacing(3.5))] md:w-[calc(30%_-_--spacing(3.5))] lg:w-[calc(19%_-_--spacing(3.5))] drop-shadow-md drop-shadow-grey-100/50 rounded-2xl after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-black/60 after:from-20% after:to-black/0 after:to-60% after:mix-blend-multiply overflow-hidden">
-          <img src="/public/images/team/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="background" loading="lazy">
+          <img src="/public/images/team/<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="background bg-surface-100" loading="lazy">
           <div class="relative p-4 xl:p-6 text-white z-1">
             <h3 class="font-title text-lg xl:text-xl"><?= $item['name'] ?></h3>
             <p class="text-base xs:text-xs lg:text-base"><?= $item['job'] ?></p>
@@ -252,7 +262,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
         <div class="swiper-wrapper !overflow-visible items-center">
           <?php foreach($content['solutions'] as $slide): ?>
             <article class="swiper-slide group h-fit !grid grid-rows-[repeat(2,auto)] grid-cols-1 gap-0">
-              <img class="rounded-2xl h-64 xl:h-80 w-full object-cover z-1 translate-y-32 xl:translate-y-40 opacity-0 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:opacity-100 transition-op-trans" src="/public/images/services/subcategories/<?= $slide['image'] ?>" alt="<?= $slide[$currentLang] ?>">
+              <img class="rounded-2xl h-64 xl:h-80 w-full object-cover z-1 translate-y-32 xl:translate-y-40 opacity-0 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:opacity-100 transition-op-trans" src="/public/images/services/subcategories/<?= $slide['image'] ?>" alt="<?= $slide[$currentLang] ?>" loading="lazy">
               <div class="relative flex flex-col rounded-2xl h-full p-6 xl:p-10 bg-secondary-200 group-[&.swiper-slide-active]:bg-brand-100 group-[&.swiper-slide-active]:rounded-t-none before:absolute before:-top-8 before:left-0 before:w-full before:h-12 before:bg-brand-100 before:-z-1 before:opacity-0 group-[&.swiper-slide-active]:before:opacity-100 before:transition-opacity -translate-y-32 xl:-translate-y-40 group-[&.swiper-slide-active]:translate-y-0 transition-trans-colors duration-300">
                 <h2 class="font-title leading-tight uppercase text-xl sm:text-3xl lg:text-5xl lg:es:text-3xl xl:es:text-5xl mb-4 text-pretty"><?= $slide[$currentLang] ?></h2>
                 <p class=""><?= $slide['description'] ?></p>
