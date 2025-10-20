@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $currentLang ?>" class="scroll-smooth <?= (!empty($hasSnapScroll)) ? 'snap-mandatory snap-y' : '' ?>">
+<html lang="<?= $currentLang ?>" class="scroll-smooth <?= (!empty($hasSnapScroll)) ? 'snap-proximity snap-y' : '' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/assets/css/styles-forced-4.css">
+  <link rel="stylesheet" href="/public/assets/css/styles-forced-4-1.css">
 
   <?php if (!empty($includeRecaptcha)): ?>
     <!-- reCAPTCHA v3 -->
