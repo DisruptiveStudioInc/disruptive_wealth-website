@@ -337,7 +337,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-black"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch] slide-up"><?= $trans('home.clients.text') ?></p>
   </div>
-  <ul id="clients1-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">
+  <ul id="clients1-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients1 as $slide): ?>
         <li class="swiper-slide">
@@ -346,7 +346,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul id="clients2-swiper" class="clients-even-swiper swiper !overflow-visible linear-swiper mask-x-from-85% mask-x-to-95%">
+  <ul id="clients2-swiper" class="clients-even-swiper swiper !overflow-visible linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients2 as $slide): ?>
         <li class="swiper-slide">
@@ -355,7 +355,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul id="clients3-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90%">
+  <ul id="clients3-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients3 as $slide): ?>
         <li class="swiper-slide">
@@ -392,20 +392,20 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <h2 class="font-title leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl slide-up-words-black"><?= $trans('home.certifications.title') ?></h2>
     <p class="md:text-lg lg:text-2xl slide-up"><?= $trans('home.certifications.text') ?></p>
   </div>
-  <ul class="certifications1 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90%">
+  <ul class="certifications1 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($certifications1 as $item): ?>
         <li class="swiper-slide">
-          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification">
         </li>
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul class="certifications2 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90%">
+  <ul class="certifications2 swiper !overflow-visible w-full linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($certifications2 as $item): ?>
         <li class="swiper-slide">
-          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification">
         </li>
       <?php endforeach; ?>
     </div>

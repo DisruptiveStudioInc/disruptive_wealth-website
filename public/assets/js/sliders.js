@@ -59,6 +59,8 @@ const clientsSliderOps = {
   slidesPerView: 2,
   loop: true,
   initialSlide: 6,
+  lazyPreloadPrevNext: 4,
+  loopAdditionalSlides: 6,
   freemode: {
     enabled: true,
     momentum: false,
@@ -102,6 +104,9 @@ const certificatesSliderOps = {
   slidesPerView: 3,
   loop: true,
   initialSlide: 6,
+  lazyPreloadPrevNext: 2,
+  loopAdditionalSlides: 4,
+  loopPreventsSliding: true,
   freemode: {
     enabled: true,
     momentum: false,
