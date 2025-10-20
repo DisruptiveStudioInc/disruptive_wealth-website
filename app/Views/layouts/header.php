@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $currentLang ?>" class="scroll-smooth <?= $hasSnapScroll ? 'snap-y snap-mandatory' : '' ?>">
+<html lang="<?= $currentLang ?>" class="scroll-smooth <?= $hasSnapScroll ? 'snap-y snap-proximity' : '' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
