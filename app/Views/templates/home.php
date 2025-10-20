@@ -198,7 +198,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
           <li class="disr-vertical lg:absolute lg:top-1/2 lg:left-1/2 max-lg:transform-none hover:z-3" style="--i:<?= $k+1; ?>
             <?= ($k === 0 || $k === 3 || $k === 4) ? ';--r-alt:-60px' : '' ?>"
           >
-            <a href="<?= serviceRoute($item['key'], $currentLang) ?>"
+            <span
               class="block <?= $k === 3 ? 'lg:translate-x-2' : '' ?> <?= $k === 4 ? 'lg:-translate-x-2' : '' ?>"
             >
               <div class="bg-white rounded-2xl px-5 py-4 drop-shadow-lg drop-shadow-grey-100/10 origin-center hover:ring-3 ring-brand-100 transition-shadow">
@@ -217,7 +217,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
                   <?php endif; ?>
                 </svg>
               </div>
-            </a>
+            </span>
           </li>
         <?php endforeach; ?>
       </ul>
