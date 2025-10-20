@@ -250,10 +250,11 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       </div>
       <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[18%] lg:overflow-x-hidden h-full max-w-lg sm:max-w-sm lg:max-w-none flex items-end">
         <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-center">
-          <div class="swiper-wrapper !h-full !overflow-visible items-center">
+          <div class="swiper-wrapper !overflow-visible items-center">
             <?php foreach($content['solutions'] as $slide): ?>
-              <article class="swiper-slide group h-auto flex">
-                <div class="relative flex flex-col rounded-2xl h-full p-6 xl:p-10 bg-secondary-200 group-[&.swiper-slide-active]:bg-brand-100 transition-colors duration-300">
+              <article class="swiper-slide group h-fit !grid grid-rows-[repeat(2,auto)] grid-cols-1 gap-0">
+                <img class="rounded-2xl h-64 xl:h-80 w-full object-cover z-1 translate-y-32 xl:translate-y-40 opacity-0 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:opacity-100 transition-op-trans" src="/public/images/services/subcategories/<?= $slide['image'] ?>" alt="<?= $slide[$currentLang] ?>">
+                <div class="relative flex flex-col rounded-2xl h-full p-6 xl:p-10 bg-secondary-200 group-[&.swiper-slide-active]:bg-brand-100 group-[&.swiper-slide-active]:rounded-t-none before:absolute before:-top-8 before:left-0 before:w-full before:h-12 before:bg-brand-100 before:-z-1 before:opacity-0 group-[&.swiper-slide-active]:before:opacity-100 before:transition-opacity -translate-y-32 xl:-translate-y-40 group-[&.swiper-slide-active]:translate-y-0 transition-trans-colors duration-300">
                   <h2 class="font-title leading-tight uppercase text-xl sm:text-3xl lg:text-5xl lg:es:text-3xl xl:es:text-5xl mb-4 text-pretty"><?= $slide[$currentLang] ?></h2>
                   <p class=""><?= $slide['description'] ?></p>
                 </div>

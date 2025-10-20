@@ -255,6 +255,13 @@
   transition-duration: var(--default-transition-duration);
 }
 
+@utility transition-trans-colors {
+  transition-property: transform, translate, scale, rotate, colors,
+    background-color;
+  transition-timing-function: var(--default-transition-timing-function);
+  transition-duration: var(--default-transition-duration);
+}
+
 .banner-text .bg-text-white.word8 {
   color: --alpha(var(--color-brand-100) / 95%);
 }

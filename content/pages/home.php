@@ -398,57 +398,68 @@ return[
     [
       'es' => 'Marketing de referidos',
       'en' => 'Referral marketing',
-      'description' => Language::trans('servsub.referral_marketing')
+      'description' => Language::trans('servsub.referral_marketing'),
+      'image' => 'referral_marketing.webp'
     ],
     [
       'es' => 'Desarrollo Blockchain',
       'en' => 'Blockchain development',
-      'description' => Language::trans('servsub.blockchain')
+      'description' => Language::trans('servsub.blockchain'),
+      'image' => 'blockchain_dev.webp'
     ],
     [
       'es' => 'Servicios personalizados',
       'en' => 'Custom services',
-      'description' => Language::trans('servsub.custom_services')
+      'description' => Language::trans('servsub.custom_services'),
+      'image' => 'custom_services.webp'
     ],
     [
       'es' => 'Servicios creativos',
       'en' => 'Creative services',
-      'description' => Language::trans('servsub.creative_services')
+      'description' => Language::trans('servsub.creative_services'),
+      'image' => 'creative_services.webp'
     ],
     [
       'es' => 'Servicios de logística',
       'en' => 'Logistic services',
-      'description' => Language::trans('servsub.logistic_services')
+      'description' => Language::trans('servsub.logistic_services'),
+      'image' => 'logistic.webp'
     ],
     [
       'es' => 'Servicios financieros',
       'en' => 'Finance services',
-      'description' => Language::trans('servsub.finance_services')
+      'description' => Language::trans('servsub.finance_services'),
+      'image' => 'finance.webp'
     ],
     [
       'es' => 'Servicios legales',
       'en' => 'Legal and compliance services',
-      'description' => Language::trans('servsub.legal_services')
+      'description' => Language::trans('servsub.legal_services'),
+      'image' => 'legal_compliance.webp'
     ],
     [
       'es' => 'Servicios de procesamiento de pagos',
       'en' => 'Payment processing services',
-      'description' => Language::trans('servsub.payment_processing')
+      'description' => Language::trans('servsub.payment_processing'),
+      'image' => 'payment_process.webp'
     ],
     [
       'es' => 'Servicios de RR.HH.',
       'en' => 'HR Services',
-      'description' => Language::trans('servsub.hr')
+      'description' => Language::trans('servsub.hr'),
+      'image' => 'hr.webp'
     ],
     [
       'es' => 'Servicios de manofactura',
       'en' => 'Manufacturing Services',
-      'description' => Language::trans('servsub.manufacturing')
+      'description' => Language::trans('servsub.manufacturing'),
+      'image' => 'payment-processing.webp'
     ],
     [
       'es' => 'Servicios de CS',
       'en' => 'CS Services',
-      'description' => Language::trans('servsub.cs')
+      'description' => Language::trans('servsub.cs'),
+      'image' => 'custom-software.webp'
     ],
   ]
 ];
