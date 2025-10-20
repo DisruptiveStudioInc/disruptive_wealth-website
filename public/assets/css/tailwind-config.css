@@ -166,10 +166,6 @@
     max-width: calc(var(--breakpoint-2xl) * 0.5);
     padding-inline: --spacing(7);
   }
-  .nav-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
   .button {
     display: flex;
     justify-content: center;
