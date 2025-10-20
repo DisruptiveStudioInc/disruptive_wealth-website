@@ -10,7 +10,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Hero Section -->
 <section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
-  <?php generateBackground('hero',4); ?>
+  <?php generateBackground('black-g1',3); ?>
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
     <div id="hero-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible">
       <div class="swiper-wrapper">
@@ -29,11 +29,11 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section relative">
-  <?php generateBackground('discover',3); ?>
+  <?php generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-10xl xl:text-11xl text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
-      <ul id="discover-tabs" class="lg:space-y-2 bg-white rounded-4xl p-4 shrink-0 slide-up-stagger">
+      <ul id="discover-tabs" class="lg:space-y-2 bg-white drop-shadow-md drop-shadow-grey-100/30 rounded-4xl p-4 shrink-0 slide-up-stagger">
         <?php foreach($content['discover'] as $k => $item): ?>
           <li data-index="<?= $k ?>" data-animation="<?= $item['animation'] ?>" class="discover-tab font-semibold rounded-full p-3 pr-4 flex items-center gap-2 leading-none cursor-pointer lg:text-xl xl:text-2xl hover:bg-secondary-100 hover:text-white [&.active]:bg-secondary-200 [&.active]:text-white transition-colors <?= $k === 0 ? 'active' : '' ?>">
             <span class="flex-center aspect-square rounded-full size-7 lg:size-9 pt-1 text-white bg-brand-100 shrink-0"><?= $k+1; ?></span>
@@ -46,7 +46,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
         <svg class="size-36 lg:h-auto lg:w-60 xl:w-80 my-4 lg:my-0 lg:mx-6 max-lg:rotate-90" width="473" height="264" viewBox="0 0 473 264" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path id="motion-up" d="M0.167969 11.7738H58.2951C73.2068 11.7738 85.2951 23.8621 85.2951 38.7738V105C85.2951 119.912 97.3834 132 112.295 132H472" stroke="transparent"/>
           <path id="motion-down" d="M0.167969 252.226H58.2951C73.2068 252.226 85.2951 240.138 85.2951 225.226V159C85.2951 144.088 97.3834 132 112.295 132H472" stroke="transparent"/>
-          <path d="M0.167969 11.2734V12.2734H58.2949C72.9304 12.2734 84.7947 24.138 84.7949 38.7734V105C84.7951 118.397 94.3757 129.554 107.059 132C94.3755 134.446 84.7949 145.603 84.7949 159V225.227C84.7949 239.862 72.9305 251.727 58.2949 251.727H0.167969V252.727H58.2949C73.4828 252.727 85.7949 240.415 85.7949 225.227V159C85.7949 144.364 97.6594 132.5 112.295 132.5H174.477V131.5H112.295C97.6595 131.5 85.7951 119.636 85.7949 105V38.7734C85.7947 23.5858 73.4826 11.2734 58.2949 11.2734H0.167969ZM382.479 131.5V132.5H472.215V131.5H382.479Z" fill="#979797"/>
+          <path d="M58.2949 9.27344C74.5872 9.27344 87.7947 22.4813 87.7949 38.7734V105L87.8027 105.633C88.1386 118.872 98.9757 129.5 112.295 129.5H176.477V134.5H112.295C98.764 134.5 87.7949 145.469 87.7949 159V225.227C87.7949 241.519 74.5874 254.727 58.2949 254.727H-1.83203V249.727H58.2949C71.8259 249.727 82.7949 238.757 82.7949 225.227V159C82.7949 146.938 90.0332 136.573 100.401 132C90.0334 127.427 82.7951 117.062 82.7949 105V38.7734C82.7947 25.2426 71.8258 14.2734 58.2949 14.2734H-1.83203V9.27344H58.2949ZM474.215 134.5H380.479V129.5H474.215V134.5Z" fill="#979797"/>
           <path id="ball-last" class="hidden" d="M387.399 143.432C393.712 143.432 398.831 138.314 398.831 132C398.831 125.686 393.712 120.568 387.399 120.568C381.085 120.568 375.967 125.686 375.967 132C375.967 138.314 381.085 143.432 387.399 143.432Z" fill="#6937FF"/>
           <path id="ball-up" class="opacity-0" d="M11.5999 23.2057C17.9135 23.2057 23.0318 18.0875 23.0318 11.7738C23.0318 5.46016 17.9135 0.341919 11.5999 0.341919C5.2862 0.341919 0.167969 5.46016 0.167969 11.7738C0.167969 18.0875 5.2862 23.2057 11.5999 23.2057Z" fill="#6937FF"/>
           <path id="ball-down" class="opacity-0" d="M11.5999 263.626C17.9135 263.626 23.0318 258.508 23.0318 252.194C23.0318 245.88 17.9135 240.762 11.5999 240.762C5.2862 240.762 0.167969 245.88 0.167969 252.194C0.167969 258.508 5.2862 263.626 11.5999 263.626Z" fill="#6937FF"/>
@@ -78,7 +78,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Builder -->
 <section data-nav-index="2" class="nav-section relative w-full">
-  <?php generateBackground('builder',3); ?>
+  <?php generateBackground('black-g2',3); ?>
   <div class="block-content min-h-dvh flex-center flex-col text-white">
     <div class="stagger-parent flex-center flex-col text-center">
       <p class="uppercase md:text-lg lg:text-5xl mb-6 lg:mb-2 slide-up-stagger"><?= $trans('home.builder') ?></p>
@@ -94,11 +94,11 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- About -->
-<section data-nav-index="3" class="nav-section relative section-about text-white w-full  overflow-hidden">
+<section data-nav-index="3" class="nav-section relative section-about text-secondary-200 w-full  overflow-hidden">
   <span class="absolute top-0 left-0 size-0" id="about"></span>
-  <?php generateBackground('about',3); ?>
+  <?php generateBackground('white-g2',3); ?>
   <div class="block-content about-content min-h-dvh flex-center flex-col text-center">
-    <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-13xl leading-none pl-0.5 slide-up-words-white"><?= $trans('home.about.title') ?></h2>
+    <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-13xl leading-none pl-0.5 slide-up-words-black"><?= $trans('home.about.title') ?></h2>
     <p class="max-w-[46ch] mx-auto my-6 lg:text-xl slide-up"><?= $trans('home.about.text') ?></p>
     <p class="font-title uppercase text-lg md:text-xl lg:text-3xl leading-tight max-w-[28ch] mx-auto slide-up"><?= $trans('home.about.big') ?></p>
   </div>
@@ -106,7 +106,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Tech -->
 <section data-nav-index="4" class="nav-section relative tech-section h-dvh w-full overflow-hidden">
-  <?php generateBackground('technology',3); ?>
+  <?php generateBackground('black-g1',3); ?>
   <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col overflow-hidden">
     <h2 class="tech-title font-title leading-none uppercase text-5xl md:text-10xl lg:text-13xl text-center slide-up-words-white"><?= $trans('home.technology') ?></h2>
     <div class="w-full mx-auto">
@@ -137,7 +137,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Team -->
 <section data-nav-index="6" class="nav-section relative">
   <span class="absolute top-0 left-0 size-0" id="team"></span>
-  <?php generateBackground('team',3); ?>
+  <?php generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title leading-none uppercase text-4xl sm:text-7xl lg:text-9xl xl:text-11xl text-center mb-4 lg:mb-12 slide-up-words-black"><?= $trans('home.team_big') ?></h2>
     <ul class="flex-center flex-wrap gap-7">
@@ -161,8 +161,8 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Stats -->
 <section data-nav-index="7" class="nav-section relative">
-  <?php generateBackground('stats',3); ?>
-  <div class="block-content py-16 lg:py-32 xl:py-40">
+  <?php generateBackground('black-g2',3); ?>
+  <div class="block-content min-h-dvh flex-center flex-col justify-center py-16 lg:py-32 xl:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl md:text-3xl lg:text-5xl xl:text-[2.85vw] mb-6 lg:mb-16 slide-up-words-white"><?= $trans('home.statistics.title') ?></h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-md md:max-w-none mx-auto">
       <?php foreach($content['stats'] as $item): ?>
@@ -181,7 +181,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Ecosystem -->
 <section data-nav-index="8" class="nav-section relative">
   <span class="absolute top-0 left-0 size-0" id="ecosystem"></span>
-  <?php generateBackground('ecosystem',3); ?>
+  <?php generateBackground('white-g2',3); ?>
   <div class="block-content py-16 lg:py-32">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-7xl xl:text-9xl lg:mb-4 slide-up-words-black"><?= $trans('home.ecosystem.title') ?></h2>
 
@@ -228,7 +228,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <div class="relative">
-  <?php generateBackground('solutions',3); ?>
+  <?php generateBackground('black-g1',3); ?>
   <!-- Services -->
   <section data-nav-index="9" class="nav-section relative text-white w-full overflow-x-hidden">
     <span class="absolute top-0 left-0 size-0" id="solutions"></span>
@@ -322,7 +322,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Clients -->
 <section data-nav-index="12" class="nav-section relative pb-16 lg:pb-40 overflow-x-hidden">
-  <?php generateBackground('clients',3); ?>
+  <?php generateBackground('white-g1',3); ?>
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-black"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch] slide-up"><?= $trans('home.clients.text') ?></p>
@@ -358,7 +358,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Partners -->
 <section data-nav-index="13" class="nav-section relative text-white">
-  <?php generateBackground('partners',3); ?>
+  <?php generateBackground('black-g1',3); ?>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-white"><?= $trans('home.partners.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl mx-auto max-w-[52ch] mb-12 slide-up"><?= $trans('home.partners.text') ?></p>
@@ -377,7 +377,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Certifications -->
 <section data-nav-index="14" class="nav-section relative min-h-dvh py-16 flex-center flex-col overflow-x-hidden">
   <span class="absolute top-0 left-0 size-0" id="certifications"></span>
-  <?php generateBackground('certifications',3); ?>
+  <?php generateBackground('white-g2',3); ?>
   <div class="text-center px-7 pb-20">
     <h2 class="font-title leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl slide-up-words-black"><?= $trans('home.certifications.title') ?></h2>
     <p class="md:text-lg lg:text-2xl slide-up"><?= $trans('home.certifications.text') ?></p>

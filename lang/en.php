@@ -94,9 +94,9 @@ return [
         'text' => 'A borderless multilevel: digitalized, global, and constantly expanding.'
       ]
     ],
-    'builder' => "We don't just build systems,",
-    'builder_big' => 'We create the future:',
-    'builder_text' => 'Strategy, innovation, and experiences that transform your business.',
+    'builder' => "We don't just build systems",
+    'builder_big' => 'We create the future',
+    'builder_text' => 'Strategy, innovation, and experiences that transform your business',
     'about' => [
       'title' => 'About',
       'text' => "At Disruptive, we don't follow trends—we create them. We design a technological ecosystem that integrates software, blockchain, payments, marketing, talent, and creativity so your project can evolve with strength, clarity, and a global vision.",

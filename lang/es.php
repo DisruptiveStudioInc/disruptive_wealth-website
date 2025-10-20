@@ -94,9 +94,9 @@ return [
         'text' => 'Un multinivel sin fronteras: digitalizado, global y en constante expansión.'
       ]
     ],
-    'builder' => 'No solo construimos sistemas,',
-    'builder_big' => 'Creamos el futuro:',
-    'builder_text' => 'Estrategia, innovación y experiencias que transforman tu negocio.',
+    'builder' => 'No solo construimos sistemas',
+    'builder_big' => 'Creamos el futuro',
+    'builder_text' => 'Estrategia, innovación y experiencias que transforman tu negocio',
     'about' => [
       'title' => 'About',
       'text' => 'En Disruptive no seguimos tendencias, las creamos. Diseñamos un ecosistema tecnológico que integra software, blockchain, pagos, marketing, talento y creatividad para que tu proyecto evolucione con fuerza, claridad y visión global.',

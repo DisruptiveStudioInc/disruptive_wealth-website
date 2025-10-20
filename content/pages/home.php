@@ -279,7 +279,7 @@ return[
       'image' => 'jose_duarte.webp'
     ],
     [
-      'name' => 'Paola',
+      'name' => 'Paula',
       'job' => Language::trans('home.team_jobs.logistics_operations_lead'),
       'description' => Language::trans('home.team_description.paola_duarte'),
       'image' => 'paola_duarte.webp'
