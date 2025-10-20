@@ -109,6 +109,10 @@
           <?php endforeach; ?>
 
         </ul>
+
+        <a href="<?= route('contact', $currentLang) ?>" class="button w-full rounded-lg font-bold flex text-xl">
+          <?= $trans('nav.contact') ?>
+        </a>
       </div>
     </div>
   </nav>
