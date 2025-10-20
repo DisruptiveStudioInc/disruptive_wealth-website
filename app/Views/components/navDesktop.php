@@ -5,11 +5,11 @@
     <?= $item['isMegamenu'] ? 'group/submenu' : '' ?>"
   >
     <?php if(isset($item['url'])): ?>
-      <a href="<?= $item['url'] ?>" class="flex items-center h-full px-3 lg:es:px-2.5 xl:es:px-3 text-sm xl:text-base text-grey-100 hover:text-brand-100 transition-colors">
+      <a href="<?= $item['url'] ?>" class="flex items-center h-full px-3 lg:px-2 xl:px-3 text-sm xl:text-base text-grey-100 hover:text-brand-100 transition-colors">
         <?= $item['label'] ?>
       </a>
     <?php else: ?>
-      <span class="flex items-center h-full px-3 lg:es:px-2.5 xl:es:px-3 text-sm xl:text-base group-hover/submenu:text-brand-100 transition-colors">
+      <span class="flex items-center h-full px-3 lg:es:px-2 xl:es:px-3 text-sm xl:text-base group-hover/submenu:text-brand-100 transition-colors">
         <?= $item['label'] ?>
       </span>
       <ul class="absolute top-full bg-white border border-surface-300 pointer-events-none opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:pointer-events-auto transition-opacity <?= $item['isMegamenu'] ? 'grid grid-cols-3 gap-4 w-full max-w-max left-1/2 -translate-x-1/2 p-5 rounded-2xl' : 'flex flex-col p-2 rounded-lg' ?>">

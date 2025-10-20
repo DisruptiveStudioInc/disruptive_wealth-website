@@ -1,5 +1,5 @@
 <div class="language-switcher relative group">
-  <button type="button" class="lang-trigger flex items-center px-3 lg:es:pl-1.5 py-4 lg:py-5 gap-1">
+  <button type="button" class="lang-trigger flex items-center pl-3 lg:es:pl-1.5 py-4 lg:py-5 gap-1">
     <svg class="size-7 text-secondary-50/80 group-hover:text-brand-100"><use href="#world"/></svg>
     <svg class="size-5 text-brand-100 lg:group-hover:rotate-180 [&.open]:rotate-180 transition-transform"><use href="#chevron-down"/></svg>
   </button>
