@@ -447,19 +447,19 @@ return[
       'es' => 'Servicios de RR.HH.',
       'en' => 'HR Services',
       'description' => Language::trans('servsub.hr'),
-      'image' => 'hr.webp'
+      'image' => 'hr_services.webp'
     ],
     [
       'es' => 'Servicios de manofactura',
       'en' => 'Manufacturing Services',
       'description' => Language::trans('servsub.manufacturing'),
-      'image' => 'payment-processing.webp'
+      'image' => 'manufacturing.webp'
     ],
     [
       'es' => 'Servicios de CS',
       'en' => 'CS Services',
       'description' => Language::trans('servsub.cs'),
-      'image' => 'custom-software.webp'
+      'image' => 'cs_services.webp'
     ],
   ]
 ];
