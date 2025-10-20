@@ -188,7 +188,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <div class="flex-center flex-col my-10 relative pt-12 lg:py-40">
       <div class="flex-center relative w-full mb-10 lg:mb-0">
         <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-full xs:w-3/5 sm:w-2/5 bg-brand-100/10"></div>
-        <div class="circle-expansion absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-3/4 xs:w-9/20 sm:w-3/10 bg-brand-100/10"></div>
+        <div class="circle-expansion middle absolute top-1/2 left-1/2 -translate-1/2 aspect-square rounded-full w-3/4 xs:w-9/20 sm:w-3/10 bg-brand-100/10"></div>
         <div id="ecosystem-circle" class="relative flex-center bg-brand-100 text-white aspect-square rounded-full p-4 w-1/5 min-w-41 z-2">
           <p class="font-light leading-tight text-center text-lg md:text:xl lg:text-3xl xl:text-4xl"><?= $trans('home.ecosystem.circle') ?></p>
         </div>

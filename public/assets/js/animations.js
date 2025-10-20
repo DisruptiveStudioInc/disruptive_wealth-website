@@ -252,7 +252,6 @@ if (disrVerticals.length && ecosystemCircle) {
         end: "top center",
         toggleActions: playReverse,
       },
-      onStart: () => console.log("started"),
     }
   );
 
@@ -261,10 +260,13 @@ if (disrVerticals.length && ecosystemCircle) {
   let magneticListeners = [];
 
   function initMagneticEffect() {
+    console.log("magnetic fx");
     const disrVerticals = document.querySelectorAll(".disr-vertical");
     const ecosystemCircle = document.getElementById("ecosystem-circle");
-    const innerCircle = document.querySelector(".circle-expansion.w-3\\/10");
+    const innerCircle = document.querySelector(".circle-expansion.middle");
     const verticalsList = document.getElementById("disr-verticals");
+
+    console.log({ disrVerticals, ecosystemCircle, innerCircle, verticalsList });
 
     if (
       !disrVerticals.length ||
