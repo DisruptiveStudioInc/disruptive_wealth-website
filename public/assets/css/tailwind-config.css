@@ -74,6 +74,15 @@
   --color-multi-blue: oklch(0.815 0.116 252.5); /*#A4CBFF*/
   --color-multi-pink: oklch(0.91 0.07 312.8); /*#F1DAFF*/
 
+  --color-red-100: oklch(93.6% 0.032 17.717);
+  --color-red-400: oklch(70.4% 0.191 22.216);
+  --color-red-500: oklch(63.7% 0.237 25.331);
+  --color-red-700: oklch(50.5% 0.213 27.518);
+
+  --color-green-100: oklch(96.2% 0.044 156.743);
+  --color-green-400: oklch(79.2% 0.209 151.711);
+  --color-green-700: oklch(52.7% 0.154 150.069);
+
   --font-sans: "Axiforma", ui-sans-serif, system-ui, sans-serif;
   --font-title: "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   --font-khand: "Khand", ui-sans-serif, system-ui, sans-serif;

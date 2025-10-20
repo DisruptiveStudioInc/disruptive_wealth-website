@@ -13,8 +13,12 @@ class ContactController extends BaseController
 {
   public function index(Request $request): Response
   {
+    // Load page content
+    $pageContent = $this->loadPageContent('contact');
+
     return $this->view('contact', [
-      'includeRecaptcha' => true
+      'includeRecaptcha' => true,
+      'content' => $pageContent,
     ]);
   }
 

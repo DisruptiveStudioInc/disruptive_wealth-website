@@ -138,3 +138,29 @@ const certifications2Swiper = new Swiper(".certifications2", {
     reverseDirection: true,
   },
 });
+
+const officesThubsSwiper = new Swiper("#offices-thumbs-swiper", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    530: {
+      slidesPerView: 3,
+    },
+  },
+});
+const officesSwiper = new Swiper("#offices-swiper", {
+  slidesPerView: 1,
+  speed: 800,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+  thumbs: {
+    swiper: officesThubsSwiper,
+  },
+});
