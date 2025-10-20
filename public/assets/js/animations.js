@@ -1,6 +1,13 @@
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
 
+// Smooth scroll
+// export const smoother = ScrollSmoother.create({
+//   smooth: 1.5,
+//   effects: true,
+//   smoothTouch: 0.1,
+// });
+
 // toggles animations
 const playNone = "play none none none";
 const playReverse = "play none none reverse";
@@ -12,8 +19,8 @@ gsap.utils.toArray(".slide-up").forEach((element) => {
     scrollTrigger: {
       trigger: element,
       start: "top 80%",
-      end: "top 50%",
-      scrub: true,
+      // end: "top 50%",
+      // scrub: true,
       toggleActions: playReverse,
     },
     opacity: 0,
@@ -37,8 +44,8 @@ document.fonts.ready.then(() => {
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "top 50%",
-            scrub: true,
+            // end: "top 50%",
+            // scrub: true,
             toggleActions: playReverse,
           },
         });
@@ -59,8 +66,8 @@ document.fonts.ready.then(() => {
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "top 50%",
-            scrub: true,
+            // end: "top 50%",
+            // scrub: true,
             toggleActions: playReverse,
           },
         });
@@ -81,8 +88,8 @@ document.fonts.ready.then(() => {
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "top 50%",
-            scrub: true,
+            // end: "top 50%",
+            // scrub: true,
             toggleActions: playReverse,
           },
         });
@@ -97,8 +104,8 @@ gsap.utils.toArray(".stagger-parent").forEach((container) => {
     scrollTrigger: {
       trigger: container,
       start: "top 80%",
-      end: "top 50%",
-      scrub: true,
+      // end: "top 50%",
+      // scrub: true,
       toggleActions: playReverse,
     },
     opacity: 0,

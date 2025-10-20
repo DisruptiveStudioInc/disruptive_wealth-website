@@ -229,6 +229,10 @@
     color: rgba(0, 0, 0, 0);
     animation: var(--animate-textbg);
   }
+  .nav-section {
+    scroll-snap-align: start;
+    /* scroll-snap-stop: always; */
+  }
 }
 
 @utility transition-grid-rows {
