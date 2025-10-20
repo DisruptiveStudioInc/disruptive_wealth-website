@@ -1414,6 +1414,13 @@
     }
     --tw-drop-shadow: var(--tw-drop-shadow-size);
   }
+  .drop-shadow-grey-100\/20 {
+    --tw-drop-shadow-color: color-mix(in srgb, oklch(0.409 0.034 258.7) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-drop-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-grey-100) 20%, transparent) var(--tw-drop-shadow-alpha), transparent);
+    }
+    --tw-drop-shadow: var(--tw-drop-shadow-size);
+  }
   .drop-shadow-grey-100\/30 {
     --tw-drop-shadow-color: color-mix(in srgb, oklch(0.409 0.034 258.7) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {

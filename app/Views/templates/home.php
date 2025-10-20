@@ -227,72 +227,71 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
   </div>
 </section>
 
-<div class="relative">
+<!-- Services -->
+<section data-nav-index="9" class="nav-section relative text-white w-full overflow-x-hidden">
+  <span class="absolute top-0 left-0 size-0" id="solutions"></span>
   <?php generateBackground('black-g1',3); ?>
-  <!-- Services -->
-  <section data-nav-index="9" class="nav-section relative text-white w-full overflow-x-hidden">
-    <span class="absolute top-0 left-0 size-0" id="solutions"></span>
-    <div class="block-content min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-4 lg:gap-0">
-      <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left max-lg:px-0">
-        <h2 class="solutions-title font-title uppercase leading-tight text-2xl sm:text-6xl lg:text-9xl lg:es:text-7xl xl:es:text-9xl lg:en:mt-16 slide-up-words-white">
-          <span class='sm:block sm:en:text-12xl lg:en:text-[10.5rem] sm:leading-[0.4]'><?= $trans('home.our_services.first') ?></span>
-          <?= $trans('home.our_services.second') ?>
-        </h2>
-        <p class="lg:text-2xl lg:en:max-w-[32ch] mb-6 slide-up"><?= $trans('home.services_text') ?></p>
-        <nav class="flex gap-2 justify-center slide-up lg:max-w-[48ch]">
-          <button class="subcategories-button-prev rounded-lg cursor-pointer text-white hover:bg-secondary-200 [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-op-colors">
-            <svg class="size-10 transition-colors"><use href="#arrow-left"/></svg>
-          </button>
-          <button class="subcategories-button-next rounded-lg cursor-pointer text-white hover:bg-secondary-200 [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-op-colors">
-            <svg class="size-10 transition-colors"><use href="#arrow-right"/></svg>
-          </button>
-        </nav>
-      </div>
-      <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[18%] lg:overflow-x-hidden h-full max-w-lg sm:max-w-sm lg:max-w-none flex items-end">
-        <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-center">
-          <div class="swiper-wrapper !overflow-visible items-center">
-            <?php foreach($content['solutions'] as $slide): ?>
-              <article class="swiper-slide group h-fit !grid grid-rows-[repeat(2,auto)] grid-cols-1 gap-0">
-                <img class="rounded-2xl h-64 xl:h-80 w-full object-cover z-1 translate-y-32 xl:translate-y-40 opacity-0 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:opacity-100 transition-op-trans" src="/public/images/services/subcategories/<?= $slide['image'] ?>" alt="<?= $slide[$currentLang] ?>">
-                <div class="relative flex flex-col rounded-2xl h-full p-6 xl:p-10 bg-secondary-200 group-[&.swiper-slide-active]:bg-brand-100 group-[&.swiper-slide-active]:rounded-t-none before:absolute before:-top-8 before:left-0 before:w-full before:h-12 before:bg-brand-100 before:-z-1 before:opacity-0 group-[&.swiper-slide-active]:before:opacity-100 before:transition-opacity -translate-y-32 xl:-translate-y-40 group-[&.swiper-slide-active]:translate-y-0 transition-trans-colors duration-300">
-                  <h2 class="font-title leading-tight uppercase text-xl sm:text-3xl lg:text-5xl lg:es:text-3xl xl:es:text-5xl mb-4 text-pretty"><?= $slide[$currentLang] ?></h2>
-                  <p class=""><?= $slide['description'] ?></p>
-                </div>
-              </article>
-            <?php endforeach; ?>
-          </div>
+  <div class="block-content min-h-dvh lg:max-w-none lg:px-0 py-16 lg:py-40 flex-center flex-col lg:flex-row lg:justify-end gap-4 lg:gap-0">
+    <div class="half max-lg:max-w-none lg:pr-12 w-full lg:w-1/2 text-center lg:text-left max-lg:px-0">
+      <h2 class="solutions-title font-title uppercase leading-tight text-2xl sm:text-6xl lg:text-9xl lg:es:text-7xl xl:es:text-9xl lg:en:mt-16 slide-up-words-white">
+        <span class='sm:block sm:en:text-12xl lg:en:text-[10.5rem] sm:leading-[0.4]'><?= $trans('home.our_services.first') ?></span>
+        <?= $trans('home.our_services.second') ?>
+      </h2>
+      <p class="lg:text-2xl lg:en:max-w-[32ch] mb-6 slide-up"><?= $trans('home.services_text') ?></p>
+      <nav class="flex gap-2 justify-center slide-up lg:max-w-[48ch]">
+        <button class="subcategories-button-prev rounded-lg cursor-pointer text-white hover:bg-secondary-200 [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-op-colors">
+          <svg class="size-10 transition-colors"><use href="#arrow-left"/></svg>
+        </button>
+        <button class="subcategories-button-next rounded-lg cursor-pointer text-white hover:bg-secondary-200 [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-30 p-2 transition-op-colors">
+          <svg class="size-10 transition-colors"><use href="#arrow-right"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="w-full lg:w-1/2 px-2 lg:pl-0 lg:pr-[18%] lg:overflow-x-hidden h-full max-w-lg sm:max-w-sm lg:max-w-none flex items-end">
+      <div id="subcategories-swiper" data-swiper-autoplay="2000" class="swiper flex w-full !overflow-visible items-center">
+        <div class="swiper-wrapper !overflow-visible items-center">
+          <?php foreach($content['solutions'] as $slide): ?>
+            <article class="swiper-slide group h-fit !grid grid-rows-[repeat(2,auto)] grid-cols-1 gap-0">
+              <img class="rounded-2xl h-64 xl:h-80 w-full object-cover z-1 translate-y-32 xl:translate-y-40 opacity-0 group-[&.swiper-slide-active]:translate-y-0 group-[&.swiper-slide-active]:opacity-100 transition-op-trans" src="/public/images/services/subcategories/<?= $slide['image'] ?>" alt="<?= $slide[$currentLang] ?>">
+              <div class="relative flex flex-col rounded-2xl h-full p-6 xl:p-10 bg-secondary-200 group-[&.swiper-slide-active]:bg-brand-100 group-[&.swiper-slide-active]:rounded-t-none before:absolute before:-top-8 before:left-0 before:w-full before:h-12 before:bg-brand-100 before:-z-1 before:opacity-0 group-[&.swiper-slide-active]:before:opacity-100 before:transition-opacity -translate-y-32 xl:-translate-y-40 group-[&.swiper-slide-active]:translate-y-0 transition-trans-colors duration-300">
+                <h2 class="font-title leading-tight uppercase text-xl sm:text-3xl lg:text-5xl lg:es:text-3xl xl:es:text-5xl mb-4 text-pretty"><?= $slide[$currentLang] ?></h2>
+                <p class=""><?= $slide['description'] ?></p>
+              </div>
+            </article>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- IP -->
-  <section data-nav-index="10" class="nav-section relative text-white">
-    <span class="absolute top-0 left-0 size-0" id="our-ip"></span>
-    <div class="block-content min-h-dvh py-16 lg:py-20 flex flex-col justify-center">
-      <h2 class="font-title uppercase leading-tight text-2xl sm:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words-white"><?= $trans('home.ip.title') ?></h2>
-      <p class="lg:text-2xl text-center mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.text') ?></p>
-      <!-- <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.big') ?></p> -->
+<!-- IP -->
+<section data-nav-index="10" class="nav-section relative">
+  <span class="absolute top-0 left-0 size-0" id="our-ip"></span>
+  <?php generateBackground('white-g1',3); ?>
+  <div class="block-content min-h-dvh py-16 lg:py-20 flex flex-col justify-center">
+    <h2 class="font-title uppercase leading-tight text-2xl sm:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words-black"><?= $trans('home.ip.title') ?></h2>
+    <p class="lg:text-2xl text-center mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.text') ?></p>
+    <!-- <p class="font-bold text-center text-xl sm:text-3xl lg:text-5xl mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.big') ?></p> -->
 
-      <div class="flex justify-center flex-wrap gap-6 max-w-md md:max-w-3xl lg:max-w-none mx-auto">
-        <?php foreach($ips as $slide): ?>
-          <article class="w-full md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(25%_-_--spacing(6))] p-4 md:p-5 flex-center flex-col bg-surface-100 text-grey-100 rounded-xl md:rounded-2xl">
-            <img src="/public/images/services/ips/<?= $slide['key'] ?>.svg" alt="" loading="lazy" class="w-1/2 lg:w-2/5 mb-4">
-            <div class="w-full">
-              <h2 class="font-title leading-tight uppercase text-secondary-200 text-xl md:text-2xl lg:text-lg xl:text-2xl mb-2"><?= $slide['meta']['meta_title'] ?></h2>
-              <p class="lg:text-xs"><?= $slide['meta']['meta_description'] ?></p>
-            </div>
-            <?php if(false): ?>
-              <a href="<?= serviceRoute($slide['key'], $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 mt-4 mx-auto lg:mx-0 hover:bg-brand-200 transition-colors">
-                <?= $trans('common.view_more') ?>
-              </a>
-            <?php endif; ?>
-          </article>
-        <?php endforeach; ?>
-      </div>
+    <div class="flex justify-center flex-wrap gap-6 max-w-md md:max-w-3xl lg:max-w-none mx-auto">
+      <?php foreach($ips as $slide): ?>
+        <article class="w-full md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(25%_-_--spacing(6))] p-4 md:p-5 flex-center flex-col bg-white text-grey-100 drop-shadow-md drop-shadow-grey-100/20 rounded-xl md:rounded-2xl">
+          <img src="/public/images/services/ips/<?= $slide['key'] ?>.svg" alt="" loading="lazy" class="w-1/2 lg:w-2/5 mb-4">
+          <div class="w-full">
+            <h2 class="font-title leading-tight uppercase text-secondary-200 text-xl md:text-2xl lg:text-lg xl:text-2xl mb-2"><?= $slide['meta']['meta_title'] ?></h2>
+            <p class="lg:text-xs"><?= $slide['meta']['meta_description'] ?></p>
+          </div>
+          <?php if(false): ?>
+            <a href="<?= serviceRoute($slide['key'], $currentLang) ?>" class="button w-fit bg-brand-100 text-white text-lg lg:text-xl rounded-full font-semibold px-7 py-3 mt-4 mx-auto lg:mx-0 hover:bg-brand-200 transition-colors">
+              <?= $trans('common.view_more') ?>
+            </a>
+          <?php endif; ?>
+        </article>
+      <?php endforeach; ?>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <!-- Cases -->
 <section data-nav-index="11" class="nav-section relative cases-section text-brand-100">
@@ -323,7 +322,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Clients -->
 <section data-nav-index="12" class="nav-section relative pb-16 lg:pb-40 overflow-x-hidden">
-  <?php generateBackground('white-g1',3); ?>
+  <?php generateBackground('white-g2',3); ?>
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-black"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch] slide-up"><?= $trans('home.clients.text') ?></p>
@@ -378,7 +377,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Certifications -->
 <section data-nav-index="14" class="nav-section relative min-h-dvh py-16 flex-center flex-col overflow-x-hidden">
   <span class="absolute top-0 left-0 size-0" id="certifications"></span>
-  <?php generateBackground('white-g2',3); ?>
+  <?php generateBackground('white-g1',3); ?>
   <div class="text-center px-7 pb-20">
     <h2 class="font-title leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl slide-up-words-black"><?= $trans('home.certifications.title') ?></h2>
     <p class="md:text-lg lg:text-2xl slide-up"><?= $trans('home.certifications.text') ?></p>
