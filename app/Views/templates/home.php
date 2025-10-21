@@ -115,7 +115,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Tech -->
-<section data-nav-index="4" class="nav-section relative tech-section snap-align-none ha-dvh w-full overflow-hidden">
+<section data-nav-index="4" class="nav-section relative tech-section snap-align-none h-dvh w-full overflow-hidden">
   <?php generateBackground('black',3); ?>
   <div class="block-content min-h-dvh py-12 lg:py-40 flex-center flex-col overflow-hidden">
     <h2 class="tech-title font-title leading-none uppercase text-5xl md:text-10xl lg:text-13xl text-center slide-up-words-white"><?= $trans('home.technology') ?></h2>
