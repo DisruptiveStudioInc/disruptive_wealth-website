@@ -253,7 +253,7 @@ function generateBackground(string $fileName, int $amount, bool $reverse = false
     $delay = $index * $timing;
     echo $index===0 ?
       "<img class='background' src='/public/images/background/{$fileName}-0{$item}.webp' alt='' loading='lazy'>":
-      "<img class='background opacity-0 animate-cycle' src='/public/images/background/{$fileName}-0{$item}.webp' alt='' loading='lazy'> style='animation-duration:{$duration}s;animation-delay:{$delay}s'";
+      "<img class='background opacity-0 animate-cycle' src='/public/images/background/{$fileName}-0{$item}.webp' alt='' loading='lazy' style='animation-duration:{$duration}s;animation-delay:{$delay}s'>";
   }
   echo "</div>";
 }
