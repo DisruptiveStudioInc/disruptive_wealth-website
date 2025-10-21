@@ -132,13 +132,13 @@
     from {
       opacity: 0;
     }
-    5% {
+    10% {
       opacity: 1;
     }
     35% {
       opacity: 1;
     }
-    40% {
+    50% {
       opacity: 0;
     }
     to {

@@ -191,7 +191,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Ecosystem -->
 <section data-nav-index="8" class="nav-section relative">
   <span class="absolute top-0 left-0 size-0" id="ecosystem"></span>
-  <?php generateBackground('white',3, true); ?>
+  <?php generateBackground('white-g2',3, true); ?>
   <div class="block-content py-16 lg:py-32">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-7xl xl:text-9xl lg:mb-4 slide-up-words-black"><?= $trans('home.ecosystem.title') ?></h2>
 
