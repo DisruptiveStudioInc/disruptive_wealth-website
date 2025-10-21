@@ -35,9 +35,9 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section relative">
   <div class="aboslute -z-1 w-full h-full top-0 left-0">
-    <img class="background" src="/public/images/background/white-01.webp" alt="" loading="eager" fetchpriority="high">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
+    <img class="background" src="/public/images/background/white2-01.webp" alt="" loading="eager" fetchpriority="high">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/white2-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/white2-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
   </div>
   <?php #generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
@@ -106,7 +106,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- About -->
 <section data-nav-index="3" class="nav-section relative section-about text-secondary-200 w-full  overflow-hidden">
   <span class="absolute top-0 left-0 size-0" id="about"></span>
-  <?php generateBackground('white',3, true); ?>
+  <?php generateBackground('white2',3, true); ?>
   <div class="block-content about-content min-h-dvh flex-center flex-col text-center">
     <h2 class="font-title uppercase text-3xl md:text-7xl lg:text-13xl leading-none pl-0.5 slide-up-words-black"><?= $trans('home.about.title') ?></h2>
     <p class="max-w-[46ch] mx-auto my-6 lg:text-xl slide-up"><?= $trans('home.about.text') ?></p>
@@ -147,7 +147,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Team -->
 <section data-nav-index="6" class="nav-section relative">
   <span class="absolute top-0 left-0 size-0" id="team"></span>
-  <?php generateBackground('white',3); ?>
+  <?php generateBackground('white2',3); ?>
   <div class="block-content py-16 lg:py-40">
     <h2 class="font-title leading-none uppercase text-4xl sm:text-7xl lg:text-9xl xl:text-11xl text-center mb-4 lg:mb-12 slide-up-words-black"><?= $trans('home.team_big') ?></h2>
     <ul class="flex-center flex-wrap gap-7">
@@ -278,7 +278,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- IP -->
 <section data-nav-index="10" class="nav-section relative">
   <span class="absolute top-0 left-0 size-0" id="our-ip"></span>
-  <?php generateBackground('white',3); ?>
+  <?php generateBackground('white2',3); ?>
   <div class="block-content min-h-dvh py-16 lg:py-20 flex flex-col justify-center">
     <h2 class="font-title uppercase leading-tight text-2xl sm:text-6xl lg:text-9xl xl:text-11xl text-center slide-up-words-black"><?= $trans('home.ip.title') ?></h2>
     <p class="lg:text-2xl text-center mb-6 lg:mb-12 slide-up"><?= $trans('home.ip.text') ?></p>
@@ -332,7 +332,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 
 <!-- Clients -->
 <section data-nav-index="12" class="nav-section relative pb-16 lg:pb-40 overflow-x-hidden">
-  <?php generateBackground('white',3, true); ?>
+  <?php generateBackground('white2',3, true); ?>
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-black"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch] slide-up"><?= $trans('home.clients.text') ?></p>
