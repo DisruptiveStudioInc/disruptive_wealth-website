@@ -12,8 +12,8 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
   <div class="aboslute -z-1 w-full h-full top-0 left-0">
     <img class="background" src="/public/images/background/black-01.webp" alt="" loading="eager" fetchpriority="high">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-02.webp" alt="" loading="eager" style="animation-duration:30s;animation-delay:10s">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-03.webp" alt="" loading="lazy" style="animation-duration:30s;animation-delay:20s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
   </div>
   <?php #generateBackground('black-g1',3); ?>
   <div class="block-content max-w-screen-lg min-h-dvh flex-center relative">
@@ -36,8 +36,8 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <section data-nav-index="1" class="nav-section relative">
   <div class="aboslute -z-1 w-full h-full top-0 left-0">
     <img class="background" src="/public/images/background/white-01.webp" alt="" loading="eager" fetchpriority="high">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-02.webp" alt="" loading="eager" style="animation-duration:30s;animation-delay:10s">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-03.webp" alt="" loading="lazy" style="animation-duration:30s;animation-delay:20s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/white-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
   </div>
   <?php #generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
