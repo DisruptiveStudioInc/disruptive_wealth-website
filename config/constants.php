@@ -82,7 +82,7 @@ return [
     [ 'name' => 'EXMA', 'logo' => 'clientes-73.png' ],
     [ 'name' => 'Doctors Net', 'logo' => 'clientes-74.png' ],
     [ 'name' => 'client75', 'logo' => 'clientes-75.png' ],
-    [ 'name' => 'client76', 'logo' => 'clientes-76.png' ],
+    // [ 'name' => 'client76', 'logo' => 'clientes-76.png' ],
     [ 'name' => 'client77', 'logo' => 'clientes-77.png' ],
     [ 'name' => 'client78', 'logo' => 'clientes-78.png' ],
     [ 'name' => 'client79', 'logo' => 'clientes-79.png' ],
