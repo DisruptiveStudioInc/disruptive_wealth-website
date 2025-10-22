@@ -186,7 +186,38 @@ return [
     [ 'name' => 'client177', 'logo' => 'clientes-177.png' ],
     [ 'name' => 'client178', 'logo' => 'clientes-178.png' ],
     [ 'name' => 'client179', 'logo' => 'clientes-179.png' ],
-    [ 'name' => 'client180', 'logo' => 'clientes-180.png' ]
+    [ 'name' => 'client180', 'logo' => 'clientes-180.png' ],
+    [ 'name' => 'client181', 'logo' => 'clientes-181.png' ],
+    [ 'name' => 'client182', 'logo' => 'clientes-182.png' ],
+    [ 'name' => 'client183', 'logo' => 'clientes-183.png' ],
+    [ 'name' => 'client184', 'logo' => 'clientes-184.png' ],
+    [ 'name' => 'client185', 'logo' => 'clientes-185.png' ],
+    [ 'name' => 'client186', 'logo' => 'clientes-186.png' ],
+    [ 'name' => 'client187', 'logo' => 'clientes-187.png' ],
+    [ 'name' => 'client188', 'logo' => 'clientes-188.png' ],
+    [ 'name' => 'client189', 'logo' => 'clientes-189.png' ],
+    [ 'name' => 'client190', 'logo' => 'clientes-190.png' ],
+    [ 'name' => 'client191', 'logo' => 'clientes-191.png' ],
+    [ 'name' => 'client192', 'logo' => 'clientes-192.png' ],
+    [ 'name' => 'client193', 'logo' => 'clientes-193.png' ],
+    [ 'name' => 'client194', 'logo' => 'clientes-194.png' ],
+    [ 'name' => 'client195', 'logo' => 'clientes-195.png' ],
+    [ 'name' => 'client196', 'logo' => 'clientes-196.png' ],
+    [ 'name' => 'client197', 'logo' => 'clientes-197.png' ],
+    [ 'name' => 'client198', 'logo' => 'clientes-198.png' ],
+    [ 'name' => 'client199', 'logo' => 'clientes-199.png' ],
+    [ 'name' => 'client200', 'logo' => 'clientes-200.png' ],
+    [ 'name' => 'client201', 'logo' => 'clientes-201.png' ],
+    [ 'name' => 'client202', 'logo' => 'clientes-202.png' ],
+    [ 'name' => 'client203', 'logo' => 'clientes-203.png' ],
+    [ 'name' => 'client204', 'logo' => 'clientes-204.png' ],
+    [ 'name' => 'client205', 'logo' => 'clientes-205.png' ],
+    [ 'name' => 'client206', 'logo' => 'clientes-206.png' ],
+    [ 'name' => 'client207', 'logo' => 'clientes-207.png' ],
+    [ 'name' => 'client208', 'logo' => 'clientes-208.png' ],
+    [ 'name' => 'client209', 'logo' => 'clientes-209.png' ],
+    [ 'name' => 'client210', 'logo' => 'clientes-210.png' ],
+    [ 'name' => 'client211', 'logo' => 'clientes-211.png' ]
   ],
 
   'certifications' => [
@@ -258,9 +289,9 @@ return [
   ],
 
   'contact_info' => [
-    'email' => 'info@example.com',
-    'phone' => '+1 234 567 890',
-    'address' => '123 Main Street, City, Country',
+    'email' => 'sales@disruptivestudio.com',
+    'phone' => '+1 408 858 4504',
+    'wame' => '+14088584504',
   ],
 
   // Add more constants as needed

@@ -322,5 +322,9 @@ return [
     'view_more' => 'Ver más',
     'learn_more' => 'Conoce más',
     'back' => 'Volver',
+    'next' => 'Siguiente',
+    'previous' => 'Anterior',
   ],
+
+  // Services Content
 ];

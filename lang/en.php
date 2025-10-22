@@ -322,5 +322,7 @@ return [
     'view_more' => 'View more',
     'learn_more' => 'Learn more',
     'back' => 'Back',
+    'next' => 'Next',
+    'previous' => 'Previous',
   ],
 ];
