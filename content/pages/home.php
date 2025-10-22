@@ -3,6 +3,7 @@
 use App\Models\Language;
 
 return[
+  'seoDescription' => Language::trans('home.description'),
   'hero' => [
     [
       'title' => Language::trans('home.hero.slide1.title'),

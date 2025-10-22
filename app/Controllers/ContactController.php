@@ -19,6 +19,7 @@ class ContactController extends BaseController
     return $this->view('contact', [
       'includeRecaptcha' => true,
       'content' => $pageContent,
+      'metaDescription' => $pageContent['seoDescription'] ?? null
     ]);
   }
 

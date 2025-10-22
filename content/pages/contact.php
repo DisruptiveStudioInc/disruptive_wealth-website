@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Language;
+
 return [
+  'seoDescription' => Language::trans('contact.description'),
   'offices' => [
     [
       'image' => 'mx-01.webp',

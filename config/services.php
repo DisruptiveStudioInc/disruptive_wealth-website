@@ -8,7 +8,7 @@ return [
     'category' => 'services',
     'subcategory' => 'blockchain',
     'template' => 'service-type-1',
-    'content_file' => 'contratos-inteligentes',
+    'content_file' => 'servicio-ejemplo-1',
     'es' => [
       'slug' => 'contratos-inteligentes',
       'meta_title' => 'Contratos inteligentes',

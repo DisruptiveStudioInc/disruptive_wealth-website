@@ -26,7 +26,8 @@ class HomeController extends BaseController
       'subcategories' => $subcatServices,
       'ips' => $disrIps,
       'hasSnapScroll' => true,
-      'hasTextTexture' => true
+      'hasTextTexture' => true,
+      'metaDescription' => $pageContent['seoDescription'] ?? null
     ]);
   }
 }

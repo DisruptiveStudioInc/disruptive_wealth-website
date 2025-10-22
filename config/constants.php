@@ -73,7 +73,7 @@ return [
     // [ 'name' => 'Progress Pro Fly', 'logo' => 'clientes-64.png' ],
     // [ 'name' => 'Quianticon', 'logo' => 'clientes-65.png' ],
     [ 'name' => 'RED Real State Digital', 'logo' => 'clientes-66.png' ],
-    // [ 'name' => 'Planet-D', 'logo' => 'clientes-67.png' ],
+    [ 'name' => 'Planet-D', 'logo' => 'clientes-67.png' ],
     [ 'name' => 'The Golden Emporium', 'logo' => 'clientes-68.png' ],
     [ 'name' => 'Daniel Cruz', 'logo' => 'clientes-69.png' ],
     // [ 'name' => 'MEGA AIR', 'logo' => 'clientes-70.png' ],
@@ -183,7 +183,10 @@ return [
     [ 'name' => 'client174', 'logo' => 'clientes-174.png' ],
     [ 'name' => 'client175', 'logo' => 'clientes-175.png' ],
     [ 'name' => 'client176', 'logo' => 'clientes-176.png' ],
-    [ 'name' => 'client177', 'logo' => 'clientes-177.png' ]
+    [ 'name' => 'client177', 'logo' => 'clientes-177.png' ],
+    [ 'name' => 'client178', 'logo' => 'clientes-178.png' ],
+    [ 'name' => 'client179', 'logo' => 'clientes-179.png' ],
+    [ 'name' => 'client180', 'logo' => 'clientes-180.png' ]
   ],
 
   'certifications' => [

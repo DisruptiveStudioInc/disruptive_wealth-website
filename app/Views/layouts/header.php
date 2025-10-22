@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $currentLang ?>" class="scroll-smooth <?= $hasSnapScroll ? 'snap-y snap-proximity' : '' ?>">
+<html lang="<?= $currentLang ?>" class="scroll-smooth <?= isset($hasSnapScroll) ? 'snap-y snap-proximity' : '' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,45 @@
   <?php if (isset($metaDescription)): ?>
     <meta name="description" content="<?= htmlspecialchars($metaDescription) ?>">
   <?php endif; ?>
+
+  <!-- Opengraph -->
+  <meta property="og:url" content="<?= $config['app']['url'] ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
+  <meta property="og:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
+  <meta property="og:image" content="<?= $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <meta property="og:image:alt" content="<?= $pageTitle ?? $trans('home.title') ?>" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta property="og:locale" content="<?= $currentLang ?>" />
+  <meta property="og:site_name" content="<?= $pageTitle ?? $trans('home.title') ?>" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
+  <meta name="twitter:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
+  <meta name="twitter:image" content="<?= $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Disruptive Studio",
+    "url": "<?= $config['app']['url'] ?>",
+    "logo": "<?= $config['app']['url'] ?>/public/logo.svg",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1 408 858 4504",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/+14088584504"
+    ]
+  }
+  </script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />

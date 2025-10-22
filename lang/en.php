@@ -57,6 +57,7 @@ return [
   // Home page
   'home' => [
     'title' => 'Disruptive Studio',
+    'description' => 'Comprehensive solution for companies and multilevel networks.',
     'hero' => [
       'slide1' => [
         'title' => 'Grow',
@@ -287,6 +288,7 @@ return [
   // Contact page
   'contact' => [
     'title' => 'Contact Us',
+    'description' => 'Create your future with Disruptive Studio. Write to us or contact us via WhatsApp.',
     'form' => [
       'name' => 'Name',
       'email' => 'Email',
