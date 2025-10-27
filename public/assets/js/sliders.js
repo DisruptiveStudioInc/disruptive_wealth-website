@@ -171,7 +171,7 @@ const officesSwiper = new Swiper("#offices-swiper", {
   },
 });
 
-const swiper = new Swiper(".swiper-tt", {
+const swiperServices = new Swiper(".swiper-tt", {
   direction: "vertical",
   effect: "fade",
   speed: 500,
@@ -198,6 +198,13 @@ const swiper = new Swiper(".swiper-tt", {
     },
   },
 });
+
+const servicesFirstButton = document.getElementById("serv-int-button");
+if (swiperServices && servicesFirstButton) {
+  servicesFirstButton.addEventListener("click", () => {
+    swiperServices.slideNext();
+  });
+}
 
 const mySwiper = new Swiper(".my-swiper", {
   effect: "cards",
