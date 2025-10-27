@@ -257,3 +257,31 @@ function generateBackground(string $fileName, int $amount, bool $reverse = false
   }
   echo "</div>";
 }
+
+/**
+ * Load all PHP files inside lang/services and return an assoc array:
+ *   [ 'aplicaciones-hibridas' => <returned value from file> , ... ]
+ *
+ * Note: for predictable results each service file should `return` its array (preferred).
+ * If a file doesn't return a value `require` yields 1.
+ */
+function loadLangServices(string $servicesDir = ''): array
+{
+  $dir = $servicesDir === '' ? __DIR__ . '/../lang/services' : $servicesDir;
+  if (!is_dir($dir)) {
+    return [];
+  }
+
+  $files = glob(rtrim($dir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . '*.php');
+  sort($files, SORT_STRING);
+
+  $services = [];
+  foreach ($files as $file) {
+    $key = pathinfo($file, PATHINFO_FILENAME);
+    // include in function scope so any "return" in the file is captured
+    $value = require $file;
+    $services[$key] = $value;
+  }
+
+  return $services;
+}

@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/services/aplicaciones-hibridas.php';
+$servicesTranslations = loadLangServices();
 
 return [
   // Navigation
@@ -337,5 +337,10 @@ return [
   ],
 
   // Services Content
-  'hybrid_app' => $aplicacionsHibridas
+  'hybrid_app' => $servicesTranslations['aplicaciones-hibridas'],
+  'inventory_control_storage' => $servicesTranslations['almacenaje-control-inventario'],
+  'mobile_app' => $servicesTranslations['aplicaciones-moviles'],
+  'multitenant_app' => $servicesTranslations['aplicaciones-multitenant'],
+  'web_app' => $servicesTranslations['aplicaciones-web'],
+  'web3_app' => $servicesTranslations['aplicaciones-web3']
 ];

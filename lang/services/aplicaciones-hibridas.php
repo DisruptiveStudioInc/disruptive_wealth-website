@@ -1,6 +1,6 @@
 <?php
 
-$aplicacionsHibridas = [
+return [
   'es' => [
     'hero' => [
       'title' => 'Experiencias web y móviles unificadas',
