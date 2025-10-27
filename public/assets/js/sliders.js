@@ -1,4 +1,5 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
+import DepthSlider from "./depthSlider.js";
 
 const heroSwiper = new Swiper("#hero-swiper", {
   speed: 800,
@@ -169,3 +170,51 @@ const officesSwiper = new Swiper("#offices-swiper", {
     swiper: officesThubsSwiper,
   },
 });
+
+const swiper = new Swiper(".swiper-tt", {
+  direction: "vertical",
+  effect: "fade",
+  speed: 500,
+  spaceBetween: 0,
+  breakpoints: {
+    1088: {
+      direction: "horizontal",
+      allowTouchMove: false,
+    },
+  },
+  navigation: {
+    nextEl: "#serv-next",
+    prevEl: "#serv-prev",
+  },
+  pagination: {
+    el: "#serv-dots",
+    clickable: true,
+    bulletClass: "serv-dot",
+    bulletActiveClass: "bg-brand-100",
+    renderBullet: function (index, className) {
+      return `<li tabindex="0" role="button" aria-label="Got to slide ${
+        index + 1
+      }" class="h-3 w-4 xs:w-8 transition-colors ${className}"></li>`;
+    },
+  },
+});
+
+const mySwiper = new Swiper(".my-swiper", {
+  effect: "cards",
+  grabCursor: true,
+  pagination: {
+    el: "#my-swiper-pagination",
+    clickable: true,
+    bulletClass: "flex-center",
+    bulletActiveClass: "active",
+    renderBullet: function (index, className) {
+      return `<li tabindex="0" role="button" aria-label="Go to process ${
+        index + 1
+      }" class="size-9 lg:size-14 text-lg lg:text-2xl font-bold text-white leading-none rounded-full bg-brand-100 hover:bg-brand-200 active:bg-brand-200 [&.active]:bg-brand-200 [&.active]:ring-2 [&.active]:ring-white transition-colors cursor-pointer ${className}">${
+        index + 1
+      }</li>`;
+    },
+  },
+});
+
+const faqSlider = new DepthSlider("#faq-slider");

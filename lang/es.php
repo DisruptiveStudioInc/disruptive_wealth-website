@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/services/aplicaciones-hibridas.php';
+
 return [
   // Navigation
   'nav' => [
@@ -321,10 +323,19 @@ return [
     'read_more' => 'Leer más',
     'view_more' => 'Ver más',
     'learn_more' => 'Conoce más',
+    'know_more' => 'Saber más',
     'back' => 'Volver',
     'next' => 'Siguiente',
     'previous' => 'Anterior',
+    'sales' => 'Ventas'
+  ],
+
+  // Common titles
+  'common_titles' => [
+    'benefits' => 'Beneficios',
+    'faqs' => 'Preguntas frecuentes'
   ],
 
   // Services Content
+  'hybrid_app' => $aplicacionsHibridas
 ];

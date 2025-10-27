@@ -1,191 +1,212 @@
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
 
-// Smooth scroll
-// export const smoother = ScrollSmoother.create({
-//   smooth: 1.5,
-//   effects: true,
-//   smoothTouch: 0.1,
-// });
-
 // toggles animations
 const playNone = "play none none none";
 const playReverse = "play none none reverse";
 
 // Slide in animations
-const slideUp = gsap.utils.toArray(".slide-up");
-gsap.utils.toArray(".slide-up").forEach((element) => {
-  gsap.from(element, {
-    scrollTrigger: {
-      trigger: element,
-      start: "top 80%",
-      // end: "top 50%",
-      // scrub: true,
-      toggleActions: playReverse,
-    },
-    opacity: 0,
-    y: 30,
-    // duration: 0.8,
-    // ease: "power2.out",
+const slideUpEls = document.querySelectorAll(".slide-up");
+
+if (slideUpEls.length > 0) {
+  const slideUp = gsap.utils.toArray(".slide-up");
+  gsap.utils.toArray(".slide-up").forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        // end: "top 50%",
+        // scrub: true,
+        toggleActions: playReverse,
+      },
+      opacity: 0,
+      y: 30,
+      // duration: 0.8,
+      // ease: "power2.out",
+    });
   });
-});
+}
 
 document.fonts.ready.then(() => {
-  gsap.utils.toArray(".slide-up-words").forEach((element) => {
-    SplitText.create(element, {
-      type: "words",
-      autoSplit: true,
-      smartWrap: true,
-      onSplit: (self) => {
-        return gsap.from(self.words, {
-          yPercent: 20,
-          autoAlpha: 0,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            // end: "top 50%",
-            // scrub: true,
-            toggleActions: playReverse,
-          },
-        });
-      },
+  const wordsEls = document.querySelectorAll(".slide-up-words");
+  const wordsBlackEls = document.querySelectorAll(".slide-up-words-black");
+  const wordsWhiteEls = document.querySelectorAll(".slide-up-words-white");
+
+  if (wordsEls.length > 0) {
+    gsap.utils.toArray(".slide-up-words").forEach((element) => {
+      SplitText.create(element, {
+        type: "words",
+        autoSplit: true,
+        smartWrap: true,
+        onSplit: (self) => {
+          return gsap.from(self.words, {
+            yPercent: 20,
+            autoAlpha: 0,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              // end: "top 50%",
+              // scrub: true,
+              toggleActions: playReverse,
+            },
+          });
+        },
+      });
     });
-  });
-  gsap.utils.toArray(".slide-up-words-black").forEach((element) => {
-    SplitText.create(element, {
-      type: "words",
-      autoSplit: true,
-      smartWrap: true,
-      wordsClass: "bg-clip-text bg-text-black pt-2",
-      onSplit: (self) => {
-        return gsap.from(self.words, {
-          yPercent: 20,
-          autoAlpha: 0,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            // end: "top 50%",
-            // scrub: true,
-            toggleActions: playReverse,
-          },
-        });
-      },
+  }
+  if (wordsBlackEls.length > 0) {
+    gsap.utils.toArray(".slide-up-words-black").forEach((element) => {
+      SplitText.create(element, {
+        type: "words",
+        autoSplit: true,
+        smartWrap: true,
+        wordsClass: "bg-clip-text bg-text-black pt-2",
+        onSplit: (self) => {
+          return gsap.from(self.words, {
+            yPercent: 20,
+            autoAlpha: 0,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              // end: "top 50%",
+              // scrub: true,
+              toggleActions: playReverse,
+            },
+          });
+        },
+      });
     });
-  });
-  gsap.utils.toArray(".slide-up-words-white").forEach((element) => {
-    SplitText.create(element, {
-      type: "words",
-      autoSplit: true,
-      smartWrap: true,
-      wordsClass: "bg-clip-text bg-text-white pt-2 word++",
-      onSplit: (self) => {
-        return gsap.from(self.words, {
-          yPercent: 20,
-          autoAlpha: 0,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            // end: "top 50%",
-            // scrub: true,
-            toggleActions: playReverse,
-          },
-        });
-      },
+  }
+  if (wordsWhiteEls.length > 0) {
+    gsap.utils.toArray(".slide-up-words-white").forEach((element) => {
+      SplitText.create(element, {
+        type: "words",
+        autoSplit: true,
+        smartWrap: true,
+        wordsClass: "bg-clip-text bg-text-white pt-2 word++",
+        onSplit: (self) => {
+          return gsap.from(self.words, {
+            yPercent: 20,
+            autoAlpha: 0,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              // end: "top 50%",
+              // scrub: true,
+              toggleActions: playReverse,
+            },
+          });
+        },
+      });
     });
-  });
+  }
 });
 
-gsap.utils.toArray(".stagger-parent").forEach((container) => {
-  const elements = container.querySelectorAll(".slide-up-stagger");
-  gsap.from(elements, {
-    scrollTrigger: {
-      trigger: container,
-      start: "top 80%",
-      // end: "top 50%",
-      // scrub: true,
-      toggleActions: playReverse,
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.2,
-    // duration: 0.8,
-    // ease: "power2.out",
+const staggerEls = document.querySelectorAll(".stagger-parent");
+if (staggerEls.length > 0) {
+  gsap.utils.toArray(".stagger-parent").forEach((container) => {
+    const elements = container.querySelectorAll(".slide-up-stagger");
+    gsap.from(elements, {
+      scrollTrigger: {
+        trigger: container,
+        start: "top 80%",
+        // end: "top 50%",
+        // scrub: true,
+        toggleActions: playReverse,
+      },
+      opacity: 0,
+      y: 30,
+      stagger: 0.2,
+      // duration: 0.8,
+      // ease: "power2.out",
+    });
   });
-});
+}
 
 // Discover tabs svgs
-export const ballUpAnim = gsap.fromTo(
-  "#ball-up",
-  {
-    opacity: 0,
-  },
-  {
-    motionPath: {
-      path: "#motion-up",
-      align: "#motion-up",
-      alignOrigin: [0.5, 0.5],
-      autoRotate: true,
+let ballUpAnim;
+let ballDownAnim;
+let flipTabContent;
+const ballUp = document.getElementById("ball-up");
+const ballDown = document.getElementById("ball-down");
+const discoverContent = document.getElementById("discover-content");
+
+if (ballUp && ballDown && discoverContent) {
+  ballUpAnim = gsap.fromTo(
+    "#ball-up",
+    {
+      opacity: 0,
     },
+    {
+      motionPath: {
+        path: "#motion-up",
+        align: "#motion-up",
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true,
+      },
+      transformOrigin: "50% 50%",
+      opacity: 0,
+      keyframes: {
+        "3%": { opacity: 1 },
+        "97%": { opacity: 1 },
+        "100%": { opacity: 0 },
+      },
+      duration: 1,
+      ease: "power1.inOut",
+      paused: true,
+    }
+  );
+  ballDownAnim = gsap.fromTo(
+    "#ball-down",
+    {
+      opacity: 0,
+    },
+    {
+      motionPath: {
+        path: "#motion-down",
+        align: "#motion-down",
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true,
+      },
+      transformOrigin: "50% 50%",
+      opacity: 0,
+      keyframes: {
+        "3%": { opacity: 1 },
+        "97%": { opacity: 1 },
+        "100%": { opacity: 0 },
+      },
+      duration: 1,
+      ease: "power2.inOut",
+      paused: true,
+    }
+  );
+  flipTabContent = gsap.to("#discover-content", {
+    rotateY: 360,
     transformOrigin: "50% 50%",
-    opacity: 0,
     keyframes: {
-      "3%": { opacity: 1 },
-      "97%": { opacity: 1 },
-      "100%": { opacity: 0 },
+      "50%": { scale: 1.2 },
+      "100%": { scale: 1 },
     },
-    duration: 1,
-    ease: "power1.inOut",
-    paused: true,
-  }
-);
-export const ballDownAnim = gsap.fromTo(
-  "#ball-down",
-  {
-    opacity: 0,
-  },
-  {
-    motionPath: {
-      path: "#motion-down",
-      align: "#motion-down",
-      alignOrigin: [0.5, 0.5],
-      autoRotate: true,
-    },
-    transformOrigin: "50% 50%",
-    opacity: 0,
-    keyframes: {
-      "3%": { opacity: 1 },
-      "97%": { opacity: 1 },
-      "100%": { opacity: 0 },
-    },
-    duration: 1,
+    duration: 0.7,
     ease: "power2.inOut",
     paused: true,
-  }
-);
-export const flipTabContent = gsap.to("#discover-content", {
-  rotateY: 360,
-  transformOrigin: "50% 50%",
-  keyframes: {
-    "50%": { scale: 1.2 },
-    "100%": { scale: 1 },
-  },
-  duration: 0.7,
-  ease: "power2.inOut",
-  paused: true,
-  onUpdate: function () {
-    const progress = this.progress();
-    const content = document.querySelector("#discover-content-wrap");
-    // Hide content when card is perpendicular (between 25% and 75%)
-    if (progress > 0.25 && progress < 0.75) {
-      content.style.opacity = "0";
-    } else {
-      content.style.opacity = "1";
-    }
-  },
-});
+    onUpdate: function () {
+      const progress = this.progress();
+      const content = document.querySelector("#discover-content-wrap");
+      // Hide content when card is perpendicular (between 25% and 75%)
+      if (content) {
+        if (progress > 0.25 && progress < 0.75) {
+          content.style.opacity = "0";
+        } else {
+          content.style.opacity = "1";
+        }
+      }
+    },
+  });
+}
 
 // Techs cards animation
 // Techs cards animation
@@ -389,3 +410,5 @@ if (circleExpansions.length && ecosystemCircle) {
     }
   );
 }
+
+export { ballUpAnim, ballDownAnim, flipTabContent };

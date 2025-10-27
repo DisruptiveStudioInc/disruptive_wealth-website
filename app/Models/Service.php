@@ -21,7 +21,7 @@ class Service
 
     foreach (self::$services as $key => $service) {
       if (isset($service[$language]['slug']) && $service[$language]['slug'] === $slug) {
-        $content = self::loadContent($service['content_file'], $language);
+        $content = self::loadContent($service['content_file']);
 
         return [
           'key' => $key,
@@ -35,7 +35,7 @@ class Service
     return null;
   }
 
-  private static function loadContent(string $contentFile, string $language): array
+  private static function loadContent(string $contentFile): array
   {
     $file = __DIR__ . "/../../content/services/{$contentFile}.php";
 
@@ -44,7 +44,7 @@ class Service
     }
 
     $contentData = require $file;
-    return $contentData[$language] ?? [];
+    return $contentData ?? [];
   }
 
   public static function getAll(string $language): array
@@ -54,7 +54,7 @@ class Service
     $result = [];
     foreach (self::$services as $key => $service) {
       if (isset($service[$language])) {
-        $content = self::loadContent($service['content_file'], $language);
+        $content = self::loadContent($service['content_file']);
 
         $result[] = [
           'key' => $key,
@@ -76,7 +76,7 @@ class Service
     $result = [];
     foreach (self::$services as $key => $service) {
       if (isset($service[$language]) && ($service['category'] ?? 'services') === $category) {
-        $content = self::loadContent($service['content_file'], $language);
+        $content = self::loadContent($service['content_file']);
 
         $result[] = [
           'key' => $key,
