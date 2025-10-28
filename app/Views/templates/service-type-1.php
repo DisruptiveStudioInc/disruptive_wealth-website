@@ -24,55 +24,56 @@ include __DIR__ . '/../components/fixedBackground.php';
   <div class="swiper swiper-tt h-screen">
     <div class="swiper-wrapper h-screen">
       <!-- Hero section -->
-      <section class="slide-section swiper-slide h-screen w-full">
-        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
+      <section class="slide-section swiper-slide group h-screen w-full">
+        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl text-balance"><?= $content['hero'] ?></h2>
-            <p class="lg:text-xl"><?= $content['hero_text'] ?></p>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['hero'] ?></h2>
+            <p class="lg:text-xl text-secondary-200 text-balance"><?= $content['hero_text'] ?></p>
             <button class="button rounded-full mt-4 lg:mt-8 lg:px-10 bg-white border border-brand-100 text-secondary-200 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white" type="button" id="serv-int-button"><?= $trans('common.know_more') ?></button>
           </div>
           <div class="relative lg:w-1/2">
-            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 lg:-translate-y-1/2">
-            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto lg:translate-y-10 xl:translate-y-8 shadow-lg lg:shadow-xl xl:shadow-serv">
+            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
           </div>
         </div>
       </section>
 
       <!-- About 1 section -->
-      <section class="slide-section swiper-slide h-screen w-full">
-        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
+      <section class="slide-section swiper-slide group h-screen w-full">
+        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl text-balance"><?= $content['about1_title'] ?></h2>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about1_title'] ?></h2>
           </div>
           <div class="lg:w-1/2 flex">
-            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv">
-            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 -translate-x-8 translate-y-16 shadow-lg lg:shadow-xl xl:shadow-serv">
+            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 -translate-x-8 translate-y-16 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300">
           </div>
         </div>
       </section>
 
       <!-- About 2 section -->
-      <section class="slide-section swiper-slide h-screen w-full">
-        <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
+      <section class="slide-section swiper-slide group h-screen w-full">
+        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl text-balance"><?= $content['about2_title'] ?></h2>
-            <p class="lg:text-xl"><?= $content['about2_text'] ?></p>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about2_title'] ?></h2>
+            <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['about2_text'] ?></p>
           </div>
           <div class="relative lg:w-1/2 lg:pr-12">
-            <img src="/public/images/services/sec3_big.svg" alt="" class="rounded-xl md:rounded-2xl mx-auto max-h-[45vh] h-full lg:max-h-none lg:h-auto">
-            <img src="/public/images/services/sec3_mid.svg" alt="" class="rounded-xl md:rounded-2xl w-1/2 sm:w-2/3 lg:w-auto absolute -top-4 -right-6 sm:-right-16 lg:-top-8 lg:-right-2 xl:-right-8 shadow-lg lg:shadow-xl xl:shadow-serv">
-            <img src="/public/images/services/sec3_small.svg" alt="" class="rounded-xl md:rounded-2xl w-2/5 sm:w-1/2 lg:w-auto absolute bottom-8 -left-6 sm:bottom-4 sm:-left-16 lg:bottom-8 lg:-left-4 xl:left-0 shadow-lg lg:shadow-xl xl:shadow-serv">
+            <img src="/public/images/services/sec3_big.svg" alt="" class="rounded-xl md:rounded-2xl mx-auto max-h-[45vh] h-full lg:max-h-none lg:h-auto opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec3_mid.svg" alt="" class="rounded-xl md:rounded-2xl w-1/2 sm:w-2/3 lg:w-auto absolute -top-4 -right-6 sm:-right-16 lg:-top-8 lg:-right-2 xl:-right-8 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300">
+            <img src="/public/images/services/sec3_small.svg" alt="" class="rounded-xl md:rounded-2xl w-2/5 sm:w-1/2 lg:w-auto absolute bottom-8 -left-6 sm:bottom-4 sm:-left-16 lg:bottom-8 lg:-left-4 xl:left-0 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-400">
           </div>
         </div>
       </section>
 
       <!-- Benefits section -->
-      <section class="slide-section swiper-slide h-screen w-full">
+      <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col">
-          <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl"><?= $trans('common_titles.benefits') ?></h2>
+          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $trans('common_titles.benefits') ?></h2>
           <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 xl:gap-12 w-full">
-            <?php foreach($content['benefits'] as $benefit): ?>
-              <li class="flex items-start gap-2 sm:flex-col">
+            <?php foreach($content['benefits'] as $k => $benefit): ?>
+              <li class="flex items-start gap-2 sm:flex-col opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-300"
+              style="transition-delay: calc(200ms + (100ms * <?= $k ?>));">
                 <div class="p-2 rounded-lg bg-surface-100 text-brand-100 mb-0 lg:mb-4 flex-center shadow-md lg:shadow-xl">
                   <svg class="size-6 lg:size-10"><use href="#gear"/></svg>
                 </div>
@@ -88,9 +89,9 @@ include __DIR__ . '/../components/fixedBackground.php';
 
       <!-- Process section -->
       <section class="slide-section swiper-slide h-screen w-full">
-        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
+        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-center lg:text-left text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl"><?= $content['process_title'] ?></h2>
+            <h2 class="font-khand uppercase text-center lg:text-left bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $content['process_title'] ?></h2>
             <ul id="my-swiper-pagination" class="flex items-center justify-center lg:justify-start gap-2 lg:gap-4 mt-2 lg:mt-6"></ul>
           </div>
           <div class="w-full lg:w-1/2 lg:pr-40">
@@ -118,7 +119,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <!-- FAQ section -->
       <section class="slide-section swiper-slide h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col">
-          <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl"><?= $trans('common_titles.faqs') ?></h2>
+          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-center text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $trans('common_titles.faqs') ?></h2>
           <div class="block w-full md:w-9/10 mx-auto mt-6 lg:mt-10">
             <div id="faq-slider" class="relative text-center perspective-distant transition-[height]">
               <?php foreach( $content['faq'] as $k => $item): ?>
@@ -143,19 +144,19 @@ include __DIR__ . '/../components/fixedBackground.php';
       </section>
 
       <!-- Sales section -->
-      <section class="slide-section swiper-slide h-screen w-full">
-        <div class="block-content py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
+      <section class="slide-section swiper-slide group h-screen w-full">
+        <div class="px-7 py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-secondary-200 leading-none text-5xl xs:text-7xl sm:text-8xl md:text-12xl xl:text-13xl text-balance"><?= $content['sales']['title'] ?></h2>
-            <p class="lg:text-xl"><?= $content['sales']['text'] ?></p>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['sales']['title'] ?></h2>
+            <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['sales']['text'] ?></p>
             <a href="https://wa.me/<?= $constants['contact_info']['wame'] ?>" target="_blank" rel="noopener noreferrer" class="button leading-none bg-green-400 hover:bg-green-700 active:bg-green-700 gap-2 rounded-full w-fit md:text-xl font-semibold mt-4 lg:mt-8">
               <svg class="size-7 md:size-8"><use href="#whatsapp" /></svg>
               <span class="pt-0.5"><?= $trans('common.sales') ?></span>
             </a>
           </div>
           <div class="relative lg:w-1/2">
-            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 lg:-translate-y-1/2">
-            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto lg:translate-y-10 xl:translate-y-8">
+            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
           </div>
         </div>
       </section>

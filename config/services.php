@@ -38,13 +38,13 @@ return [
     ],
   ],
 
-  'bases-datos-serguras' => [
+  'bases-datos-seguras' => [
     'category' => 'services',
     'subcategory' => 'blockchain',
     'template' => 'service-type-1',
-    'content_file' => 'bases-datos-serguras',
+    'content_file' => 'bases-datos-seguras',
     'es' => [
-      'slug' => 'bases-de-datos-serguras',
+      'slug' => 'bases-de-datos-seguras',
       'meta_title' => 'Bases de datos seguras',
       'meta_description' => 'Descripción SEO',
     ],

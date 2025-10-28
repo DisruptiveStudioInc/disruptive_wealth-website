@@ -217,7 +217,7 @@ const mySwiper = new Swiper(".my-swiper", {
     renderBullet: function (index, className) {
       return `<li tabindex="0" role="button" aria-label="Go to process ${
         index + 1
-      }" class="size-9 lg:size-14 text-lg lg:text-2xl font-bold text-white leading-none rounded-full bg-brand-100 hover:bg-brand-200 active:bg-brand-200 [&.active]:bg-brand-200 [&.active]:ring-2 [&.active]:ring-white transition-colors cursor-pointer ${className}">${
+      }" class="size-9 lg:size-12 text-lg lg:text-xl font-bold text-white leading-none rounded-full bg-brand-100 hover:bg-brand-200 active:bg-brand-200 [&.active]:bg-brand-200 [&.active]:ring-2 [&.active]:ring-white transition-colors cursor-pointer ${className}">${
         index + 1
       }</li>`;
     },
