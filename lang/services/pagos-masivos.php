@@ -76,5 +76,85 @@ return [
       'title' => 'Automatiza. Controla. Paga sin límites.',
       'text' => 'Agenda una demo y descubre cómo los pagos masivos pueden transformar tu gestión financiera.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Automated and precise multi-payments',
+      'text' => 'Simplify your operations with secure, intelligent mass payouts.'
+    ],
+    'about1' => 'Distribute commissions and rewards',
+    'about2' => 'Payment control and automation',
+    'about2_text' => 'Optimize your management with secure digital financial processes.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Total efficiency',
+        'text' => 'Save time and resources with an automated disbursement system.'
+      ],
+      'item2' => [
+        'title' => 'Payments in seconds',
+        'text' => 'Send funds to thousands of recipients simultaneously with zero manual errors.'
+      ],
+      'item3' => [
+        'title' => 'Control and traceability',
+        'text' => 'Every movement is recorded in auditable reports.'
+      ],
+      'item4' => [
+        'title' => 'Currency flexibility',
+        'text' => 'Operate with local currency or cryptocurrencies as needed.'
+      ],
+      'item5' => [
+        'title' => 'Guaranteed security',
+        'text' => 'Encrypted transactions with multi-factor validation.'
+      ],
+      'item6' => [
+        'title' => 'Accounting integration',
+        'text' => 'Real-time connection with ERP, CRM, or corporate platforms.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Operation analysis',
+        'text' => 'We identify payment types and ideal frequency.'
+      ],
+      'item2' => [
+        'title' => 'System configuration',
+        'text' => 'We customize rules, validations and user permissions.'
+      ],
+      'item3' => [
+        'title' => 'Data source integration',
+        'text' => 'We connect databases, wallets and payroll systems.'
+      ],
+      'item4' => [
+        'title' => 'Workflow automation',
+        'text' => 'Scheduled payments and automated payout reporting.'
+      ],
+      'item5' => [
+        'title' => 'Monitoring and support',
+        'text' => 'Automatic reconciliations and continuous maintenance.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What types of payments can I automate?',
+      'answer1' => 'Commissions, payroll, bonuses, incentives, reimbursements and recurring flows.',
+      'question2' => 'Can I pay in different currencies or cryptocurrencies?',
+      'answer2' => 'Yes. Local currencies, stablecoins or custom tokens according to your policies.'
+      ,
+      'question3' => 'Is it possible to limit or approve payments by levels?',
+      'answer3' => 'Yes. User profiles and hierarchical approval workflows.'
+      ,
+      'question4' => 'How fast are mass payments processed?',
+      'answer4' => 'In seconds thanks to banking and blockchain integrations.'
+      ,
+      'question5' => 'Can I connect this system to my ERP or CRM?',
+      'answer5' => 'Yes. We integrate with Odoo, SAP, Zoho and internal systems through secure APIs.'
+      ,
+      'question6' => 'What financial reports does the platform offer?',
+      'answer6' => 'Full history, automatic reconciliations and user-level audit trails.'
+    ],
+    'sales' => [
+      'title' => 'Automate. Control. Pay without limits.',
+      'text' => 'Book a demo and discover how mass payouts can transform your financial operations.'
+    ]
   ]
 ];

@@ -76,5 +76,81 @@ return [
       'title' => 'La seguridad es la base de la confianza digital.',
       'text' => 'Solicita tu demo y conoce cómo la seguridad impulsa tu crecimiento.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'The most valuable information in your business',
+      'text' => 'Strengthen your operation with technology that ensures total integrity'
+    ],
+    'about1' => 'Full encryption and advanced control',
+    'about2' => 'Real-time monitoring and regulatory compliance',
+    'about2_text' => 'Enable your digital environment with full protection and complete traceability',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Guaranteed integrity',
+        'text' => 'Every data point remains protected and verifiable at all times.'
+      ],
+      'item2' => [
+        'title' => 'Advanced encryption',
+        'text' => 'Multilayer protection against unauthorized access or vulnerabilities.'
+      ],
+      'item3' => [
+        'title' => 'High availability',
+        'text' => 'Redundant infrastructure built to keep operations running 24/7.'
+      ],
+      'item4' => [
+        'title' => 'Scalability',
+        'text' => 'Databases designed to support your company’s global growth.'
+      ],
+      'item5' => [
+        'title' => 'Regulatory compliance',
+        'text' => 'Aligned with GDPR, ISO 27001, SOC 2 and international security standards.'
+      ],
+      'item6' => [
+        'title' => 'Audit and traceability',
+        'text' => 'Full control with detailed logs of activities and access.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'System analysis',
+        'text' => 'We evaluate your current architecture and potential risks.'
+      ],
+      'item2' => [
+        'title' => 'Security design',
+        'text' => 'We define protocols, encryption and segmented access levels.'
+      ],
+      'item3' => [
+        'title' => 'Technical implementation',
+        'text' => 'We configure secure, distributed and scalable databases.'
+      ],
+      'item4' => [
+        'title' => 'Testing and validation',
+        'text' => 'Security audits and system performance checks prior to deployment.'
+      ],
+      'item5' => [
+        'title' => 'Monitoring and support',
+        'text' => 'Continuous supervision and proactive infrastructure maintenance.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What differentiates a secure database from a conventional one?',
+      'answer1' => 'It uses advanced encryption, access control and constant monitoring to minimize risks.',
+      'question2' => 'Can I integrate my current database?',
+      'answer2' => 'Yes, we adapt our solutions to existing infrastructures without interrupting operations.',
+      'question3' => 'Which businesses need secure databases?',
+      'answer3' => 'Fintech, healthcare, e-commerce, education, legaltech and corporations handling sensitive data.',
+      'question4' => 'Do you comply with international regulations?',
+      'answer4' => 'Yes, we align the entire system with GDPR, ISO 27001, SOC 2 and global privacy policies.',
+      'question5' => 'What happens if there is an unauthorized access attempt?',
+      'answer5' => 'Alerts, preventive blocking and event logging are activated for an immediate response.',
+      'question6' => 'What level of customization do you offer?',
+      'answer6' => 'Tailored solutions: permissions, cloud architecture and encryption based on each case.'
+    ],
+    'sales' => [
+      'title' => 'Security is the foundation of digital trust.',
+      'text' => 'Request your demo and discover how security drives growth.'
+    ]
   ]
 ];

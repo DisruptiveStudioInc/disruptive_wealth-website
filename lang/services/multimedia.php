@@ -76,5 +76,85 @@ return [
       'title' => 'No solo creamos contenido. Creamos experiencias que se recuerdan.',
       'text' => 'Agenda una demo y conoce cómo amplificar el poder visual de tu marca.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Audiovisual content that inspires and connects',
+      'text' => 'Bring your brand to life with impactful visual content.'
+    ],
+    'about1' => 'Professional audiovisual production and editing',
+    'about2' => 'Strategic and persuasive visual content',
+    'about2_text' => 'Your message comes to life with impactful visual content.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Effective communication',
+        'text' => 'We convey your message with clarity and emotion through audiovisual storytelling.'
+      ],
+      'item2' => [
+        'title' => 'Strengthened identity',
+        'text' => 'Consistent, professional content that reinforces your brand.'
+      ],
+      'item3' => [
+        'title' => 'Higher engagement',
+        'text' => 'Dynamic visual stories that capture attention in seconds.'
+      ],
+      'item4' => [
+        'title' => 'Total versatility',
+        'text' => 'Formats for social media, websites, events and launches.'
+      ],
+      'item5' => [
+        'title' => 'Visual strategy',
+        'text' => 'Every piece responds to a communication and positioning objective.'
+      ],
+      'item6' => [
+        'title' => 'Professional quality',
+        'text' => 'Filming, editing and post-production with international standards.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Concept and script',
+        'text' => 'We define the core idea, objectives and narrative tone of the project.'
+      ],
+      'item2' => [
+        'title' => 'Storyboard and creative direction',
+        'text' => 'We visualize sequences and the graphic style of the piece.'
+      ],
+      'item3' => [
+        'title' => 'Audiovisual production',
+        'text' => 'Filming, animation or capturing the required material.'
+      ],
+      'item4' => [
+        'title' => 'Editing and post-production',
+        'text' => 'We apply effects, color, audio and visual branding.'
+      ],
+      'item5' => [
+        'title' => 'Final delivery',
+        'text' => 'Optimized versions exported for each platform.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What type of materials do you produce?',
+      'answer1' => 'Corporate videos, animations, reels, tutorials, commercials and more.',
+      'question2' => 'Can you adapt content to different formats?',
+      'answer2' => 'Yes. We deliver optimized versions for platforms like Instagram, YouTube and websites.'
+      ,
+      'question3' => 'Do you work with 2D or 3D animation?',
+      'answer3' => 'Yes. Motion graphics, modeling and animation in 2D and 3D.'
+      ,
+      'question4' => 'What duration do you recommend for a promotional video?',
+      'answer4' => 'Between 30 and 90 seconds, depending on the goal and distribution channel.'
+      ,
+      'question5' => 'Can I combine live-action with animation?',
+      'answer5' => 'Yes. We can integrate real footage with graphic and motion elements.'
+      ,
+      'question6' => 'How do you ensure visual consistency with my brand?',
+      'answer6' => 'We apply your brand\'s colors, typography and visual style.'
+    ],
+    'sales' => [
+      'title' => 'We don\'t just create content. We create unforgettable experiences.',
+      'text' => 'Book a demo and discover how to amplify your brand\'s visual power.'
+    ]
   ]
 ];

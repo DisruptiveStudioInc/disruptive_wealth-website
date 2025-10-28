@@ -76,5 +76,81 @@ return [
       'title' => 'Diseño que no solo impacta. Conecta.',
       'text' => 'Agenda una demo y descubre cómo UI/UX Design puede transformar la experiencia de tus usuarios.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Functional and visually appealing digital interfaces',
+      'text' => 'Elevate your brand with inspiring digital experiences.'
+    ],
+    'about1' => 'Web and mobile interface design',
+    'about2' => 'Conversion-focused visual architecture',
+    'about2_text' => 'Turn your platform into a unique and powerful digital experience.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Enhanced user experience',
+        'text' => 'Smooth interactions that increase retention and satisfaction.'
+      ],
+      'item2' => [
+        'title' => 'Functional design',
+        'text' => 'Every visual element serves a clear purpose: guide, inform and convert.'
+      ],
+      'item3' => [
+        'title' => 'Brand consistency',
+        'text' => 'Unified visual identity across every touchpoint.'
+      ],
+      'item4' => [
+        'title' => 'Data-driven decisions',
+        'text' => 'Flows optimized through real behavior analytics.'
+      ],
+      'item5' => [
+        'title' => 'Rapid prototyping',
+        'text' => 'Early validation that reduces errors and accelerates outcomes.'
+      ],
+      'item6' => [
+        'title' => 'Adaptive design',
+        'text' => 'Interfaces optimized for web, mobile, desktop and hybrid apps.'
+      ]
+    ],
+    'process' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Research and discovery',
+        'text' => 'Brand, audience and strategic goals analysis.'
+      ],
+      'item2' => [
+        'title' => 'Information architecture',
+        'text' => 'Definition of hierarchies, flows and logical navigation.'
+      ],
+      'item3' => [
+        'title' => 'Wireframes and prototypes',
+        'text' => 'Interactive models to validate the experience.'
+      ],
+      'item4' => [
+        'title' => 'Visual design',
+        'text' => 'Interfaces aligned with brand identity and business conversion.'
+      ],
+      'item5' => [
+        'title' => 'Testing and optimization',
+        'text' => 'Adjustments based on usability metrics and feedback.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What is the difference between UI and UX?',
+      'answer1' => 'UI focuses on visual design and interaction; UX on structure, flow and user satisfaction.',
+      'question2' => 'Can I redesign without rebuilding my entire platform?',
+      'answer2' => 'Yes. We perform audits to identify improvements and progressive changes.',
+      'question3' => 'Which tools do you use?',
+      'answer3' => 'Figma, Adobe XD, Sketch and Framer, with integration to development teams.',
+      'question4' => 'How do you measure design success?',
+      'answer4' => 'Conversions, retention and real navigation metrics.',
+      'question5' => 'Is the design mobile responsive?',
+      'answer5' => 'Yes. All of our projects are fully responsive.',
+      'question6' => 'Which sectors can benefit?',
+      'answer6' => 'Fintech, education, e-commerce and any experience-focused brand.'
+    ],
+    'sales' => [
+      'title' => 'Design that not only impacts. It connects.',
+      'text' => 'Book a demo and discover how UI/UX Design can transform your user experience.'
+    ]
   ]
 ];

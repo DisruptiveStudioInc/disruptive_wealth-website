@@ -76,5 +76,82 @@ return [
       'title' => 'La gestión inteligente comienza con datos confiables.',
       'text' => 'Agenda una demo y moderniza tu administración financiera con una plataforma hecha a la medida.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Digital financial solutions for businesses',
+      'text' => 'Manage your finances with precision, agility and total control.'
+    ],
+    'about1' => 'Platforms for comprehensive financial control',
+    'about2' => 'Banking, payments and accounting integration',
+    'about2_text' => 'Financial solutions that drive growth.',
+    'benefits' => [
+      'item1' => [
+        'title' => '360° business visibility',
+        'text' => 'All accounting and financial data in a single dashboard.'
+      ],
+      'item2' => [
+        'title' => 'Accounting automation',
+        'text' => 'Reconciliations, calculations and reports without manual workloads.'
+      ],
+      'item3' => [
+        'title' => 'Smart projections',
+        'text' => 'Scenario simulations and financial impact of decisions.'
+      ],
+      'item4' => [
+        'title' => 'Regulatory compliance',
+        'text' => 'Aligned with the accounting and tax standards of each country.'
+      ],
+      'item5' => [
+        'title' => 'Full integration',
+        'text' => 'ERP, CRM, banks, wallets and payment platforms connected.'
+      ],
+      'item6' => [
+        'title' => 'Real-time reporting',
+        'text' => 'Reliable data for faster and safer strategic decisions.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Financial diagnosis',
+        'text' => 'Analysis of accounting structure, cash flows and control needs.'
+      ],
+      'item2' => [
+        'title' => 'Architecture design',
+        'text' => 'Modules for income, expenses, budgeting and reconciliations.'
+      ],
+      'item3' => [
+        'title' => 'System development',
+        'text' => 'Platform with automated calculations and advanced financial controls.'
+      ],
+      'item4' => [
+        'title' => 'Integration with external tools',
+        'text' => 'Banks, accountants or gateways through secure APIs.'
+      ],
+      'item5' => [
+        'title' => 'Monitoring and support',
+        'text' => 'Ongoing optimization and continuous maintenance.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What type of financial solutions do you offer?',
+      'answer1' => 'Accounting control, treasury, budgeting, reconciliations and real-time projections.',
+      'question2' => 'Can I integrate the platform with my current bank or ERP?',
+      'answer2' => 'Yes. Integrations with banks and corporate systems through secure APIs.',
+      'question3' => 'What level of security does the system have?',
+      'answer3' => 'Bank-grade encryption, access control and multi-factor authentication.',
+      'question4' => 'Can custom reports be generated?',
+      'answer4' => 'Yes. Dashboards and reports tailored to KPIs, departments and access levels.'
+      ,
+      'question5' => 'Does the platform comply with tax regulations?',
+      'answer5' => 'Yes. Compliance with local and international regulations (SAT, IRS, IFRS, etc.).',
+      'question6' => 'What types of companies can use it?',
+      'answer6' => 'Corporations, startups, franchises and operations requiring high financial control.'
+    ],
+    'sales' => [
+      'title' => 'Smart management starts with reliable data.',
+      'text' => 'Book a demo and modernize your financial administration with a custom platform.'
+    ]
   ]
 ];

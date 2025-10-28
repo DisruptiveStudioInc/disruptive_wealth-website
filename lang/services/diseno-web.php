@@ -76,5 +76,82 @@ return [
       'title' => 'Tu sitio no solo debe verse bien. Debe convertir.',
       'text' => 'Agenda una demo y descubre cómo impulsamos tu estrategia digital.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Strategic, functional and high-performing websites',
+      'text' => 'Connect with your audience through a website that truly drives growth.'
+    ],
+    'about1' => 'Designs that convey trust and professionalism',
+    'about2' => 'Structures optimized for maximum conversion',
+    'about2_text' => 'Turn your online presence into a real growth engine.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Strategic design',
+        'text' => 'A platform aligned with your goals, not just a pretty website.'
+      ],
+      'item2' => [
+        'title' => 'Smooth user experience',
+        'text' => 'Intuitive navigation that increases engagement and encourages action.'
+      ],
+      'item3' => [
+        'title' => 'Full adaptability',
+        'text' => 'Websites optimized for desktop, tablet, and mobile.'
+      ],
+      'item4' => [
+        'title' => 'SEO optimization',
+        'text' => 'A technical structure prepared for search engine ranking.'
+      ],
+      'item5' => [
+        'title' => 'Digital integration',
+        'text' => 'Connection with CRM, payment gateways, automation, and analytics.'
+      ],
+      'item6' => [
+        'title' => 'Easy self-management',
+        'text' => 'Update content without relying on technical support.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Diagnosis and strategy',
+        'text' => 'Analysis of brand, audience, and digital goals.'
+      ],
+      'item2' => [
+        'title' => 'Content architecture',
+        'text' => 'Structured information for clarity and conversion.'
+      ],
+      'item3' => [
+        'title' => 'Visual design',
+        'text' => 'Attractive, coherent, and user-centered UI.'
+      ],
+      'item4' => [
+        'title' => 'Technical development',
+        'text' => 'Clean, secure, and high-performance code.'
+      ],
+      'item5' => [
+        'title' => 'Launch and optimization',
+        'text' => 'Testing, deployment, and ongoing monitoring.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What type of websites do you develop?',
+      'answer1' => 'Corporate sites, landing pages, portfolios, interactive platforms, e-commerce, and institutional websites.',
+      'question2' => 'Will the site be compatible with mobile and tablets?',
+      'answer2' => 'Yes. All projects are 100% responsive.',
+      'question3' => 'Can I update the content without relying on the technical team?',
+      'answer3' => 'Yes. We include a self-managed panel and a usage guide.',
+      'question4' => 'Does it include SEO optimization?',
+      'answer4' => 'Yes. Optimized structure, metadata, and speed that boost online visibility.'
+      ,
+      'question5' => 'Which technologies do you use?',
+      'answer5' => 'WordPress, Webflow, React, Next.js, Laravel, and custom solutions.',
+      'question6' => 'Can you maintain and update my site after launch?',
+      'answer6' => 'Yes. We offer maintenance plans and continuous monitoring.'
+    ],
+    'sales' => [
+      'title' => 'Your website should not only look great. It must convert.',
+      'text' => 'Book a demo and discover how we boost your digital strategy.'
+    ]
   ]
 ];

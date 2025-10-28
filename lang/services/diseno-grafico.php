@@ -76,5 +76,81 @@ return [
       'title' => 'Diseño que no solo se ve. Se recuerda.',
       'text' => 'Agenda una demo y descubre cómo podemos elevar el poder visual de tu marca.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Solid and memorable visual identities',
+      'text' => 'Make your brand shine with impactful design.'
+    ],
+    'about1' => 'Strategic design for brands and products',
+    'about2' => 'Visual communication that drives conversion',
+    'about2_text' => 'Project your brand with designs that communicate value.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Strong identity',
+        'text' => 'Consistent visual systems that reinforce your brand.'
+      ],
+      'item2' => [
+        'title' => 'Effective communication',
+        'text' => 'Every piece delivers a clear and memorable message.'
+      ],
+      'item3' => [
+        'title' => 'Visual adaptability',
+        'text' => 'Designs optimized for social media, web, print, and presentations.'
+      ],
+      'item4' => [
+        'title' => 'Brand coherence',
+        'text' => 'Complete alignment between aesthetics, tone, and corporate strategy.'
+      ],
+      'item5' => [
+        'title' => 'Purposeful creativity',
+        'text' => 'Design that looks great and meets business goals.'
+      ],
+      'item6' => [
+        'title' => 'Production-ready assets',
+        'text' => 'Files optimized for any format and channel.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Brief and diagnosis',
+        'text' => 'We analyze brand, audience, and communication goals.'
+      ],
+      'item2' => [
+        'title' => 'Conceptualization',
+        'text' => 'We transform your essence into a clear visual direction.'
+      ],
+      'item3' => [
+        'title' => 'Graphic development',
+        'text' => 'Pieces with visual impact and aesthetic balance.'
+      ],
+      'item4' => [
+        'title' => 'Review and adjustments',
+        'text' => 'Iteration to ensure functionality and visual coherence.'
+      ],
+      'item5' => [
+        'title' => 'Delivery and application',
+        'text' => 'Final files ready for multichannel implementation.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What type of materials do you design?',
+      'answer1' => 'From complete branding to presentations, social media, packaging, interfaces, and corporate content.',
+      'question2' => 'Can I request only some specific graphic pieces?',
+      'answer2' => 'Yes. We adapt the scope for campaigns, launches, or partial redesigns.',
+      'question3' => 'Do you create visual identities from scratch?',
+      'answer3' => 'Yes. Naming, logo, palette, typography, and complete visual system.',
+      'question4' => 'Do the designs adapt to digital and physical formats?',
+      'answer4' => 'Yes. Materials optimized for print, web, social media, and presentations.',
+      'question5' => 'Can you follow my existing brand guidelines?',
+      'answer5' => 'We follow guidelines and maintain visual consistency.',
+      'question6' => 'How do you ensure quality in the final result?',
+      'answer6' => 'Internal reviews, client validation, and application testing.'
+    ],
+    'sales' => [
+      'title' => 'Design that is not just seen. It stays remembered.',
+      'text' => 'Book a demo and discover how we can elevate your brand’s visual power.'
+    ]
   ]
 ];

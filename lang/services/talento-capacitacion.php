@@ -76,5 +76,84 @@ return [
       'title' => 'El talento correcto cambia el rumbo de una empresa.',
       'text' => 'Agenda una demo y descubre cómo impulsar tu crecimiento con talento alineado a tus metas.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'We connect companies with strategic talent',
+      'text' => 'Build the team that will drive your company\'s growth.'
+    ],
+    'about1' => 'Specialized talent sourcing and selection',
+    'about2' => 'Recruitment automation and follow-up',
+    'about2_text' => 'Strengthen your team with talent that delivers results.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Precise selection',
+        'text' => 'We identify profiles aligned with your organization\'s needs and values.'
+      ],
+      'item2' => [
+        'title' => 'Agile processes',
+        'text' => 'We digitize management to reduce time and increase efficiency.'
+      ],
+      'item3' => [
+        'title' => 'Comprehensive evaluation',
+        'text' => 'Technical, psychological and cultural validation for every candidate.'
+      ],
+      'item4' => [
+        'title' => 'Active talent database',
+        'text' => 'Access to verified professionals across multiple industries.'
+      ],
+      'item5' => [
+        'title' => 'Operational savings',
+        'text' => 'Reduce turnover and hiring costs through smart processes.'
+      ],
+      'item6' => [
+        'title' => 'Team scalability',
+        'text' => 'Solutions for local growth or international expansion.'
+      ]
+    ],
+    'process' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Profile analysis',
+        'text' => 'Definition of required competencies, skills and experience.'
+      ],
+      'item2' => [
+        'title' => 'Strategic search',
+        'text' => 'Digital channels, headhunting and professional networks.'
+      ],
+      'item3' => [
+        'title' => 'Candidate evaluation',
+        'text' => 'Technical and cultural filters using digital tools.'
+      ],
+      'item4' => [
+        'title' => 'Finalist presentation',
+        'text' => 'Comparative reports with clear data for decision-making.'
+      ],
+      'item5' => [
+        'title' => 'Onboarding and follow-up',
+        'text' => 'Support during onboarding and monitoring initial performance.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What types of profiles can you recruit?',
+      'answer1' => 'Operational, administrative, tech specialists, marketing and executive leadership roles.',
+      'question2' => 'Do you offer temporary or project-based hiring?',
+      'answer2' => 'Yes. Flexible solutions for specific projects or role coverage.',
+      'question3' => 'How do you ensure candidate quality?',
+      'answer3' => 'Structured interviews, technical assessments and verified references.'
+      ,
+      'question4' => 'Can you provide support after the hire?',
+      'answer4' => 'Yes. Post-hire follow-up and support during the adaptation phase.'
+      ,
+      'question5' => 'Do you use technology tools?',
+      'answer5' => 'ATS, interview automation and data analysis.'
+      ,
+      'question6' => 'Which industries do you serve?',
+      'answer6' => 'Technology, marketing, sales, operations, finance and corporate roles.'
+    ],
+    'sales' => [
+      'title' => 'The right talent can change a company\'s trajectory.',
+      'text' => 'Book a demo and learn how to accelerate growth with talent aligned to your goals.'
+    ]
   ]
 ];

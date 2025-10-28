@@ -76,5 +76,81 @@ return [
       'title' => 'No es solo software. Es control, expansión y resultados.',
       'text' => 'Agenda una demo y descubre cómo transformar la gestión de tu red.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'Professional software for multilevel networks',
+      'text' => 'Grow your network with secure, professional technology.'
+    ],
+    'about1' => 'Automated commissions and rank management',
+    'about2' => 'Full control of your network',
+    'about2_text' => 'Transform your business with clear, measurable and auditable processes.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Complete control',
+        'text' => 'Supervision of transactions, records and payments with full traceability.'
+      ],
+      'item2' => [
+        'title' => 'Full automation',
+        'text' => 'Compensation and bonus rules without manual intervention.'
+      ],
+      'item3' => [
+        'title' => 'Global scaling',
+        'text' => 'Support for thousands of users and rapidly expanding networks.'
+      ],
+      'item4' => [
+        'title' => 'Operational transparency',
+        'text' => 'Real-time reports with verifiable data for each affiliate.'
+      ],
+      'item5' => [
+        'title' => 'Flexible integration',
+        'text' => 'Compatible with wallets, Web3, payment gateways and CRM.'
+      ],
+      'item6' => [
+        'title' => 'Regulatory compliance',
+        'text' => 'Aligned with international standards for direct selling and compliance.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Compensation plan analysis',
+        'text' => 'Evaluation of network structure, ranks and bonuses.'
+      ],
+      'item2' => [
+        'title' => 'Digital ecosystem design',
+        'text' => 'Definition of modules, hierarchies and information workflows.'
+      ],
+      'item3' => [
+        'title' => 'System development',
+        'text' => 'Core architecture, back office and user dashboard.'
+      ],
+      'item4' => [
+        'title' => 'Payments and reporting integration',
+        'text' => 'Connection of wallets, currencies and automated metrics.'
+      ],
+      'item5' => [
+        'title' => 'Launch and support',
+        'text' => 'Initial training, maintenance and continuous updates.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What exactly is MLM software?',
+      'answer1' => 'A system that manages affiliates, sales, commissions and bonuses with full automation.',
+      'question2' => 'Can I adapt the software to my compensation plan?',
+      'answer2' => 'Yes. 100% customized solutions based on your business model.',
+      'question3' => 'How many users can it support?',
+      'answer3' => 'Thousands of active affiliates simultaneously, without performance loss.',
+      'question4' => 'Which compensation plans are supported?',
+      'answer4' => 'Unilevel, Binary, Matrix, Breakaway, Hybrid and fully customized models.',
+      'question5' => 'Can it integrate with external systems?',
+      'answer5' => 'Integration with CRM, ERPs, e-learning, wallets and payments through secure APIs.',
+      'question6' => 'Is it compatible with blockchain or Web3?',
+      'answer6' => 'Yes. Smart contracts and tokenization can be included for enhanced transparency.'
+    ],
+    'sales' => [
+      'title' => 'It\'s not just software. It\'s control, expansion and results.',
+      'text' => 'Book a demo and discover how to transform the management of your network.'
+    ]
   ]
 ];

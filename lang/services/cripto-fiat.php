@@ -76,5 +76,81 @@ return [
       'title' => 'Una sola plataforma. Dos mundos financieros.',
       'text' => 'Agenda una demo y descubre cómo un sistema Cripto/Fiat puede modernizar la gestión económica de tu empresa.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'We connect the crypto and financial ecosystem',
+      'text' => 'Operate without limits between crypto and traditional finance.'
+    ],
+    'about1' => 'Convert and manage crypto and fiat money',
+    'about2' => 'Centralized wallet and balance management',
+    'about2_text' => 'Manage your treasury with secure, automated, and borderless operations.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Instant conversion',
+        'text' => 'Agile exchange between traditional currencies and cryptocurrencies at the most competitive rate.'
+      ],
+      'item2' => [
+        'title' => 'Financial unification',
+        'text' => 'Control crypto and bank accounts from a single admin dashboard.'
+      ],
+      'item3' => [
+        'title' => 'Borderless payments',
+        'text' => 'International transfers without the costs or delays of the traditional banking system.'
+      ],
+      'item4' => [
+        'title' => 'Total security',
+        'text' => 'KYC/AML implementation, advanced encryption, and full operational traceability.'
+      ],
+      'item5' => [
+        'title' => 'Global compatibility',
+        'text' => 'Integration with banks, payment gateways, exchanges, and Web3 platforms.'
+      ],
+      'item6' => [
+        'title' => 'Regulatory compliance',
+        'text' => 'Aligned with specific regulatory and financial policies in each country.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Financial flow assessment',
+        'text' => 'We map collection, payment, and conversion processes between crypto and fiat.'
+      ],
+      'item2' => [
+        'title' => 'Banking and crypto integration',
+        'text' => 'Connection of wallets, bank accounts, and APIs from regulated services.'
+      ],
+      'item3' => [
+        'title' => 'Exchange rate configuration',
+        'text' => 'Automation of rules for conversion and accounting reconciliation.'
+      ],
+      'item4' => [
+        'title' => 'Validation and security',
+        'text' => 'Additional layers of encryption, authentication, and continuous monitoring.'
+      ],
+      'item5' => [
+        'title' => 'Deployment and continuous support',
+        'text' => 'Training, active maintenance, and system evolution.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What can I do with a Crypto/Fiat system?',
+      'answer1' => 'Send, receive, and convert funds between cryptocurrencies and traditional currency instantly and securely.',
+      'question2' => 'What currencies and networks do you support?',
+      'answer2' => 'USD, EUR, MXN and assets such as BTC, ETH, USDT, USDC, and BNB, among others.',
+      'question3' => 'Is it necessary to have a bank account or an exchange?',
+      'answer3' => 'Not in all cases. You can operate with corporate wallets or regulated services.',
+      'question4' => 'Which companies can use this system?',
+      'answer4' => 'Fintechs, startups, marketplaces, or companies with international operations.',
+      'question5' => 'Can it automate conversions or payments?',
+      'answer5' => 'Yes. It enables automatic dispersion, conversion, and reconciliation rules.',
+      'question6' => 'Does it comply with international regulations?',
+      'answer6' => 'Yes. It follows AML/KYC standards and applicable local regulations.'
+    ],
+    'sales' => [
+      'title' => 'One platform. Two financial worlds.',
+      'text' => 'Book a demo and discover how a Crypto/Fiat system can modernize your company’s economic management.'
+    ]
   ]
 ];

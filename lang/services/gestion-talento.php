@@ -76,5 +76,81 @@ return [
       'title' => 'Gestionar talento no es administrar personas, es impulsar su evolución.',
       'text' => 'Agenda una demo y descubre cómo crear el equipo ideal que crece contigo.'
     ]
+  ],
+  'en' => [
+    'hero' => [
+      'title' => 'We manage talent, culture and results',
+      'text' => 'Build a culture where talent grows and thrives.'
+    ],
+    'about1' => 'Performance-based talent models',
+    'about2' => 'Automated evaluation and development',
+    'about2_text' => 'Clear, measurable and people-centered processes.',
+    'benefits' => [
+      'item1' => [
+        'title' => 'Aligned strategy',
+        'text' => 'Organizational goals connected to team growth.'
+      ],
+      'item2' => [
+        'title' => 'Objective evaluation',
+        'text' => 'Digital measurement of performance, skills and real outcomes.'
+      ],
+      'item3' => [
+        'title' => 'Talent retention',
+        'text' => 'Programs that drive development, recognition and belonging.'
+      ],
+      'item4' => [
+        'title' => 'Efficient management',
+        'text' => 'Reduced operational load through automation and analytics.'
+      ],
+      'item5' => [
+        'title' => 'Career planning',
+        'text' => 'Personalized growth paths by role and potential.'
+      ],
+      'item6' => [
+        'title' => 'Strengthened organizational culture',
+        'text' => 'More motivated, collaborative and purpose-driven teams.'
+      ]
+    ],
+    'development' => [
+      'title' => 'Implementation process',
+      'item1' => [
+        'title' => 'Organizational assessment',
+        'text' => 'Analysis of structure, roles and talent challenges.'
+      ],
+      'item2' => [
+        'title' => 'Management model design',
+        'text' => 'Definition of indicators, competencies and evaluation tools.'
+      ],
+      'item3' => [
+        'title' => 'System implementation',
+        'text' => 'Platform activation and continuous tracking workflows.'
+      ],
+      'item4' => [
+        'title' => 'Internal training',
+        'text' => 'Preparing leaders and HR to operate the model effectively.'
+      ],
+      'item5' => [
+        'title' => 'Monitoring and improvement',
+        'text' => 'Impact evaluation and periodic strategy adjustments.'
+      ]
+    ],
+    'faq' => [
+      'question1' => 'What does a talent management system include?',
+      'answer1' => 'Performance evaluation, competency management and development plans.',
+      'question2' => 'Can evaluation processes be automated?',
+      'answer2' => 'Yes. Goal-based, 360° or competency evaluations through digital systems.',
+      'question3' => 'What size of company can implement it?',
+      'answer3' => 'From startups to large corporations, fully scalable.',
+      'question4' => 'How is the impact measured?',
+      'answer4' => 'Performance indicators, turnover, work climate and productivity by area.',
+      'question5' => 'Do you include training or support for leaders?',
+      'answer5' => 'Yes. Workshops and sessions to strengthen leadership and people management.',
+      'question6' => 'Can this system integrate with other platforms?',
+      'answer6' => 'Compatible with CRM, ERP, payroll or existing LMS platforms.'
+    ],
+    'sales' => [
+      'title' => 'Managing talent is not about administrating people, it is about driving their evolution.',
+      'text' => 'Schedule a demo and discover how to build the ideal team that grows with you.'
+    ]
   ]
 ];
