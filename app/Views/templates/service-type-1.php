@@ -25,26 +25,26 @@ include __DIR__ . '/../components/fixedBackground.php';
     <div class="swiper-wrapper h-screen">
       <!-- Hero section -->
       <section class="slide-section swiper-slide group h-screen w-full">
-        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
+        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['hero'] ?></h2>
             <p class="lg:text-xl text-secondary-200 text-balance"><?= $content['hero_text'] ?></p>
             <button class="button rounded-full mt-4 lg:mt-8 lg:px-10 bg-white border border-brand-100 text-secondary-200 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white" type="button" id="serv-int-button"><?= $trans('common.know_more') ?></button>
           </div>
           <div class="relative lg:w-1/2">
-            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
-            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
+            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
           </div>
         </div>
       </section>
 
       <!-- About 1 section -->
       <section class="slide-section swiper-slide group h-screen w-full">
-        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
-          <div class="lg:w-1/2">
+        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
+          <div class="lg:w-11/20">
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about1_title'] ?></h2>
           </div>
-          <div class="lg:w-1/2 flex">
+          <div class="lg:w-9/20 flex">
             <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-200">
             <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 -translate-x-8 translate-y-16 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300">
           </div>
@@ -53,7 +53,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
       <!-- About 2 section -->
       <section class="slide-section swiper-slide group h-screen w-full">
-        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
+        <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about2_title'] ?></h2>
             <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['about2_text'] ?></p>
@@ -89,7 +89,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
       <!-- Process section -->
       <section class="slide-section swiper-slide h-screen w-full">
-        <div class="px-7 py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
+        <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
           <div class="lg:w-1/2">
             <h2 class="font-khand uppercase text-center lg:text-left bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $content['process_title'] ?></h2>
             <ul id="my-swiper-pagination" class="flex items-center justify-center lg:justify-start gap-2 lg:gap-4 mt-2 lg:mt-6"></ul>
@@ -145,7 +145,7 @@ include __DIR__ . '/../components/fixedBackground.php';
 
       <!-- Sales section -->
       <section class="slide-section swiper-slide group h-screen w-full">
-        <div class="px-7 py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
+        <div class="block-content py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2">
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['sales']['title'] ?></h2>
             <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['sales']['text'] ?></p>
@@ -155,8 +155,8 @@ include __DIR__ . '/../components/fixedBackground.php';
             </a>
           </div>
           <div class="relative lg:w-1/2">
-            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
-            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:tranlate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
+            <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl md:rounded-2xl lg:min-w-[44vw] relative max-h-[45vh] h-full lg:max-h-none lg:h-auto lg:absolute lg:top-1/2 lg:left-1/5 opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 lg:-translate-y-[calc(50%_-_--spacing(12))] lg:group-[&.swiper-slide-fully-visible]:-translate-y-1/2 transition-op-trans duration-500 delay-200">
+            <img src="/public/images/services/sec1_small.svg" alt="" class="absolute lg:relative rounded-xl md:rounded-2xl w-1/3 bottom-6 lg:bottom-0 -left-6 sm:-left-16 lg:left-0 lg:w-52 xl:w-auto shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 lg:translate-y-22 lg:group-[&.swiper-slide-fully-visible]:translate-y-10 xl:translate-y-20 xl:group-[&.swiper-slide-fully-visible]:translate-y-8 transition-op-trans duration-500 delay-300">
           </div>
         </div>
       </section>
