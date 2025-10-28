@@ -358,7 +358,7 @@ return [
   'massive_payments' => $servicesTranslations['pagos-masivos'],
   'crypto_processing' => $servicesTranslations['procesamiento-criptomonedas'],
   'recruitment' => $servicesTranslations['reclutamiento'],
-  'talent_training' => $servicesTranslations['talento-capacitacion'],
+  'talent_recruitment' => $servicesTranslations['talento-captacion'],
   'tokenization_projects' => $servicesTranslations['tokenizacion-proyectos'],
   'ui_ux' => $servicesTranslations['ui-ux']
 ];
