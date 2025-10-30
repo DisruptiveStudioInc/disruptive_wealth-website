@@ -233,3 +233,44 @@ if (casesSection && cases.length > 0) {
   // Listen for resize
   window.addEventListener("resize", checkViewport);
 }
+
+// IPs how works tabs
+const ipTabsContainer = document.getElementById("ip-works-tabs");
+const ipTabs = document.querySelectorAll(".ip-works-trigger");
+const ipTabsContents = document.querySelectorAll(".ip-works-content");
+const ipTabsImages = document.querySelectorAll(".ip-works-image");
+
+if (ipTabsContainer && ipTabs && ipTabsContents && ipTabsImages) {
+  const ipImagesWraps = Array.from(ipTabsImages).map((el) => el.parentElement);
+
+  const setIpTabsImages = () => {
+    const [current] = ipImagesWraps.filter((wrap) =>
+      wrap.classList.contains("active")
+    );
+    const inactiveWraps = ipImagesWraps.filter(
+      (wrap) => !wrap.classList.contains("active")
+    );
+    current.style.zIndex = `${ipImagesWraps.length}`;
+    current.style.transform = "";
+    inactiveWraps.forEach((wrap, index) => {
+      wrap.style.zIndex = `${inactiveWraps.length - index}`;
+      wrap.style.transform = `translateX(calc(40px * ${index + 1}))`;
+    });
+  };
+  setIpTabsImages();
+
+  ipTabsContainer.addEventListener("click", (event) => {
+    const target = event.target.closest(".ip-works-trigger");
+    if (!target) return;
+
+    ipTabs.forEach((tab) => tab.parentElement.classList.remove("active"));
+    ipTabsContents.forEach((tabText) => tabText.classList.remove("open"));
+    ipImagesWraps.forEach((wrap) => wrap.classList.remove("active"));
+
+    target.parentElement.classList.add("active");
+    target.nextElementSibling.classList.add("open");
+    ipImagesWraps[target.dataset.index].classList.add("active");
+
+    setIpTabsImages();
+  });
+}

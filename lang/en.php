@@ -327,13 +327,15 @@ return [
     'back' => 'Back',
     'next' => 'Next',
     'previous' => 'Previous',
-    'sales' => 'Sales'
+    'sales' => 'Sales',
+    'demo' => 'Schedule a demo'
   ],
 
   // Common titles
   'common_titles' => [
     'benefits' => 'Benefits',
-    'faqs' => 'FAQs'
+    'faqs' => 'FAQs',
+    'how_works' => 'How it works'
   ],
 
   // Services Content
@@ -360,5 +362,8 @@ return [
   'recruitment' => $servicesTranslations['reclutamiento'],
   'talent_recruitment' => $servicesTranslations['talento-captacion'],
   'tokenization_projects' => $servicesTranslations['tokenizacion-proyectos'],
-  'ui_ux' => $servicesTranslations['ui-ux']
+  'ui_ux' => $servicesTranslations['ui-ux'],
+
+  // IPs Content
+  'backoffice' => $servicesTranslations['backoffice']
 ];

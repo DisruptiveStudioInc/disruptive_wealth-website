@@ -33,6 +33,7 @@ class ServiceController extends BaseController
       'service' => $service,
       'meta' => $service['meta'],
       'content' => $service['content'],
+      'hasSnapScroll' => false
     ]);
   }
 }

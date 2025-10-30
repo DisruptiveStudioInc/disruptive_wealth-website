@@ -78,7 +78,7 @@
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
 </head>
 
-<body class="bg-white text-grey-100 antialiased overflow-x-hidden">
+<body class="text-grey-100 antialiased overflow-x-hidden">
 <header class="bg-white border-b border-surface-300 w-full fixed top-0 left-0 z-50">
   <nav class="w-full">
     <div class="flex justify-between items-center lg:items-stretch gap-4 lg:es:gap-0 xl:es:gap-2 w-full px-7">

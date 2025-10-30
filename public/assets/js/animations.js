@@ -31,6 +31,9 @@ document.fonts.ready.then(() => {
   const wordsEls = document.querySelectorAll(".slide-up-words");
   const wordsBlackEls = document.querySelectorAll(".slide-up-words-black");
   const wordsWhiteEls = document.querySelectorAll(".slide-up-words-white");
+  const wordsWhiteScrollEls = document.querySelectorAll(
+    ".slide-up-words-white-scroll"
+  );
 
   if (wordsEls.length > 0) {
     gsap.utils.toArray(".slide-up-words").forEach((element) => {
@@ -103,26 +106,69 @@ document.fonts.ready.then(() => {
       });
     });
   }
+  if (wordsWhiteScrollEls.length > 0) {
+    gsap.utils.toArray(".slide-up-words-white-scroll").forEach((element) => {
+      SplitText.create(element, {
+        type: "words",
+        autoSplit: true,
+        smartWrap: true,
+        wordsClass: "bg-clip-text bg-text-white pt-2 word++",
+        onSplit: (self) => {
+          return gsap.from(self.words, {
+            yPercent: 20,
+            autoAlpha: 0,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              end: "top 50%",
+              scrub: true,
+              toggleActions: playReverse,
+            },
+          });
+        },
+      });
+    });
+  }
 });
 
 const staggerEls = document.querySelectorAll(".stagger-parent");
 if (staggerEls.length > 0) {
   gsap.utils.toArray(".stagger-parent").forEach((container) => {
-    const elements = container.querySelectorAll(".slide-up-stagger");
-    gsap.from(elements, {
-      scrollTrigger: {
-        trigger: container,
-        start: "top 80%",
-        // end: "top 50%",
-        // scrub: true,
-        toggleActions: playReverse,
-      },
-      opacity: 0,
-      y: 30,
-      stagger: 0.2,
-      // duration: 0.8,
-      // ease: "power2.out",
-    });
+    const elementSlide = container.querySelectorAll(".slide-up-stagger");
+    if (elementSlide.length > 0) {
+      gsap.from(elementSlide, {
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          // end: "top 50%",
+          // scrub: true,
+          toggleActions: playReverse,
+        },
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        // duration: 0.8,
+        // ease: "power2.out",
+      });
+    }
+
+    const elementOpacity = container.querySelectorAll(".opacity-stagger");
+    if (elementOpacity.length > 0) {
+      gsap.from(elementOpacity, {
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          // end: "top 50%",
+          // scrub: true,
+          toggleActions: playReverse,
+        },
+        opacity: 0,
+        stagger: 0.2,
+        // duration: 0.8,
+        // ease: "power2.out",
+      });
+    }
   });
 }
 
@@ -409,6 +455,42 @@ if (circleExpansions.length && ecosystemCircle) {
       },
     }
   );
+}
+
+// IPs Benefits
+const ipBenefits = document.querySelectorAll(".ip-benefit");
+
+if (ipBenefits.length > 0) {
+  ipBenefits.forEach((element) => {
+    gsap.fromTo(
+      element,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 60%",
+          end: "top 40%",
+          scrub: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      element,
+      { opacity: 1 },
+      {
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 20%",
+          end: "top 0%",
+          scrub: true,
+        },
+      }
+    );
+  });
 }
 
 export { ballUpAnim, ballDownAnim, flipTabContent };
