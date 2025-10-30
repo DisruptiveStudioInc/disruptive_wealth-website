@@ -150,7 +150,7 @@ return [
     ],
     'sales' => [
       'title' => 'Design that is not just seen. It stays remembered.',
-      'text' => 'Book a demo and discover how we can elevate your brand’s visual power.'
+      'text' => 'Book a demo and discover how we can elevate your brand\'s visual power.'
     ]
   ]
 ];

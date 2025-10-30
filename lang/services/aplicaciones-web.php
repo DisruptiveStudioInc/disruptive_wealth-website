@@ -115,7 +115,7 @@ return [
       'title' => 'Development process',
       'item1' => [
         'title' => 'Requirements analysis',
-        'text' => 'We identify objectives, users and the system’s critical flows.'
+        'text' => 'We identify objectives, users and the system\'s critical flows.'
       ],
       'item2' => [
         'title' => 'Functional design',

@@ -150,7 +150,7 @@ return [
     ],
     'sales' => [
       'title' => 'One platform. Two financial worlds.',
-      'text' => 'Book a demo and discover how a Crypto/Fiat system can modernize your company’s economic management.'
+      'text' => 'Book a demo and discover how a Crypto/Fiat system can modernize your company\'s economic management.'
     ]
   ]
 ];

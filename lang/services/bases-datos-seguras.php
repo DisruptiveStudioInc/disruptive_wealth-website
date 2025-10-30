@@ -100,7 +100,7 @@ return [
       ],
       'item4' => [
         'title' => 'Scalability',
-        'text' => 'Databases designed to support your company’s global growth.'
+        'text' => 'Databases designed to support your company\'s global growth.'
       ],
       'item5' => [
         'title' => 'Regulatory compliance',

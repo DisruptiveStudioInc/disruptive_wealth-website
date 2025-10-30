@@ -365,5 +365,11 @@ return [
   'ui_ux' => $servicesTranslations['ui-ux'],
 
   // IPs Content
-  'backoffice' => $servicesTranslations['backoffice']
+  'backoffice' => $servicesTranslations['backoffice'],
+  'blockchain' => $servicesTranslations['blockchain'],
+  'metaverse' => $servicesTranslations['metaverse'],
+  'otc' => $servicesTranslations['otc'],
+  'payment_processing' => $servicesTranslations['payment-processing'],
+  'tokenization' => $servicesTranslations['tokenization'],
+  'wallet' => $servicesTranslations['wallet']
 ];

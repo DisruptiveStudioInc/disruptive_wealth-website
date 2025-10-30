@@ -141,7 +141,7 @@ return [
       'answer2' => 'Each instance can have its own branding, language, currency, modules and flows, without affecting others.',
       'question3' => 'What types of companies use this model?',
       'answer3' => 'Ideal for SaaS, multilayer corporations, franchises and networks with independent operational divisions.',
-      'question4' => 'How is each tenant’s information protected?',
+      'question4' => 'How is each tenant\'s information protected?',
       'answer4' => 'Through individual encryption, segmented authentication and logical isolation for maximum security.',
       'question5' => 'What advantages does it offer over independent systems?',
       'answer5' => 'Automatic updates, centralized management and reduced duplicated infrastructure.',

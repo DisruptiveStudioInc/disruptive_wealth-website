@@ -154,7 +154,7 @@ return [
     ],
     'sales' => [
       'title' => 'Design that not only impacts. It connects.',
-      'text' => 'Schedule a demo and discover how UI/UX design can transform your users’ experience.'
+      'text' => 'Schedule a demo and discover how UI/UX design can transform your users\' experience.'
     ]
   ]
 ];

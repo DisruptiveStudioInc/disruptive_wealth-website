@@ -108,7 +108,7 @@ return [
       ],
       'item6' => [
         'title' => 'Legal adaptability',
-        'text' => 'Configured according to regulations applicable to the client’s country or industry.'
+        'text' => 'Configured according to regulations applicable to the client\'s country or industry.'
       ]
     ],
     'development' => [

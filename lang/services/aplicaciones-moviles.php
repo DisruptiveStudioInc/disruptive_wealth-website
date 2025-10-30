@@ -92,7 +92,7 @@ return [
       ],
       'item2' => [
         'title' => 'Superior performance',
-        'text' => 'Lightweight, fast apps adapted to each device’s performance.'
+        'text' => 'Lightweight, fast apps adapted to each device\'s performance.'
       ],
       'item3' => [
         'title' => 'Full integration',
