@@ -33,7 +33,7 @@ require __DIR__ . '/../layouts/header.php';
       <h1 class="font-title font-bold bg-clip-text bg-text-black uppercase text-lg md:text-2xl lg:text-4xl xl:text-6xl text-balance leading-tight text-center lg:text-left sm:mb-4 opacity-0 animate-slideup" style="animation-delay:400ms"><?= $content['hero'] ?></h1>
       <p class="lg:text-xl mb-6 lg:mb-12 text-center lg:text-left opacity-0 animate-slideup" style="animation-delay:500ms"><?= $content['hero_text'] ?></p>
       <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start opacity-0 animate-slideup" style="animation-delay:600ms">
-        <a href="<?= $content['hero_cta_main']['link'] ?>" target="_blank" rel="noopener noreferrer" class="button rounded-full sm:px-7 bg-white text-secondary-200 border-2 border-brand-100 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white text-center">
+        <a href="<?= $content['hero_cta_main']['link'].$constants['contact_info']['wame'] ?>" target="_blank" rel="noopener noreferrer" class="button rounded-full sm:px-7 bg-white text-secondary-200 border-2 border-brand-100 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white text-center">
           <?= $content['hero_cta_main']['text'] ?>
         </a>
         <a href="<?= $content['hero_cta_secondary']['link'] ?>" class="button rounded-full sm:px-7 text-center">
@@ -129,7 +129,7 @@ require __DIR__ . '/../layouts/header.php';
     <h2 class="font-title pt-1 uppercase text-center text-3xl sm:text-5xl lg:text-7xl xl:text-8xl leading-tight text-balance slide-up-words-white-scroll"><?= $content['banner_title'] ?></h2>
     <p class="text-center lg:text-2xl my-5 lg:my-8 text-pretty max-w-[52ch] slide-up"><?= $content['banner_text'] ?></p>
     <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start w-full lg:w-fit slide-up">
-      <a href="<?= $content['banner_cta_main']['link'] ?>" target="_blank" rel="noopener noreferrer" class="button rounded-full sm:px-7 bg-white text-secondary-200 border-2 border-brand-100 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white text-center">
+      <a href="<?= $content['banner_cta_main']['link'].$constants['contact_info']['wame'] ?>" target="_blank" rel="noopener noreferrer" class="button rounded-full sm:px-7 bg-white text-secondary-200 border-2 border-brand-100 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white text-center">
         <?= $content['banner_cta_main']['text'] ?>
       </a>
       <a href="<?= route($content['banner_cta_secondary']['link'], $currentLang) ?>" class="button rounded-full sm:px-7 text-center">

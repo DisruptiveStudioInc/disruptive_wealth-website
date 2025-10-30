@@ -18,7 +18,7 @@ return [
   'hero_image' => 'file.webp',
   'hero_cta_main' => [
     'text' => Language::trans("common.demo"),
-    'link' => 'https://demo.com'
+    'link' => "https://wa.me/"
   ],
   'hero_cta_secondary' => [
     'text' => Language::trans("{$sKey}.hero.cta"),
@@ -109,7 +109,7 @@ return [
   'banner_text' => Language::trans("{$sKey}.cta.text"),
   'banner_cta_main' => [
     'text' => Language::trans("common.demo"),
-    'link' => 'https://demo.com'
+    'link' => 'https://wa.me/'
   ],
   'banner_cta_secondary' => [
     'text' => Language::trans("{$sKey}.cta.button"),
