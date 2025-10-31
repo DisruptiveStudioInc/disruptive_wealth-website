@@ -27,7 +27,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2 text-center lg:text-left">
-            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['hero'] ?></h2>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $content['hero'] ?></h2>
             <p class="lg:text-xl text-secondary-200 text-balance"><?= $content['hero_text'] ?></p>
             <button class="button rounded-full mt-4 mx-auto lg:mx-0 lg:mt-8 px-7 lg:px-10 bg-white border border-brand-100 text-secondary-200 hover:bg-brand-100 active:bg-brand-100 hover:text-white active:text-white" type="button" id="serv-int-button"><?= $trans('common.know_more') ?></button>
           </div>
@@ -42,7 +42,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-11/20 text-center lg:text-left">
-            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about1_title'] ?></h2>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $content['about1_title'] ?></h2>
           </div>
           <div class="lg:w-9/20 flex">
             <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-200">
@@ -55,7 +55,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2 text-center lg:text-left">
-            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['about2_title'] ?></h2>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $content['about2_title'] ?></h2>
             <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['about2_text'] ?></p>
           </div>
           <div class="relative lg:w-1/2 lg:pr-12">
@@ -69,7 +69,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <!-- Benefits section -->
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col">
-          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $trans('common_titles.benefits') ?></h2>
+          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl es:pt-2"><?= $trans('common_titles.benefits') ?></h2>
           <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 xl:gap-12 w-full">
             <?php foreach($content['benefits'] as $k => $benefit): ?>
               <li class="flex items-start gap-2 sm:flex-col opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-300"
@@ -91,7 +91,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
           <div class="lg:w-1/2">
-            <h2 class="font-khand uppercase text-center lg:text-left bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $content['process_title'] ?></h2>
+            <h2 class="font-khand uppercase text-center lg:text-left bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl es:pt-2"><?= $content['process_title'] ?></h2>
             <ul id="my-swiper-pagination" class="flex items-center justify-center lg:justify-start gap-2 lg:gap-4 mt-2 lg:mt-6"></ul>
           </div>
           <div class="w-full lg:w-1/2 lg:pr-40">
@@ -119,7 +119,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <!-- FAQ section -->
       <section class="slide-section swiper-slide h-screen w-full">
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col">
-          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-center text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl"><?= $trans('common_titles.faqs') ?></h2>
+          <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-center text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl es:pt-2"><?= $trans('common_titles.faqs') ?></h2>
           <div class="block w-full md:w-9/10 mx-auto mt-6 lg:mt-10">
             <div id="faq-slider" class="relative text-center perspective-distant transition-[height]">
               <?php foreach( $content['faq'] as $k => $item): ?>
@@ -147,7 +147,7 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2 text-center lg:text-left">
-            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance"><?= $content['sales']['title'] ?></h2>
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $content['sales']['title'] ?></h2>
             <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['sales']['text'] ?></p>
             <a href="https://wa.me/<?= $constants['contact_info']['wame'] ?>" target="_blank" rel="noopener noreferrer" class="button leading-none bg-green-400 hover:bg-green-700 active:bg-green-700 gap-2 rounded-full w-fit md:text-xl font-semibold mt-4 mx-auto lg:mt-8 lg:mx-0">
               <svg class="size-7 md:size-8"><use href="#whatsapp" /></svg>
