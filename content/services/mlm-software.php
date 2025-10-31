@@ -8,8 +8,8 @@ return [
   'hero' => Language::trans("{$sKey}.hero.title"),
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
-    'big' => 'file.webp',
-    'small' => 'file.webp'
+    'big' => 'mlm_desktop.webp',
+    'small' => 'mlm_mobile.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
