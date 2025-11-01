@@ -45,8 +45,8 @@ include __DIR__ . '/../components/fixedBackground.php';
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $content['about1_title'] ?></h2>
           </div>
           <div class="lg:w-9/20 flex">
-            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-200" loading="lazy">
-            <img src="/public/images/services/sec2.svg" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 -translate-x-8 translate-y-16 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300" loading="lazy">
+            <img src="/public/images/services/solutions/<?= $content['about1_images']['front'] ?>" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-200" loading="lazy">
+            <img src="/public/images/services/solutions/<?= $content['about1_images']['back'] ?>" alt="" class="rounded-xl md:rounded-2xl max-h-[45vh] h-full lg:max-h-none lg:h-auto w-1/2 -translate-x-8 translate-y-16 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300" loading="lazy">
           </div>
         </div>
       </section>

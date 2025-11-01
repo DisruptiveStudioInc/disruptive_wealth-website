@@ -13,8 +13,8 @@ return [
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
-    'front' => 'file.webp',
-    'back' => 'file.webp'
+    'front' => 'mlm_rank1.webp',
+    'back' => 'mlm_rank2.webp'
   ],
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
