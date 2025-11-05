@@ -112,5 +112,9 @@ return [
   'sales' => [
     'title' => Language::trans("{$sKey}.sales.title"),
     'text' => Language::trans("{$sKey}.sales.text")
+  ],
+  'sales_images' => [
+    'big' => 'mlm_last_big.webp',
+    'small' => 'mlm_last_small.webp'
   ]
 ];
