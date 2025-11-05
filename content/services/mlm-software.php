@@ -19,38 +19,38 @@ return [
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'file.webp',
-    'mid' => 'file.webp',
-    'small' => 'file.webp'
+    'big' => 'mlm_control_big.webp',
+    'mid' => 'mlm_control_mid.webp',
+    'small' => 'mlm_control_small.webp'
   ],
   'benefits' => [
     [
-      'image' => 'bimg',
+      'image' => 'mlm-automation',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'bimg',
+      'image' => 'mlm-control',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'bimg',
+      'image' => 'mlm-compliant',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'bimg',
+      'image' => 'mlm-scaling',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'bimg',
+      'image' => 'mlm-integration',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'bimg',
+      'image' => 'mlm-transparency',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],

@@ -59,9 +59,9 @@ include __DIR__ . '/../components/fixedBackground.php';
             <p class="text-secondary-200 lg:text-xl text-balance"><?= $content['about2_text'] ?></p>
           </div>
           <div class="relative lg:w-1/2 lg:pr-12">
-            <img src="/public/images/services/sec3_big.svg" alt="" class="rounded-xl md:rounded-2xl mx-auto max-h-[45vh] h-full lg:max-h-none lg:h-auto opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-500 delay-200" loading="lazy">
-            <img src="/public/images/services/sec3_mid.svg" alt="" class="rounded-xl md:rounded-2xl w-1/2 sm:w-2/3 lg:w-auto absolute -top-4 -right-6 sm:-right-16 lg:-top-8 lg:-right-2 xl:-right-8 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300" loading="lazy">
-            <img src="/public/images/services/sec3_small.svg" alt="" class="rounded-xl md:rounded-2xl w-2/5 sm:w-1/2 lg:w-auto absolute bottom-8 -left-6 sm:bottom-4 sm:-left-16 lg:bottom-8 lg:-left-4 xl:left-0 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-400" loading="lazy">
+            <img src="/public/images/services/solutions/<?= $content['about2_images']['big'] ?>" alt="" class="rounded-xl md:rounded-2xl mx-auto max-h-[45vh] h-full lg:max-h-none lg:h-auto opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-500 delay-200" loading="lazy">
+            <img src="/public/images/services/solutions/<?= $content['about2_images']['mid'] ?>" alt="" class="rounded-xl md:rounded-2xl w-1/2 sm:w-2/3 lg:w-auto absolute -top-4 -right-6 sm:-right-16 lg:-top-8 lg:-right-2 xl:-right-8 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-300" loading="lazy">
+            <img src="/public/images/services/solutions/<?= $content['about2_images']['small'] ?>" alt="" class="rounded-xl md:rounded-2xl w-2/5 sm:w-1/2 lg:w-auto absolute bottom-8 -left-6 sm:bottom-4 sm:-left-16 lg:bottom-8 lg:-left-4 xl:left-0 shadow-lg lg:shadow-xl xl:shadow-serv opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 scale-90 group-[&.swiper-slide-fully-visible]:scale-100 transition-op-trans duration-500 delay-400" loading="lazy">
           </div>
         </div>
       </section>
@@ -75,7 +75,7 @@ include __DIR__ . '/../components/fixedBackground.php';
               <li class="flex items-start gap-2 sm:flex-col opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-300"
               style="transition-delay: calc(200ms + (100ms * <?= $k ?>));">
                 <div class="p-2 rounded-lg bg-surface-100 text-brand-100 mb-0 lg:mb-4 flex-center shadow-md lg:shadow-xl">
-                  <svg class="size-6 lg:size-10"><use href="#gear"/></svg>
+                  <svg class="size-6 lg:size-10"><use href="#<?= $benefit['image'] ?>"/></svg>
                 </div>
                 <div>
                   <h3 class="font-bold sm:text-lg lg:text-xl w-full"><?= $benefit['title'] ?></h3>
