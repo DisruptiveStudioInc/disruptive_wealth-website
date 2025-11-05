@@ -58,27 +58,27 @@ return [
   'process_title' => Language::trans("{$sKey}.development.title"),
   'processes' => [
     [
-      'image' => 'pimg',
+      'image' => 'mlm_s1_analisis.webp',
       'title' => Language::trans("{$sKey}.development.item1.title"),
       'text' => Language::trans("{$sKey}.development.item1.text")
     ],
     [
-      'image' => 'pimg',
+      'image' => 'mlm_s2_diseno.webp',
       'title' => Language::trans("{$sKey}.development.item2.title"),
       'text' => Language::trans("{$sKey}.development.item2.text")
     ],
     [
-      'image' => 'pimg',
+      'image' => 'mlm_s3_desarrollo.webp',
       'title' => Language::trans("{$sKey}.development.item3.title"),
       'text' => Language::trans("{$sKey}.development.item3.text")
     ],
     [
-      'image' => 'pimg',
+      'image' => 'mlm_s4_integracion.webp',
       'title' => Language::trans("{$sKey}.development.item4.title"),
       'text' => Language::trans("{$sKey}.development.item4.text")
     ],
     [
-      'image' => 'pimg',
+      'image' => 'mlm_s5_lanzamiento.webp',
       'title' => Language::trans("{$sKey}.development.item5.title"),
       'text' => Language::trans("{$sKey}.development.item5.text")
     ]

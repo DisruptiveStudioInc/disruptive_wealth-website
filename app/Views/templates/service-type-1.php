@@ -101,7 +101,7 @@ include __DIR__ . '/../components/fixedBackground.php';
                   <?php foreach($content['processes'] as $item): ?>
                     <article class="swiper-slide slide-ff">
                       <div class="flex-center flex-col text-center lg:text-left h-full bg-secondary-200 text-white rounded-xl">
-                        <img src="/public/images/services/sec5_slide.svg" alt="<?= $item['title'] ?>" class="rounded-xl w-full pointer-events-none" loading="lazy">
+                        <img src="/public/images/services/solutions/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="rounded-xl w-full pointer-events-none" loading="lazy">
                         <div class="p-4 md:p-7 lg:p-12">
                           <h3 class="font-title text-lg md:text-2xl lg:text-3xl xl:text-5xl leading-tight font-bold mb-2 md:mb-0"><?= $item['title'] ?></h3>
                           <p class="text-sm md:text-base"><?= $item['text'] ?></p>
