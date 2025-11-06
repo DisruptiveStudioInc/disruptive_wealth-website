@@ -10,12 +10,12 @@ return [
   'hero_tag' => [
     'text' => Language::trans("{$sKey}.hero.tag"),
     'images' => [
-      'file.webp',
-      'file.webp',
-      'file.webp'
+      'metaverse_logo_1.png',
+      'metaverse_logo_2.png',
+      'metaverse_logo_3.png'
     ]
   ],
-  'hero_image' => 'file.webp',
+  'hero_image' => 'metaverse_hero.webp',
   'hero_cta_main' => [
     'text' => Language::trans("common.demo"),
     'link' => "https://wa.me/"
@@ -28,32 +28,32 @@ return [
   'benefits_text' => Language::trans("{$sKey}.benefits.text"),
   'benefits' => [
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_presencia.webp',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_interaccion.webp',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_economias.webp',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_compatibilidad.webp',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_blockchain.webp',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_escalabilidad.webp',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text")
     ]
@@ -62,22 +62,22 @@ return [
   'how_works_text' => Language::trans("{$sKey}.how_works.text"),
   'how_works_list' => [
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_conceptualizacion.webp',
       'title' => Language::trans("{$sKey}.how_works.item1.title"),
       'text' => Language::trans("{$sKey}.how_works.item1.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_diseno.webp',
       'title' => Language::trans("{$sKey}.how_works.item2.title"),
       'text' => Language::trans("{$sKey}.how_works.item2.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_integracion.webp',
       'title' => Language::trans("{$sKey}.how_works.item3.title"),
       'text' => Language::trans("{$sKey}.how_works.item3.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'metaverse_despliegue.webp',
       'title' => Language::trans("{$sKey}.how_works.item4.title"),
       'text' => Language::trans("{$sKey}.how_works.item4.text")
     ]

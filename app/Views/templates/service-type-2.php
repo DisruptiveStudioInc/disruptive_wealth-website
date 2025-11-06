@@ -21,10 +21,10 @@ require __DIR__ . '/../layouts/header.php';
   <div class="block-content py-16 lg:py-40 min-h-dvh flex-center flex-col-reverse lg:flex-row lg:gap-12 xl:gap-32">
     <div class="lg:w-1/2">
       <div class="flex items-center gap-4 mb-6 lg:mb-12 w-fit mx-auto lg:mx-0">
-        <ul class="flex gap-0 -space-x-2 sm:-space-x-4">
+        <ul class="flex gap-0 -space-x-2 sm:-space-x-4 shrink-0">
           <?php foreach($content['hero_tag']['images'] as $k => $img): ?>
             <li class="opacity-0 animate-fadein" style="animation-delay:calc(100ms + (50ms * <?= $k ?>))">
-              <img src="/public/images/services/sec3_small.svg" alt="client" class="size-7 sm:size-12 rounded-full shadow-md shadow-secondary-50/40 bg-surface-100 object-cover">
+              <img src="/public/images/services/ips/<?= $img ?>" alt="client" class="size-7 sm:size-12 rounded-full shadow-md shadow-secondary-50/40 bg-surface-100 object-cover">
             </li>
           <?php endforeach; ?>
         </ul>
@@ -42,7 +42,7 @@ require __DIR__ . '/../layouts/header.php';
       </div>
     </div>
     <div class="lg:w-1/2">
-      <img src="/public/images/services/sec1_big.svg" alt="" class="rounded-xl lg:rounded-2xl w-4/5 max-w-xl lg:w-full lg:max-w-none mx-auto mb-8 lg:mb-0 opacity-0 animate-fadein" style="animation-delay:100ms">
+      <img src="/public/images/services/ips/<?= $content['hero_image'] ?>" alt="" class="rounded-xl lg:rounded-2xl w-4/5 max-w-xl lg:w-full lg:max-w-none mx-auto mb-8 lg:mb-0 opacity-0 animate-fadein" style="animation-delay:100ms">
     </div>
   </div>
 </section>
@@ -57,7 +57,7 @@ require __DIR__ . '/../layouts/header.php';
     <div class="flex flex-col gap-20 max-w-screen-xl mx-auto snap-y snap-proximity">
       <?php foreach($content['benefits'] as $k => $item): ?>
         <article class="ip-benefit opacity-0 flex-center flex-col lg:flex-row gap-4 lg:gap-12 xl:gap-32 max-w-xl lg:max-w-none mx-auto lg:mx-0 snap-center">
-          <img src="/public/images/services/sec5_slide.svg" alt="<?= $item['title'] ?>" class="rounded-xl lg:rounded-2xl w-full lg:w-1/2">
+          <img src="/public/images/services/ips/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="rounded-xl lg:rounded-2xl w-full lg:w-1/2">
           <div class="w-full lg:w-1/2">
             <p class="text-base lg:text-2xl"><?= sprintf("%02d", $k + 1) ?></p>
             <h3 class="font-title bg-clip-text bg-text-white pt-1 uppercase leading-tight text-lg md:text-2xl lg:text-5xl xl:text-7xl text-balance my-2 sm:my-4 lg:my-6"><?= $item['title'] ?></h3>
@@ -93,7 +93,7 @@ require __DIR__ . '/../layouts/header.php';
       <div class="relative hidden lg:flex items-center w-9/20">
         <?php foreach($content['how_works_list'] as $k => $item): ?>
           <div data-index="<?= $k ?>" class="ip-works-image-wrap absolute top-1/2 -left-10 w-4/5 -translate-y-1/2 perspective-distant group opacity-stagger <?= $k === 0 ? 'active': '' ?>">
-            <img src="/public/images/services/sec5_slide.svg" alt="<?= $item['title'] ?>" class="ip-works-image relative rounded-2xl -rotate-y-24 group-[&.active]:rotate-y-0 shadow-xl shadow-secondary-200/40 transition-transform">
+            <img src="/public/images/services/ips/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="ip-works-image relative rounded-2xl -rotate-y-24 group-[&.active]:rotate-y-0 shadow-xl shadow-secondary-200/40 transition-transform">
           </div>
         <?php endforeach; ?>
       </div>
