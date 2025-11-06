@@ -10,12 +10,12 @@ return [
   'hero_tag' => [
     'text' => Language::trans("{$sKey}.hero.tag"),
     'images' => [
-      'file.webp',
-      'file.webp',
-      'file.webp'
+      'sec_client.svg',
+      'sec_client.svg',
+      'sec_client.svg'
     ]
   ],
-  'hero_image' => 'file.webp',
+  'hero_image' => 'sec_hero.svg',
   'hero_cta_main' => [
     'text' => Language::trans("common.demo"),
     'link' => "https://wa.me/"
@@ -28,32 +28,32 @@ return [
   'benefits_text' => Language::trans("{$sKey}.benefits.text"),
   'benefits' => [
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text")
     ]
@@ -62,22 +62,22 @@ return [
   'how_works_text' => Language::trans("{$sKey}.how_works.text"),
   'how_works_list' => [
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.how_works.item1.title"),
       'text' => Language::trans("{$sKey}.how_works.item1.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.how_works.item2.title"),
       'text' => Language::trans("{$sKey}.how_works.item2.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.how_works.item3.title"),
       'text' => Language::trans("{$sKey}.how_works.item3.text")
     ],
     [
-      'image' => 'file.webp',
+      'image' => 'sec_slide.svg',
       'title' => Language::trans("{$sKey}.how_works.item4.title"),
       'text' => Language::trans("{$sKey}.how_works.item4.text")
     ]
@@ -104,7 +104,7 @@ return [
       'text' => Language::trans("{$sKey}.faqs.answer5")
     ]
   ],
-  'banner_image' => 'file.webp',
+  'banner_image' => 'sec_slide.svg',
   'banner_title' => Language::trans("{$sKey}.cta.title"),
   'banner_text' => Language::trans("{$sKey}.cta.text"),
   'banner_cta_main' => [
