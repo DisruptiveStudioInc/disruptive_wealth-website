@@ -566,7 +566,8 @@ return [
 
   // IPs CATEGORY (no subcategories)
     'backoffice' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'services',
     'template' => 'service-type-2',
     'content_file' => 'backoffice',
@@ -583,7 +584,8 @@ return [
   ],
 
   'blockchain' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'blockchain',
@@ -600,7 +602,8 @@ return [
   ],
 
   'tokenization' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'tokenization',
@@ -617,7 +620,8 @@ return [
   ],
 
   'otc' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'otc',
@@ -634,7 +638,8 @@ return [
   ],
 
   'processing' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'processing',
@@ -651,7 +656,8 @@ return [
   ],
 
   'wallet' => [
-    'isActive' => false,
+    'isActive' => true,
+    'inNav' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'wallet',
@@ -669,6 +675,7 @@ return [
 
   'metaverse' => [
     'isActive' => true,
+    'inNav' => true,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'metaverse',

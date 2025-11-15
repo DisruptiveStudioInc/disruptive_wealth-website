@@ -102,6 +102,29 @@ class Service
     return empty($result) ? 'no_services' : $result;
   }
 
+  public static function getNavIps(string $language): array|string
+  {
+    self::loadServices();
+
+    $result = [];
+    foreach (self::$services as $key => $service) {
+      if (isset($service[$language]) && ($service['category'] ?? 'services') === 'ips' && self::isServiceActive($service) && ($service['inNav'] ?? false) === true) {
+
+        $content = self::loadContent($service['content_file']);
+
+        $result[] = [
+          'key' => $key,
+          'category' => $service['category'],
+          'template' => $service['template'],
+          'meta' => $service[$language],
+          'content' => $content,
+        ];
+      }
+    }
+
+    return empty($result) ? 'no_services' : $result;
+  }
+
   public static function getCategories(): array
   {
     return ['services', 'ecosystem', 'ips'];

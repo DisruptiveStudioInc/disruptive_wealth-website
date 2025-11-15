@@ -192,7 +192,7 @@ function getNavigationMenu(string $lang, callable $trans): array {
     is_array($partHr) ? $partHr : []
   ));
   $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
-  $subIps = \App\Models\Service::getByCategory('ips', $lang);
+  $subIps = \App\Models\Service::getNavIps($lang);
   return [
     [
       'label' => $trans('nav.about'),
