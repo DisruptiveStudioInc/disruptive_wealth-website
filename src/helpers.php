@@ -169,22 +169,28 @@ function getServiceSubcategoryName(string $lang): array{
 
 function getNavigationMenu(string $lang, callable $trans): array {
   $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
-  $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
-  $subSolutions = [];
-  foreach($servicesGrouped as $subcategory => $items){
-    $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
-    $subcat = [
-      'name' => $subcatName,
-      'list' => []
-    ];
-    foreach($items as $item){
-      $subcat['list'][] = [
-        'label' => $item['meta']['meta_title'],
-        'url' => serviceRoute($item['meta']['slug'], $lang)
-      ];
-    }
-    array_push($subSolutions, $subcat);
-  }
+  // $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
+  // $subSolutions = [];
+  // foreach($servicesGrouped as $subcategory => $items){
+  //   $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
+  //   $subcat = [
+  //     'name' => $subcatName,
+  //     'list' => []
+  //   ];
+  //   foreach($items as $item){
+  //     $subcat['list'][] = [
+  //       'label' => $item['meta']['meta_title'],
+  //       'url' => serviceRoute($item['meta']['slug'], $lang)
+  //     ];
+  //   }
+  //   array_push($subSolutions, $subcat);
+  // }
+  $partReferral = \App\Models\Service::getBySubcategory('referral-marketing', $lang);
+  $partHr = \App\Models\Service::getBySubcategory('hr', $lang);
+  $subSolutions = array_values(array_merge(
+    is_array($partReferral) ? $partReferral : [],
+    is_array($partHr) ? $partHr : []
+  ));
   $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
   $subIps = \App\Models\Service::getByCategory('ips', $lang);
   return [
@@ -217,7 +223,7 @@ function getNavigationMenu(string $lang, callable $trans): array {
       'label' => $trans('nav.solutions'),
       // 'url' => route('home', $lang).'#solutions',
       'hasSubmenu' => true,
-      'isMegamenu' => true,
+      'isMegamenu' => false,
       'submenu' => $subSolutions,
     ],
     [

@@ -12,7 +12,7 @@
       <span class="flex items-center h-full px-3 lg:es:px-2 xl:es:px-3 text-sm xl:text-base group-hover/submenu:text-brand-100 transition-colors">
         <?= $item['label'] ?>
       </span>
-      <ul class="absolute top-full bg-white border border-surface-300 pointer-events-none opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:pointer-events-auto transition-opacity <?= $item['isMegamenu'] ? 'grid grid-cols-2 gap-4 w-full max-w-max left-1/2 -translate-x-1/2 p-5 rounded-2xl' : 'flex flex-col p-2 rounded-lg' ?>">
+      <ul class="absolute top-full bg-white border border-surface-300 pointer-events-none opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:pointer-events-auto transition-opacity <?= $item['isMegamenu'] ? 'grid grid-cols-3 gap-4 w-full max-w-max left-1/2 -translate-x-1/2 p-5 rounded-2xl' : 'flex flex-col p-2 rounded-lg' ?>">
         <?php
           foreach($item['submenu'] as $sub):
             if($item['isMegamenu']):
