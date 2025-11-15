@@ -5,8 +5,10 @@ use App\Models\Language;
 return [
   // SERVICES CATEGORY - Blockchain subcategory
   'contratos-inteligentes' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'blockchain',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'contratos-inteligentes',
     'es' => [
@@ -22,8 +24,10 @@ return [
   ],
 
   'aplicaciones-web3' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'blockchain',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-web3',
     'es' => [
@@ -39,8 +43,10 @@ return [
   ],
 
   'bases-datos-seguras' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'blockchain',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'bases-datos-seguras',
     'es' => [
@@ -56,8 +62,10 @@ return [
   ],
 
   'tokenizacion-proyectos' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'blockchain',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'tokenizacion-proyectos',
     'es' => [
@@ -74,8 +82,10 @@ return [
 
   // SERVICES CATEGORY - Custom Software subcategory
   'aplicaciones-moviles' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-moviles',
     'es' => [
@@ -91,8 +101,10 @@ return [
   ],
 
   'aplicaciones-web' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-web',
     'es' => [
@@ -107,26 +119,28 @@ return [
     ],
   ],
 
-  'aplicaciones-hibridas' => [
-    'category' => 'services',
-    'subcategory' => 'custom-software',
-    'template' => 'service-type-1',
-    'content_file' => 'aplicaciones-hibridas',
-    'es' => [
-      'slug' => 'aplicaciones-hibridas',
-      'meta_title' => 'Aplicaciones híbridas',
-      'meta_description' => 'Descripción SEO',
-    ],
-    'en' => [
-      'slug' => 'hybrid-applications',
-      'meta_title' => 'Hybrid Applications',
-      'meta_description' => 'SEO description',
-    ],
-  ],
+  // 'aplicaciones-hibridas' => [
+  //   'category' => 'services',
+  //   'subcategory' => 'custom-software',
+  //   'template' => 'service-type-1',
+  //   'content_file' => 'aplicaciones-hibridas',
+  //   'es' => [
+  //     'slug' => 'aplicaciones-hibridas',
+  //     'meta_title' => 'Aplicaciones híbridas',
+  //     'meta_description' => 'Descripción SEO',
+  //   ],
+  //   'en' => [
+  //     'slug' => 'hybrid-applications',
+  //     'meta_title' => 'Hybrid Applications',
+  //     'meta_description' => 'SEO description',
+  //   ],
+  // ],
 
   'aplicaciones-multitenant' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-multitenant',
     'es' => [
@@ -143,8 +157,10 @@ return [
 
   // SERVICES CATEGORY - Payment Processing subcategory
   'procesamiento-criptomonedas' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'procesamiento-criptomonedas',
     'es' => [
@@ -160,8 +176,10 @@ return [
   ],
 
   'pagos-masivos' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'pagos-masivos',
     'es' => [
@@ -177,8 +195,10 @@ return [
   ],
 
   'cripto-fiat' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'cripto-fiat',
     'es' => [
@@ -195,8 +215,10 @@ return [
 
   // SERVICES CATEGORY - Referral Marketing subcategory
   'mlm-software' => [
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
+    'icon' => 'mlm-service-main',
     'template' => 'service-type-1',
     'content_file' => 'mlm-software',
     'es' => [
@@ -212,8 +234,10 @@ return [
   ],
 
   'ecommerce' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'ecommerce',
     'es' => [
@@ -229,8 +253,10 @@ return [
   ],
 
   'elearning' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'elearning',
     'es' => [
@@ -246,8 +272,10 @@ return [
   ],
 
   'financial' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'financial',
     'es' => [
@@ -264,8 +292,10 @@ return [
 
   // SERVICES CATEGORY - Creative Services subcategory
   'ui-ux' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'creative-services',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'ui-ux',
     'es' => [
@@ -281,8 +311,10 @@ return [
   ],
 
   'graphic-design' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'creative-services',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'graphic-design',
     'es' => [
@@ -298,8 +330,10 @@ return [
   ],
 
   'web-design' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'creative-services',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'web-design',
     'es' => [
@@ -315,8 +349,10 @@ return [
   ],
 
   'multimedia' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'creative-services',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'multimedia',
     'es' => [
@@ -333,8 +369,10 @@ return [
 
   // SERVICES CATEGORY - HR subcategory
   'talento-captacion' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'hr',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'talento-captacion',
     'es' => [
@@ -350,8 +388,10 @@ return [
   ],
 
   'formacion-desarrollo' => [
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'hr',
+    'icon' => 'gear',
     'template' => 'service-type-1',
     'content_file' => 'formacion-desarrollo',
     'es' => [
@@ -367,8 +407,10 @@ return [
   ],
 
   'gestion-talento' => [
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'hr',
+    'icon' => 'gestion-service-main',
     'template' => 'service-type-1',
     'content_file' => 'gestion-talento',
     'es' => [
@@ -384,8 +426,10 @@ return [
   ],
 
   'recruitment' => [
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'hr',
+    'icon' => 'reclutamiento-service-main',
     'template' => 'service-type-1',
     'content_file' => 'recruitment',
     'es' => [
@@ -402,6 +446,7 @@ return [
 
   // ECOSYSTEM CATEGORY (no subcategories)
   'crea' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'crea',
@@ -418,6 +463,7 @@ return [
   ],
 
   'exchange' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'exchange',
@@ -434,6 +480,7 @@ return [
   ],
 
   'law' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'law',
@@ -450,6 +497,7 @@ return [
   ],
 
   'payments' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'payments',
@@ -466,6 +514,7 @@ return [
   ],
 
   'talent' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'talent',
@@ -482,6 +531,7 @@ return [
   ],
 
   'corpsyte' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'corpsyte',
@@ -498,6 +548,7 @@ return [
   ],
 
   'logistics' => [
+    'isActive' => true,
     'category' => 'ecosystem',
     'template' => 'service-type-1',
     'content_file' => 'logistics',
@@ -514,8 +565,9 @@ return [
   ],
 
   // IPs CATEGORY (no subcategories)
-  'backoffice' => [
-    'category' => 'ips',
+    'backoffice' => [
+    'isActive' => false,
+    'category' => 'services',
     'template' => 'service-type-2',
     'content_file' => 'backoffice',
     'es' => [
@@ -531,6 +583,7 @@ return [
   ],
 
   'blockchain' => [
+    'isActive' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'blockchain',
@@ -547,6 +600,7 @@ return [
   ],
 
   'tokenization' => [
+    'isActive' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'tokenization',
@@ -563,6 +617,7 @@ return [
   ],
 
   'otc' => [
+    'isActive' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'otc',
@@ -579,6 +634,7 @@ return [
   ],
 
   'processing' => [
+    'isActive' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'processing',
@@ -595,6 +651,7 @@ return [
   ],
 
   'wallet' => [
+    'isActive' => false,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'wallet',
@@ -611,6 +668,7 @@ return [
   ],
 
   'metaverse' => [
+    'isActive' => true,
     'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'metaverse',

@@ -8,49 +8,49 @@ return [
   'hero' => Language::trans("{$sKey}.hero.title"),
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'reclutamiento_1_big.webp',
+    'small' => 'reclutamiento_1_small.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
-    'front' => 'sec2.svg',
-    'back' => 'sec2.svg'
+    'front' => 'reclutamiento_2_front.webp',
+    'back' => 'reclutamiento_2_back.webp'
   ],
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'sec3_big.svg',
-    'mid' => 'sec3_mid.svg',
-    'small' => 'sec3_small.svg'
+    'big' => 'reclutamiento_3_big.webp',
+    'mid' => 'reclutamiento_3_mid.webp',
+    'small' => 'reclutamiento_3_small.webp'
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-hiring',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-selection',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-turnover',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-talent',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-savings',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'reclutamiento-recruitment',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
@@ -58,27 +58,27 @@ return [
   'process_title' => Language::trans("{$sKey}.process.title"),
   'processes' => [
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'reclutamiento_5-1.webp',
       'title' => Language::trans("{$sKey}.process.item1.title"),
       'text' => Language::trans("{$sKey}.process.item1.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'reclutamiento_5-2.webp',
       'title' => Language::trans("{$sKey}.process.item2.title"),
       'text' => Language::trans("{$sKey}.process.item2.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'reclutamiento_5-3.webp',
       'title' => Language::trans("{$sKey}.process.item3.title"),
       'text' => Language::trans("{$sKey}.process.item3.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'reclutamiento_5-4.webp',
       'title' => Language::trans("{$sKey}.process.item4.title"),
       'text' => Language::trans("{$sKey}.process.item4.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'reclutamiento_5-5.webp',
       'title' => Language::trans("{$sKey}.process.item5.title"),
       'text' => Language::trans("{$sKey}.process.item5.text")
     ]
@@ -114,7 +114,7 @@ return [
     'text' => Language::trans("{$sKey}.sales.text")
   ],
   'sales_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'reclutamiento_7_big.webp',
+    'small' => 'reclutamiento_7_small.webp'
   ]
 ];

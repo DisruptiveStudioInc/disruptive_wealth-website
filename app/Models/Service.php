@@ -47,13 +47,24 @@ class Service
     return $contentData ?? [];
   }
 
-  public static function getAll(string $language): array
+  /**
+   * Check if a service is active
+   *
+   * @param array $service The service configuration array
+   * @return bool True if the service is active, false otherwise
+   */
+  private static function isServiceActive(array $service): bool
+  {
+    return isset($service['isActive']) && $service['isActive'] === true;
+  }
+
+  public static function getAll(string $language): array|string
   {
     self::loadServices();
 
     $result = [];
     foreach (self::$services as $key => $service) {
-      if (isset($service[$language])) {
+      if (isset($service[$language]) && self::isServiceActive($service)) {
         $content = self::loadContent($service['content_file']);
 
         $result[] = [
@@ -66,16 +77,16 @@ class Service
       }
     }
 
-    return $result;
+    return empty($result) ? 'no_services' : $result;
   }
 
-  public static function getByCategory(string $category, string $language): array
+  public static function getByCategory(string $category, string $language): array|string
   {
     self::loadServices();
 
     $result = [];
     foreach (self::$services as $key => $service) {
-      if (isset($service[$language]) && ($service['category'] ?? 'services') === $category) {
+      if (isset($service[$language]) && ($service['category'] ?? 'services') === $category && self::isServiceActive($service)) {
         $content = self::loadContent($service['content_file']);
 
         $result[] = [
@@ -88,7 +99,7 @@ class Service
       }
     }
 
-    return $result;
+    return empty($result) ? 'no_services' : $result;
   }
 
   public static function getCategories(): array
@@ -108,32 +119,33 @@ class Service
     ];
   }
 
-  public static function getBySubcategory(string $subcategory, string $language): array
+  public static function getBySubcategory(string $subcategory, string $language): array|string
   {
     self::loadServices();
 
     $result = [];
     foreach (self::$services as $key => $service) {
-      if (isset($service[$language]) && ($service['subcategory'] ?? null) === $subcategory) {
+      if (isset($service[$language]) && ($service['subcategory'] ?? null) === $subcategory && self::isServiceActive($service)) {
         $result[] = [
           'key' => $key,
           'category' => $service['category'],
           'subcategory' => $service['subcategory'],
+          'icon' => $service['icon'],
           'meta' => $service[$language],
         ];
       }
     }
 
-    return $result;
+    return empty($result) ? 'no_services' : $result;
   }
 
-  public static function getServicesGroupedBySubcategory(string $language): array
+  public static function getServicesGroupedBySubcategory(string $language): array|string
   {
     self::loadServices();
 
     $grouped = [];
     foreach (self::$services as $key => $service) {
-      if (($service['category'] ?? 'services') !== 'services' || !isset($service[$language])) {
+      if (($service['category'] ?? 'services') !== 'services' || !isset($service[$language]) || !self::isServiceActive($service)) {
         continue;
       }
 
@@ -149,7 +161,7 @@ class Service
       ];
     }
 
-    return $grouped;
+    return empty($grouped) ? 'no_services' : $grouped;
   }
 
   public static function exists(string $slug, string $language): bool

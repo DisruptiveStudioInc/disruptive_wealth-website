@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Language;
+use App\Models\Service;
 
 return[
   'seoDescription' => Language::trans('home.description'),
@@ -400,25 +401,29 @@ return[
       'es' => 'Marketing de referidos',
       'en' => 'Referral marketing',
       'description' => Language::trans('servsub.referral_marketing'),
-      'image' => 'referral_marketing.webp'
+      'image' => 'referral_marketing.webp',
+      'services' => Service::getBySubcategory('referral-marketing', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Desarrollo Blockchain',
       'en' => 'Blockchain development',
       'description' => Language::trans('servsub.blockchain'),
-      'image' => 'blockchain_dev.webp'
+      'image' => 'blockchain_dev.webp',
+      'services' => Service::getBySubcategory('blockchain', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios personalizados',
       'en' => 'Custom services',
       'description' => Language::trans('servsub.custom_services'),
-      'image' => 'custom_services.webp'
+      'image' => 'custom_services.webp',
+      'services' => Service::getBySubcategory('custom-software', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios creativos',
       'en' => 'Creative services',
       'description' => Language::trans('servsub.creative_services'),
-      'image' => 'creative_services.webp'
+      'image' => 'creative_services.webp',
+      'services' => Service::getBySubcategory('creative-services', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de logística',
@@ -442,13 +447,15 @@ return[
       'es' => 'Servicios de procesamiento de pagos',
       'en' => 'Payment processing services',
       'description' => Language::trans('servsub.payment_processing'),
-      'image' => 'payment_process.webp'
+      'image' => 'payment_process.webp',
+      'services' => Service::getBySubcategory('payment-processing', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de RR.HH.',
       'en' => 'HR Services',
       'description' => Language::trans('servsub.hr'),
-      'image' => 'hr_services.webp'
+      'image' => 'hr_services.webp',
+      'services' => Service::getBySubcategory('hr', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de manofactura',

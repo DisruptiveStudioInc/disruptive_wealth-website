@@ -74,7 +74,7 @@ include __DIR__ . '/../components/fixedBackground.php';
             <?php foreach($content['benefits'] as $k => $benefit): ?>
               <li class="flex items-start gap-2 sm:flex-col opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-300"
               style="transition-delay: calc(200ms + (100ms * <?= $k ?>));">
-                <div class="p-2 rounded-lg bg-surface-100 text-brand-100 mb-0 lg:mb-4 flex-center shadow-md lg:shadow-xl">
+                <div class="p-2 rounded-lg bg-brand-100 text-white mb-0 lg:mb-4 flex-center shadow-md lg:shadow-xl">
                   <svg class="size-6 lg:size-10"><use href="#<?= $benefit['image'] ?>"/></svg>
                 </div>
                 <div>
@@ -174,4 +174,3 @@ include __DIR__ . '/../components/fixedBackground.php';
 </style>
 
 <?php require __DIR__ . '/../components/svgSprites.php'; ?>
-<?php #require __DIR__ . '/../layouts/footer.php'; ?>
