@@ -130,12 +130,12 @@ return[
       'description' => Language::trans('home.team_description.maria_paola'),
       'image' => 'maria_paola.webp'
     ],
-    // [
-    //   'name' => 'Walter',
-    //   'job' => Language::trans('home.team_jobs.head_engineering_excellence'),
-    //   'description' => Language::trans('home.team_description.walter'),
-    //   'image' => 'walter.webp'
-    // ],
+    [
+      'name' => 'Walter',
+      'job' => Language::trans('home.team_jobs.head_engineering_excellence'),
+      'description' => Language::trans('home.team_description.walter'),
+      'image' => 'walter.webp'
+    ],
     [
       'name' => 'Ilyra',
       'job' => Language::trans('home.team_jobs.ai_integrations_specialist'),
