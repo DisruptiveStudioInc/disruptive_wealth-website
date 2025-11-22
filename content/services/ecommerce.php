@@ -8,13 +8,13 @@ return [
   'hero' => Language::trans("{$sKey}.hero.title"),
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'ecommerce_1_big.webp',
+    'small' => 'ecommerce_1_small.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
-    'front' => 'sec2.svg',
-    'back' => 'sec2.svg'
+    'front' => 'ecommerce_2_front.webp',
+    'back' => 'ecommerce_2_back.webp'
   ],
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
@@ -25,32 +25,32 @@ return [
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-centralized',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-optimization',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-payments',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-ux',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-analysis',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'ecommerce-escale',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
@@ -58,27 +58,27 @@ return [
   'process_title' => Language::trans("{$sKey}.development.title"),
   'processes' => [
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'ecommerce_s1.webp',
       'title' => Language::trans("{$sKey}.development.item1.title"),
       'text' => Language::trans("{$sKey}.development.item1.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'ecommerce_s2.webp',
       'title' => Language::trans("{$sKey}.development.item2.title"),
       'text' => Language::trans("{$sKey}.development.item2.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'ecommerce_s3.webp',
       'title' => Language::trans("{$sKey}.development.item3.title"),
       'text' => Language::trans("{$sKey}.development.item3.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'ecommerce_s4.webp',
       'title' => Language::trans("{$sKey}.development.item4.title"),
       'text' => Language::trans("{$sKey}.development.item4.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'ecommerce_s5.webp',
       'title' => Language::trans("{$sKey}.development.item5.title"),
       'text' => Language::trans("{$sKey}.development.item5.text")
     ]

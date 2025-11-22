@@ -25,32 +25,32 @@ return [
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'multimeida-communication',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'multimeida-identity',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'multimeida-engagement',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'multimeida-versatility',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'multimeida-strategy',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'multimeida-quality',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],

@@ -25,32 +25,32 @@ return [
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'talent-selection',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'talent-processes',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'talent-evaluation',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'talent-database',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'talent-savings',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'talent-scale',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
