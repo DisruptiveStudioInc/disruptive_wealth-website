@@ -19,9 +19,9 @@ return [
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'sec3_big.svg',
-    'mid' => 'sec3_mid.svg',
-    'small' => 'sec3_small.svg'
+    'big' => 'ecommerce_3_big.webp',
+    'mid' => 'ecommerce_3_mid.webp',
+    'small' => 'ecommerce_3_small.webp'
   ],
   'benefits' => [
     [
@@ -114,7 +114,7 @@ return [
     'text' => Language::trans("{$sKey}.sales.text")
   ],
   'sales_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'ecommerce_7_big.webp',
+    'small' => 'ecommerce_7_small.webp'
   ]
 ];
