@@ -444,6 +444,45 @@ return [
     ],
   ],
 
+  // SERVICES CATEGORY - HR subcategory
+  'supplements' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'manufacturing',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'supplements',
+    'es' => [
+      'slug' => 'servicios-integrales-en-suplementos',
+      'meta_title' => 'Servicios integrales en suplementos',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'integral-services-in-supplements',
+      'meta_title' => 'Integral Services in Supplements',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'package-design' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'manufacturing',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'package-design',
+    'es' => [
+      'slug' => 'diseno-de-empaque',
+      'meta_title' => 'Diseño de empaque',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'package-design',
+      'meta_title' => 'Package Design',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
   // ECOSYSTEM CATEGORY (no subcategories)
   'crea' => [
     'isActive' => true,

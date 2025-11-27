@@ -363,6 +363,8 @@ return [
   'talent_recruitment' => $servicesTranslations['talento-captacion'],
   'tokenization_projects' => $servicesTranslations['tokenizacion-proyectos'],
   'ui_ux' => $servicesTranslations['ui-ux'],
+  'supplements' => $servicesTranslations['suplementos'],
+  'package_design' => $servicesTranslations['diseno-empaque'],
 
   // IPs Content
   'backoffice' => $servicesTranslations['backoffice'],

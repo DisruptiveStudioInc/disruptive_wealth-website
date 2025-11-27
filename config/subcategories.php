@@ -38,4 +38,24 @@ return [
     'en' => 'HR',
     'description' => Language::trans('servsub.hr')
   ],
+  'manufacturing' => [
+    'es' => 'Servicios de manofactura',
+    'en' => 'Manufacturing services',
+    'description' => Language::trans('servsub.manufacturing')
+  ],
+  'costumer-service' => [
+    'es' => 'Servicios de CS',
+    'en' => 'CS Services',
+    'description' => Language::trans('servsub.cs')
+  ],
+  'legal-services' => [
+    'es' => 'Servicios legales',
+    'en' => 'Legal and compliance services',
+    'description' => Language::trans('servsub.legal_services')
+  ],
+  'logistics' => [
+    'es' => 'Servicios de logística',
+    'en' => 'Logistic services',
+    'description' => Language::trans('servsub.logistic_services')
+  ]
 ];
