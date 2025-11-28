@@ -7,8 +7,8 @@ return [
       'text' => 'Donde la innovación transforma la forma de aprender.'
     ],
     'about1' => 'Sistemas educativos con cursos y certificaciones',
-    'about2' => 'Integración con CRM, pagos y automatización',
-    'about2_text' => 'Crea tu academia online con contenido dinámico y personalizado.',
+    'about2' => 'Tu academia digital lista para crecer',
+    'about2_text' => 'Contenido dinámico y experiencia premium.',
     'benefits' => [
       'item1' => [
         'title' => 'Gestión integral del aprendizaje',
@@ -84,8 +84,8 @@ return [
       'text' => 'Where innovation transforms the way we learn.'
     ],
     'about1' => 'Educational systems with courses and certifications',
-    'about2' => 'Integration with CRM, payments and automation',
-    'about2_text' => 'Create your online academy with dynamic and personalized content.',
+    'about2' => 'Your digital academy ready to grow',
+    'about2_text' => 'Dynamic content and premium experience.',
     'benefits' => [
       'item1' => [
         'title' => 'Comprehensive learning management',

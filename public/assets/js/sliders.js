@@ -224,4 +224,7 @@ const mySwiper = new Swiper(".my-swiper", {
   },
 });
 
-const faqSlider = new DepthSlider("#faq-slider");
+const faqSliderEl = document.getElementById("faq-slider");
+if (faqSliderEl) {
+  const faqSlider = new DepthSlider("#faq-slider");
+}

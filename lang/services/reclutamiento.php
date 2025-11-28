@@ -73,7 +73,7 @@ return [
       'answer6' => 'Sí. Conexión con ATS, CRM y plataformas internas mediante integraciones seguras.'
     ],
     'sales' => [
-      'title' => 'Reclutar con estrategia es crecer con certeza.',
+      'title' => 'Gestionar talento es potenciar a las personas',
       'text' => 'Agenda una demo y descubre cómo elevamos la calidad y velocidad de tus contrataciones.'
     ]
   ],
@@ -149,7 +149,7 @@ return [
       'answer6' => 'Yes. Integration with ATS, CRM and internal platforms through secure connections.'
     ],
     'sales' => [
-      'title' => 'Strategic hiring means growing with confidence.',
+      'title' => 'Managing talent is empowering people',
       'text' => 'Book a demo and discover how we improve the quality and speed of your hires.'
     ]
   ]

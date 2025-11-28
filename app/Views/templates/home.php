@@ -2,7 +2,9 @@
 $pageTitle = $trans('home.title');
 $heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
 list($clients1, $clients2, $clients3) = split_array_in_thirds($constants['clients']);
-list($certifications1, $certifications2) = split_array_in_half($constants['certifications']);
+list($certs1, $certs2) = split_array_in_half($constants['certifications']);
+$certifications1 = array_merge($certs1, $certs1, $certs1);
+$certifications2 = array_merge($certs2, $certs2, $certs2);
 require __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/sideDotsNavigation.php';
 // include __DIR__ . '/../components/fixedBackground.php';
@@ -416,7 +418,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <div class="swiper-wrapper">
       <?php foreach($certifications1 as $item): ?>
         <li class="swiper-slide">
-          <img src="/public/images/certifications/<?= $item ?>" alt="certification">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
@@ -425,7 +427,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <div class="swiper-wrapper">
       <?php foreach($certifications2 as $item): ?>
         <li class="swiper-slide">
-          <img src="/public/images/certifications/<?= $item ?>" alt="certification">
+          <img src="/public/images/certifications/<?= $item ?>" alt="certification" loading="lazy">
         </li>
       <?php endforeach; ?>
     </div>
