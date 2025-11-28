@@ -168,7 +168,7 @@ function getServiceSubcategoryName(string $lang): array{
 }
 
 function getNavigationMenu(string $lang, callable $trans): array {
-  $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
+  // $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
   // $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
   // $subSolutions = [];
   // foreach($servicesGrouped as $subcategory => $items){
@@ -187,9 +187,11 @@ function getNavigationMenu(string $lang, callable $trans): array {
   // }
   $partReferral = \App\Models\Service::getBySubcategory('referral-marketing', $lang);
   $partHr = \App\Models\Service::getBySubcategory('hr', $lang);
+  $partCreative = \App\Models\Service::getBySubcategory('creative-services', $lang);
   $subSolutions = array_values(array_merge(
     is_array($partReferral) ? $partReferral : [],
-    is_array($partHr) ? $partHr : []
+    is_array($partCreative) ? $partCreative : [],
+    is_array($partHr) ? $partHr : [],
   ));
   $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
   $subIps = \App\Models\Service::getNavIps($lang);

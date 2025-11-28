@@ -234,10 +234,10 @@ return [
   ],
 
   'ecommerce' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
-    'icon' => 'gear',
+    'icon' => 'ecommerce-service-main',
     'template' => 'service-type-1',
     'content_file' => 'ecommerce',
     'es' => [
@@ -256,7 +256,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
-    'icon' => 'gear',
+    'icon' => 'elearning-service-main',
     'template' => 'service-type-1',
     'content_file' => 'elearning',
     'es' => [
@@ -275,7 +275,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
-    'icon' => 'gear',
+    'icon' => 'financial-service-main',
     'template' => 'service-type-1',
     'content_file' => 'financial',
     'es' => [
@@ -292,10 +292,10 @@ return [
 
   // SERVICES CATEGORY - Creative Services subcategory
   'ui-ux' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'creative-services',
-    'icon' => 'gear',
+    'icon' => 'ux-service-main',
     'template' => 'service-type-1',
     'content_file' => 'ui-ux',
     'es' => [
@@ -311,10 +311,10 @@ return [
   ],
 
   'graphic-design' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'creative-services',
-    'icon' => 'gear',
+    'icon' => 'graphic-service-main',
     'template' => 'service-type-1',
     'content_file' => 'graphic-design',
     'es' => [
@@ -330,10 +330,10 @@ return [
   ],
 
   'web-design' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'creative-services',
-    'icon' => 'gear',
+    'icon' => 'web-service-main',
     'template' => 'service-type-1',
     'content_file' => 'web-design',
     'es' => [
@@ -349,10 +349,10 @@ return [
   ],
 
   'multimedia' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'creative-services',
-    'icon' => 'gear',
+    'icon' => 'multimedia-service-main',
     'template' => 'service-type-1',
     'content_file' => 'multimedia',
     'es' => [
@@ -372,7 +372,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'hr',
-    'icon' => 'gear',
+    'icon' => 'talent-service-main',
     'template' => 'service-type-1',
     'content_file' => 'talento-captacion',
     'es' => [
@@ -391,7 +391,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'hr',
-    'icon' => 'gear',
+    'icon' => 'formacion-service-main',
     'template' => 'service-type-1',
     'content_file' => 'formacion-desarrollo',
     'es' => [
@@ -605,9 +605,9 @@ return [
 
   // IPs CATEGORY (no subcategories)
     'backoffice' => [
-    'isActive' => true,
+    'isActive' => false,
     'inNav' => false,
-    'category' => 'services',
+    'category' => 'ips',
     'template' => 'service-type-2',
     'content_file' => 'backoffice',
     'es' => [
