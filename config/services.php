@@ -253,7 +253,7 @@ return [
   ],
 
   'elearning' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
     'icon' => 'elearning-service-main',
