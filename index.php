@@ -1,10 +1,5 @@
 <?php
 
-// Add debugging for development
-// ini_set('display_startup_errors', 1);
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
-
 // Load Composer autoloader
 require __DIR__ . '/vendor/autoload.php';
 
@@ -14,6 +9,13 @@ $dotenv->load();
 
 // Error handling based on environment
 $config = require __DIR__ . '/config/config.php';
+
+// Add debugging for development
+if ($config['app']['debug']) {
+  ini_set('display_startup_errors', 1);
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+}
 
 // Load helper functions
 require __DIR__ . '/src/helpers.php';
