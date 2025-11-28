@@ -19,9 +19,9 @@ return [
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'sec3_big.svg',
-    'mid' => 'sec3_mid.svg',
-    'small' => 'sec3_small.svg'
+    'big' => 'elearning_3_big.webp',
+    'mid' => 'elearning_3_mid.webp',
+    'small' => 'elearning_3_small.webp'
   ],
   'benefits' => [
     [

@@ -8,20 +8,20 @@ return [
   'hero' => Language::trans("{$sKey}.hero.title"),
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'formacion_1_big.webp',
+    'small' => 'formacion_1_small.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
-    'front' => 'sec2.svg',
-    'back' => 'sec2.svg'
+    'front' => 'formacion_2_front.webp',
+    'back' => 'formacion_2_back.webp'
   ],
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'sec3_big.svg',
-    'mid' => 'sec3_mid.svg',
-    'small' => 'sec3_small.svg'
+    'big' => 'formacion_3_big.webp',
+    'mid' => 'formacion_3_mid.webp',
+    'small' => 'formacion_3_small.webp'
   ],
   'benefits' => [
     [
@@ -58,27 +58,27 @@ return [
   'process_title' => Language::trans("{$sKey}.development.title"),
   'processes' => [
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'formacion_s1.webp',
       'title' => Language::trans("{$sKey}.development.item1.title"),
       'text' => Language::trans("{$sKey}.development.item1.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'formacion_s2.webp',
       'title' => Language::trans("{$sKey}.development.item2.title"),
       'text' => Language::trans("{$sKey}.development.item2.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'formacion_s3.webp',
       'title' => Language::trans("{$sKey}.development.item3.title"),
       'text' => Language::trans("{$sKey}.development.item3.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'formacion_s4.webp',
       'title' => Language::trans("{$sKey}.development.item4.title"),
       'text' => Language::trans("{$sKey}.development.item4.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'formacion_s5.webp',
       'title' => Language::trans("{$sKey}.development.item5.title"),
       'text' => Language::trans("{$sKey}.development.item5.text")
     ]
@@ -114,7 +114,7 @@ return [
     'text' => Language::trans("{$sKey}.sales.text")
   ],
   'sales_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'formacion_7_big.webp',
+    'small' => 'formacion_7_small.webp'
   ]
 ];
