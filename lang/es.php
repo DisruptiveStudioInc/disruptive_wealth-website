@@ -365,6 +365,18 @@ return [
   'ui_ux' => $servicesTranslations['ui-ux'],
   'supplements' => $servicesTranslations['suplementos'],
   'package_design' => $servicesTranslations['diseno-empaque'],
+  'client_support' => $servicesTranslations['client-support'],
+  'ticket_management' => $servicesTranslations['ticket-management'],
+  'support_training' => $servicesTranslations['support-training'],
+  'legal_financial' => $servicesTranslations['legal-financial-corporative'],
+  'legal_realestate' => $servicesTranslations['legal-real-estate'],
+  'intellectual_property' => $servicesTranslations['intellectual-property'],
+  'litigation' => $servicesTranslations['litigio'],
+  'storage_inventory' => $servicesTranslations['storage-inventory'],
+  'package_fulfillment' => $servicesTranslations['package-fulfillment'],
+  'shipment_distribution' => $servicesTranslations['shipment-distribution'],
+  'logistic_optimization' => $servicesTranslations['logistic-optimization'],
+  'operation_consulting' => $servicesTranslations['operation-consulting'],
 
   // IPs Content
   'backoffice' => $servicesTranslations['backoffice'],

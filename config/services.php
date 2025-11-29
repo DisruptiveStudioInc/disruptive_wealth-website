@@ -444,7 +444,7 @@ return [
     ],
   ],
 
-  // SERVICES CATEGORY - HR subcategory
+  // SERVICES CATEGORY - Manufacturing subcategory
   'supplements' => [
     'isActive' => false,
     'category' => 'services',
@@ -479,6 +479,237 @@ return [
     'en' => [
       'slug' => 'package-design',
       'meta_title' => 'Package Design',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  // SERVICES CATEGORY - Customer support subcategory
+  'client-support' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'customer-support',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'client-support',
+    'es' => [
+      'slug' => 'atencion-y-soporte-al-cliente',
+      'meta_title' => 'Atención y soporte al cliente',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'client-support',
+      'meta_title' => 'Client Support',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'case-management' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'customer-support',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'case-management',
+    'es' => [
+      'slug' => 'gestion-de-casos-y-solicitudes',
+      'meta_title' => 'Gestión de casos y solicitudes',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'case-and-request-management',
+      'meta_title' => 'Case and Request Management',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'support-training' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'customer-support',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'support-training',
+    'es' => [
+      'slug' => 'implementacion-y-capacitacion-de-equipos',
+      'meta_title' => 'Implementación y capacitación de equipos',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'support-training',
+      'meta_title' => 'Support Training',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  // SERVICES CATEGORY - legal subcategory
+  'legal-financial' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'legal-services',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'legal-financial',
+    'es' => [
+      'slug' => 'derecho-corporativo-y-financiero',
+      'meta_title' => 'Derecho corporativo y financiero',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'corporate-and-financial-law',
+      'meta_title' => 'Corporate and Financial Law',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'legal-realestate' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'legal-services',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'legal-realestate',
+    'es' => [
+      'slug' => 'derecho-inmobiliario-y-construccion',
+      'meta_title' => 'Derecho inmobiliario y construcción',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'real-estate-and-construction-law',
+      'meta_title' => 'Real Estate and Construction Law',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'intellectual-property' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'legal-services',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'intellectual-property',
+    'es' => [
+      'slug' => 'propiedad-intelectual-y-tecnologia',
+      'meta_title' => 'Propiedad intelectual y tecnología',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'intellectual-property-and-technology',
+      'meta_title' => 'Intellectual Property and Technology',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'litigation' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'legal-services',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'litigation',
+    'es' => [
+      'slug' => 'litigio',
+      'meta_title' => 'Litigio',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'litigation',
+      'meta_title' => 'Litigation',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  // SERVICES CATEGORY - logistics subcategory
+  'storage-inventory' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'logistics',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'storage-inventory',
+    'es' => [
+      'slug' => 'almacenaje-e-inventarios',
+      'meta_title' => 'Almacenaje e inventarios',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'storage-and-inventory',
+      'meta_title' => 'Storage and Inventory',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'package-fulfillment' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'logistics',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'package-fulfillment',
+    'es' => [
+      'slug' => 'empaque-y-fulfillment',
+      'meta_title' => 'Empaque y fulfillment',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'package-fulfillment',
+      'meta_title' => 'Package Fulfillment',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'shipment-distribution' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'logistics',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'shipment-distribution',
+    'es' => [
+      'slug' => 'envio-y-distribucion',
+      'meta_title' => 'Envío y distribución',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'shipment-and-distribution',
+      'meta_title' => 'Shipment and Distribution',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'logistic-optimization' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'logistics',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'logistic-optimization',
+    'es' => [
+      'slug' => 'optimizacion-logistica',
+      'meta_title' => 'Optimización logística',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'logistic-optimization',
+      'meta_title' => 'Logistic Optimization',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'operation-consulting' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'logistics',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'operation-consulting',
+    'es' => [
+      'slug' => 'consultoria-operativa',
+      'meta_title' => 'Consultoría operativa',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'operation-consulting',
+      'meta_title' => 'Operation Consulting',
       'meta_description' => 'SEO description',
     ],
   ],

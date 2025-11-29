@@ -43,7 +43,7 @@ return [
     'en' => 'Manufacturing services',
     'description' => Language::trans('servsub.manufacturing')
   ],
-  'costumer-service' => [
+  'customer-support' => [
     'es' => 'Servicios de CS',
     'en' => 'CS Services',
     'description' => Language::trans('servsub.cs')
