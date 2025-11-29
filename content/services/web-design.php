@@ -9,7 +9,7 @@ return [
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
     'big' => 'web_1_big.webp',
-    'small' => 'web_1_small.webp'
+    'small' => 'web_1_temp.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
