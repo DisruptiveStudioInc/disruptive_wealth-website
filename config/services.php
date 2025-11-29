@@ -272,7 +272,7 @@ return [
   ],
 
   'financial' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'referral-marketing',
     'icon' => 'financial-service-main',
@@ -369,7 +369,7 @@ return [
 
   // SERVICES CATEGORY - HR subcategory
   'talento-captacion' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'hr',
     'icon' => 'talent-service-main',
@@ -388,7 +388,7 @@ return [
   ],
 
   'formacion-desarrollo' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'hr',
     'icon' => 'formacion-service-main',
