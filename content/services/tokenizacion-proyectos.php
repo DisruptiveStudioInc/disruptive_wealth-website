@@ -8,49 +8,49 @@ return [
   'hero' => Language::trans("{$sKey}.hero.title"),
   'hero_text' => Language::trans("{$sKey}.hero.text"),
   'hero_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'projectoken_1_big.webp',
+    'small' => 'projectoken_1_small.webp'
   ],
   'about1_title' => Language::trans("{$sKey}.about1"),
   'about1_images' => [
-    'front' => 'sec2.svg',
-    'back' => 'sec2.svg'
+    'front' => 'projectoken_2_front.webp',
+    'back' => 'projectoken_2_back.webp'
   ],
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'sec3_big.svg',
-    'mid' => 'sec3_mid.svg',
-    'small' => 'sec3_small.svg'
+    'big' => 'projectoken_3_big.webp',
+    'mid' => 'projectoken_3_mid.webp',
+    'small' => 'projectoken_3_small.webp'
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'tokenization-liquidity',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'tokenization-transparency',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'tokenization-accessibility',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'tokenization-security',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'tokenization-scale',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'tokenization-integration',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
@@ -58,27 +58,27 @@ return [
   'process_title' => Language::trans("{$sKey}.process.title"),
   'processes' => [
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'projectoken_s1.webp',
       'title' => Language::trans("{$sKey}.process.item1.title"),
       'text' => Language::trans("{$sKey}.process.item1.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'projectoken_s2.webp',
       'title' => Language::trans("{$sKey}.process.item2.title"),
       'text' => Language::trans("{$sKey}.process.item2.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'projectoken_s3.webp',
       'title' => Language::trans("{$sKey}.process.item3.title"),
       'text' => Language::trans("{$sKey}.process.item3.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'projectoken_s4.webp',
       'title' => Language::trans("{$sKey}.process.item4.title"),
       'text' => Language::trans("{$sKey}.process.item4.text")
     ],
     [
-      'image' => 'sec5_slide.svg',
+      'image' => 'projectoken_s5.webp',
       'title' => Language::trans("{$sKey}.process.item5.title"),
       'text' => Language::trans("{$sKey}.process.item5.text")
     ]
@@ -114,7 +114,7 @@ return [
     'text' => Language::trans("{$sKey}.sales.text")
   ],
   'sales_images' => [
-    'big' => 'sec1_big.svg',
-    'small' => 'sec1_small.svg'
+    'big' => 'projectoken_7_big.webp',
+    'small' => 'projectoken_7_small.webp'
   ]
 ];

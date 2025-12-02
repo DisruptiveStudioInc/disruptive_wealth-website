@@ -160,7 +160,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
-    'icon' => 'gear',
+    'icon' => 'cryptoprocess-service-main',
     'template' => 'service-type-1',
     'content_file' => 'procesamiento-criptomonedas',
     'es' => [
@@ -179,7 +179,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
-    'icon' => 'gear',
+    'icon' => 'payment-service-main',
     'template' => 'service-type-1',
     'content_file' => 'pagos-masivos',
     'es' => [
@@ -198,7 +198,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'payment-processing',
-    'icon' => 'gear',
+    'icon' => 'crypto-service-main',
     'template' => 'service-type-1',
     'content_file' => 'cripto-fiat',
     'es' => [
