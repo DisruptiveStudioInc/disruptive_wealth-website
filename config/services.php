@@ -5,10 +5,10 @@ use App\Models\Language;
 return [
   // SERVICES CATEGORY - Blockchain subcategory
   'contratos-inteligentes' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'blockchain',
-    'icon' => 'gear',
+    'icon' => 'contracts-service-main',
     'template' => 'service-type-1',
     'content_file' => 'contratos-inteligentes',
     'es' => [
@@ -24,10 +24,10 @@ return [
   ],
 
   'aplicaciones-web3' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'blockchain',
-    'icon' => 'gear',
+    'icon' => 'web3-service-main',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-web3',
     'es' => [
@@ -43,10 +43,10 @@ return [
   ],
 
   'bases-datos-seguras' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'blockchain',
-    'icon' => 'gear',
+    'icon' => 'dbsecure-service-main',
     'template' => 'service-type-1',
     'content_file' => 'bases-datos-seguras',
     'es' => [
@@ -62,10 +62,10 @@ return [
   ],
 
   'tokenizacion-proyectos' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'blockchain',
-    'icon' => 'gear',
+    'icon' => 'tokenization-service-main',
     'template' => 'service-type-1',
     'content_file' => 'tokenizacion-proyectos',
     'es' => [

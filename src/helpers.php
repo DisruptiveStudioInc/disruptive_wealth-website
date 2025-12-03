@@ -168,31 +168,31 @@ function getServiceSubcategoryName(string $lang): array{
 }
 
 function getNavigationMenu(string $lang, callable $trans): array {
-  // $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
-  // $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
-  // $subSolutions = [];
-  // foreach($servicesGrouped as $subcategory => $items){
-  //   $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
-  //   $subcat = [
-  //     'name' => $subcatName,
-  //     'list' => []
-  //   ];
-  //   foreach($items as $item){
-  //     $subcat['list'][] = [
-  //       'label' => $item['meta']['meta_title'],
-  //       'url' => serviceRoute($item['meta']['slug'], $lang)
-  //     ];
-  //   }
-  //   array_push($subSolutions, $subcat);
-  // }
-  $partReferral = \App\Models\Service::getBySubcategory('referral-marketing', $lang);
-  $partHr = \App\Models\Service::getBySubcategory('hr', $lang);
-  $partCreative = \App\Models\Service::getBySubcategory('creative-services', $lang);
-  $subSolutions = array_values(array_merge(
-    is_array($partReferral) ? $partReferral : [],
-    is_array($partCreative) ? $partCreative : [],
-    is_array($partHr) ? $partHr : [],
-  ));
+  $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
+  $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
+  $subSolutions = [];
+  foreach($servicesGrouped as $subcategory => $items){
+    $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
+    $subcat = [
+      'name' => $subcatName,
+      'list' => []
+    ];
+    foreach($items as $item){
+      $subcat['list'][] = [
+        'label' => $item['meta']['meta_title'],
+        'url' => serviceRoute($item['meta']['slug'], $lang)
+      ];
+    }
+    array_push($subSolutions, $subcat);
+  }
+  // $partReferral = \App\Models\Service::getBySubcategory('referral-marketing', $lang);
+  // $partHr = \App\Models\Service::getBySubcategory('hr', $lang);
+  // $partCreative = \App\Models\Service::getBySubcategory('creative-services', $lang);
+  // $subSolutions = array_values(array_merge(
+  //   is_array($partReferral) ? $partReferral : [],
+  //   is_array($partCreative) ? $partCreative : [],
+  //   is_array($partHr) ? $partHr : [],
+  // ));
   $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
   $subIps = \App\Models\Service::getNavIps($lang);
   return [
@@ -225,7 +225,7 @@ function getNavigationMenu(string $lang, callable $trans): array {
       'label' => $trans('nav.solutions'),
       // 'url' => route('home', $lang).'#solutions',
       'hasSubmenu' => true,
-      'isMegamenu' => false,
+      'isMegamenu' => true,
       'submenu' => $subSolutions,
     ],
     [

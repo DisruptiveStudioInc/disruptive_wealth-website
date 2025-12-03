@@ -12,16 +12,16 @@
       <span class="flex items-center h-full px-3 lg:es:px-2 xl:es:px-3 text-sm xl:text-base group-hover/submenu:text-brand-100 transition-colors">
         <?= $item['label'] ?>
       </span>
-      <ul class="absolute top-full bg-white border border-surface-300 pointer-events-none opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:pointer-events-auto transition-opacity <?= $item['isMegamenu'] ? 'grid grid-cols-3 gap-4 w-full max-w-max left-1/2 -translate-x-1/2 p-5 rounded-2xl' : 'flex flex-col p-2 rounded-lg' ?>">
+      <ul class="absolute top-full bg-white border border-surface-300 pointer-events-none opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:pointer-events-auto left-1/2 -translate-x-1/2 transition-opacity <?= $item['isMegamenu'] ? 'grid grid-cols-4 gap-4 w-full max-w-max p-5 rounded-2xl' : 'flex flex-col p-2 min-w-56 rounded-lg' ?>">
         <?php
           foreach($item['submenu'] as $sub):
             if($item['isMegamenu']):
         ?>
           <li class="w-full p-4 rounded-lg group/category hover:bg-brand-100 transition-colors">
-            <h3 class="text-2xl font-bold mb-4 text-secondary-100 group-hover/category:text-white transition-colors"><?= $sub['name'] ?></h3>
-            <ul class="flex flex-col gap-2 pl-4">
+            <h3 class="text-lg 2xl:text-2xl font-bold mb-2 text-secondary-100 group-hover/category:text-white transition-colors"><?= $sub['name'] ?></h3>
+            <ul class="flex flex-col gap-1 2xl:gap-2 pl-4">
               <?php foreach($sub['list'] as $subItem): ?>
-                <a href="<?= $subItem['url'] ?>" class="transition-colors group-hover/category:text-white/80 hover:text-white"><?= $subItem['label'] ?></a>
+                <a href="<?= $subItem['url'] ?>" class="transition-colors group-hover/category:text-white/80 hover:text-white text-sm 2xl:text-base"><?= $subItem['label'] ?></a>
               <?php endforeach; ?>
             </ul>
           </li>
