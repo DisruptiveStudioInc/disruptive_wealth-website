@@ -19,7 +19,7 @@ return [
   'about2_title' => Language::trans("{$sKey}.about2"),
   'about2_text' => Language::trans("{$sKey}.about2_text"),
   'about2_images' => [
-    'big' => 'cryptoprocess_3_big.webp',
+    'big' => 'cryptoprocess_3_big_v2.webp',
     'mid' => 'cryptoprocess_3_mid.webp',
     'small' => 'cryptoprocess_3_small.webp'
   ],
