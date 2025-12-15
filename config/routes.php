@@ -12,6 +12,13 @@ return function(Router $router) {
   $router->post('/contacto', 'App\\Controllers\\ContactController', 'submit');
   $router->post('/contact', 'App\\Controllers\\ContactController', 'submit');
 
-  // Services - dynamic route with slug
+  // Blog
+  $router->get('/blog', 'App\\Controllers\\BlogController', 'index');
+  $router->get('/blog/{slug}', 'App\\Controllers\\BlogController', 'show');
+
+  // Blog cache clear (optional - for webhook)
+  $router->post('/blog/cache/clear', 'App\\Controllers\\BlogController', 'clearCache');
+
+  // Services - dynamic route with slug (keep this last as it's a catch-all)
   $router->get('/{slug}', 'App\\Controllers\\ServiceController', 'show');
 };

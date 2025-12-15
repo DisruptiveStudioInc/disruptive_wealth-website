@@ -48,7 +48,10 @@ class Router
 
     // Try to match route
     foreach ($this->routes as $route) {
-      if ($route['method'] === $httpMethod && $this->matchPath($route['path'], $cleanUri)) {
+      $params = [];
+      if ($route['method'] === $httpMethod && $this->matchPath($route['path'], $cleanUri, $params)) {
+        // Add route parameters to request
+        $request->setRouteParams($params);
         return $this->callController($route['controller'], $route['action'], $request);
       }
     }
@@ -82,18 +85,35 @@ class Router
     return $uri;
   }
 
-  private function matchPath(string $routePath, string $uri): bool
+  private function matchPath(string $routePath, string $uri, array &$params = []): bool
   {
     // Exact match
     if ($routePath === $uri) {
       return true;
     }
 
+    // Extract parameter names from route path
+    preg_match_all('/\{([^}]+)\}/', $routePath, $paramNames);
+
     // Pattern match with parameters (e.g., /service/{slug})
     $pattern = preg_replace('/\{[^}]+\}/', '([^/]+)', $routePath);
     $pattern = "#^$pattern$#";
 
-    return (bool) preg_match($pattern, $uri);
+    if (preg_match($pattern, $uri, $matches)) {
+      // Remove full match, keep only capture groups
+      array_shift($matches);
+
+      // Map parameter names to values
+      foreach ($paramNames[1] as $index => $name) {
+        if (isset($matches[$index])) {
+          $params[$name] = $matches[$index];
+        }
+      }
+
+      return true;
+    }
+
+    return false;
   }
 
   private function callController(string $controller, string $method, Request $request): Response

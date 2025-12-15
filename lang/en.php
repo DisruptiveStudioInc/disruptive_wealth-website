@@ -396,5 +396,26 @@ return [
   'otc' => $servicesTranslations['otc'],
   'payment_processing' => $servicesTranslations['payment-processing'],
   'tokenization' => $servicesTranslations['tokenization'],
-  'wallet' => $servicesTranslations['wallet']
+  'wallet' => $servicesTranslations['wallet'],
+
+  // Blog
+  'blog' => [
+    'title' => 'Blog',
+    'description' => 'Discover the latest insights, news, and articles from our team',
+    'all_posts' => 'All Posts',
+    'categories' => 'Categories',
+    'tags' => 'Tags',
+    'no_posts' => 'No posts found',
+    'error_loading' => 'There was an error loading the blog posts. Please try again later.',
+    'previous' => 'Previous',
+    'next' => 'Next',
+    'pagination' => 'Pagination',
+    'post' => 'Post',
+    'min_read' => 'min read',
+    'about_author' => 'About the author',
+    'available_in' => 'This post is also available in',
+    'share' => 'Share',
+    'related_posts' => 'Related Posts',
+    'read_more' => 'Read more',
+  ]
 ];
