@@ -1,19 +1,20 @@
 <?php
 $pageTitle = $title ?? $trans('blog.title');
 require __DIR__ . '/../../layouts/header.php';
+require __DIR__ . '/../../components/fixedBackgroundDark.php';
 ?>
 
 <!-- Blog Index Page -->
-<section class="relative bg-white py-16 lg:py-24">
-  <div class="container mx-auto px-4 max-w-screen-xl">
+<section class="relative">
+  <div class="block-content py-24 lg:py-40">
 
     <!-- Page Header -->
     <div class="text-center mb-12 lg:mb-16">
-      <h1 class="font-title text-4xl md:text-6xl lg:text-7xl uppercase mb-4">
+      <h1 class="font-title leading-tight uppercase bg-clip-text bg-text-white text-4xl md:text-7xl lg:text-11xl">
         <?= htmlspecialchars($title ?? $trans('blog.title')) ?>
       </h1>
       <?php if (isset($metaDescription) && $metaDescription): ?>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="md:text-xl text-white mx-auto">
           <?= htmlspecialchars($metaDescription) ?>
         </p>
       <?php endif; ?>
@@ -21,7 +22,7 @@ require __DIR__ . '/../../layouts/header.php';
 
     <!-- Error Message -->
     <?php if (isset($error) && $error): ?>
-      <div class="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-8 text-center">
+      <div class="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg mb-8 text-center">
         <p><?= htmlspecialchars($error) ?></p>
       </div>
     <?php endif; ?>
@@ -31,60 +32,49 @@ require __DIR__ . '/../../layouts/header.php';
       <!-- Main Content - Posts Grid -->
       <div class="flex-1">
         <?php if (!empty($posts)): ?>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <?php foreach ($posts as $post): ?>
-              <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="grid grid-cols-1 gap-6 lg:gap-8">
+            <?php foreach ($posts as $k => $post): ?>
+              <article class="bg-surface-100 rounded-2xl p-2 overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-4">
 
                 <!-- Featured Image -->
-                <?php if ($post['featuredImage']): ?>
-                  <a href="<?= htmlspecialchars($post['url']) ?>" class="block aspect-video overflow-hidden">
-                    <img
-                      src="<?= htmlspecialchars($post['featuredImage']['url']) ?>"
-                      alt="<?= htmlspecialchars($post['featuredImage']['alt'] ?: $post['title']) ?>"
-                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    >
-                  </a>
-                <?php endif; ?>
+                <?php $backupImage = $k%3 ?>
+                <a href="<?= htmlspecialchars($post['url']) ?>" class="block aspect-video lg:aspect-square rounded-lg overflow-hidden">
+                  <img
+                    src="<?= htmlspecialchars(isset($post['featuredImage']['url']) ?  $post['featuredImage']['url'] : "/public/images/background/blog-cover-{$backupImage}.webp") ?>"
+                    alt="<?= htmlspecialchars(isset($post['featuredImage']['alt']) ?  $post['featuredImage']['alt'] : $post['title']) ?>"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  >
+                </a>
 
-                <div class="p-6">
+                <div class="flex flex-col justify-between p-4">
+                  <!-- Title -->
+                  <a href="<?= htmlspecialchars($post['url']) ?>" class="hover:text-brand-100 transition-colors">
+                    <h2 class="text-xl lg:text-3xl 2xl:text-5xl leading-tight font-bold mb-3 line-clamp-3">
+                      <?= htmlspecialchars($post['title']) ?>
+                    </h2>
+                  </a>
+
                   <!-- Categories -->
                   <?php if (!empty($post['categories'])): ?>
                     <div class="flex flex-wrap gap-2 mb-3">
                       <?php foreach (array_slice($post['categories'], 0, 2) as $category): ?>
-                        <span class="text-xs font-semibold px-3 py-1 bg-secondary-100 text-white rounded-full">
+                        <span class="text-xs font-semibold px-3 py-1 bg-secondary-50 text-white rounded-full">
                           <?= htmlspecialchars($category['name']) ?>
                         </span>
                       <?php endforeach; ?>
                     </div>
                   <?php endif; ?>
 
-                  <!-- Title -->
-                  <h2 class="text-xl font-bold mb-3 line-clamp-2">
-                    <a href="<?= htmlspecialchars($post['url']) ?>" class="hover:text-secondary-200 transition-colors">
-                      <?= htmlspecialchars($post['title']) ?>
-                    </a>
-                  </h2>
-
                   <!-- Excerpt -->
                   <?php if ($post['excerpt']): ?>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
+                    <p class="mb-4 mt-auto line-clamp-3">
                       <?= htmlspecialchars($post['excerpt']) ?>
                     </p>
                   <?php endif; ?>
 
                   <!-- Meta Info -->
-                  <div class="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-200">
-                    <div class="flex items-center gap-2">
-                      <?php if ($post['author']['avatar']): ?>
-                        <img
-                          src="<?= htmlspecialchars($post['author']['avatar']) ?>"
-                          alt="<?= htmlspecialchars($post['author']['name']) ?>"
-                          class="w-8 h-8 rounded-full"
-                        >
-                      <?php endif; ?>
-                      <span><?= htmlspecialchars($post['author']['name']) ?></span>
-                    </div>
+                  <div class="flex items-center justify-between text-sm pt-4 border-t border-surface-300">
                     <time datetime="<?= htmlspecialchars($post['dateRaw']) ?>">
                       <?= htmlspecialchars($post['date']) ?>
                     </time>
@@ -106,29 +96,32 @@ require __DIR__ . '/../../layouts/header.php';
       </div>
 
       <!-- Sidebar -->
-      <aside class="w-full lg:w-80 shrink-0">
+      <aside class="w-full lg:w-80 shrink-0 relative">
 
         <!-- Categories -->
         <?php if (!empty($categories)): ?>
-          <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+          <div class="bg-secondary-100 text-white rounded-xl shadow-lg p-6 mb-6 lg:sticky lg:top-28">
             <h3 class="text-xl font-bold mb-4"><?= $trans('blog.categories') ?></h3>
             <ul class="space-y-2">
               <li>
                 <a
-                  href="/blog"
-                  class="block px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors <?= !$selectedCategory ? 'bg-secondary-100 text-white hover:bg-secondary-200' : '' ?>"
+                  href="<?= route('blog', $currentLang) ?>"
+                  class="block px-4 py-2 rounded-lg transition-colors <?= !$selectedCategory ? 'bg-brand-100 hover:bg-brand-200' : 'hover:bg-secondary-50' ?>"
                 >
                   <?= $trans('blog.all_posts') ?>
                 </a>
               </li>
-              <?php foreach ($categories as $category): ?>
+              <?php
+                foreach ($categories as $category):
+                  if ($category['count'] <= 0) continue;
+              ?>
                 <li>
                   <a
                     href="?category=<?= urlencode($category['slug']) ?>"
-                    class="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors <?= $selectedCategory === $category['slug'] ? 'bg-secondary-100 text-white hover:bg-secondary-200' : '' ?>"
+                    class="flex items-center justify-between px-4 py-2 rounded-lg transition-colors <?= $selectedCategory === $category['slug'] ? 'bg-brand-100 hover:bg-brand-200' : 'hover:bg-secondary-50' ?>"
                   >
                     <span><?= htmlspecialchars($category['name']) ?></span>
-                    <span class="text-sm text-gray-500">(<?= $category['count'] ?>)</span>
+                    <span class="text-sm">(<?= $category['count'] ?>)</span>
                   </a>
                 </li>
               <?php endforeach; ?>

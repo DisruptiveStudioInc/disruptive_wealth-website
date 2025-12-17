@@ -127,6 +127,101 @@ class WordPressClient
   }
 
   /**
+   * Get total count of posts by language
+   *
+   * @param string $lang Language code (ES or EN)
+   * @return int Total number of posts
+   */
+  public function getPostsCount(string $lang = 'EN'): int
+  {
+    $cacheKey = "posts_count_{$lang}";
+
+    // Try cache first (cache for longer since count doesn't change often)
+    if ($cached = $this->getFromCache($cacheKey)) {
+      return $cached;
+    }
+
+    $query = '
+      query GetPostsCount($lang: LanguageCodeFilterEnum!) {
+        posts(where: {language: $lang}) {
+          nodes {
+            id
+          }
+        }
+      }
+    ';
+
+    $variables = [
+      'lang' => strtoupper($lang),
+    ];
+
+    $result = $this->request($query, $variables);
+
+    $count = 0;
+    if (isset($result['data']['posts']['nodes'])) {
+      $count = count($result['data']['posts']['nodes']);
+    }
+
+    // Cache for 30 minutes
+    $this->saveToCache($cacheKey, $count);
+    return $count;
+  }
+
+  /**
+   * Get all page cursors for numbered pagination
+   * This method fetches cursors for all pages (cached)
+   *
+   * @param string $lang Language code
+   * @param int $limit Posts per page
+   * @return array Array of cursors indexed by page number
+   */
+  public function getPageCursors(string $lang = 'EN', int $limit = 10): array
+  {
+    $cacheKey = "page_cursors_{$lang}_{$limit}";
+
+    // Try cache first (cache for longer since structure doesn't change often)
+    if ($cached = $this->getFromCache($cacheKey)) {
+      return $cached;
+    }
+
+    $cursors = [1 => null]; // Page 1 has no cursor (first page)
+    $currentCursor = null;
+    $pageNumber = 1;
+
+    // Keep fetching pages until there are no more
+    while (true) {
+      // Fetch current page to get its endCursor
+      $data = $this->getPosts($lang, $currentCursor, $limit);
+      $pageInfo = $data['pageInfo'] ?? [];
+
+      // Check if there's a next page
+      if (!($pageInfo['hasNextPage'] ?? false)) {
+        break; // No more pages
+      }
+
+      // Get the cursor for the next page
+      $currentCursor = $pageInfo['endCursor'] ?? null;
+
+      if (!$currentCursor) {
+        break; // No cursor means we can't continue
+      }
+
+      // Add the cursor for the next page
+      $pageNumber++;
+      $cursors[$pageNumber] = $currentCursor;
+
+      // Safety limit to prevent infinite loops
+      if ($pageNumber > 1000) {
+        break;
+      }
+    }
+
+    // Cache for 1 hour
+    $this->saveToCache($cacheKey, $cursors);
+    return $cursors;
+  }
+
+  /**
    * Get a single post by slug
    *
    * @param string $slug Post slug

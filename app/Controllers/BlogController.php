@@ -46,12 +46,16 @@ class BlogController extends BaseController
         $formattedPosts = Blog::formatMultiple($posts);
         $pagination = null;
       } else {
+        // Get all page cursors for numbered pagination
+        $pageCursors = $this->wp->getPageCursors(strtoupper($currentLang), $this->postsPerPage);
+
+        // Fetch posts for current page
         $data = $this->wp->getPosts(strtoupper($currentLang), $after, $this->postsPerPage);
         $posts = $data['posts'] ?? [];
         $pageInfo = $data['pageInfo'] ?? [];
 
         $formattedPosts = Blog::formatMultiple($posts);
-        $pagination = Blog::generatePagination($pageInfo, $after);
+        $pagination = Blog::generatePagination($pageInfo, $pageCursors, $after, $this->postsPerPage);
       }
 
       // Fetch categories for sidebar/filter
@@ -105,6 +109,7 @@ class BlogController extends BaseController
       if (!$post) {
         return $this->callController('App\\Controllers\\ErrorController', 'notFound', $request);
       }
+      error_log('POST DATA: ' . print_r($post, true));
 
       $formattedPost = Blog::format($post);
 
@@ -128,6 +133,9 @@ class BlogController extends BaseController
       // Build structured data for SEO
       $structuredData = $this->buildStructuredData($formattedPost);
 
+      // Prepare post translations for language switcher
+      $postTranslations = $formattedPost['translations'] ?? [];
+
       return $this->view('blog/show', [
         'title' => $formattedPost['seo']['title'] ?: $formattedPost['title'],
         'metaDescription' => $formattedPost['seo']['metaDesc'] ?: $formattedPost['excerpt'],
@@ -135,6 +143,7 @@ class BlogController extends BaseController
         'relatedPosts' => $relatedPosts,
         'readingTime' => $readingTime,
         'structuredData' => $structuredData,
+        'postTranslations' => $postTranslations, // Pass translations to header
         'hasSnapScroll' => false,
         'hasTextTexture' => false,
         // SEO meta tags

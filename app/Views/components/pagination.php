@@ -1,15 +1,15 @@
 <?php
 /**
- * Pagination Component
+ * Pagination Component with Page Numbers
  *
- * A reusable cursor-based pagination component for WordPress GraphQL
+ * A reusable cursor-based pagination component with numbered pages
  *
- * @param array $pagination Pagination data with 'hasNext', 'hasPrev', 'endCursor'
+ * @param array $pagination Pagination data with pages, cursors, currentPage, etc.
  * @param string|null $selectedCategory Optional category filter
  * @param array $additionalParams Additional query parameters to preserve
  */
 
-if (!isset($pagination) || !$pagination || (!$pagination['hasNext'] && !$pagination['hasPrev'])) {
+if (!isset($pagination) || !$pagination || ($pagination['totalPages'] ?? 0) <= 1) {
   return; // Don't render if no pagination needed
 }
 
@@ -25,46 +25,78 @@ if (isset($additionalParams) && is_array($additionalParams)) {
 }
 $queryString = !empty($queryParams) ? implode('&', $queryParams) : '';
 $separator = !empty($queryString) ? '&' : '';
+
+$currentPage = $pagination['currentPage'];
+$totalPages = $pagination['totalPages'];
+$pageCursors = $pagination['pageCursors'];
 ?>
 
-<nav class="mt-12 flex justify-center items-center gap-4" aria-label="<?= $trans('blog.pagination') ?>">
+<nav class="mt-12 flex justify-center items-center gap-2" aria-label="<?= $trans('blog.pagination') ?>">
 
-  <!-- Previous Page (Back to First) -->
+  <!-- Previous Button -->
   <?php if ($pagination['hasPrev']): ?>
     <a
       href="?<?= $queryString ?>"
-      class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+      class="inline-flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
       aria-label="<?= $trans('blog.previous') ?>"
+      title="<?= $trans('blog.previous') ?>"
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      <?= $trans('blog.previous') ?>
     </a>
   <?php else: ?>
-    <span class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed font-medium">
+    <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      <?= $trans('blog.previous') ?>
     </span>
   <?php endif; ?>
 
-  <!-- Next Page -->
+  <!-- Page Numbers -->
+  <?php foreach ($pagination['pages'] as $page): ?>
+    <?php if ($page['type'] === 'ellipsis'): ?>
+      <span class="inline-flex items-center justify-center w-10 h-10 text-gray-400">
+        <?= $page['value'] ?>
+      </span>
+    <?php else: ?>
+      <?php
+      $pageNum = $page['value'];
+      $isActive = $pageNum === $currentPage;
+      $cursor = $pageCursors[$pageNum] ?? null;
+      $href = $cursor ? "?{$queryString}{$separator}after=" . urlencode($cursor) : "?{$queryString}";
+      ?>
+
+      <?php if ($isActive): ?>
+        <span class="inline-flex items-center justify-center w-10 h-10 bg-secondary-200 text-white rounded-lg font-semibold">
+          <?= $pageNum ?>
+        </span>
+      <?php else: ?>
+        <a
+          href="<?= $href ?>"
+          class="inline-flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+          aria-label="<?= $trans('blog.page') ?> <?= $pageNum ?>"
+        >
+          <?= $pageNum ?>
+        </a>
+      <?php endif; ?>
+    <?php endif; ?>
+  <?php endforeach; ?>
+
+  <!-- Next Button -->
   <?php if ($pagination['hasNext']): ?>
     <a
       href="?<?= $queryString ?><?= $separator ?>after=<?= urlencode($pagination['endCursor']) ?>"
-      class="inline-flex items-center gap-2 px-6 py-3 bg-secondary-200 text-white rounded-lg hover:bg-secondary-100 transition-colors font-medium"
+      class="inline-flex items-center justify-center w-10 h-10 bg-secondary-200 text-white rounded-lg hover:bg-secondary-100 transition-colors"
       aria-label="<?= $trans('blog.next') ?>"
+      title="<?= $trans('blog.next') ?>"
     >
-      <?= $trans('blog.next') ?>
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </a>
   <?php else: ?>
-    <span class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed font-medium">
-      <?= $trans('blog.next') ?>
+    <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>

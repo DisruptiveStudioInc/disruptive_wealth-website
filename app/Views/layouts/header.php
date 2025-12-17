@@ -112,7 +112,11 @@
         </a>
 
         <!-- Language switcher -->
-        <?php include(__DIR__.'/../components/langSwitcherIcon.php') ?>
+        <?php
+        // Pass post translations to language switcher if available
+        $postTranslations = $postTranslations ?? null;
+        include(__DIR__.'/../components/langSwitcherIcon.php');
+        ?>
 
         <a href="https://wa.me/+14088584504" target="_blank" rel="noopener noreferrer" class="flex-center p-1.5 rounded-full bg-green-400 hover:bg-green-700 active:bg-green-700">
           <svg class="size-7 text-white"><use href="#whatsapp"/></svg>
