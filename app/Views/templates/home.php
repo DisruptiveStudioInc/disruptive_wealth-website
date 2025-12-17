@@ -305,7 +305,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
         <?php if($hasLink): ?>
           <a href="<?= serviceRoute($slide['key'], $currentLang) ?>" class="group w-full md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(25%_-_--spacing(6))]">
         <?php endif; ?>
-        <article class="w-full <?= $hasLink ? '' : 'md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(25%_-_--spacing(6))]' ?> p-4 md:p-5 flex-center flex-col bg-white text-grey-100 drop-shadow-md drop-shadow-grey-100/20 rounded-xl md:rounded-2xl">
+        <article class="w-full <?= $hasLink ? '' : 'md:w-[calc(50%_-_--spacing(3))] lg:w-[calc(32%_-_--spacing(6))]' ?> p-4 md:p-5 flex-center flex-col bg-white text-grey-100 drop-shadow-md drop-shadow-grey-100/20 rounded-xl md:rounded-2xl">
           <img src="/public/images/services/ips/<?= $slide['key'] ?>.svg" alt="" loading="lazy" class="w-1/2 lg:w-2/5 mb-4">
           <div class="w-full">
             <h2 class="font-title leading-tight uppercase text-secondary-200 group-hover:text-brand-100 group-active:text-brand-100 text-xl md:text-2xl lg:text-lg xl:text-2xl mb-2 transition-colors"><?= $slide['meta']['meta_title'] ?></h2>

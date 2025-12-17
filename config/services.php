@@ -944,7 +944,7 @@ return [
   ],
 
   'metaverse' => [
-    'isActive' => true,
+    'isActive' => false,
     'inNav' => true,
     'category' => 'ips',
     'template' => 'service-type-2',

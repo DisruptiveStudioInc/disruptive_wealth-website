@@ -230,8 +230,8 @@ function getNavigationMenu(string $lang, callable $trans): array {
     ],
     [
       'label' => $trans('nav.disruptive_ip'),
-      // 'url' => route('home', $lang).'#our-ip',
-      'hasSubmenu' => true,
+      'url' => route('home', $lang).'#our-ip',
+      'hasSubmenu' => false,
       'isMegamenu' => false,
       'submenu' => $subIps,
     ],
