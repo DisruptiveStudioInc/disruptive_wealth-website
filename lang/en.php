@@ -294,6 +294,9 @@ return [
   'contact' => [
     'title' => 'Contact Us',
     'description' => 'Create your future with Disruptive Studio. Write to us or contact us via WhatsApp.',
+    'map_title' => 'Global Presence',
+    'map_text1' => 'Our reach spans the USA, Europe, Mexico, Canada, Japan, the UAE, and China powered by a global network of specialists and strategic partners.',
+    'map_text2' => 'This is where ideas turn into execution.',
     'form' => [
       'name' => 'Name',
       'email' => 'Email',

@@ -294,6 +294,9 @@ return [
   'contact' => [
     'title' => 'Contáctanos',
     'description' => 'Crea tu futuro con Disruptive Studio. Escríbenos o contactanos por WhatsApp.',
+    'map_title' => 'Presencia Global',
+    'map_text1' => 'Nuestra presencia abarca EE.UU., Europa, México, Canadá, Japón, EAU y China, impulsada por una red global de especialistas y socios estratégicos.',
+    'map_text2' => 'Aquí es donde las ideas se convierten en ejecución.',
     'form' => [
       'name' => 'Nombre',
       'email' => 'Correo electrónico',
