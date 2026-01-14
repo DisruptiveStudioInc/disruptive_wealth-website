@@ -24,11 +24,6 @@ class Blog
       'date' => self::formatDate($post['date'] ?? ''),
       'dateRaw' => $post['date'] ?? '',
       'modified' => self::formatDate($post['modified'] ?? ''),
-      'author' => [
-        'name' => $post['author']['node']['name'] ?? 'Unknown',
-        'description' => $post['author']['node']['description'] ?? '',
-        'avatar' => $post['author']['node']['avatar']['url'] ?? '',
-      ],
       'featuredImage' => self::formatFeaturedImage($post['featuredImage'] ?? null),
       'categories' => self::formatTerms($post['categories']['nodes'] ?? []),
       'tags' => self::formatTerms($post['tags']['nodes'] ?? []),
@@ -155,8 +150,6 @@ class Blog
       'twitterTitle' => $seo['twitterTitle'] ?? '',
       'twitterDescription' => $seo['twitterDescription'] ?? '',
       'twitterImage' => $seo['twitterImage']['sourceUrl'] ?? '',
-      'canonical' => $seo['canonical'] ?? '',
-      'breadcrumbs' => $seo['breadcrumbs'] ?? [],
     ];
   }
 

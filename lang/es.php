@@ -413,7 +413,6 @@ return [
     'pagination' => 'Paginación del blog',
     'post' => 'Publicación',
     'min_read' => 'min de lectura',
-    'about_author' => 'Acerca del autor',
     'available_in' => 'Esta publicación también está disponible en',
     'share' => 'Compartir',
     'related_posts' => 'Publicaciones relacionadas',

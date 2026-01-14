@@ -413,7 +413,6 @@ return [
     'pagination' => 'Blog pagination',
     'post' => 'Post',
     'min_read' => 'min read',
-    'about_author' => 'About the author',
     'available_in' => 'This post is also available in',
     'share' => 'Share',
     'related_posts' => 'Related Posts',

@@ -12,10 +12,10 @@
 
   <!-- Opengraph -->
   <meta property="og:url" content="<?= $config['app']['url'] ?>" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="<?= $ogType ?? 'website' ?>" />
   <meta property="og:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta property="og:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
-  <meta property="og:image" content="<?= $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <meta property="og:image" content="<?= $ogImage ?? $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
   <meta property="og:image:alt" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="675" />
@@ -25,7 +25,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta name="twitter:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
-  <meta name="twitter:image" content="<?= $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <meta name="twitter:image" content="<?= $ogImage ?? $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <link rel="canonical" href="<?= $config['app']['url'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>" />
 
   <!-- Structured data -->
   <script type="application/ld+json">

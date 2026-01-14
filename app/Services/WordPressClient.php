@@ -63,14 +63,6 @@ class WordPressClient
             excerpt
             date
             modified
-            author {
-              node {
-                name
-                avatar {
-                  url
-                }
-              }
-            }
             featuredImage {
               node {
                 sourceUrl
@@ -247,15 +239,6 @@ class WordPressClient
           excerpt
           date
           modified
-          author {
-            node {
-              name
-              description
-              avatar {
-                url
-              }
-            }
-          }
           featuredImage {
             node {
               sourceUrl
@@ -292,11 +275,6 @@ class WordPressClient
             twitterDescription
             twitterImage {
               sourceUrl
-            }
-            canonical
-            breadcrumbs {
-              text
-              url
             }
           }
           translations {

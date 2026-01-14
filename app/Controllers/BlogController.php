@@ -109,7 +109,6 @@ class BlogController extends BaseController
       if (!$post) {
         return $this->callController('App\\Controllers\\ErrorController', 'notFound', $request);
       }
-      error_log('POST DATA: ' . print_r($post, true));
 
       $formattedPost = Blog::format($post);
 
@@ -147,13 +146,13 @@ class BlogController extends BaseController
         'hasSnapScroll' => false,
         'hasTextTexture' => false,
         // SEO meta tags
+        'ogType' => 'article',
         'ogTitle' => $formattedPost['seo']['opengraphTitle'] ?: $formattedPost['title'],
         'ogDescription' => $formattedPost['seo']['opengraphDescription'] ?: $formattedPost['excerpt'],
         'ogImage' => $formattedPost['seo']['opengraphImage'] ?: ($formattedPost['featuredImage']['url'] ?? ''),
         'twitterTitle' => $formattedPost['seo']['twitterTitle'] ?: $formattedPost['title'],
         'twitterDescription' => $formattedPost['seo']['twitterDescription'] ?: $formattedPost['excerpt'],
         'twitterImage' => $formattedPost['seo']['twitterImage'] ?: ($formattedPost['featuredImage']['url'] ?? ''),
-        'canonical' => $formattedPost['seo']['canonical'] ?: null,
       ]);
 
     } catch (Exception $e) {
@@ -175,10 +174,6 @@ class BlogController extends BaseController
       '@type' => 'BlogPosting',
       'headline' => $post['title'],
       'description' => $post['excerpt'],
-      'author' => [
-        '@type' => 'Person',
-        'name' => $post['author']['name'],
-      ],
       'datePublished' => $post['dateRaw'],
       'dateModified' => $post['modified'],
     ];
