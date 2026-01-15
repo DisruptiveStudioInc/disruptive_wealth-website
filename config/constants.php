@@ -227,7 +227,8 @@ return [
     [ 'name' => 'Neogora', 'logo' => 'clientes-218.png' ],
     [ 'name' => '5D Community', 'logo' => 'clientes-219.png' ],
     [ 'name' => 'Matrix', 'logo' => 'clientes-220.png' ],
-    [ 'name' => 'CRYN', 'logo' => 'clientes-221.png' ]
+    [ 'name' => 'CRYN', 'logo' => 'clientes-221.png' ],
+    [ 'name' => 'Click it', 'logo' => 'clientes-222.png' ]
   ],
 
   'certifications' => [
