@@ -274,7 +274,8 @@ return [
       'apolus' => 'App iOS/Android con wallet Web3, pagos OTC y biometría integrada.',
       'doctors_net' => 'App móvil iOS/Android con telemedicina, expediente clínico, e-commerce y biometría Binah.ai.',
       'exma' => 'Plataforma E-learning con cursos, certificaciones y gestión integral de conocimiento empresarial.',
-      'evo' => 'Ecosistema con Backoffice binario, recompra automática, e-learning, e-commerce y procesamiento en EE.UU.'
+      'evo' => 'Ecosistema con Backoffice binario, recompra automática, e-learning, e-commerce y procesamiento en EE.UU.',
+      'balance_food' => 'Presentación go-to-market, diseño de etiquetas, cumplimiento legal, sitio e-commerce y Backoffice a la medida.'
     ],
     'clients' => [
       'title' => 'Clientes',

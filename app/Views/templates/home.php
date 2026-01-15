@@ -1,7 +1,7 @@
 <?php
 $pageTitle = $trans('home.title');
 $heroSlides = array_merge($content['hero'], $content['hero'], $content['hero']);
-list($clients1, $clients2, $clients3) = split_array_in_thirds($constants['clients']);
+list($clients1, $clients2, $clients3, $clients4) = split_array_in_quarters($constants['clients']);
 list($certs1, $certs2) = split_array_in_half($constants['certifications']);
 $certifications1 = array_merge($certs1, $certs1, $certs1);
 $certifications2 = array_merge($certs2, $certs2, $certs2);
@@ -353,13 +353,13 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Clients -->
-<section data-nav-index="12" class="nav-section relative pb-16 lg:pb-40 overflow-x-hidden">
+<section data-nav-index="12" class="nav-section relative min-h-dvh pb-16 lg:pb-40 overflow-x-hidden flex-center flex-col">
   <?php generateBackground('white2',3, true); ?>
   <div class="block-content pb-12 pt-16 lg:pt-40">
     <h2 class="font-title text-center leading-tight uppercase text-2xl sm:text-6xl lg:text-9xl xl:text-11xl lg:mb-4 slide-up-words-black"><?= $trans('home.clients.title') ?></h2>
     <p class="text-center md:text-lg lg:text-2xl text-secondary-200 mx-auto max-w-[58ch] slide-up"><?= $trans('home.clients.text') ?></p>
   </div>
-  <ul id="clients1-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
+  <ul id="clients1-swiper" class="clients-odd-swiper swiper !overflow-visible w-full linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients1 as $slide): ?>
         <li class="swiper-slide">
@@ -368,7 +368,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul id="clients2-swiper" class="clients-even-swiper swiper !overflow-visible linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
+  <ul id="clients2-swiper" class="clients-even-swiper swiper !overflow-visible w-full linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients2 as $slide): ?>
         <li class="swiper-slide">
@@ -377,9 +377,18 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       <?php endforeach; ?>
     </div>
   </ul>
-  <ul id="clients3-swiper" class="clients-odd-swiper swiper !overflow-visible linear-swiper mask-x-from-70% mask-x-to-90% pointer-events-none">
+  <ul id="clients3-swiper" class="clients-odd-swiper swiper !overflow-visible w-full linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
     <div class="swiper-wrapper">
       <?php foreach($clients3 as $slide): ?>
+        <li class="swiper-slide">
+          <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
+        </li>
+      <?php endforeach; ?>
+    </div>
+  </ul>
+  <ul id="clients4-swiper" class="clients-even-swiper swiper !overflow-visible w-full linear-swiper mask-x-from-85% mask-x-to-95% pointer-events-none">
+    <div class="swiper-wrapper">
+      <?php foreach($clients4 as $slide): ?>
         <li class="swiper-slide">
           <img src="/public/images/clients/<?= $slide['logo'] ?>" alt="<?= $slide['name'] ?>" loading="lazy">
         </li>

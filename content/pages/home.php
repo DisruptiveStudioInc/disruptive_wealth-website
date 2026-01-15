@@ -394,6 +394,11 @@ return[
       'name' => 'EVO',
       'text' => Language::trans('home.cases.evo'),
       'image' => 'evo.webp'
+    ],
+    [
+      'name' => 'Balance Food',
+      'text' => Language::trans('home.cases.balance_food'),
+      'image' => 'balance-food.webp'
     ]
   ],
   'solutions' => [

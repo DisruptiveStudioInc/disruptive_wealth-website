@@ -71,10 +71,10 @@ const clientsSliderOps = {
       slidesPerView: 3,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
     1088: {
-      slidesPerView: 6,
+      slidesPerView: 10,
     },
   },
 };

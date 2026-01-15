@@ -5,17 +5,17 @@ require __DIR__ . '/../layouts/header.php';
 
 <section class="relative">
   <?php generateBackground('team',3); ?>
-  <div class="block-content max-w-screen-lg flex-center min-h-dvh py-24 lg:py-30">
-    <article class="rounded-2xl lg:rounded-4xl bg-white p-7 flex flex-col gap-7 xl:gap-12 w-full">
+  <div class="block-content flex-center min-h-dvh py-24 lg:py-30">
+    <article class="rounded-2xl lg:rounded-4xl bg-white p-7 flex flex-col lg:flex-row items-center gap-7 xl:gap-12 w-full">
 
-      <div class="w-full">
-        <h1 class="text-4xl font-bold text-center mt-4 mb-6"><?= $trans('contact.map_title') ?></h1>
-        <p class="text-center text-balance mb-2"><?= $trans('contact.map_text1') ?></p>
-        <p class="text-center text-balance mb-8 lg:mb-12"><?= $trans('contact.map_text2') ?></p>
+      <div class="w-full lg:w-1/2">
+        <h1 class="text-4xl font-bold text-center lg:text-left mt-4 mb-6"><?= $trans('contact.map_title') ?></h1>
+        <p class="text-center lg:text-left text-balance mb-2"><?= $trans('contact.map_text1') ?></p>
+        <p class="text-center lg:text-left text-balance mb-8 lg:mb-12"><?= $trans('contact.map_text2') ?></p>
         <?php include __DIR__ . '/../components/worldMap.php'; ?>
       </div>
 
-      <div class="w-full">
+      <div class="w-full lg:w-1/2">
         <h2 class="text-4xl font-bold text-center mb-6 lg:mb-8">
           <?= $trans('contact.title') ?>
         </h2>

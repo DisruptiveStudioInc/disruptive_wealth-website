@@ -245,7 +245,8 @@ return [
     'certificaciones-22.png',
     'certificaciones-23.png',
     'certificaciones-24.png',
-    'certificaciones-25.png'
+    'certificaciones-25.png',
+    'certificaciones-26.png'
   ],
 
   'partners' => [
