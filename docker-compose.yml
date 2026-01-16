@@ -1,21 +1,24 @@
 services:
-  disruptive-studio-website:
+  # Servicio 1: El motor de PHP (Sin servidor web)
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    # Optimización: Política de reinicio por si falla
-    restart: always 
+    image: disruptive-php-fpm
+    restart: always
+    volumes:
+      - ./:/var/www/html
+    environment:
+      APP_ENV: production
+
+  # Servicio 2: El servidor Web (Nginx ligero)
+  web:
+    image: nginx:alpine
+    restart: always
     ports:
       - "8080:80"
-    # Optimización: Quitamos los volúmenes de código.
-    # El código ya debe vivir DENTRO de la imagen tras el build.
-    # Solo dejamos volúmenes para cosas que persisten (ej. uploads, logs)
     volumes:
-       - ./storage:/var/www/html/storage  # Ejemplo: Solo monta carpetas de escritura
-    environment:
-      # CRÍTICO: Activa cachés y desactiva debug
-      APP_ENV: production
-      APP_DEBUG: "false"
-
-  # El servicio 'composer' no se necesita en ejecución (runtime) de producción.
-  # Las dependencias deben instalarse DENTRO del Dockerfile.
+      - ./:/var/www/html  # Necesita ver los archivos para servir estáticos
+      - ./nginx-conf:/etc/nginx/conf.d # Configuración personalizada
+    depends_on:
+      - app
