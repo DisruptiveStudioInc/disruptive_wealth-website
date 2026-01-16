@@ -31,13 +31,13 @@ $totalPages = $pagination['totalPages'];
 $pageCursors = $pagination['pageCursors'];
 ?>
 
-<nav class="mt-12 flex justify-center items-center gap-2" aria-label="<?= $trans('blog.pagination') ?>">
+<nav class="mt-12 flex flex-wrap justify-center items-center gap-2" aria-label="<?= $trans('blog.pagination') ?>">
 
   <!-- Previous Button -->
   <?php if ($pagination['hasPrev']): ?>
     <a
       href="?<?= $queryString ?>"
-      class="inline-flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+      class="inline-flex items-center justify-center w-10 h-10 bg-white rounded-lg hover:bg-brand-100 hover:text-white transition-colors"
       aria-label="<?= $trans('blog.previous') ?>"
       title="<?= $trans('blog.previous') ?>"
     >
@@ -46,7 +46,7 @@ $pageCursors = $pagination['pageCursors'];
       </svg>
     </a>
   <?php else: ?>
-    <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
+    <span class="inline-flex items-center justify-center w-10 h-10 bg-secondary-50/50 border border-grey-100 rounded-lg text-grey-100 cursor-not-allowed">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
@@ -56,7 +56,7 @@ $pageCursors = $pagination['pageCursors'];
   <!-- Page Numbers -->
   <?php foreach ($pagination['pages'] as $page): ?>
     <?php if ($page['type'] === 'ellipsis'): ?>
-      <span class="inline-flex items-center justify-center w-10 h-10 text-gray-400">
+      <span class="inline-flex items-center justify-center h-10 text-white">
         <?= $page['value'] ?>
       </span>
     <?php else: ?>
@@ -68,13 +68,13 @@ $pageCursors = $pagination['pageCursors'];
       ?>
 
       <?php if ($isActive): ?>
-        <span class="inline-flex items-center justify-center w-10 h-10 bg-secondary-200 text-white rounded-lg font-semibold">
+        <span class="inline-flex items-center justify-center w-10 h-10 bg-brand-200 text-white rounded-lg font-semibold">
           <?= $pageNum ?>
         </span>
       <?php else: ?>
         <a
           href="<?= $href ?>"
-          class="inline-flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+          class="inline-flex items-center justify-center w-10 h-10 bg-white rounded-lg hover:bg-brand-100 hover:text-white transition-colors font-medium"
           aria-label="<?= $trans('blog.page') ?> <?= $pageNum ?>"
         >
           <?= $pageNum ?>
@@ -87,7 +87,7 @@ $pageCursors = $pagination['pageCursors'];
   <?php if ($pagination['hasNext']): ?>
     <a
       href="?<?= $queryString ?><?= $separator ?>after=<?= urlencode($pagination['endCursor']) ?>"
-      class="inline-flex items-center justify-center w-10 h-10 bg-secondary-200 text-white rounded-lg hover:bg-secondary-100 transition-colors"
+      class="inline-flex items-center justify-center w-10 h-10 bg-white rounded-lg hover:bg-brand-100 hover:text-white transition-colors"
       aria-label="<?= $trans('blog.next') ?>"
       title="<?= $trans('blog.next') ?>"
     >
@@ -96,7 +96,7 @@ $pageCursors = $pagination['pageCursors'];
       </svg>
     </a>
   <?php else: ?>
-    <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
+    <span class="inline-flex items-center justify-center w-10 h-10 bg-secondary-50/50 border border-grey-100 rounded-lg text-grey-100 cursor-not-allowed">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>

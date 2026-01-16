@@ -14,20 +14,33 @@ class Blog
   {
     $currentSlug = $post['slug'] ?? '';
     $currentLang = Language::getCurrentLanguage();
+    $title = $post['title'] ?? '';
+    $excerpt = self::cleanExcerpt($post['excerpt'] ?? '');
+    $featuredImage = self::formatFeaturedImage($post['featuredImage'] ?? null);
 
     return [
       'id' => $post['id'] ?? '',
-      'title' => $post['title'] ?? '',
+      'title' => $title,
       'slug' => $currentSlug,
-      'excerpt' => self::cleanExcerpt($post['excerpt'] ?? ''),
+      'excerpt' => $excerpt,
       'content' => $post['content'] ?? '',
       'date' => self::formatDate($post['date'] ?? ''),
       'dateRaw' => $post['date'] ?? '',
-      'modified' => self::formatDate($post['modified'] ?? ''),
-      'featuredImage' => self::formatFeaturedImage($post['featuredImage'] ?? null),
+      'modified' => $post['modified'] ?? $post['date'] ?? '',
+      'featuredImage' => $featuredImage,
       'categories' => self::formatTerms($post['categories']['nodes'] ?? []),
       'tags' => self::formatTerms($post['tags']['nodes'] ?? []),
-      'seo' => self::formatSEO($post['seo'] ?? []),
+      // SEO fields now use title/excerpt/featuredImage as defaults (Yoast removed)
+      'seo' => [
+        'title' => $title,
+        'metaDesc' => $excerpt,
+        'opengraphTitle' => $title,
+        'opengraphDescription' => $excerpt,
+        'opengraphImage' => $featuredImage['url'] ?? '',
+        'twitterTitle' => $title,
+        'twitterDescription' => $excerpt,
+        'twitterImage' => $featuredImage['url'] ?? '',
+      ],
       'translations' => self::formatTranslations($post['translations'] ?? [], $currentSlug, $currentLang),
       'url' => self::buildPostUrl($currentSlug, $currentLang),
     ];
@@ -133,27 +146,6 @@ class Blog
   }
 
   /**
-   * Format SEO metadata
-   *
-   * @param array $seo SEO data from Yoast
-   * @return array Formatted SEO data
-   */
-  private static function formatSEO(array $seo): array
-  {
-    return [
-      'title' => $seo['title'] ?? '',
-      'metaDesc' => $seo['metaDesc'] ?? '',
-      'metaKeywords' => $seo['metaKeywords'] ?? '',
-      'opengraphTitle' => $seo['opengraphTitle'] ?? '',
-      'opengraphDescription' => $seo['opengraphDescription'] ?? '',
-      'opengraphImage' => $seo['opengraphImage']['sourceUrl'] ?? '',
-      'twitterTitle' => $seo['twitterTitle'] ?? '',
-      'twitterDescription' => $seo['twitterDescription'] ?? '',
-      'twitterImage' => $seo['twitterImage']['sourceUrl'] ?? '',
-    ];
-  }
-
-  /**
    * Format post translations including current post
    *
    * @param array $translations Translations data from Polylang
@@ -252,13 +244,66 @@ class Blog
   }
 
   /**
-   * Generate pagination data with page numbers
+   * Generate cursor-based pagination data (most memory efficient)
+   * Uses simple next/prev navigation without page numbers
+   *
+   * @param array $pageInfo PageInfo from WordPress GraphQL response
+   * @param string|null $currentCursor Current cursor (null for first page)
+   * @return array Pagination data
+   */
+  public static function generateCursorPagination(array $pageInfo, ?string $currentCursor = null): array
+  {
+    $hasNext = $pageInfo['hasNextPage'] ?? false;
+    $hasPrev = !empty($currentCursor);
+    $endCursor = $pageInfo['endCursor'] ?? null;
+
+    return [
+      'hasNext' => $hasNext,
+      'hasPrev' => $hasPrev,
+      'endCursor' => $endCursor,
+      'currentCursor' => $currentCursor,
+      'isFirstPage' => empty($currentCursor),
+      // For compatibility with pagination component (simple prev/next mode)
+      'totalPages' => ($hasNext || $hasPrev) ? 2 : 1, // At least show pagination if there are more pages
+      'currentPage' => $hasPrev ? 2 : 1,
+      'pages' => [], // Empty - we use simple prev/next navigation
+      'pageCursors' => [],
+    ];
+  }
+
+  /**
+   * Generate simple pagination data using page numbers (no cursors)
+   * More memory efficient than cursor-based pagination
+   *
+   * @param int $currentPage Current page number
+   * @param int $totalPages Total number of pages
+   * @return array Pagination data
+   */
+  public static function generateSimplePagination(int $currentPage, int $totalPages): array
+  {
+    // Generate page numbers to display
+    $pages = self::generatePageNumbers($currentPage, $totalPages);
+
+    return [
+      'hasNext' => $currentPage < $totalPages,
+      'hasPrev' => $currentPage > 1,
+      'currentPage' => $currentPage,
+      'totalPages' => $totalPages,
+      'pages' => $pages,
+      'nextPage' => $currentPage < $totalPages ? $currentPage + 1 : null,
+      'prevPage' => $currentPage > 1 ? $currentPage - 1 : null,
+    ];
+  }
+
+  /**
+   * Generate pagination data with page numbers (legacy cursor-based)
    *
    * @param array $pageInfo Page info from WordPress
    * @param array $pageCursors All available page cursors
    * @param string|null $currentCursor Current cursor position
    * @param int $limit Posts per page
    * @return array Pagination data
+   * @deprecated Use generateSimplePagination instead
    */
   public static function generatePagination(array $pageInfo, array $pageCursors = [], ?string $currentCursor = null, int $limit = 10): array
   {

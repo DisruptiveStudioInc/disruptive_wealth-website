@@ -12,7 +12,7 @@ use Exception;
 class BlogController extends BaseController
 {
   private WordPressClient $wp;
-  private int $postsPerPage = 12;
+  private int $postsPerPage = 8;
 
   public function __construct()
   {
@@ -35,27 +35,33 @@ class BlogController extends BaseController
   public function index(Request $request): Response
   {
     $currentLang = Language::getCurrentLanguage();
-    $after = $request->getQuery('after'); // Get cursor from query string
+    $cursor = $request->getQuery('after'); // Cursor for pagination
     $category = $request->getQuery('category');
 
     try {
       // Fetch posts data
       if ($category) {
-        $posts = $this->wp->getPostsByCategory($category, strtoupper($currentLang), $this->postsPerPage);
-        $pageInfo = []; // Category queries don't have pageInfo in our implementation
-        $formattedPosts = Blog::formatMultiple($posts);
-        $pagination = null;
-      } else {
-        // Get all page cursors for numbered pagination
-        $pageCursors = $this->wp->getPageCursors(strtoupper($currentLang), $this->postsPerPage);
+        // Get category page cursors for numbered pagination
+        $pageCursors = $this->wp->getCategoryPageCursors($category, strtoupper($currentLang), $this->postsPerPage);
 
-        // Fetch posts for current page
-        $data = $this->wp->getPosts(strtoupper($currentLang), $after, $this->postsPerPage);
+        // Fetch posts with pagination (method signature: categorySlug, lang, after, limit)
+        $data = $this->wp->getPostsByCategory($category, strtoupper($currentLang), $cursor, $this->postsPerPage);
         $posts = $data['posts'] ?? [];
         $pageInfo = $data['pageInfo'] ?? [];
 
         $formattedPosts = Blog::formatMultiple($posts);
-        $pagination = Blog::generatePagination($pageInfo, $pageCursors, $after, $this->postsPerPage);
+        $pagination = Blog::generatePagination($pageInfo, $pageCursors, $cursor, $this->postsPerPage);
+      } else {
+        // Get page cursors for numbered pagination (cached)
+        $pageCursors = $this->wp->getPageCursors(strtoupper($currentLang), $this->postsPerPage);
+
+        // Fetch posts using cursor-based pagination
+        $data = $this->wp->getPosts(strtoupper($currentLang), $cursor, $this->postsPerPage);
+        $posts = $data['posts'] ?? [];
+        $pageInfo = $data['pageInfo'] ?? [];
+
+        $formattedPosts = Blog::formatMultiple($posts);
+        $pagination = Blog::generatePagination($pageInfo, $pageCursors, $cursor, $this->postsPerPage);
       }
 
       // Fetch categories for sidebar/filter
@@ -117,7 +123,8 @@ class BlogController extends BaseController
       if (!empty($formattedPost['categories'])) {
         $firstCategory = $formattedPost['categories'][0]['slug'] ?? null;
         if ($firstCategory) {
-          $related = $this->wp->getPostsByCategory($firstCategory, strtoupper($currentLang), 4);
+          $relatedData = $this->wp->getPostsByCategory($firstCategory, strtoupper($currentLang), null, 4);
+          $related = $relatedData['posts'] ?? [];
           // Remove current post from related
           $related = array_filter($related, function($p) use ($slug) {
             return ($p['slug'] ?? '') !== $slug;
@@ -135,9 +142,14 @@ class BlogController extends BaseController
       // Prepare post translations for language switcher
       $postTranslations = $formattedPost['translations'] ?? [];
 
+      // Use title and excerpt for SEO (Yoast SEO removed for lighter queries)
+      $seoTitle = $formattedPost['title'];
+      $seoDescription = $formattedPost['excerpt'];
+      $seoImage = $formattedPost['featuredImage']['url'] ?? '';
+
       return $this->view('blog/show', [
-        'title' => $formattedPost['seo']['title'] ?: $formattedPost['title'],
-        'metaDescription' => $formattedPost['seo']['metaDesc'] ?: $formattedPost['excerpt'],
+        'title' => $seoTitle,
+        'metaDescription' => $seoDescription,
         'post' => $formattedPost,
         'relatedPosts' => $relatedPosts,
         'readingTime' => $readingTime,
@@ -145,14 +157,14 @@ class BlogController extends BaseController
         'postTranslations' => $postTranslations, // Pass translations to header
         'hasSnapScroll' => false,
         'hasTextTexture' => false,
-        // SEO meta tags
+        // SEO meta tags (using title/excerpt/featuredImage)
         'ogType' => 'article',
-        'ogTitle' => $formattedPost['seo']['opengraphTitle'] ?: $formattedPost['title'],
-        'ogDescription' => $formattedPost['seo']['opengraphDescription'] ?: $formattedPost['excerpt'],
-        'ogImage' => $formattedPost['seo']['opengraphImage'] ?: ($formattedPost['featuredImage']['url'] ?? ''),
-        'twitterTitle' => $formattedPost['seo']['twitterTitle'] ?: $formattedPost['title'],
-        'twitterDescription' => $formattedPost['seo']['twitterDescription'] ?: $formattedPost['excerpt'],
-        'twitterImage' => $formattedPost['seo']['twitterImage'] ?: ($formattedPost['featuredImage']['url'] ?? ''),
+        'ogTitle' => $seoTitle,
+        'ogDescription' => $seoDescription,
+        'ogImage' => $seoImage,
+        'twitterTitle' => $seoTitle,
+        'twitterDescription' => $seoDescription,
+        'twitterImage' => $seoImage,
       ]);
 
     } catch (Exception $e) {
