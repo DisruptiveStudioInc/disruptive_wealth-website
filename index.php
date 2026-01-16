@@ -39,6 +39,14 @@ $routeLoader($router);
 // Dispatch request and send response
 try {
   $response = $router->dispatch($request);
+  // ---------------------------------------------------------
+  // ### FIX LCP: HTTP Header Preload (Turbo Boost)
+  // Esto le grita al navegador que descargue la imagen YA,
+  // incluso antes de procesar el HTML.
+  // ---------------------------------------------------------
+  $lcpImage = '/public/images/background/black-01.webp'; // La ruta que vimos en el reporte
+  header("Link: <$lcpImage>; rel=preload; as=image; fetchpriority=high");
+  // ---------------------------------------------------------
   $response->send();
 } catch (Throwable $e) {
   // Log error
