@@ -1,0 +1,21 @@
+services:
+  disruptive-studio-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Optimización: Política de reinicio por si falla
+    restart: always 
+    ports:
+      - "8080:80"
+    # Optimización: Quitamos los volúmenes de código.
+    # El código ya debe vivir DENTRO de la imagen tras el build.
+    # Solo dejamos volúmenes para cosas que persisten (ej. uploads, logs)
+    volumes:
+       - ./storage:/var/www/html/storage  # Ejemplo: Solo monta carpetas de escritura
+    environment:
+      # CRÍTICO: Activa cachés y desactiva debug
+      APP_ENV: production
+      APP_DEBUG: "false"
+
+  # El servicio 'composer' no se necesita en ejecución (runtime) de producción.
+  # Las dependencias deben instalarse DENTRO del Dockerfile.
