@@ -7,14 +7,13 @@ $certifications1 = array_merge($certs1, $certs1, $certs1);
 $certifications2 = array_merge($certs2, $certs2, $certs2);
 require __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/sideDotsNavigation.php';
-// include __DIR__ . '/../components/fixedBackground.php';
 ?>
 
 <!-- Hero Section -->
 <section data-nav-index="0" class="nav-section relative text-white w-full overflow-x-hidden">
   <div class="aboslute -z-1 w-full h-full top-0 left-0">
     <img class="background" src="/public/images/background/black-01.webp" alt="" loading="eager" fetchpriority="high">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
+    <img class="background opacity-0 animate-cycle" src="/public/images/background/black-02.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:12s">
     <img class="background opacity-0 animate-cycle" src="/public/images/background/black-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
   </div>
   <?php #generateBackground('black-g1',3); ?>
@@ -37,11 +36,8 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 <!-- Discover -->
 <section data-nav-index="1" class="nav-section relative">
   <div class="aboslute -z-1 w-full h-full top-0 left-0">
-    <img class="background" src="/public/images/background/white2-01.webp" alt="" loading="eager" fetchpriority="high">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white2-02.webp" alt="" loading="eager" style="animation-duration:36s;animation-delay:12s">
-    <img class="background opacity-0 animate-cycle" src="/public/images/background/white2-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
+    <?php generateBackground('white2',3, true); ?>
   </div>
-  <?php #generateBackground('white-g1',3); ?>
   <div class="block-content py-16 lg:py-40 min-h-dvh flex flex-col justify-center lg:justify-start">
     <h2 class="font-title leading-none uppercase text-4xl md:text-10xl lg:text-10xl xl:text-11xl text-center mx-auto mb-4 lg:mb-12 xl:mb-20 slide-up-words-black"><?= $trans('home.discover') ?></h2>
     <div class="flex-center stagger-parent max-lg:flex-col">
