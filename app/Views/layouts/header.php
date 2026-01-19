@@ -59,11 +59,13 @@
   </script>
 
   <!-- CSS -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/public/assets/css/styles.css">
 
   <?php if (!empty($hasTextTexture)): ?>
-    <link rel="preload" as="image" href="/public/images/background/light-grad.webp">
+    <link rel="preload" as="image" href="/public/images/background/light-grad.webp" fetchpriority="high">
   <?php endif; ?>
 
   <?php if (!empty($includeRecaptcha)): ?>
