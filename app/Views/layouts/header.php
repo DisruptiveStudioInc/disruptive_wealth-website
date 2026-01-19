@@ -61,8 +61,18 @@
   <!-- CSS -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/assets/css/styles.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" /> -->
+  <!-- <link rel="stylesheet" href="/public/assets/css/styles.css"> -->
+  <link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" 
+      media="print" 
+      onload="this.media='all'; this.onload=null;">
+
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  </noscript>
+
+<link rel="stylesheet" href="/public/assets/css/styles.css">
 
   <?php if (!empty($hasTextTexture)): ?>
     <link rel="preload" as="image" href="/public/images/background/light-grad.webp" fetchpriority="high">
