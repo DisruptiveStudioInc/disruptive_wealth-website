@@ -85,7 +85,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
-    'icon' => 'gear',
+    'icon' => 'mobile-service-main',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-moviles',
     'es' => [
@@ -104,7 +104,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
-    'icon' => 'gear',
+    'icon' => 'appweb-service-main',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-web',
     'es' => [
@@ -140,7 +140,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'custom-software',
-    'icon' => 'gear',
+    'icon' => 'multitenant-service-main',
     'template' => 'service-type-1',
     'content_file' => 'aplicaciones-multitenant',
     'es' => [
@@ -623,7 +623,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'logistics',
-    'icon' => 'gear',
+    'icon' => 'storage-service-main',
     'template' => 'service-type-1',
     'content_file' => 'storage-inventory',
     'es' => [
@@ -642,7 +642,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'logistics',
-    'icon' => 'gear',
+    'icon' => 'fulfillment-service-main',
     'template' => 'service-type-1',
     'content_file' => 'package-fulfillment',
     'es' => [
@@ -661,7 +661,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'logistics',
-    'icon' => 'gear',
+    'icon' => 'shipment-service-main',
     'template' => 'service-type-1',
     'content_file' => 'shipment-distribution',
     'es' => [
@@ -680,7 +680,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'logistics',
-    'icon' => 'gear',
+    'icon' => 'logistic-service-main',
     'template' => 'service-type-1',
     'content_file' => 'logistic-optimization',
     'es' => [
@@ -699,7 +699,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'logistics',
-    'icon' => 'gear',
+    'icon' => 'operation-service-main',
     'template' => 'service-type-1',
     'content_file' => 'operation-consulting',
     'es' => [
