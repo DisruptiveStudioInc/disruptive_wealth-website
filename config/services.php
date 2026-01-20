@@ -449,7 +449,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'manufacturing',
-    'icon' => 'gear',
+    'icon' => 'supplements-service-main',
     'template' => 'service-type-1',
     'content_file' => 'supplements',
     'es' => [
@@ -468,7 +468,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'manufacturing',
-    'icon' => 'gear',
+    'icon' => 'package-service-main',
     'template' => 'service-type-1',
     'content_file' => 'package-design',
     'es' => [
@@ -488,7 +488,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'customer-support',
-    'icon' => 'gear',
+    'icon' => 'support-service-main',
     'template' => 'service-type-1',
     'content_file' => 'client-support',
     'es' => [
@@ -507,7 +507,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'customer-support',
-    'icon' => 'gear',
+    'icon' => 'cases-service-main',
     'template' => 'service-type-1',
     'content_file' => 'case-management',
     'es' => [
@@ -526,7 +526,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'customer-support',
-    'icon' => 'gear',
+    'icon' => 'training-service-main',
     'template' => 'service-type-1',
     'content_file' => 'support-training',
     'es' => [
@@ -546,7 +546,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'legal-services',
-    'icon' => 'gear',
+    'icon' => 'financial-service-main',
     'template' => 'service-type-1',
     'content_file' => 'legal-financial',
     'es' => [
@@ -565,7 +565,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'legal-services',
-    'icon' => 'gear',
+    'icon' => 'realestate-service-main',
     'template' => 'service-type-1',
     'content_file' => 'legal-realestate',
     'es' => [
@@ -584,7 +584,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'legal-services',
-    'icon' => 'gear',
+    'icon' => 'intellectual-service-main',
     'template' => 'service-type-1',
     'content_file' => 'intellectual-property',
     'es' => [
@@ -603,7 +603,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'legal-services',
-    'icon' => 'gear',
+    'icon' => 'litigation-service-main',
     'template' => 'service-type-1',
     'content_file' => 'litigation',
     'es' => [
