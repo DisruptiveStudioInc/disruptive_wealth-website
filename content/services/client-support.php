@@ -25,32 +25,32 @@ return [
   ],
   'benefits' => [
     [
-      'image' => 'gear',
+      'image' => 'support-multichannel',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'support-resolution',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'support-continuous',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'support-scale',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'support-experience',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
-      'image' => 'gear',
+      'image' => 'support-reporting',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
