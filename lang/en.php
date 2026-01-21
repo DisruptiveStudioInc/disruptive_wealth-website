@@ -384,6 +384,10 @@ return [
   'shipment_distribution' => $servicesTranslations['shipment-distribution'],
   'logistic_optimization' => $servicesTranslations['logistic-optimization'],
   'operation_consulting' => $servicesTranslations['operation-consulting'],
+  'financial_management' => $servicesTranslations['financial-management'],
+  'corporate_financial' => $servicesTranslations['corporate-financial'],
+  'accounting_reporting' => $servicesTranslations['accounting-reporting'],
+  'taxes_compliance' => $servicesTranslations['taxes-compliance'],
 
   // IPs Content
   'backoffice' => $servicesTranslations['backoffice'],

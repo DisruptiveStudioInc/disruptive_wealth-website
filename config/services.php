@@ -546,7 +546,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'legal-services',
-    'icon' => 'financial-service-main',
+    'icon' => 'corporate-service-main',
     'template' => 'service-type-1',
     'content_file' => 'legal-financial',
     'es' => [
@@ -710,6 +710,83 @@ return [
     'en' => [
       'slug' => 'operation-consulting',
       'meta_title' => 'Operation Consulting',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  // SERVICES CATEGORY - financial subcategory
+  'financial-management' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'finance',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'financial-management',
+    'es' => [
+      'slug' => 'administracion-financiera-operativa',
+      'meta_title' => 'Administración financiera operativa',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'operational-financial-management',
+      'meta_title' => 'Operational Financial Management',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'corporate-financial' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'finance',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'corporate-financial',
+    'es' => [
+      'slug' => 'consultoria-financiera-y-corporativa',
+      'meta_title' => 'Consultoría financiera y corporativa',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'corporate-financial-consulting',
+      'meta_title' => 'Corporate Financial Consulting',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'accounting-reporting' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'finance',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'accounting-reporting',
+    'es' => [
+      'slug' => 'contabilidad-y-reportes-financieros',
+      'meta_title' => 'Contabilidad y reportes financieros',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'accounting-and-financial-reporting',
+      'meta_title' => 'Accounting and Financial Reporting',
+      'meta_description' => 'SEO description',
+    ],
+  ],
+
+  'taxes-compliance' => [
+    'isActive' => false,
+    'category' => 'services',
+    'subcategory' => 'finance',
+    'icon' => 'gear',
+    'template' => 'service-type-1',
+    'content_file' => 'taxes-compliance',
+    'es' => [
+      'slug' => 'impuestos-y-cumplimiento-fiscal',
+      'meta_title' => 'Impuestos y cumplimiento fiscal',
+      'meta_description' => 'Descripción SEO',
+    ],
+    'en' => [
+      'slug' => 'taxes-and-fiscal-compliance',
+      'meta_title' => 'Taxes and Fiscal Compliance',
       'meta_description' => 'SEO description',
     ],
   ],

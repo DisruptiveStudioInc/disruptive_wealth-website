@@ -57,5 +57,10 @@ return [
     'es' => 'Servicios de logística',
     'en' => 'Logistic services',
     'description' => Language::trans('servsub.logistic_services')
+  ],
+  'finance' => [
+    'es' => 'Servicios financieros',
+    'en' => 'Financial services',
+    'description' => Language::trans('servsub.finance_services')
   ]
 ];
