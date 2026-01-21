@@ -9,6 +9,7 @@ class Request
   private array $query;
   private array $post;
   private array $server;
+  private array $routeParams = [];
 
   public function __construct()
   {
@@ -81,5 +82,20 @@ class Request
   {
     return isset($this->server['HTTP_X_REQUESTED_WITH'])
       && strtolower($this->server['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+  }
+
+  public function setRouteParams(array $params): void
+  {
+    $this->routeParams = $params;
+  }
+
+  public function getRouteParam(string $key, mixed $default = null): mixed
+  {
+    return $this->routeParams[$key] ?? $default;
+  }
+
+  public function getRouteParams(): array
+  {
+    return $this->routeParams;
   }
 }

@@ -396,5 +396,26 @@ return [
   'otc' => $servicesTranslations['otc'],
   'payment_processing' => $servicesTranslations['payment-processing'],
   'tokenization' => $servicesTranslations['tokenization'],
-  'wallet' => $servicesTranslations['wallet']
+  'wallet' => $servicesTranslations['wallet'],
+
+  // Blog
+  'blog' => [
+    'title' => 'Blog',
+    'description' => 'Descubre las últimas perspectivas, noticias y artículos de nuestro equipo',
+    'all_posts' => 'Todas las publicaciones',
+    'categories' => 'Categorías',
+    'tags' => 'Etiquetas',
+    'no_posts' => 'No se encontraron publicaciones',
+    'error_loading' => 'Hubo un error al cargar las publicaciones del blog. Por favor, intenta de nuevo más tarde.',
+    'previous' => 'Anterior',
+    'next' => 'Siguiente',
+    'page' => 'Página',
+    'pagination' => 'Paginación del blog',
+    'post' => 'Publicación',
+    'min_read' => 'min de lectura',
+    'available_in' => 'Esta publicación también está disponible en',
+    'share' => 'Compartir',
+    'related_posts' => 'Publicaciones relacionadas',
+    'read_more' => 'Leer más',
+  ]
 ];
