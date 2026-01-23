@@ -157,7 +157,7 @@ return [
 
   // SERVICES CATEGORY - Payment Processing subcategory
   'procesamiento-criptomonedas' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'payment-processing',
     'icon' => 'cryptoprocess-service-main',
@@ -176,7 +176,7 @@ return [
   ],
 
   'pagos-masivos' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'payment-processing',
     'icon' => 'payment-service-main',
@@ -195,7 +195,7 @@ return [
   ],
 
   'cripto-fiat' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'payment-processing',
     'icon' => 'crypto-service-main',
