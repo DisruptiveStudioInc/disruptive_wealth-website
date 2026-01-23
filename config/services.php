@@ -82,7 +82,7 @@ return [
 
   // SERVICES CATEGORY - Custom Software subcategory
   'aplicaciones-moviles' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'custom-software',
     'icon' => 'mobile-service-main',
@@ -101,7 +101,7 @@ return [
   ],
 
   'aplicaciones-web' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'custom-software',
     'icon' => 'appweb-service-main',
@@ -137,7 +137,7 @@ return [
   // ],
 
   'aplicaciones-multitenant' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'custom-software',
     'icon' => 'multitenant-service-main',
