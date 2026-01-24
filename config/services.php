@@ -620,7 +620,7 @@ return [
 
   // SERVICES CATEGORY - logistics subcategory
   'storage-inventory' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'logistics',
     'icon' => 'storage-service-main',
@@ -658,7 +658,7 @@ return [
   ],
 
   'shipment-distribution' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'logistics',
     'icon' => 'shipment-service-main',
@@ -677,7 +677,7 @@ return [
   ],
 
   'logistic-optimization' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'logistics',
     'icon' => 'logistic-service-main',
