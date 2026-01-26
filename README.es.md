@@ -104,7 +104,7 @@ RECAPTCHA_SCORE_THRESHOLD=0.5
 # WordPress Headless CMS
 WP_API_URL=http://localhost:10008/graphql
 WP_APP_USER=tu-usuario-wordpress
-WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
+WP_APP_PASSWORD="xxxx xxxx xxxx xxxx xxxx xxxx"
 
 # Token para limpiar caché (para webhook)
 CACHE_CLEAR_TOKEN=tu-token-secreto-aqui
