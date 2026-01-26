@@ -12,6 +12,7 @@ A multilingual corporate website for Disruptive Studio, showcasing their service
 - [Routing System](#routing-system)
 - [Services Management](#services-management)
 - [Static Pages](#static-pages)
+- [Blog & WordPress Integration](#blog--wordpress-integration)
 - [Contact Form & Email](#contact-form--email)
 - [Frontend Development](#frontend-development)
 - [Configuration](#configuration)
@@ -25,6 +26,7 @@ This is a professional corporate website for Disruptive Studio that features:
 
 - **Multilingual support** (Spanish and English)
 - **Dynamic service pages** with different templates
+- **Headless WordPress blog** with GraphQL integration
 - **Contact form** with reCAPTCHA v3 validation
 - **Responsive design** using Tailwind CSS 4
 - **Smooth animations** with GSAP
@@ -40,6 +42,7 @@ This is a professional corporate website for Disruptive Studio that features:
 - **Composer** for dependency management
 - **PHPMailer** for email functionality
 - **phpdotenv** for environment configuration
+- **Guzzle HTTP Client** for WordPress API communication
 
 ### Frontend
 
@@ -97,6 +100,14 @@ MAIL_TO_ADDRESS=contact@disruptivestudio.com
 RECAPTCHA_SITE_KEY=your-site-key
 RECAPTCHA_SECRET_KEY=your-secret-key
 RECAPTCHA_SCORE_THRESHOLD=0.5
+
+# WordPress Headless CMS
+WP_API_URL=http://localhost:10008/graphql
+WP_APP_USER=your-wordpress-username
+WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
+
+# Cache Clear Token (for webhook)
+CACHE_CLEAR_TOKEN=your-secret-token-here
 ```
 
 3. **Install PHP dependencies**
@@ -771,6 +782,330 @@ $router->get('/new-page', 'App\\Controllers\\NewPageController', 'index');
   'en' => 'new-page',
 ],
 ```
+
+---
+
+## Blog & WordPress Integration
+
+The website features a headless WordPress blog integration using WPGraphQL. Blog posts are fetched from a WordPress backend via GraphQL API and cached locally for optimal performance.
+
+### Architecture
+
+**Headless WordPress Setup:**
+
+- WordPress instance running with WPGraphQL plugin
+- GraphQL endpoint exposed for querying posts, categories, and metadata
+- Application Password authentication for secure API access
+- File-based caching system to minimize API calls
+
+**Components:**
+
+- **Controller**: `app/Controllers/BlogController.php` - Handles all blog routes
+- **Service**: `app/Services/WordPressClient.php` - WordPress API client with caching
+- **Views**:
+  - `app/Views/templates/blog/index.php` - Blog listing page
+  - `app/Views/templates/blog/show.php` - Single post view
+- **Cache**: `cache/wordpress/` - Cached API responses
+
+### How It Works
+
+1. **Request Flow:**
+   - User requests a blog page
+   - `BlogController` checks for cached data
+   - If cache miss, `WordPressClient` queries WordPress GraphQL API
+   - Response is cached and returned
+   - View template renders the data
+
+2. **Caching Strategy:**
+   - File-based persistent caching (no automatic expiration)
+   - Separate cache keys for different queries (posts list, single post, categories)
+   - Cache invalidation via WordPress webhook when content is updated
+   - Manual cache clearing available for development/testing
+
+3. **Pagination:**
+   - Cursor-based pagination using WordPress connection edges
+   - Pre-calculated page cursors for direct page access
+   - Lightweight queries to fetch only necessary data
+
+### WordPress Configuration
+
+#### Required WordPress Plugins
+
+1. **WPGraphQL** (required)
+   - Install and activate WPGraphQL plugin
+   - Configure endpoint at `/graphql`
+
+2. **WPGraphQL for Polylang** (optional, for multilingual support)
+   - Enables language filtering in GraphQL queries
+   - Adds language fields to posts
+
+#### WordPress Setup Steps
+
+1. **Install WordPress** (version 5.9 or higher recommended)
+
+2. **Install WPGraphQL Plugin:**
+
+   ```bash
+   # Via WordPress admin
+   Plugins > Add New > Search "WPGraphQL" > Install & Activate
+
+   # Or via WP-CLI
+   wp plugin install wp-graphql --activate
+   ```
+
+3. **Configure WPGraphQL Settings:**
+   - Go to `GraphQL > Settings`
+   - Enable "Public Introspection" for development
+   - For production, enable "Restrict Endpoint to Authenticated Users"
+
+4. **Create Application Password:**
+   - Go to `Users > Your Profile`
+   - Scroll to "Application Passwords"
+   - Enter name (e.g., "Disruptive Studio Website")
+   - Click "Add New Application Password"
+   - Copy the generated password (format: `xxxx xxxx xxxx xxxx`)
+
+5. **Configure Post Structure:**
+   - Create categories for organizing posts
+   - Add featured images to posts
+   - Use proper post excerpts for better preview cards
+
+6. **Optional - Polylang Setup:**
+   - Install and activate Polylang plugin
+   - Install WPGraphQL for Polylang plugin
+   - Configure languages (ES, EN)
+   - Assign language to each post
+
+### Environment Configuration
+
+Add these variables to your `.env` file:
+
+```env
+# WordPress Headless CMS
+WP_API_URL=https://your-wordpress-site.com/graphql
+WP_APP_USER=your-wordpress-username
+WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
+
+# Cache Clear Token (for webhook)
+CACHE_CLEAR_TOKEN=your-secret-random-token-here
+```
+
+**Configuration Notes:**
+
+- `WP_API_URL`: Full URL to your WordPress GraphQL endpoint
+- `WP_APP_USER`: WordPress admin username
+- `WP_APP_PASSWORD`: Application Password (not regular password!)
+- `CACHE_CLEAR_TOKEN`: Secret token for cache invalidation webhook
+
+### Blog Routes
+
+```php
+// Blog index - shows all posts with pagination
+GET /blog
+GET /blog?page=2
+GET /blog?category=technology
+
+// Single post - shows full post content
+GET /blog/{slug}
+
+// Cache management (webhook endpoint)
+POST /blog/cache/clear
+```
+
+### Features
+
+#### Blog Index Page (`/blog`)
+
+- **Post Listing**: Displays posts in a grid layout with featured images
+- **Pagination**: Numbered pagination with direct page access
+- **Category Filtering**: Sidebar with category list and post counts
+- **Responsive Design**: Adapts to mobile, tablet, and desktop
+- **Multilingual**: Automatically filters posts by current language
+
+**Query Parameters:**
+
+- `page`: Page number (e.g., `?page=2`)
+- `category`: Category slug (e.g., `?category=technology`)
+
+#### Single Post Page (`/blog/{slug}`)
+
+- **Full Content**: Complete post content with rich media support
+- **Featured Image Hero**: Large featured image with gradient overlay
+- **Post Metadata**: Publication date, reading time, categories
+- **Tags Display**: Visual tag list at bottom
+- **Related Posts**: Shows 3 related posts from same category
+- **SEO Optimization**: Structured data (JSON-LD) for search engines
+
+### Cache Management
+
+#### Manual Cache Clearing
+
+Clear all blog cache:
+
+```bash
+# Via URL (requires CACHE_CLEAR_TOKEN)
+curl -X POST https://your-site.com/blog/cache/clear \
+  -H "Authorization: Bearer your-secret-token"
+```
+
+#### WordPress Webhook (Automatic)
+
+Set up a webhook in WordPress to automatically clear cache when posts are published/updated:
+
+1. **Install Webhook Plugin** (e.g., WP Webhooks)
+
+2. **Configure Webhook:**
+   - Trigger: `post_updated`, `post_published`
+   - URL: `https://your-site.com/blog/cache/clear`
+   - Method: `POST`
+   - Headers: `Authorization: Bearer your-secret-token`
+
+3. **Test the Webhook:**
+   - Publish or update a post
+   - Check your site's cache directory is cleared
+
+#### Cache File Structure
+
+```
+cache/wordpress/
+├── posts_EN_first_10.cache          # English posts, page 1
+├── posts_ES_first_10.cache          # Spanish posts, page 1
+├── post_{slug}_EN.cache             # Single post cache
+├── categories_EN.cache              # Categories list
+├── page_cursors_EN_10.cache         # Pagination cursors
+└── total_pages_EN_10.cache          # Total page count
+```
+
+### Customization
+
+#### Customize GraphQL Queries
+
+The `WordPressClient` uses optimized GraphQL queries. To add/remove fields:
+
+```php
+// Example: Add author information to posts
+$query = '
+  query GetPosts($lang: LanguageCodeFilterEnum!, $after: String, $first: Int!) {
+    posts(where: {language: $lang}, after: $after, first: $first) {
+      edges {
+        node {
+          id
+          title
+          slug
+          excerpt
+          author {
+            node {
+              name
+              avatar {
+                url
+              }
+            }
+          }
+          ...
+        }
+      }
+    }
+  }
+';
+```
+
+#### Customize Blog Templates
+
+**Index Template** (`app/Views/templates/blog/index.php`):
+
+- Modify grid layout
+- Change post card design
+- Customize sidebar
+- Adjust pagination style
+
+**Single Post Template** (`app/Views/templates/blog/show.php`):
+
+- Modify content layout
+- Customize featured image display
+- Change related posts section
+- Add social sharing buttons
+
+### Troubleshooting
+
+#### Common Issues
+
+**1. "WordPress API URL not configured" Error**
+
+- Check `.env` file has `WP_API_URL` set
+- Verify the URL is correct and accessible
+- Test GraphQL endpoint: `https://your-wp-site.com/graphql`
+
+**2. Authentication Errors**
+
+- Verify Application Password is correct (not regular password)
+- Check username matches WordPress user
+- Ensure WPGraphQL has authentication enabled
+
+**3. Empty Blog Page**
+
+- Check WordPress has published posts
+- Verify posts have correct language assigned (if using Polylang)
+- Clear cache: `rm -rf cache/wordpress/*`
+- Check PHP error logs
+
+**4. Images Not Displaying**
+
+- Verify WordPress posts have featured images
+- Check image URLs are accessible
+- Ensure WordPress CORS settings allow external requests
+
+**5. Slow Performance**
+
+- Optimize GraphQL queries (remove unnecessary fields)
+- Enable WordPress object caching (Redis/Memcached)
+- Use CDN for WordPress media files
+- Consider adding a reverse proxy cache (Varnish, Nginx)
+
+#### Debug Mode
+
+Enable debug mode in `WordPressClient`:
+
+```php
+// Add to constructor
+private bool $debug = true;
+
+// Add logging
+if ($this->debug) {
+    error_log("GraphQL Query: " . $query);
+    error_log("GraphQL Response: " . print_r($result, true));
+}
+```
+
+### Best Practices
+
+1. **Cache Management:**
+   - Set up automatic cache clearing webhook (recommended)
+   - Cache is persistent until cleared by webhook or manually
+   - Monitor cache file sizes regularly
+   - Clear cache after bulk content updates
+
+2. **Performance:**
+   - Use optimized GraphQL queries
+   - Implement lazy loading for images
+   - Consider CDN for media files
+
+3. **Security:**
+   - Keep Application Password secure
+   - Use strong CACHE_CLEAR_TOKEN
+   - Restrict GraphQL endpoint in production
+   - Enable HTTPS for API communication
+
+4. **Content:**
+   - Always add featured images to posts
+   - Write meaningful excerpts
+   - Use categories for organization
+   - Optimize images before uploading
+
+5. **Monitoring:**
+   - Monitor API response times
+   - Track error logs for API failures
+   - Set up uptime monitoring for WordPress
+   - Verify webhook is functioning correctly
 
 ---
 
