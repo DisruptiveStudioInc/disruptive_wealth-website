@@ -639,7 +639,7 @@ return [
   ],
 
   'package-fulfillment' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'logistics',
     'icon' => 'fulfillment-service-main',
@@ -696,7 +696,7 @@ return [
   ],
 
   'operation-consulting' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'logistics',
     'icon' => 'operation-service-main',
