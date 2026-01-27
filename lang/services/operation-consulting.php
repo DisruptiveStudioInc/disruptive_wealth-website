@@ -8,7 +8,7 @@ return [
     ],
     'about1' => 'Mejora operativa guiada por análisis',
     'about2' => 'Procesos eficientes y alineados a tus objetivos',
-    'about2_text' => 'Tus procesos optimizados para ser más rápidos y eficientes',
+    'about2_text' => 'Diseñados para acelerar la operación y mejorar resultados',
     'benefits' => [
       'item1' => [
         'title' => 'Evaluación integral de tu operación',
@@ -84,7 +84,7 @@ return [
     ],
     'about1' => 'Operational improvement guided by analysis',
     'about2' => 'Efficient processes aligned with your objectives',
-    'about2_text' => 'Your processes optimized to be faster and more efficient',
+    'about2_text' => 'Designed to accelerate operations and improve results',
     'benefits' => [
       'item1' => [
         'title' => 'Comprehensive assessment of your operation',
