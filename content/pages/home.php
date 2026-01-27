@@ -434,7 +434,8 @@ return[
       'es' => 'Servicios de logística',
       'en' => 'Logistic services',
       'description' => Language::trans('servsub.logistic_services'),
-      'image' => 'logistic.webp'
+      'image' => 'logistic.webp',
+       'services' => Service::getBySubcategory('logistics', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios financieros',
