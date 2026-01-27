@@ -73,7 +73,7 @@ steps:
         COMPOSE_FILE="docker-compose.prod.yml"
       fi
 
-      SERVICE="disruptive-studio-website"
+      SERVICE="app"
 
       echo "==> Compose file: ${COMPOSE_FILE}"
       echo "==> Service: ${SERVICE}"
