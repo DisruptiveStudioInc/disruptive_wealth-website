@@ -193,7 +193,7 @@ if (casesSection && cases.length > 0) {
       () => {
         image.style.transform = `translate(0px, 0px)`;
       },
-      { once: true }
+      { once: true },
     );
   };
 
@@ -245,10 +245,10 @@ if (ipTabsContainer && ipTabs && ipTabsContents && ipTabsImages) {
 
   const setIpTabsImages = () => {
     const [current] = ipImagesWraps.filter((wrap) =>
-      wrap.classList.contains("active")
+      wrap.classList.contains("active"),
     );
     const inactiveWraps = ipImagesWraps.filter(
-      (wrap) => !wrap.classList.contains("active")
+      (wrap) => !wrap.classList.contains("active"),
     );
     current.style.zIndex = `${ipImagesWraps.length}`;
     current.style.transform = "";
@@ -272,5 +272,82 @@ if (ipTabsContainer && ipTabs && ipTabsContents && ipTabsImages) {
     ipImagesWraps[target.dataset.index].classList.add("active");
 
     setIpTabsImages();
+  });
+}
+
+//Video popup
+const videoButton = document.getElementById("video-button");
+const videoPopup = document.getElementById("popup-video");
+const closeVideo = document.getElementById("close-video");
+
+if (videoButton && videoPopup && closeVideo) {
+  const iframe = videoPopup.querySelector("iframe");
+  let player = null;
+
+  // Initialize Vimeo player after the script loads
+  const initPlayer = () => {
+    if (window.Vimeo && iframe) {
+      player = new Vimeo.Player(iframe);
+    }
+  };
+
+  // Check if Vimeo API is already loaded, otherwise wait for it
+  if (window.Vimeo) {
+    initPlayer();
+  } else {
+    // Wait for Vimeo script to load
+    const checkVimeo = setInterval(() => {
+      if (window.Vimeo) {
+        initPlayer();
+        clearInterval(checkVimeo);
+      }
+    }, 100);
+  }
+
+  const openPopup = () => {
+    videoPopup.classList.remove("pointer-events-none", "opacity-0");
+    videoPopup.classList.add("opacity-100");
+    document.body.classList.add("overflow-hidden");
+
+    // Play video with audio
+    if (player) {
+      player.setMuted(false).then(() => {
+        player.play();
+      });
+    }
+  };
+
+  const closePopup = () => {
+    videoPopup.classList.add("pointer-events-none", "opacity-0");
+    videoPopup.classList.remove("opacity-100");
+    document.body.classList.remove("overflow-hidden");
+
+    // Pause video
+    if (player) {
+      player.pause();
+    }
+  };
+
+  // Open popup on button click
+  videoButton.addEventListener("click", openPopup);
+
+  // Close popup on close button click
+  closeVideo.addEventListener("click", closePopup);
+
+  // Close popup on ESC key
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      !videoPopup.classList.contains("pointer-events-none")
+    ) {
+      closePopup();
+    }
+  });
+
+  // Close popup when clicking outside the video (on the backdrop)
+  videoPopup.addEventListener("click", (event) => {
+    if (event.target === videoPopup) {
+      closePopup();
+    }
   });
 }
