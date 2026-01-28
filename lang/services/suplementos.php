@@ -4,9 +4,9 @@ return [
   'es' => [
     'hero' => [
       'title' => 'Desarrollo y regulación de suplementos seguros',
-      'text' => 'Elaboración de suplementos alimenticios innovadores y de alta calidad.'
+      'text' => '¿Qué incluye este servicio?'
     ],
-    'about1' => 'Gestión, diseño, formulación, pruebas y elaboración',
+    'about1' => 'Suplementos alimenticios innovadores y de alta calidad',
     'about2' => 'Asesoría y gestión de permisos regulatorios:',
     'about2_text' => 'COFEPRIS (México): Cumplimiento y trámites sanitarios.<br/>FDA (Estados Unidos): Regulación, documentación y procesos requeridos.',
     'benefits' => [
@@ -74,15 +74,15 @@ return [
     ],
     'sales' => [
       'title' => 'Desarrolla suplementos seguros, regulados y listos para competir',
-      'text' => 'Desarrolla tu marca con formulación y cumplimiento sólido.'
+      'text' => 'Productos seguros, regulados y listos para competir en el mercado.'
     ]
   ],
   'en' => [
     'hero' => [
       'title' => 'Development and regulation of safe supplements',
-      'text' => 'Creation of innovative and high-quality dietary supplements.'
+      'text' => 'What does this service include?'
     ],
-    'about1' => 'Management, design, formulation, testing and production',
+    'about1' => 'Innovative and high-quality dietary supplements',
     'about2' => 'Advisory and management of regulatory permits:',
     'about2_text' => 'COFEPRIS (Mexico): Compliance and sanitary procedures.<br/>FDA (United States): Regulation, documentation and required processes.',
     'benefits' => [
@@ -150,7 +150,7 @@ return [
     ],
     'sales' => [
       'title' => 'Develop supplements that are safe, regulated and ready to compete',
-      'text' => 'Grow your brand with solid formulation and compliance.'
+      'text' => 'Products that are safe, regulated and ready to compete in the market.'
     ]
   ]
 ];
