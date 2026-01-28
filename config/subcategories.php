@@ -14,8 +14,8 @@ return [
     'description' => Language::trans('servsub.blockchain')
   ],
   'custom-software' => [
-    'es' => 'Custom software',
-    'en' => 'Custom software',
+    'es' => 'Servicios personalizados',
+    'en' => 'Custom services',
     'description' => Language::trans('servsub.custom_software')
   ],
   'payment-processing' => [
