@@ -4,7 +4,7 @@ return [
   'es' => [
     'hero' => [
       'title' => 'Diseños que destacan y fortalecen tu producto',
-      'text' => 'Creación de empaques atractivos, funcionales y listos para medios digitales e impresos.'
+      'text' => 'Creación de empaques atractivos y funcionales, preparados para competir y vender.'
     ],
     'about1' => 'Diseño digital e impreso',
     'about2' => 'Producción física de empaques',
@@ -88,7 +88,7 @@ return [
     'benefits' => [
       'item1' => [
         'title' => 'Professional and functional design',
-        'text' => 'Visual proposals that elevate the product’s perception and communicate its value.'
+        'text' => 'Visual proposals that elevate the product\'s perception and communicate its value.'
       ],
       'item2' => [
         'title' => 'Digital and print compatibility',
