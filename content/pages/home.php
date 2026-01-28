@@ -468,7 +468,7 @@ return[
       'en' => 'Manufacturing Services',
       'description' => Language::trans('servsub.manufacturing'),
       'image' => 'manufacturing.webp',
-      'services' => Service::getBySubcategory('manufacturing', Language::getCurrentLanguage())
+      // 'services' => Service::getBySubcategory('manufacturing', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de CS',

@@ -6,7 +6,7 @@ return [
       'title' => 'Desarrollo y regulación de suplementos seguros',
       'text' => '¿Qué incluye este servicio?'
     ],
-    'about1' => 'Suplementos alimenticios innovadores y de alta calidad',
+    'about1' => 'Soluciones completas para suplementos',
     'about2' => 'Asesoría y gestión de permisos regulatorios:',
     'about2_text' => 'COFEPRIS (México): Cumplimiento y trámites sanitarios.<br/>FDA (Estados Unidos): Regulación, documentación y procesos requeridos.',
     'benefits' => [
@@ -82,7 +82,7 @@ return [
       'title' => 'Development and regulation of safe supplements',
       'text' => 'What does this service include?'
     ],
-    'about1' => 'Innovative and high-quality dietary supplements',
+    'about1' => 'Complete solutions for supplements',
     'about2' => 'Advisory and management of regulatory permits:',
     'about2_text' => 'COFEPRIS (Mexico): Compliance and sanitary procedures.<br/>FDA (United States): Regulation, documentation and required processes.',
     'benefits' => [

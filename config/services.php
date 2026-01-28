@@ -446,7 +446,7 @@ return [
 
   // SERVICES CATEGORY - Manufacturing subcategory
   'supplements' => [
-    'isActive' => true,
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'manufacturing',
     'icon' => 'supplements-service-main',
@@ -465,7 +465,7 @@ return [
   ],
 
   'package-design' => [
-    'isActive' => true,
+    'isActive' => false,
     'category' => 'services',
     'subcategory' => 'manufacturing',
     'icon' => 'package-service-main',
