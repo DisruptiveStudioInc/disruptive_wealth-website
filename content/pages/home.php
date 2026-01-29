@@ -475,7 +475,8 @@ return[
       'es' => 'Servicios de CS',
       'en' => 'CS Services',
       'description' => Language::trans('servsub.cs'),
-      'image' => 'cs_services.webp'
+      'image' => 'cs_services.webp',
+      'services' => Service::getBySubcategory('customer-support', Language::getCurrentLanguage())
     ],
   ]
 ];

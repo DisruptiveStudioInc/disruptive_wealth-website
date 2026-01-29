@@ -69,7 +69,6 @@ return [
       'answer4' => 'A través de flujos definidos, responsables asignados y comunicación continua.',
       'question5' => '¿Pueden integrarse con las herramientas que ya usa mi empresa?',
       'answer5' => 'Sí. Nos adaptamos a tu sistema actual de ticketing, CRM o gestión interna para operar sin fricción y mantener tu operación centralizada.',
-      'question6' => 'Casos controlados, áreas alineadas y una operación que fluye', // NOTE: This is likely a title meant for the sales section, but is placed under FAQ in the source. I'm treating it as a Q6/A6 pair based on position. The source MD only had 5 Q/A pairs, and the last item before the sales section was an answer text *without* a question. I will omit Q6/A6 to maintain fidelity to the explicit Q/A structure (5 pairs).
     ],
     'sales' => [
       'title' => 'Casos controlados, áreas alineadas y una operación que fluye',
@@ -144,7 +143,6 @@ return [
       'answer4' => 'Through defined workflows, assigned owners and continuous communication.',
       'question5' => 'Can you integrate with the tools my company already uses?',
       'answer5' => 'Yes. We adapt to your current ticketing system, CRM or internal management to operate smoothly and keep your operation centralized.',
-      'question6' => 'Cases controlled, areas aligned and an operation that flows',
     ],
     'sales' => [
       'title' => 'Cases controlled, areas aligned and an operation that flows',

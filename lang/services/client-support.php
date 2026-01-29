@@ -4,7 +4,7 @@ return [
   'es' => [
     'hero' => [
       'title' => 'Atención y soporte multicanal para operaciones',
-      'text' => 'Solución completa de atención a clientes para tu negocio.'
+      'text' => 'Acompañamiento confiable, claro y constante.'
     ],
     'about1' => 'Gestión integral de consultas y requerimientos',
     'about2' => 'Atención multicanal con seguimiento de incidencias',
@@ -80,7 +80,7 @@ return [
   'en' => [
     'hero' => [
       'title' => 'Multichannel support and customer service for operations',
-      'text' => 'Complete customer support solution for your business.'
+      'text' => 'Reliable, clear, and constant support for your business.'
     ],
     'about1' => 'Comprehensive management of inquiries and requests',
     'about2' => 'Multichannel support with incident tracking',

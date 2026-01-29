@@ -103,10 +103,6 @@ return [
     [
       'question' => Language::trans("{$sKey}.faq.question5"),
       'answer' => Language::trans("{$sKey}.faq.answer5")
-    ],
-    [
-      'question' => Language::trans("{$sKey}.faq.question6"),
-      'answer' => Language::trans("{$sKey}.faq.answer6")
     ]
   ],
   'sales' => [

@@ -485,7 +485,7 @@ return [
 
   // SERVICES CATEGORY - Customer support subcategory
   'client-support' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'customer-support',
     'icon' => 'support-service-main',
@@ -504,7 +504,7 @@ return [
   ],
 
   'case-management' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'customer-support',
     'icon' => 'cases-service-main',
@@ -523,7 +523,7 @@ return [
   ],
 
   'support-training' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'customer-support',
     'icon' => 'training-service-main',
