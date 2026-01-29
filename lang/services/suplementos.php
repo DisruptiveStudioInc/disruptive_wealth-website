@@ -73,8 +73,8 @@ return [
       'answer6' => 'Sí. Alineamos etiquetado, claims y materiales a lo permitido por COFEPRIS y FDA.'
     ],
     'sales' => [
-      'title' => 'Desarrolla suplementos seguros, regulados y listos para competir',
-      'text' => 'Productos seguros, regulados y listos para competir en el mercado.'
+      'title' => 'Suplementos seguros, regulados y listos para competir',
+      'text' => 'Cumplimiento, control y preparación para su salida al mercado.'
     ]
   ],
   'en' => [
@@ -149,8 +149,8 @@ return [
       'answer6' => 'Yes. We align labeling, claims and materials with what COFEPRIS and FDA allow.'
     ],
     'sales' => [
-      'title' => 'Develop supplements that are safe, regulated and ready to compete',
-      'text' => 'Products that are safe, regulated and ready to compete in the market.'
+      'title' => 'Supplements that are safe, regulated and ready to compete',
+      'text' => 'Compliance, control and preparation for market launch.'
     ]
   ]
 ];

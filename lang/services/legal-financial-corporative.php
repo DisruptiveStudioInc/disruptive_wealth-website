@@ -4,7 +4,7 @@ return [
   'es' => [
     'hero' => [
       'title' => 'Solidez legal para una operación segura y transparente',
-      'text' => 'Asesoría integral para empreas.'
+      'text' => 'Asesoría integral para empresas.'
     ],
     'about1' => 'Derecho Financiero y Fiscal',
     'about2' => 'Cumplimiento Normativo y Anticorrupción',
@@ -74,8 +74,8 @@ return [
       'answer6' => 'Sí. Es ideal para empresas en crecimiento, tecnológicas, comerciales, financieras y modelos regulados.'
     ],
     'sales' => [
-      'title' => 'Protege tu empresa con cumplimiento legal sólido',
-      'text' => 'Asegura tu operación con cumplimiento legal integral'
+      'title' => 'Protege tu empresa con respaldo legal confiable',
+      'text' => 'Asegura tu operación bajo un marco normativo completo'
     ]
   ],
   'en' => [
@@ -151,8 +151,8 @@ return [
       'answer6' => 'Yes. It is ideal for growing, tech, commercial, financial and regulated-model companies.'
     ],
     'sales' => [
-      'title' => 'Protect your company with solid legal compliance',
-      'text' => 'Secure your operation with comprehensive legal compliance'
+      'title' => 'Protect your company with reliable legal support',
+      'text' => 'Ensure your operation under a comprehensive regulatory framework'
     ]
   ]
 ];

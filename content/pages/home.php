@@ -447,7 +447,8 @@ return[
       'es' => 'Servicios legales',
       'en' => 'Legal and compliance services',
       'description' => Language::trans('servsub.legal_services'),
-      'image' => 'legal_compliance.webp'
+      'image' => 'legal_compliance.webp',
+      'services' => Service::getBySubcategory('legal-services', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de procesamiento de pagos',
@@ -468,7 +469,7 @@ return[
       'en' => 'Manufacturing Services',
       'description' => Language::trans('servsub.manufacturing'),
       'image' => 'manufacturing.webp',
-      // 'services' => Service::getBySubcategory('manufacturing', Language::getCurrentLanguage())
+      'services' => Service::getBySubcategory('manufacturing', Language::getCurrentLanguage())
     ],
     [
       'es' => 'Servicios de CS',

@@ -74,7 +74,7 @@ return [
     ],
     'sales' => [
       'title' => 'Estrategia, claridad y respaldo legal experto',
-      'text' => 'Tu litigio en manos expertas'
+      'text' => 'Tu litigio en manos profesionales'
     ]
   ],
   'en' => [
@@ -150,7 +150,7 @@ return [
     ],
     'sales' => [
       'title' => 'Strategy, clarity, and expert legal support',
-      'text' => 'Your litigation in expert hands'
+      'text' => 'Your litigation in professional hands'
     ]
   ]
 ];

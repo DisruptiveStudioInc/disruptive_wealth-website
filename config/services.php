@@ -446,7 +446,7 @@ return [
 
   // SERVICES CATEGORY - Manufacturing subcategory
   'supplements' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'manufacturing',
     'icon' => 'supplements-service-main',
@@ -465,7 +465,7 @@ return [
   ],
 
   'package-design' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'manufacturing',
     'icon' => 'package-service-main',
@@ -543,7 +543,7 @@ return [
 
   // SERVICES CATEGORY - legal subcategory
   'legal-financial' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'legal-services',
     'icon' => 'corporate-service-main',
@@ -562,7 +562,7 @@ return [
   ],
 
   'legal-realestate' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'legal-services',
     'icon' => 'realestate-service-main',
@@ -581,7 +581,7 @@ return [
   ],
 
   'intellectual-property' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'legal-services',
     'icon' => 'intellectual-service-main',
@@ -600,7 +600,7 @@ return [
   ],
 
   'litigation' => [
-    'isActive' => false,
+    'isActive' => true,
     'category' => 'services',
     'subcategory' => 'legal-services',
     'icon' => 'litigation-service-main',
