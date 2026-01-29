@@ -39,7 +39,7 @@ return [
     'description' => Language::trans('servsub.hr')
   ],
   'manufacturing' => [
-    'es' => 'Servicios de manofactura',
+    'es' => 'Servicios de manufactura',
     'en' => 'Manufacturing services',
     'description' => Language::trans('servsub.manufacturing')
   ],

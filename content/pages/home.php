@@ -465,7 +465,7 @@ return[
       'services' => Service::getBySubcategory('hr', Language::getCurrentLanguage())
     ],
     [
-      'es' => 'Servicios de manofactura',
+      'es' => 'Servicios de manufactura',
       'en' => 'Manufacturing Services',
       'description' => Language::trans('servsub.manufacturing'),
       'image' => 'manufacturing.webp',
