@@ -26,31 +26,37 @@ return [
   'benefits' => [
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-strategy',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-analysis',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-structure',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-setup',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-projections',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'corpconsulting-support',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],

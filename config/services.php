@@ -719,7 +719,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'finance',
-    'icon' => 'gear',
+    'icon' => 'finmanagement-service-main',
     'template' => 'service-type-1',
     'content_file' => 'financial-management',
     'es' => [
@@ -738,7 +738,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'finance',
-    'icon' => 'gear',
+    'icon' => 'corpconsulting-service-main',
     'template' => 'service-type-1',
     'content_file' => 'corporate-financial',
     'es' => [
@@ -757,7 +757,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'finance',
-    'icon' => 'gear',
+    'icon' => 'accounting-service-main',
     'template' => 'service-type-1',
     'content_file' => 'accounting-reporting',
     'es' => [
@@ -776,7 +776,7 @@ return [
     'isActive' => false,
     'category' => 'services',
     'subcategory' => 'finance',
-    'icon' => 'gear',
+    'icon' => 'taxes-service-main',
     'template' => 'service-type-1',
     'content_file' => 'taxes-compliance',
     'es' => [

@@ -26,31 +26,37 @@ return [
   'benefits' => [
     [
       'image' => 'gear',
+      // 'image' => 'taxes-fillings',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'taxes-planning',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'taxes-compliance',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'taxes-requirements',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'taxes-risks',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'taxes-control',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],

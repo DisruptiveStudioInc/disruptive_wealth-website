@@ -26,31 +26,37 @@ return [
   'benefits' => [
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-payroll',
       'title' => Language::trans("{$sKey}.benefits.item1.title"),
       'text' => Language::trans("{$sKey}.benefits.item1.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-accounts',
       'title' => Language::trans("{$sKey}.benefits.item2.title"),
       'text' => Language::trans("{$sKey}.benefits.item2.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-invoice',
       'title' => Language::trans("{$sKey}.benefits.item3.title"),
       'text' => Language::trans("{$sKey}.benefits.item3.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-cashflow',
       'title' => Language::trans("{$sKey}.benefits.item4.title"),
       'text' => Language::trans("{$sKey}.benefits.item4.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-operation',
       'title' => Language::trans("{$sKey}.benefits.item5.title"),
       'text' => Language::trans("{$sKey}.benefits.item5.text"),
     ],
     [
       'image' => 'gear',
+      // 'image' => 'finmanagement-visibility',
       'title' => Language::trans("{$sKey}.benefits.item6.title"),
       'text' => Language::trans("{$sKey}.benefits.item6.text"),
     ],
