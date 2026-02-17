@@ -1,5 +1,5 @@
 // GSAP Animations
-gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin, TextPlugin);
 
 // toggles animations
 const playNone = "play none none none";
@@ -32,7 +32,7 @@ document.fonts.ready.then(() => {
   const wordsBlackEls = document.querySelectorAll(".slide-up-words-black");
   const wordsWhiteEls = document.querySelectorAll(".slide-up-words-white");
   const wordsWhiteScrollEls = document.querySelectorAll(
-    ".slide-up-words-white-scroll"
+    ".slide-up-words-white-scroll",
   );
 
   if (wordsEls.length > 0) {
@@ -203,7 +203,7 @@ if (ballUp && ballDown && discoverContent) {
       duration: 1,
       ease: "power1.inOut",
       paused: true,
-    }
+    },
   );
   ballDownAnim = gsap.fromTo(
     "#ball-down",
@@ -227,7 +227,7 @@ if (ballUp && ballDown && discoverContent) {
       duration: 1,
       ease: "power2.inOut",
       paused: true,
-    }
+    },
   );
   flipTabContent = gsap.to("#discover-content", {
     rotateY: 360,
@@ -297,7 +297,7 @@ if (techSection && techTitle && techCards.length > 0) {
           }
         },
       },
-      cardStart
+      cardStart,
     );
   });
 }
@@ -326,7 +326,7 @@ if (disrVerticals.length && ecosystemCircle) {
         end: "top center",
         toggleActions: playReverse,
       },
-    }
+    },
   );
 
   // Ecosystem hover magnetic effect
@@ -453,7 +453,7 @@ if (circleExpansions.length && ecosystemCircle) {
         end: "top center",
         toggleActions: playReverse,
       },
-    }
+    },
   );
 }
 
@@ -474,7 +474,7 @@ if (ipBenefits.length > 0) {
           end: "top 40%",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       element,
@@ -488,8 +488,35 @@ if (ipBenefits.length > 0) {
           end: "top 0%",
           scrub: true,
         },
-      }
+      },
     );
+  });
+}
+
+// Hero typing fx
+const heroTexts = document.getElementById("hero-typing-text");
+if (heroTexts && heroTexts.dataset.texts) {
+  const textsArray = JSON.parse(heroTexts.dataset.texts);
+
+  const typeTimeline = gsap.timeline({ repeat: -1 });
+
+  textsArray.forEach((text) => {
+    typeTimeline
+      .to(heroTexts, {
+        duration: text.length * 0.1,
+        text: { value: text, delimiter: "" },
+        ease: "none",
+      })
+      .to(heroTexts, { duration: 2 })
+      .to(heroTexts, {
+        duration: text.length * 0.06,
+        ease: "none",
+        onUpdate: function () {
+          const charsToShow = Math.round(text.length * (1 - this.progress()));
+          heroTexts.textContent = text.substring(0, charsToShow);
+        },
+      })
+      .to(heroTexts, { duration: 0.5 });
   });
 }
 

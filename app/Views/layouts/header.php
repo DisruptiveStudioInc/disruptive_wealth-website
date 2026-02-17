@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- <html lang="<?= $currentLang ?>" class="scroll-smooth <?= isset($hasSnapScroll) ? 'snap-y snap-proximity' : '' ?>"> -->
-<html lang="<?= $currentLang ?>" class="<?= isset($hasSnapScroll) ? 'snap-y snap-proximity' : '' ?>">
+<html lang="<?= $currentLang ?>" class="scroll-smooth <?= isset($hasSnapScroll) ? 'snap-y snap-proximity' : '' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,11 +104,12 @@
   <?php endif; ?>
 
   <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/TextPlugin.min.js"></script>
 
   <!-- Swiper -->
 
@@ -137,11 +138,6 @@
         include(__DIR__.'/../components/langSwitcherIcon.php');
         ?>
 
-        <a href="https://wa.me/+14088584504" target="_blank" rel="noopener noreferrer" class="flex-center p-1.5 rounded-full bg-green-400 hover:bg-green-700 active:bg-green-700">
-          <svg class="size-7 text-white"><use href="#whatsapp"/></svg>
-        </a>
-
-        <?php include(__DIR__.'/../components/popupVideo.php') ?>
       </div>
 
       <!-- Mobile menu button -->

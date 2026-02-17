@@ -6,15 +6,12 @@ return [
   // Navigation
   'nav' => [
     'home' => 'Inicio',
-    'about' => 'Nosotros',
-    'essence' => 'Esencia',
-    'team' => 'Equipo',
-    'solutions' => 'Soluciones',
-    'services' => 'Servicios',
-    'ecosystem' => 'Ecosistema',
-    'disruptive_ip' => 'Nuestro IP',
-    'case_studies' => 'Casos de estudio',
-    'certifications' => 'Certificaciones',
+    'platform' => 'Plataforma',
+    'edge' => 'Ventaja',
+    'portfolio' => 'Portafolio',
+    'strategy' => 'Estrategia',
+    'governance' => 'Gobernanza',
+    'investors' => 'Inversores',
     'contact' => 'Contacto',
   ],
 
@@ -64,230 +61,56 @@ return [
     'title' => 'Disruptive Studio',
     'description' => 'Solución integral para empresas y redes multinivel.',
     'hero' => [
-      'slide1' => [
-        'title' => 'Crece',
-        'text' => 'Impulsa tu red, conquista nuevos mercados, escala sin límites.'
+      'titleCommon' => 'Nosotros',
+      'title1' => 'Adquirir.',
+      'title2' => 'Optimizar.',
+      'title3' => 'Escalar.',
+      'text' => 'Plataforma de inversión privada que adquiere y escala empresas en infraestructura MLM, marcas de consumo y tecnología tradicional.',
+      'cta_main' => 'Explora Nuestra Estrategia',
+      'cta_secondary1' => 'Enviar una Empresa',
+      'cta_secondary2' => 'Acceso para Inversores',
+      'credibility' => 'Estructurado bajo la Ley Corporativa de EE. UU. (Wyoming)',
+    ],
+    'we_do' => [
+      'title' => 'Lo que hacemos',
+      'item1' => 'Modelo de adquisición y optimización operativa',
+      'item2' => 'Implementación de gobernanza institucional',
+      'item3' => 'Escalamiento de infraestructura tecnológica y de compensación'
+    ],
+    'edge' => [
+      'title' => 'Nuestra ventaja',
+      'item1' => 'Experiencia en infraestructura MLM',
+      'item2' => 'Sistemas de backoffice propietarios',
+      'item3' => 'Integración de criptomonedas y fiat',
+      'item4' => 'Marco de gobernanza institucional',
+      'item5' => 'Estructura legal de EE. UU. para certeza transfronteriza'
+    ],
+    'portfolio' => [
+      'title' => 'Portafolio',
+      'card1' => [
+        'title' => 'Enfoque en escalabilidad y mejora operativa',
+        'text' => 'Impulsar ejecución disciplinada en todas las empresas del portafolio.'
       ],
-      'slide2' => [
-        'title' => 'Control',
-        'text' => 'Tu red bajo control, tu tiempo enfocado en crecer.'
+      'card2' => [
+        'title' => 'Crecimiento de ingresos',
+        'text' => 'Iniciativas de crecimiento estratégico en múltiples canales'
       ],
-      'slide3' => [
-        'title' => 'Redefine',
-        'text' => 'Reinventa tu multinivel:  Innovación, claridad y progreso.'
+      'card3' => [
+        'title' => 'Expansión de márgenes EBITDA',
+        'text' => 'Mejoras estructurales en precios, abastecimiento y eficiencia operativa'
       ],
-      'slide4' => [
-        'title' => 'Tecnología',
-        'text' => 'Automatiza, simplifica y expande tu red con tecnología hecha para MLM.'
+      'card4' => [
+        'title' => 'Optimización de economía del cliente',
+        'text' => 'Mejorando la dinámica de CAC a LTV'
+      ],
+      'card5' => [
+        'title' => 'Optimización de estructura de costos',
+        'text' => 'Operaciones lean y refinamiento de infraestructura'
+      ],
+      'card6' => [
+        'title' => 'Retención e ingresos recurrentes',
+        'text' => 'Fortalecimiento del valor de vida del distribuidor y cliente'
       ]
-    ],
-    'discover' => 'Descubre Studio',
-    'discover_list' => [
-      'item1' => [
-        'title' => 'Ecosistema inteligente',
-        'text' => 'Un ecosistema donde cada servicio impulsa al otro, creando una red imparable.'
-      ],
-      'item2' => [
-        'title' => 'Inteligencia digital',
-        'text' => 'No es solo software, es una mente digital que evoluciona contigo y tu visión.'
-      ],
-      'item3' => [
-        'title' => 'Crecimiento integral',
-        'text' => 'Todo lo que tu red necesita: blockchain, software, pagos, creatividad y talento en un solo ecosistema.'
-      ],
-      'item4' => [
-        'title' => 'Impacto total',
-        'text' => 'Un multinivel sin fronteras: digitalizado, global y en constante expansión.'
-      ]
-    ],
-    'builder' => 'No solo construimos sistemas',
-    'builder_big' => 'Creamos el futuro',
-    'builder_text' => 'Estrategia, innovación y experiencias que transforman tu negocio',
-    'about' => [
-      'title' => 'About',
-      'text' => 'En Disruptive no seguimos tendencias, las creamos. Diseñamos un ecosistema tecnológico que integra software, blockchain, pagos, marketing, talento y creatividad para que tu proyecto evolucione con fuerza, claridad y visión global.',
-      'big' => 'Aquí no hablamos de límites, hablamos de expansión real.'
-    ],
-    'technology' => 'Tecnología que rompe fronteras',
-    'tech_list' => [
-      'item1' => [
-        'title' => 'Poder digital',
-        'text' => 'Blockchain, software y pagos masivos diseñados para que tu multinivel no dependa de la improvisación.'
-      ],
-      'item2' => [
-        'title' => 'Visión global',
-        'text' => 'No pensamos en pequeño: diseñamos sistemas que crecen contigo y se adaptan a tu visión global.'
-      ],
-      'item3' => [
-        'title' => 'Creatividad ilimitada',
-        'text' => 'Integramos creatividad, educación y tecnología para que tu red evolucione sin límites.'
-      ]
-    ],
-    'we_are' => "Somos los creadores del futuro, <span class='text-brand-100'>ahora</span>",
-    'team' => 'Team Disruptive',
-    'team_big' => 'Equipo administrativo',
-    'team_jobs' => [
-      'ceo' => 'Chief Executive Officer (CEO)',
-      'cto' => 'Chief Technology Officer (CTO)',
-      'cfo' => 'Chief Financial Officer (CFO)',
-      'cpco' => 'Chief People & Culture Officer (CPCO)',
-      'cmo' => 'Chief Marketing Officer (CMO)',
-      'csgo' => 'Chief Strategy & Growth Officer (CSO)',
-      'software_arch_lead' => 'Software Architect Lead',
-      'cloud_infra_specialist' => 'Cloud Infrastructure Specialist',
-      'head_quality_engineering' => 'Head of Quality Engineering',
-      'lead_qa_architect' => 'Lead QA Automation Architect',
-      'perf_security_tester' => 'Performance & Security Tester',
-      'head_engineering_excellence' => 'Head of Engineering Excellence',
-      'ai_integrations_specialist' => 'Automation & AI Integrations Specialist',
-      'head_delivery_pmo' => 'Head of Delivery & PMO',
-      'code_quality_architect' => 'Code Quality Architect',
-      'fullstack_strategy_lead' => 'Fullstack Strategy Lead',
-      'perf_optimization_lead' => 'Performance Optimization Lead',
-      'blockchain_architect' => 'Blockchain Solutions Architect',
-      'lead_fullstack_architect' => 'Lead Fullstack Architect',
-      'crypto_infra_architect' => 'Crypto Infrastructure Architect',
-      'learning_experience_architect' => 'Learning Experience Architect',
-      'business_reengineering_lead' => 'Business Process Reengineering Lead',
-      'learning_innovation_specialist' => 'Learning Innovation Specialist',
-      'customer_insights_specialist' => 'Customer Insights & Innovation Specialist',
-      'customer_experience_specialist' => 'Customer Experience Innovation Specialist',
-      'head_human_capital' => 'Head of Human Capital Strategy',
-      'creative_strategy_director' => 'Creative Strategy Director',
-      'art_direction_lead' => 'Art Direction Lead',
-      'digital_design_lead' => 'Digital Design Lead',
-      'brand_identity_designer' => 'Brand Identity Designer',
-      'creative_content_strategist' => 'Creative Content Strategist',
-      'financial_operations_manager' => 'Financial Operations Manager',
-      'financial_performance_manager' => 'Financial Performance Manager',
-      'qa_strategy_lead' => 'Quality Assurance Strategy Lead',
-      'client_onboarding_experience_director' => 'Client Onboarding & Experience Director',
-      'head_logistics' => 'Head of Logistics',
-      'logistics_operations_lead' => 'Logistics Operations Lead',
-      'sales_strategy_lead' => 'Sales Strategy Lead',
-      'legal_strategy_lead' => 'Legal Strategy Lead',
-      'content_production_lead' => 'Content Production Lead'
-    ],
-    'team_description' => [
-      'daniel' => 'Define la visión estratégica y lidera la expansión global de la compañía.',
-      'geo' => 'Encabeza la innovación tecnológica y garantiza la excelencia técnica de cada proyecto.',
-      'karen' => 'Asegura la rentabilidad, control financiero y sostenibilidad de la organización.',
-      'lalo' => 'Construye una cultura de alto desempeño basada en propósito, bienestar y liderazgo consciente.',
-      'fer' => 'Posiciona la marca globalmente, conecta audiencias y diseña estrategias creativas que generan crecimiento sostenido.',
-      'refugio' => 'Dirige la expansión comercial, alianzas estratégicas y nuevos modelos de negocio.',
-      'nestor' => 'Diseña soluciones escalables, seguras y de alto rendimiento.',
-      'ramon' => 'Administra infraestructuras en la nube optimizando costos y disponibilidad.',
-      'gabriela' => 'Transforma la calidad en cultura, garantizando la excelencia técnica desde la base del código.',
-      'yubelkis' => 'Diseña estrategias de testing automatizado que aseguran precisión, velocidad y confianza en cada release.',
-      'maria_paola' => 'Evalúa vulnerabilidades y optimiza el rendimiento para garantizar estabilidad total.',
-      'walter' => 'Define los estándares, metodologías y buenas prácticas que garantizan calidad e innovación en cada línea de código.',
-      'ilyra' => 'Implementa soluciones de inteligencia artificial aplicadas a procesos reales.',
-      'carlos_ramirez' => 'Garantiza ejecución impecable bajo metodologías ágiles.',
-      'jair' => 'Define estándares, revisa arquitecturas y lidera la mejora estructural del código a nivel organizacional.',
-      'jesus_elias' => 'Fusiona ingeniería y diseño para crear experiencias digitales intuitivas y de alto impacto.',
-      'ulises' => 'Eleva la velocidad y eficiencia de los sistemas mediante ingeniería avanzada.',
-      'mariano' => 'Diseña arquitecturas descentralizadas que integran contratos inteligentes, seguridad y escalabilidad.',
-      'rommer' => 'Orquesta las decisiones de arquitectura y garantiza consistencia técnica a gran escala.',
-      'jesus_torres' => 'Gestiona redes, nodos y validadores asegurando integridad, eficiencia y disponibilidad.',
-      'gabriel' => 'Diseña ecosistemas digitales de aprendizaje centrados en el usuario y basados en datos.',
-      'diego' => 'Rediseña flujos críticos para maximizar eficiencia, eliminar desperdicios y aumentar valor.',
-      'kamila' => 'Diseña soluciones de aprendizaje digital personalizadas para empresas, integrando IA, nuevas metodologías y experiencias formativas de alto impacto.',
-      'randy' => 'Analiza datos de interacción y diseña estrategias digitales que optimizan la experiencia, la retención y la fidelidad del cliente.',
-      'viri' => 'Desarrolla soluciones digitales y automatizaciones que elevan la interacción entre cliente y marca.',
-      'mauxi' => 'Diseña modelos de gestión de talento adaptados a la etapa y objetivos de cada organización.',
-      'eli' => 'Transforma objetivos de negocio en narrativas visuales y conceptuales que inspiran acción.',
-      'meny' => 'Define la estética visual y los lineamientos creativos que dan forma a la identidad de cada marca.',
-      'sebas' => 'Diseña experiencias digitales intuitivas y visualmente impactantes en plataformas web y móviles.',
-      'dani' => 'Construye sistemas visuales que reflejan la personalidad, valores y proyección de cada marca.',
-      'dillan' => 'Planifica y desarrolla contenido inteligente, alineado a estrategia, audiencia y conversión.',
-      'antonio' => 'Supervisa procesos contables, flujos de efectivo y control presupuestal con precisión y transparencia.',
-      'victor' => 'Analiza indicadores clave de rentabilidad, eficiencia y márgenes para optimizar la operación.',
-      'gustavo' => 'Define metodologías y estándares de prueba adaptados a cada cliente, tecnología y producto.',
-      'kenia' => 'Orquesta el proceso de incorporación, asegurando que cada cliente entienda, confíe y se sienta acompañado.',
-      'jose_duarte' => 'Diseña modelos logísticos personalizados que integran operaciones, tecnología y experiencia del cliente.',
-      'paola_duarte' => 'Coordina la ejecución diaria de la cadena de suministro, garantizando precisión, velocidad y control total.',
-      'diego_arevalo' => 'Define estrategias comerciales y alinea objetivos de venta con las metas estratégicas del negocio.',
-      'ana' => 'Diseña marcos legales y contractuales que aseguran crecimiento, protección y estabilidad operativa.',
-      'jose_maria' => 'Coordina la ejecución audiovisual con enfoque en eficiencia, storytelling y retorno creativo.'
-    ],
-    'statistics' => [
-      'title' => 'Cada número es una historia de éxito',
-      'text' => 'No es solo software, es una mente digital que evoluciona contigo y tu visión.',
-      'list' => [
-        'item1' => [
-          'feature' => 'años',
-          'text' => 'Lanzando proyectos donde la calidad es lo más importante.'
-        ],
-        'item2' => [
-          'feature' => 'países',
-          'text' => 'Presentes en el compromiso de Disruptive Studio y nuestros social comerciales.'
-        ],
-        'item3' => [
-          'feature' => 'colaboradores',
-          'text' => 'Presentes en todo el mundo, fusionando sus talentos.'
-        ],
-        'item4' => [
-          'number' => '+300 mil',
-          'feature' => 'horas',
-          'text' => 'Dedicadas a los proyectos de planificación, desarrollo y estrategía.'
-        ],
-        'item5' => [
-          'feature' => 'clientes',
-          'text' => 'Atendidos con resultados satisfactorios para ofrecer un apoyo personalizado.'
-        ],
-        'item6' => [
-          'number' => '+1 billón',
-          'feature' => 'de dólares',
-          'text' => 'Vendidos por nuestros clientes gracias a nuestra tecnología exclusiva.'
-        ]
-      ]
-    ],
-    'ecosystem' => [
-      'title' => 'Disruptive Ecosystem',
-      'text' => 'Nuestro ecosistema no solo resuelve necesidades, abre caminos. Integra lo esencial para escalar, conecta lo que parecía disperso y convierte a cualquier organización en una potencia global.',
-      'circle' => "Un ecosistema, <span class='font-bold'>muchas habilidades</span>",
-      'big' => 'Explora cómo cada área puede transformar tu negocio.',
-      'verticals' => [
-        'studio' => 'Impulsa tu negocio con tecnología, automatización y marketing digital que potencian tu crecimiento empresarial.',
-        'mindz' => 'Descubre el futuro con soluciones blockchain que impulsan seguridad, transparencia y crecimiento digital sostenible.',
-        'crea' => 'Transforma tu negocio con diseño estratégico que comunica, conecta y potencia resultados con impacto visual.',
-        'exchange' => 'Libera el poder de la venta libre con liquidez, seguridad y eficiencia digital sin precedentes.',
-        'law' => 'Simplifica lo complejo con soluciones legales digitales que protegen, agilizan y garantizan tu cumplimiento jurídico.',
-        'payments' => 'Transformamos las transacciones con soluciones de pago digitales seguras, accesibles y orientadas al crecimiento global.',
-        'talent' => 'Libera el potencial de tu equipo con soluciones que impulsan desarrollo y crecimiento empresarial.',
-        'corpsyte' => 'Da el primer paso con soluciones personalizadas que impulsan tu visión y crecimiento empresarial.'
-      ]
-    ],
-    'our_services' => [
-      'first' => 'Nuestras',
-      'second' => 'soluciones'
-    ],
-    'services_text' => 'No es solo software, es una mente digital que evoluciona contigo y tu visión.',
-    'ip' => [
-      'title' => 'Disruptive IP',
-      'text' => 'Creamos activos digitales únicos que redefinen cómo operan las redes en la nueva era',
-      'big' => 'Atrévete a entrar al futuro'
-    ],
-    'cases' => [
-      'title' => 'Case Studies',
-      'darevita' => 'Ecosistema de bienestar integral: producto, marca, legalidad y modelo comercial creados desde cero.',
-      'apolus' => 'App iOS/Android con wallet Web3, pagos OTC y biometría integrada.',
-      'doctors_net' => 'App móvil iOS/Android con telemedicina, expediente clínico, e-commerce y biometría Binah.ai.',
-      'exma' => 'Plataforma E-learning con cursos, certificaciones y gestión integral de conocimiento empresarial.',
-      'evo' => 'Ecosistema con Backoffice binario, recompra automática, e-learning, e-commerce y procesamiento en EE.UU.',
-      'balance_food' => 'Presentación go-to-market, diseño de etiquetas, cumplimiento legal, sitio e-commerce y Backoffice a la medida.'
-    ],
-    'clients' => [
-      'title' => 'Clientes',
-      'text' => 'Ellos son parte del ecosistema Disruptive, un ecosistema que lidera sin fronteras y marca la disrupción global.'
-    ],
-    'partners' => [
-      'title' => 'Partners',
-      'text' => 'Partners estratégicos que fortalecen cada proyecto con tecnología líder en el mundo.'
-    ],
-    'certifications' => [
-      'title' => 'Certificaciones',
-      'text' => 'Más de 40 certificaciones'
     ]
   ],
 

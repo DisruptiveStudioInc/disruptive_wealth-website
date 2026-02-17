@@ -168,85 +168,46 @@ function getServiceSubcategoryName(string $lang): array{
 }
 
 function getNavigationMenu(string $lang, callable $trans): array {
-  $subcategoryLabels = require __DIR__ . '/../config/subcategories.php';
-  $servicesGrouped = \App\Models\Service::getServicesGroupedBySubcategory($lang);
-  $subSolutions = [];
-  foreach($servicesGrouped as $subcategory => $items){
-    $subcatName = $subcategoryLabels[$subcategory][$lang] ?? $subcategory;
-    $subcat = [
-      'name' => $subcatName,
-      'list' => []
-    ];
-    foreach($items as $item){
-      $subcat['list'][] = [
-        'label' => $item['meta']['meta_title'],
-        'url' => serviceRoute($item['meta']['slug'], $lang)
-      ];
-    }
-    array_push($subSolutions, $subcat);
-  }
-  // $partReferral = \App\Models\Service::getBySubcategory('referral-marketing', $lang);
-  // $partHr = \App\Models\Service::getBySubcategory('hr', $lang);
-  // $partCreative = \App\Models\Service::getBySubcategory('creative-services', $lang);
-  // $subSolutions = array_values(array_merge(
-  //   is_array($partReferral) ? $partReferral : [],
-  //   is_array($partCreative) ? $partCreative : [],
-  //   is_array($partHr) ? $partHr : [],
-  // ));
-  $subEcosystem = \App\Models\Service::getByCategory('ecosystem', $lang);
-  $subIps = \App\Models\Service::getNavIps($lang);
   return [
     [
-      'label' => $trans('nav.about'),
-      'url' => route('home', $lang).'#about',
+      'label' => $trans('nav.platform'),
+      'url' => route('home', $lang).'#platform',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
     [
-      'label' => $trans('nav.essence'),
-      'url' => route('home', $lang).'#essence',
+      'label' => $trans('nav.edge'),
+      'url' => route('home', $lang).'#edge',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
     [
-      'label' => $trans('nav.team'),
-      'url' => route('home', $lang).'#team',
+      'label' => $trans('nav.portfolio'),
+      'url' => route('home', $lang).'#portfolio',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
     [
-      'label' => $trans('nav.ecosystem'),
-      'url' => route('home', $lang).'#ecosystem',
-      'hasSubmenu' => false,
-      'isMegamenu' => false,
-      // 'submenu' => $subEcosystem,
-    ],
-    [
-      'label' => $trans('nav.solutions'),
-      // 'url' => route('home', $lang).'#solutions',
-      'hasSubmenu' => true,
-      'isMegamenu' => true,
-      'submenu' => $subSolutions,
-    ],
-    [
-      'label' => $trans('nav.disruptive_ip'),
-      'url' => route('home', $lang).'#our-ip',
-      'hasSubmenu' => false,
-      'isMegamenu' => false,
-      'submenu' => $subIps,
-    ],
-    [
-      'label' => $trans('nav.case_studies'),
-      'url' => route('home', $lang).'#case_studies',
+      'label' => $trans('nav.strategy'),
+      // 'url' => route('strategy', $lang),
+      'url' => '#',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
     [
-      'label' => $trans('nav.certifications'),
-      'url' => route('home', $lang).'#certifications',
+      'label' => $trans('nav.governance'),
+      // 'url' => route('governance', $lang).'#solutions',
+      'url' => '#',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
+    [
+      'label' => $trans('nav.investors'),
+      // 'url' => route('investors', $lang),
+      'url' => '#',
+      'hasSubmenu' => false,
+      'isMegamenu' => false
+    ]
   ];
 }
 
