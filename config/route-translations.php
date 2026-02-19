@@ -23,6 +23,16 @@ return [
     'en' => 'services',
   ],
 
+  'strategy' => [
+    'es' => 'estrategia',
+    'en' => 'strategy',
+  ],
+
+  'governance' => [
+    'es' => 'gobernanza',
+    'en' => 'governance',
+  ],
+
   // Add more static routes here as needed
   // 'about' => [
   //   'es' => 'nosotros',

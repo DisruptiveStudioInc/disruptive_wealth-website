@@ -139,6 +139,206 @@ return [
     ],
   ],
 
+  // Strategy page
+  'strategy' => [
+    'title' => 'Investment Strategy',
+    'description' => '',
+    'hero' => [
+      'title' => 'Strategy designed with structure.',
+      'text' => 'Capital invested with discipline and international corporate architecture.'
+    ],
+    'execution' => 'At Disruptive Wealth, we combine local execution with strong global standards.',
+    'where' => [
+      'title' => 'Where We Invest',
+      'text' => 'We invest in companies with proven demand, predictable cash flows, and organized expansion capacity.'
+    ],
+    'areas' => [
+      'title' => 'Priority Areas',
+      'item1' => 'Infrastructure and industry',
+      'item2' => 'Logistics and supply chains',
+      'item3' => 'Agro-industry with technological integration',
+      'item4' => 'Specialized B2B services',
+      'item5' => 'Industrial assets with operational efficiency'
+    ],
+    'structure' => [
+      'title' => 'Investment Structures',
+      'item1' => [
+        'title' => 'Capital Architecture',
+        'text' => 'Each investment is structured under a corporate model that prioritizes predictability, shareholder protection, and contractual clarity.'
+      ],
+      'item2' => [
+        'title' => 'General Structure',
+        'text1' => 'Holding entity under an international corporate framework.',
+        'text2' => 'Local operating vehicle.',
+        'text3' => 'Structured shareholder agreements.'
+      ],
+      'item3' => [
+        'title' => 'Key Elements Incorporated from the Beginning',
+        'text1' => 'Contractually defined shareholder rights.',
+        'text2' => 'Supermajority mechanisms for strategic decisions.',
+        'text3' => 'Protection against unauthorized dilution.',
+        'text4' => 'Binding arbitration protocols.',
+        'text5' => 'Structured financial reporting.'
+      ],
+    ],
+    'horizon' => 'Investment Horizon: 3-7 Years',
+    'plans' => [
+      'title' => 'Planning from the Outset',
+      'item1' => 'Each investment contemplates a projected horizon between 3 and 7 years, depending on the sector, asset maturity, and market conditions.',
+      'item2' => 'The strategy is not indefinite. A defined timeframe is established, oriented toward structured scalability and a liquidity event.',
+      'item3' => 'Potential scenarios: strategic sale, integration into a larger group, recapitalization, and transaction with an institutional fund.',
+      'item4' => 'Exit planning is part of the initial design, not a subsequent decision.'
+    ],
+    'governance' => [
+      'title' => 'Applied Institutional Governance',
+      'text' => 'Investment discipline is supported by:',
+      'item1' => 'Clear separation between operations and strategic decision-making.',
+      'item2' => 'Structured oversight.',
+      'item3' => 'Compliance protocols.',
+      'item4' => 'Periodic financial reporting.',
+      'item5' => 'Contractual definition of rights and responsibilities.'
+    ],
+    'risks' => [
+      'title' => 'Comprehensive Risk Management',
+      'text' => 'Each investment incorporates evaluation and monitoring of:',
+      'item1' => 'Operational risk',
+      'item2' => 'Financial risk',
+      'item3' => 'Legal risk',
+      'item4' => 'Market risk',
+      'item5' => 'Execution risk'
+    ],
+    'cta' => [
+      'text' => 'Our strategy integrates efficient local execution with international corporate standards to provide an investment environment with clear rules and defined processes.',
+      'button' => 'Investor Access'
+    ]
+  ],
+
+  // Governance page
+  'governance' => [
+    'title' => 'Legal & Governance',
+    'description' => '',
+    'hero' => [
+      'title' => 'Legal Architecture and Institutional Governance',
+      'text' => 'Our corporate structure has been designed under international standards to provide clarity, predictability, and structural protection for our investors.'
+    ],
+    'central' => [
+      'title' => 'Not an accessory element',
+      'text' => 'It is a central component of the model.'
+    ],
+    'framework' => [
+      'title' => 'U.S. Legal Structure - Wyoming Corporate Framework',
+      'text' => 'The holding company is established under the corporate framework of the State of Wyoming, recognized for its regulatory clarity and defined business structure.'
+    ],
+    'design' => [
+      'title' => 'Asset operations are executed locally, while the corporate architecture establishes',
+      'item1' => 'Clear corporate rules',
+      'item2' => 'Defined shareholder rights',
+      'item3' => 'Formal decision-making procedures',
+      'item4' => 'Structured contractual framework',
+      'text' => 'This design integrates regional execution with international corporate standards. This is not about comparative jurisdiction, it is about corporate architecture.'
+    ],
+    'protections' => [
+      'title' => 'Shareholder Protections: Supermajority, ROFR, Dilution Limits',
+      'text' => 'The structure incorporates mechanisms designed to preserve rights and prevent unilateral decisions.'
+    ],
+    'keys' => [
+      'title' => 'Key Elements',
+      'item1' => 'Supermajority for strategic decisions',
+      'item2' => 'Clearly defined ROFR (Right of First Refusal)',
+      'item3' => 'Contractual dilution limits',
+      'item4' => 'Structured shareholder agreements',
+      'item5' => 'Formal voting protocols'
+    ],
+    'transparency' => [
+      'title' => 'Financial Transparency: Quarterly Reporting + Audit',
+      'text' => 'Governance includes periodic structured disclosure obligations.'
+    ],
+    'commitments' => [
+      'title' => 'Incorporated Commitments',
+      'item1' => 'Quarterly financial reporting',
+      'item2' => 'Structured operational information',
+      'item3' => 'Accounting oversight',
+      'item4' => 'External audit (when applicable based on vehicle size and stage)'
+    ],
+    'compliance' => [
+      'title' => 'AML/KYC Compliance Procedures',
+      'text' => 'The structure incorporates compliance protocols aligned with international standards.'
+    ],
+    'implementation' => [
+      'title' => 'Implementation',
+      'item1' => 'Investor identity verification (KYC)',
+      'item2' => 'Evaluation of investor profile and source of funds',
+      'item3' => 'Internal anti-money laundering (AML) policies',
+      'item4' => 'Document retention in accordance with applicable guidelines'
+    ],
+    'jurisdiction' => [
+      'title' => 'Binding Arbitration under Wyoming Jurisdiction',
+      'text' => 'Corporate agreements establish dispute resolution procedures through binding arbitration under jurisdiction defined in the State of Wyoming.'
+    ],
+    'allow' => [
+      'title' => 'This Allows:',
+      'item1' => 'Pre-established procedures',
+      'item2' => 'Clarity in case of dispute',
+      'item3' => 'Structured resolution',
+      'item4' => 'Reduction of procedural uncertainty'
+    ]
+  ],
+
+  // Investors page
+  'investors' => [
+    'title' => 'Investor Access',
+    'description' => '',
+    'hero' => [
+      'title' => 'Institutional Framework',
+      'text' => 'Disruptive Wealth operates with international corporate architecture, defined governance, and strategic discipline oriented toward preserving clarity, protection, and exit planning.'
+    ],
+    'governance' => [
+      'title' => 'Institutional Governance Positioning',
+      'text' => 'Governance as the foundation of the model. Our approach is not limited to selecting assets; it focuses on structuring them under institutional corporate governance principles.'
+    ],
+    'foundation' => [
+      'title' => 'Legal Foundation',
+      'item1' => 'Defined shareholder rights',
+      'item2' => 'Strategic supermajorities',
+      'item3' => 'Formal contractual protocols',
+      'item4' => 'Structured financial reporting',
+      'item5' => 'Established dispute resolution mechanisms'
+    ],
+    'oversight' => [
+      'title' => 'Oversight and Discipline',
+      'item1' => 'Separation between operations and strategic decision-making',
+      'item2' => 'Exit planning from the outset',
+      'item3' => 'Structured risk evaluation',
+      'item4' => 'Defined international corporate framework'
+    ],
+    'private' => [
+      'title' => 'Private Placement Only - Accredited Investors',
+      'subtitle' => 'Limited access',
+      'text' => 'Exclusive participation through private placement. This does not constitute a public offering. Intended solely for investors who meet established legal criteria.'
+    ],
+    'profile' => [
+      'title' => 'General Investor Profile',
+      'item1' => 'Accredited investors',
+      'item2' => 'Analytical capacity and medium-term horizon',
+      'item3' => 'Understanding of risks associated with private assets',
+      'item4' => 'Focus on discipline and structure',
+    ],
+    'process' => [
+      'title' => 'Access Process',
+      'text' => 'Participation is governed exclusively by the applicable legal documentation.',
+      'item1' => 'Information request',
+      'item2' => 'Profile evaluation',
+      'item3' => 'Execution of confidentiality documentation',
+      'item4' => 'Receipt of information memorandum',
+      'item5' => 'Review and contractual subscription',
+    ],
+    'vision' => [
+      'title' => 'For Investors with a Structured Vision',
+      'text' => 'Our architecture combines operational execution with international corporate standards to provide clarity and discipline in every investment. Be part of an investment with clear rules.',
+      'button' => 'Request Access'
+    ]
+  ],
+
   // Errors
   'error' => [
     '404' => [

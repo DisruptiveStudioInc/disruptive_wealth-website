@@ -12,6 +12,12 @@ return function(Router $router) {
   $router->post('/contacto', 'App\\Controllers\\ContactController', 'submit');
   $router->post('/contact', 'App\\Controllers\\ContactController', 'submit');
 
+  // Strategy
+  $router->get('/strategy', 'App\\Controllers\\StrategyController', 'index');
+
+  // Governance
+  $router->get('/governance', 'App\\Controllers\\GovernanceController', 'index');
+
   // Blog
   $router->get('/blog', 'App\\Controllers\\BlogController', 'index');
   $router->get('/blog/{slug}', 'App\\Controllers\\BlogController', 'show');

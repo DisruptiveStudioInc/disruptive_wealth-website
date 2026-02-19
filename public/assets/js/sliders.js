@@ -66,25 +66,30 @@ if (swiperServices && servicesFirstButton) {
   });
 }
 
-const mySwiper = new Swiper(".my-swiper", {
-  effect: "cards",
-  grabCursor: true,
-  pagination: {
-    el: "#my-swiper-pagination",
-    clickable: true,
-    bulletClass: "flex-center",
-    bulletActiveClass: "active",
-    renderBullet: function (index, className) {
-      return `<li tabindex="0" role="button" aria-label="Go to process ${
-        index + 1
-      }" class="size-9 lg:size-12 text-lg lg:text-xl font-bold text-white leading-none rounded-full bg-brand-100 hover:bg-brand-200 active:bg-brand-200 [&.active]:bg-brand-200 [&.active]:ring-2 [&.active]:ring-white transition-colors cursor-pointer ${className}">${
-        index + 1
-      }</li>`;
-    },
-  },
-});
+const cardSwipers = document.querySelectorAll(".my-swiper");
+if (cardSwipers.length > 0) {
+  cardSwipers.forEach((cSwiper) => {
+    cSwiper = new Swiper(cSwiper, {
+      effect: "cards",
+      grabCursor: true,
+      pagination: {
+        el: `#${cSwiper.dataset.pagination}`,
+        clickable: true,
+        bulletClass: "flex-center",
+        bulletActiveClass: "active",
+        renderBullet: function (index, className) {
+          return `<li tabindex="0" role="button" aria-label="Go to process ${
+            index + 1
+          }" class="size-9 lg:size-12 text-lg lg:text-xl font-bold text-white leading-none rounded-full bg-brand-100 hover:bg-brand-200 active:bg-brand-200 [&.active]:bg-brand-200 [&.active]:ring-2 [&.active]:ring-white transition-colors cursor-pointer ${className}">${
+            index + 1
+          }</li>`;
+        },
+      },
+    });
+  });
+}
 
-const faqSliderEl = document.getElementById("faq-slider");
-if (faqSliderEl) {
-  const faqSlider = new DepthSlider("#faq-slider");
+const depthSliders = document.querySelectorAll(".depth-slider");
+if (depthSliders.length > 0) {
+  depthSliders.forEach((slider) => (slider = new DepthSlider(slider)));
 }

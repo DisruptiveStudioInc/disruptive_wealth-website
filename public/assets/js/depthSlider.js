@@ -44,11 +44,12 @@ export default class DepthSlider {
         maxHeight = height;
       }
     });
-    this.container.style.height = maxHeight + "px";
+    this.container.querySelector(".depth-slides-wrap").style.height =
+      maxHeight + "px";
   }
 
   renderPagination() {
-    const pagination = document.getElementById("pagination-depth");
+    const pagination = this.container.querySelector(".pagination");
     this.slides.forEach((_, i) => {
       const dot = document.createElement("button");
       dot.className = "pagination-dot";
@@ -81,7 +82,7 @@ export default class DepthSlider {
   }
 
   updatePagination() {
-    const dots = document.querySelectorAll(".pagination-dot");
+    const dots = this.container.querySelectorAll(".pagination-dot");
     dots.forEach((dot, i) => {
       dot.classList.toggle("active", i === this.currentIndex);
     });
@@ -104,11 +105,11 @@ export default class DepthSlider {
   }
 
   attachEvents() {
-    document
-      .getElementById("nextBtn")
+    this.container
+      .querySelector(".nextBtn")
       .addEventListener("click", () => this.next());
-    document
-      .getElementById("prevBtn")
+    this.container
+      .querySelector(".prevBtn")
       .addEventListener("click", () => this.prev());
 
     // Keyboard navigation

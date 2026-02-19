@@ -189,15 +189,13 @@ function getNavigationMenu(string $lang, callable $trans): array {
     ],
     [
       'label' => $trans('nav.strategy'),
-      // 'url' => route('strategy', $lang),
-      'url' => '#',
+      'url' => route('strategy', $lang),
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
     [
       'label' => $trans('nav.governance'),
-      // 'url' => route('governance', $lang).'#solutions',
-      'url' => '#',
+      'url' => route('governance', $lang).'#solutions',
       'hasSubmenu' => false,
       'isMegamenu' => false
     ],
