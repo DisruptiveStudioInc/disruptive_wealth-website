@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: disruptive-php-fpm
+    image: disruptive-wealth-php-fpm
     restart: always
     volumes:
       - ./:/var/www/html
@@ -16,7 +16,7 @@ services:
     image: nginx:alpine
     restart: always
     ports:
-      - "8080:80"
+      - "8006:80"
     volumes:
       - ./:/var/www/html  # Necesita ver los archivos para servir estáticos
       - ./nginx-conf:/etc/nginx/conf.d # Configuración personalizada
