@@ -18,11 +18,6 @@ return [
     'en' => 'contact',
   ],
 
-  'services' => [
-    'es' => 'servicios',
-    'en' => 'services',
-  ],
-
   'strategy' => [
     'es' => 'estrategia',
     'en' => 'strategy',
@@ -32,6 +27,11 @@ return [
     'es' => 'gobernanza',
     'en' => 'governance',
   ],
+
+  'investors' => [
+    'es' => 'inversores',
+    'en' => 'investors',
+  ]
 
   // Add more static routes here as needed
   // 'about' => [

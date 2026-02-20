@@ -14,17 +14,23 @@ return function(Router $router) {
 
   // Strategy
   $router->get('/strategy', 'App\\Controllers\\StrategyController', 'index');
+  $router->get('/estrategia', 'App\\Controllers\\StrategyController', 'index');
 
   // Governance
   $router->get('/governance', 'App\\Controllers\\GovernanceController', 'index');
+  $router->get('/gobernanza', 'App\\Controllers\\GovernanceController', 'index');
+
+  // Investors
+  $router->get('/investors', 'App\\Controllers\\InvestorsController', 'index');
+  $router->get('/inversores', 'App\\Controllers\\InvestorsController', 'index');
 
   // Blog
-  $router->get('/blog', 'App\\Controllers\\BlogController', 'index');
-  $router->get('/blog/{slug}', 'App\\Controllers\\BlogController', 'show');
+  // $router->get('/blog', 'App\\Controllers\\BlogController', 'index');
+  // $router->get('/blog/{slug}', 'App\\Controllers\\BlogController', 'show');
 
   // Blog cache clear (optional - for webhook)
-  $router->post('/blog/cache/clear', 'App\\Controllers\\BlogController', 'clearCache');
+  // $router->post('/blog/cache/clear', 'App\\Controllers\\BlogController', 'clearCache');
 
   // Services - dynamic route with slug (keep this last as it's a catch-all)
-  $router->get('/{slug}', 'App\\Controllers\\ServiceController', 'show');
+  // $router->get('/{slug}', 'App\\Controllers\\ServiceController', 'show');
 };

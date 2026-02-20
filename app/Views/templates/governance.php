@@ -1,5 +1,5 @@
 <?php
-$pageTitle = $meta['meta_title'] ?? $trans('strategy.title');
+$pageTitle = $meta['meta_title'] ?? $trans('governance.title');
 $metaDescription = $meta['meta_description'] ?? '';
 require __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/fixedBackground.php';
