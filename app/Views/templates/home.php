@@ -27,7 +27,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
       </div>
     </div>
   </div>
-  <div class="block-content min-h-dvh flex-col flex-center relative">
+  <div class="block-content max-w-none min-h-dvh flex-col flex-center relative">
     <h1 class="font-title text-center uppercase bg-clip-text bg-text-white text-[7vw]">
       <span class="es:opacity-0 es:pointer-events-none"><?= $trans('home.hero.titleCommon') ?></span>
       <span id="hero-typing-text" data-texts='<?= $heroTitles ?>'></span>
