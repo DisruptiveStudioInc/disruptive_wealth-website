@@ -161,7 +161,7 @@ include __DIR__ . '/../components/fixedBackground.php';
             <div class="depth-slides-wrap relative text-center perspective-distant transition-[height]">
               <?php foreach( $content['commitments'] as $k => $item): ?>
               <article class="slide-depth absolute top-0 left-1/2 w-full h-fit bg-secondary-200 text-white p-4 lg:p-10 rounded-2xl transition-op-trans duration-300" data-index="<?= $k ?>">
-                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-6xl mb-2"><?= $item ?></p>
+                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-6xl"><?= $item ?></p>
               </article>
               <?php endforeach; ?>
             </div>
@@ -245,7 +245,7 @@ include __DIR__ . '/../components/fixedBackground.php';
             <div class="depth-slides-wrap relative text-center perspective-distant transition-[height]">
               <?php foreach( $content['allow_items'] as $k => $item): ?>
               <article class="slide-depth absolute top-0 left-1/2 w-full h-fit bg-secondary-200 text-white p-4 lg:p-10 rounded-2xl transition-op-trans duration-300" data-index="<?= $k ?>">
-                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-6xl mb-2"><?= $item ?></p>
+                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-6xl"><?= $item ?></p>
               </article>
               <?php endforeach; ?>
             </div>

@@ -100,17 +100,17 @@ include __DIR__ . '/../components/fixedBackground.php';
                   <?php foreach($content['structure'] as $item): ?>
                     <article class="swiper-slide slide-ff">
                       <div class="flex-center flex-col text-center lg:text-left h-full bg-secondary-200 text-white rounded-xl">
-                        <img src="/public/images/services/solutions/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="rounded-xl w-full h-[30vh] xl:h-[40vh] object-cover pointer-events-none" loading="lazy">
+                        <img src="/public/images/services/solutions/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="rounded-xl w-full h-[20vh] md:h-[30vh] xl:h-[40vh] object-cover pointer-events-none" loading="lazy">
                         <div class="p-4 md:p-7 xl:p-10">
-                          <h3 class="font-title text-lg md:text-2xl lg:text-xl xl:text-3xl leading-tight font-bold mb-2 md:mb-0"><?= $item['title'] ?></h3>
+                          <h3 class="font-title text-base md:text-lg lg:text-xl xl:text-3xl leading-tight font-bold mb-2 md:mb-0"><?= $item['title'] ?></h3>
                           <?php if(isset($item['text'])): ?>
                             <p class="text-sm md:text-base"><?= $item['text'] ?></p>
                           <?php endif; ?>
                           <?php if(isset($item['list']) && isset($item['list_type'])): ?>
                             <?php if($item['list_type'] === 'ol'): ?>
-                              <ol class="list-decimal pl-5 text-sm md:text-base">
+                              <ol class="list-decimal pl-5 text-sm md:text-base text-left">
                             <?php else: ?>
-                              <ul class="list-disc pl-5 text-sm md:text-base">
+                              <ul class="list-disc pl-5 text-sm md:text-base text-left">
                             <?php endif; ?>
                               <?php foreach($item['list'] as $li): ?>
                                 <li><?= $li ?></li>
@@ -141,7 +141,7 @@ include __DIR__ . '/../components/fixedBackground.php';
             <div class="depth-slides-wrap relative text-center perspective-distant transition-[height]">
               <?php foreach( $content['plans'] as $k => $item): ?>
               <article class="slide-depth absolute top-0 left-1/2 w-full h-fit bg-secondary-200 text-white p-4 lg:p-10 rounded-2xl transition-op-trans duration-300" data-index="<?= $k ?>">
-                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-4xl mb-2"><?= $item ?></p>
+                <p class="font-khand uppercase leading-tight text-pretty text-xl md:text-2xl lg:text-4xl"><?= $item ?></p>
               </article>
               <?php endforeach; ?>
             </div>
