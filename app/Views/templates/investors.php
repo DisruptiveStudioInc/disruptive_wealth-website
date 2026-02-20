@@ -97,8 +97,7 @@ include __DIR__ . '/../components/fixedBackground.php';
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-7 lg:gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2 text-center lg:text-left">
             <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $trans('investors.private.title') ?></h2>
-            <p class="text-white bg-brand-100 px-4 pb-1.5 pt-1.75 mb-4 w-fit font-bold text-lg lg:text-2xl text-balance"><?= $trans('investors.private.subtitle') ?></p>
-            <p class="text-secondary-200 lg:text-xl text-balance"><?= $trans('investors.private.text') ?></p>
+            <p class="text-white bg-brand-100 px-4 pb-1.5 pt-1.75 mt-2 w-fit font-bold text-lg lg:text-2xl text-balance"><?= $trans('investors.private.subtitle') ?></p>
           </div>
           <div class="relative lg:w-1/2 lg:pr-12">
             <img src="/public/images/services/solutions/<?= $content['about2_images']['big'] ?>" alt="" class="rounded-xl md:rounded-2xl mx-auto max-h-[45vh] h-full lg:max-h-none lg:h-auto opacity-0 group-[&.swiper-slide-fully-visible]:opacity-100 translate-y-12 group-[&.swiper-slide-fully-visible]:translate-y-0 transition-op-trans duration-500 delay-200" loading="lazy">

@@ -72,7 +72,6 @@ include __DIR__ . '/../components/fixedBackground.php';
         <div class="block-content py-16 lg:py-24 h-full flex-center gap-4 lg:gap-12 flex-col lg:flex-row">
           <div class="lg:w-1/2">
             <h2 class="font-khand uppercase text-center lg:text-left bg-clip-text bg-text-black leading-none text-3xl xs:text-4xl sm:text-6xl md:text-8xl xl:text-10xl es:pt-2"><?= $trans('governance.design.title') ?></h2>
-            <p class="lg:text-lg text-secondary-200 text-balance"><?= $trans('governance.design.text') ?></p>
             <ul id="design-pagination" class="flex items-center justify-center lg:justify-start gap-2 lg:gap-4 mt-2 lg:mt-6"></ul>
           </div>
           <div class="w-full lg:w-1/2 lg:pr-40">

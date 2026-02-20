@@ -201,8 +201,9 @@ include __DIR__ . '/../components/fixedBackground.php';
       <section class="slide-section swiper-slide group h-screen w-full">
         <div class="block-content py-16 lg:py-40 h-full flex-center gap-4 flex-col lg:flex-row">
           <div class="lg:w-1/2 text-center lg:text-left">
-            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-5xl xl:text-8xl text-balance es:pt-2"><?= $trans('strategy.cta.text') ?></h2>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="button leading-none rounded-full w-fit md:text-xl font-semibold mt-4 mx-auto lg:mt-8 lg:mx-0 px-7 py-4">
+            <h2 class="font-khand uppercase bg-clip-text bg-text-black leading-none text-5xl xs:text-7xl sm:text-8xl md:text-11xl xl:text-12xl text-balance es:pt-2"><?= $trans('strategy.cta.title') ?></h2>
+            <p class="lg:text-xl text-secondary-200 text-balance"><?= $trans('strategy.cta.text') ?></p>
+            <a href="<?= route('strategy', $currentLang) ?>" class="button leading-none rounded-full w-fit md:text-xl font-semibold mt-4 mx-auto lg:mt-8 lg:mx-0 px-7 py-4">
               <span class=""><?= $trans('strategy.cta.button') ?></span>
             </a>
           </div>

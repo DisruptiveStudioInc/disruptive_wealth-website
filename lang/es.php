@@ -23,48 +23,22 @@ return [
     'privacy' => 'Políticas de privacidad',
     'terms' => 'Términos y condiciones',
     'use_terms' => 'Términos de uso',
+    'legal_notice' => 'Aviso legal',
     'legal_small' => 'Todas las marcas registradas, logotipos y nombres comerciales son propiedad de sus respectivos dueños. Su uso en este sitio es únicamente con fines de identificación y referencia, y no implica ninguna afiliación, patrocinio ni respaldo.',
     'affiliate_brand' => 'Software de MLM',
     'affiliate_text' => 'se encuentra verificado como',
     'affiliate_name' => 'Software para Afiliados en México',
   ],
 
-  // Services Subcategories
-  'servsub' => [
-    'blockchain' => 'Soluciones blockchain seguras y escalables que optimizan transacciones, procesos y trazabilidad empresarial.',
-    'custom_software' => 'Software personalizado enfocado en eficiencia, escalabilidad y control total de tu operación.',
-    'payment_processing' => 'Pagos automatizados y seguros para transacciones globales rápidas, confiables y transparentes.',
-    'referral_marketing' => 'Sistemas inteligentes de referidos que impulsan crecimiento, retención y expansión empresarial.',
-    'creative_services' => 'Diseño, estrategia y tecnología para crear experiencias digitales que conectan y convierten.',
-    'hr' => 'Soluciones digitales que automatizan reclutamiento, capacitación y desarrollo del talento humano.',
-    'custom_services' => 'Soluciones tecnológicas personalizadas para optimizar procesos, integrar sistemas y escalar operaciones empresariales.',
-    'logistic_services' => 'Gestión logística integral con control de inventarios, distribución estratégica y cadena de suministro eficiente.',
-    'finance_services' => 'Estrategia financiera integral enfocada en administración de capital, rentabilidad y crecimiento empresarial.',
-    'legal_services' => 'Gestión legal y regulatoria que garantiza cumplimiento normativo, transparencia y seguridad empresarial integral.',
-    'manufacturing' => 'Producción inteligente y personalizada que optimiza procesos, calidad, escalabilidad y eficiencia industrial global.',
-    'cs' => 'Atención al cliente profesional con soporte multicanal, gestión eficiente y experiencia personalizada continua.'
-  ],
-
-  // IPs
-  'ips' => [
-    'backoffice' => 'Plataforma integral para administrar redes, comisiones, pagos y rendimiento empresarial en tiempo real.',
-    'blockchain' => 'Soluciones blockchain seguras y escalables que optimizan procesos, transacciones y trazabilidad empresarial global.',
-    'tokenization' => 'Infraestructura completa para digitalizar activos y crear ecosistemas de valor mediante tokenización segura.',
-    'exchange' => 'Sistema profesional de intercambio privado para operaciones seguras, rápidas y con máxima confidencialidad global.',
-    'processing' => 'Procesamiento global de pagos con tecnología automatizada, segura y compatible con divisas digitales múltiples.',
-    'wallet' => 'Billetera digital segura para almacenar, transferir y gestionar activos digitales con autonomía total.',
-    'metaverse' => 'Experiencias inmersivas que combinan VR y XR para elevar conexión, presencia e innovación digital.',
-  ],
-
   // Home page
   'home' => [
-    'title' => 'Disruptive Studio',
+    'title' => 'Disruptive Wealth',
     'description' => 'Solución integral para empresas y redes multinivel.',
     'hero' => [
-      'titleCommon' => 'Nosotros',
-      'title1' => 'Adquirir.',
-      'title2' => 'Optimizar.',
-      'title3' => 'Escalar.',
+      'titleCommon' => '|',
+      'title1' => 'Adquirimos',
+      'title2' => 'Optimizamos',
+      'title3' => 'Escalamos',
       'text' => 'Plataforma de inversión privada que adquiere y escala empresas en infraestructura MLM, marcas de consumo y tecnología tradicional.',
       'cta_main' => 'Explora Nuestra Estrategia',
       'cta_secondary1' => 'Enviar una Empresa',
@@ -117,7 +91,7 @@ return [
   // Contact page
   'contact' => [
     'title' => 'Contáctanos',
-    'description' => 'Crea tu futuro con Disruptive Studio. Escríbenos o contactanos por WhatsApp.',
+    'description' => 'Crea tu futuro con Disruptive Wealth. Escríbenos o contactanos por WhatsApp.',
     'map_title' => 'Presencia Global',
     'map_text1' => 'Nuestra presencia abarca EE.UU., Europa, México, Canadá, Japón, EAU y China, impulsada por una red global de especialistas y socios estratégicos.',
     'map_text2' => 'Aquí es donde las ideas se convierten en ejecución.',
@@ -208,7 +182,8 @@ return [
       'item5' => 'Riesgo de ejecución'
     ],
     'cta' => [
-      'text' => 'Nuestra estrategia integra ejecución local eficiente con estándares corporativos internacionales para ofrecer un entorno de inversión con reglas claras y procesos definidos.',
+      'title' => 'Ejecución con gobernanza internacional y procesos claros.',
+      'text' => 'Participación mediante colocación privada.',
       'button' => 'Acceso Inversionistas'
     ]
   ],
@@ -230,7 +205,7 @@ return [
       'text' => 'La holding está establecida bajo el marco corporativo del Estado de Wyoming, reconocido por su claridad regulatoria y estructura empresarial definida.'
     ],
     'design' => [
-      'title' => 'Las operaciones de activos se ejecutan localmente, mientras la arquitectura corporativa establece',
+      'title' => 'La arquitectura corporativa establece',
       'item1' => 'Reglas corporativas claras',
       'item2' => 'Derechos accionarios definidos',
       'item3' => 'Procedimientos formales de toma de decisiones',
@@ -305,11 +280,12 @@ return [
       'item5' => 'Mecanismos establecidos de resolución de disputas'
     ],
     'oversight' => [
-      'title' => 'Supervisión y Disciplina',
+      'title' => 'Control y Dirección Estratégica',
       'item1' => 'Separación entre operaciones y toma de decisiones estratégicas',
       'item2' => 'Planificación de salida desde el inicio',
       'item3' => 'Evaluación estructurada de riesgos',
-      'item4' => 'Marco corporativo internacional definido'
+      'item4' => 'Marco corporativo internacional definido',
+      'item5' => 'Evaluación estructurada de riesgos'
     ],
     'private' => [
       'title' => 'Colocación Privada Exclusiva - Inversores Acreditados',
@@ -387,5 +363,15 @@ return [
     'share' => 'Compartir',
     'related_posts' => 'Publicaciones relacionadas',
     'read_more' => 'Leer más',
+  ],
+
+  // Legal
+  'legal_notice' => [
+    'title' => 'Aviso legal',
+    'description' => 'Información legal y términos de uso de Disruptive Wealth.',
+    'tex1' => 'Disruptive Wealth opera bajo una estructura corporativa constituida conforme a la legislación aplicable del estado de Wyoming, Estados Unidos.',
+    'tex2' => 'La información contenida en este sitio tiene carácter informativo y no constituye oferta pública de valores ni recomendación de inversión. La participación está dirigida exclusivamente a inversionistas que cumplan los requisitos establecidos en la documentación legal correspondiente.',
+    'tex3' => 'La inversión en activos privados implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido.',
+    'tex4' => 'La participación se rige por los acuerdos contractuales firmados entre las partes.'
   ]
 ];

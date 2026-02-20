@@ -14,7 +14,7 @@
   <meta property="og:url" content="<?= $config['app']['url'] ?>" />
   <meta property="og:type" content="<?= $ogType ?? 'website' ?>" />
   <meta property="og:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
-  <meta property="og:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
+  <meta property="og:description" content="<?= $metaDescription ?? 'Disruptive Wealth' ?>" />
   <meta property="og:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
   <meta property="og:image:alt" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta property="og:image:width" content="1200" />
@@ -24,7 +24,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
-  <meta name="twitter:description" content="<?= $metaDescription ?? 'Disruptive Studio' ?>" />
+  <meta name="twitter:description" content="<?= $metaDescription ?? 'Disruptive Wealth' ?>" />
   <meta name="twitter:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
   <link rel="canonical" href="<?= $config['app']['url'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>" />
 
@@ -33,7 +33,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Disruptive Studio",
+    "name": "Disruptive Wealth",
     "url": "<?= $config['app']['url'] ?>",
     "logo": "<?= $config['app']['url'] ?>/public/logo.svg",
     "contactPoint": [

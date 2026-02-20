@@ -1,6 +1,6 @@
-# Sitio Web de Disruptive Studio
+# Sitio Web de Disruptive Wealth
 
-Un sitio web corporativo multilingüe para Disruptive Studio, mostrando sus servicios, procesos de trabajo e información de la empresa. Construido con PHP 8.3, Tailwind CSS y animaciones GSAP.
+Un sitio web corporativo multilingüe para Disruptive Wealth, mostrando sus servicios, procesos de trabajo e información de la empresa. Construido con PHP 8.3, Tailwind CSS y animaciones GSAP.
 
 ## Tabla de Contenidos
 
@@ -22,7 +22,7 @@ Un sitio web corporativo multilingüe para Disruptive Studio, mostrando sus serv
 
 ## Descripción del Proyecto
 
-Este es un sitio web corporativo profesional para Disruptive Studio que cuenta con:
+Este es un sitio web corporativo profesional para Disruptive Wealth que cuenta con:
 
 - **Soporte multilingüe** (Español e Inglés)
 - **Páginas de servicios dinámicas** con diferentes plantillas
@@ -94,7 +94,7 @@ MAIL_USERNAME=your-email@example.com
 MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
 
 RECAPTCHA_SITE_KEY=your-site-key
@@ -463,12 +463,12 @@ Editar `config/services.php` y agregar:
   'content_file' => 'nuevo-servicio',
   'es' => [
     'slug' => 'nuevo-servicio',
-    'meta_title' => 'Nuevo Servicio | Disruptive Studio',
+    'meta_title' => 'Nuevo Servicio | Disruptive Wealth',
     'meta_description' => 'Descripción del nuevo servicio para SEO',
   ],
   'en' => [
     'slug' => 'new-service',
-    'meta_title' => 'New Service | Disruptive Studio',
+    'meta_title' => 'New Service | Disruptive Wealth',
     'meta_description' => 'New service description for SEO',
   ],
 ],
@@ -861,7 +861,7 @@ El sitio web cuenta con una integración de blog headless con WordPress usando W
 4. **Crear Contraseña de Aplicación:**
    - Ir a `Usuarios > Tu Perfil`
    - Desplazarse a "Contraseñas de Aplicación"
-   - Ingresar un nombre (ej., "Sitio Web Disruptive Studio")
+   - Ingresar un nombre (ej., "Sitio Web Disruptive Wealth")
    - Clic en "Añadir Nueva Contraseña de Aplicación"
    - Copiar la contraseña generada (formato: `xxxx xxxx xxxx xxxx`)
 
@@ -1148,7 +1148,7 @@ MAIL_ENCRYPTION=tls
 
 # Información del remitente
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 
 # Email del destinatario
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
@@ -1351,7 +1351,7 @@ MAIL_USERNAME=your-email@example.com
 MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
 
 # reCAPTCHA v3
@@ -1542,4 +1542,4 @@ Para preguntas o problemas:
 
 ## Licencia
 
-Propietario - Disruptive Studio © 2025
+Propietario - Disruptive Wealth © 2025

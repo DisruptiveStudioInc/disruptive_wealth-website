@@ -23,42 +23,16 @@ return [
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms & Policies',
     'use_terms' => 'Terms Of Use',
+    'legal_notice' => 'Legal Notice',
     'legal_small' => 'All trademarks, logos, and brand names are the property of their respective owners. Their use on this site is for identification and reference purposes only and does not imply any affiliation, sponsorship, or endorsement.',
     'affiliate_brand' => 'MLM Software',
     'affiliate_text' => 'is verified as',
     'affiliate_name' => 'Affiliate Software in Mexico',
   ],
 
-  // Services Subcategories
-  'servsub' => [
-    'blockchain' => 'Secure and scalable blockchain solutions that optimize transactions, processes, and business traceability.',
-    'custom_software' => 'Custom software focused on efficiency, scalability, and full control of your operations.',
-    'payment_processing' => 'Automated and secure payments for fast, reliable, and transparent global transactions.',
-    'referral_marketing' => 'Intelligent referral systems that drive business growth, retention, and expansion.',
-    'creative_services' => 'Design, strategy, and technology to create digital experiences that connect and convert.',
-    'hr' => 'Digital solutions that automate recruitment, training, and human talent development.',
-    'custom_services' => 'Customized technological solutions to optimize processes, integrate systems, and scale business operations.',
-    'logistic_services' => 'Comprehensive logistics management with inventory control, strategic distribution, and an efficient supply chain.',
-    'finance_services' => 'Comprehensive financial strategy focused on capital management, profitability, and business growth.',
-    'legal_services' => 'Legal and regulatory management that ensures compliance, transparency, and comprehensive business security.',
-    'manufacturing' => 'Smart and customized production that optimizes processes, quality, scalability, and global industrial efficiency.',
-    'cs' => 'Professional customer service with multichannel support, efficient management, and a continuous personalized experience.'
-  ],
-
-  // IPs
-  'ips' => [
-    'backoffice' => 'Comprehensive platform to manage networks, commissions, payments, and business performance in real time.',
-    'blockchain' => 'Secure and scalable blockchain solutions that optimize processes, transactions, and global business traceability.',
-    'tokenization' => 'Complete infrastructure to digitize assets and create value ecosystems through secure tokenization.',
-    'exchange' => 'Professional private exchange system for secure, fast operations with maximum global confidentiality.',
-    'processing' => 'Global payment processing with automated, secure technology compatible with multiple digital currencies.',
-    'wallet' => 'Secure digital wallet to store, transfer, and manage digital assets with full autonomy.',
-    'metaverse' => 'Immersive experiences combining VR and XR to enhance connection, presence, and digital innovation.',
-  ],
-
   // Home page
   'home' => [
-    'title' => 'Disruptive Studio',
+    'title' => 'Disruptive Wealth',
     'description' => 'Comprehensive solution for companies and multilevel networks.',
     'hero' => [
       'titleCommon' => 'We',
@@ -117,7 +91,7 @@ return [
   // Contact page
   'contact' => [
     'title' => 'Contact Us',
-    'description' => 'Create your future with Disruptive Studio. Write to us or contact us via WhatsApp.',
+    'description' => 'Create your future with Disruptive Wealth. Write to us or contact us via WhatsApp.',
     'map_title' => 'Global Presence',
     'map_text1' => 'Our reach spans the USA, Europe, Mexico, Canada, Japan, the UAE, and China powered by a global network of specialists and strategic partners.',
     'map_text2' => 'This is where ideas turn into execution.',
@@ -208,7 +182,8 @@ return [
       'item5' => 'Execution risk'
     ],
     'cta' => [
-      'text' => 'Our strategy integrates efficient local execution with international corporate standards to provide an investment environment with clear rules and defined processes.',
+      'title' => 'Execution with international governance and clear processes.',
+      'text' => 'Participation through private placement.',
       'button' => 'Investor Access'
     ]
   ],
@@ -230,7 +205,7 @@ return [
       'text' => 'The holding company is established under the corporate framework of the State of Wyoming, recognized for its regulatory clarity and defined business structure.'
     ],
     'design' => [
-      'title' => 'Asset operations are executed locally, while the corporate architecture establishes',
+      'title' => 'The corporate architecture establishes',
       'item1' => 'Clear corporate rules',
       'item2' => 'Defined shareholder rights',
       'item3' => 'Formal decision-making procedures',
@@ -305,11 +280,12 @@ return [
       'item5' => 'Established dispute resolution mechanisms'
     ],
     'oversight' => [
-      'title' => 'Oversight and Discipline',
+      'title' => 'Control and Strategic Direction',
       'item1' => 'Separation between operations and strategic decision-making',
       'item2' => 'Exit planning from the outset',
       'item3' => 'Structured risk evaluation',
-      'item4' => 'Defined international corporate framework'
+      'item4' => 'Defined international corporate framework',
+      'item5' => 'Structured risk evaluation'
     ],
     'private' => [
       'title' => 'Private Placement Only - Accredited Investors',
@@ -387,5 +363,15 @@ return [
     'share' => 'Share',
     'related_posts' => 'Related Posts',
     'read_more' => 'Read more',
+  ],
+
+  // Legal
+  'legal_notice' => [
+    'title' => 'Legal Notice',
+    'description' => 'Legal information and terms of use of Disruptive Wealth.',
+    'tex1' => 'Disruptive Wealth operates under a corporate structure established in accordance with the applicable laws of the state of Wyoming, United States.',
+    'tex2' => 'The information contained on this site is for informational purposes only and does not constitute a public offering of securities or investment advice. Participation is exclusively for investors who meet the requirements set forth in the applicable legal documentation.',
+    'tex3' => 'Investment in private assets involves risks, including the potential loss of part or all of the invested capital.',
+    'tex4' => 'Participation is governed by the contractual agreements signed between the parties.'
   ]
 ];

@@ -1,6 +1,21 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 import DepthSlider from "./depthSlider.js";
 
+const heroLegalSwiper = new Swiper("#hero-legal", {
+  speed: 9000,
+  spaceBetween: 0,
+  loop: true,
+  loopAdditionalSlides: 4,
+  loopPreventsSliding: true,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    reverseDirection: false,
+  },
+});
+
 const edgeSwiper = new Swiper(".edge-items", {
   speed: 9000,
   spaceBetween: 20,

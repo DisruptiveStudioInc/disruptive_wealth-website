@@ -31,7 +31,12 @@ return [
   'investors' => [
     'es' => 'inversores',
     'en' => 'investors',
-  ]
+  ],
+
+  'legal-notice' => [
+    'es' => 'aviso-legal',
+    'en' => 'legal-notice',
+  ],
 
   // Add more static routes here as needed
   // 'about' => [

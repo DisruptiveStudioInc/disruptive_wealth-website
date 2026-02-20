@@ -13,14 +13,28 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
     <img class="background opacity-0 animate-cycle" src="/public/images/background/black-02.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:12s">
     <img class="background opacity-0 animate-cycle" src="/public/images/background/black-03.webp" alt="" loading="lazy" style="animation-duration:36s;animation-delay:24s">
   </div>
-  <?php #generateBackground('black-g1',3); ?>
+  <div class="absolute w-full overflow-x-visible bottom-0 left-0 border-t border-white/20 py-2 pointer-events-none">
+    <div id="hero-legal" class="swiper !overflow-visible w-full linear-swiper">
+      <div class="swiper-wrapper">
+        <?php foreach(range(0, 9) as $item): ?>
+          <div class="swiper-slide !w-fit">
+            <div class="inline-flex items-center gap-4 pl-4 py-2">
+              <span class="block size-3 md:size-4 rounded-full bg-white -translate-y-0.25"></span>
+              <p class="text-nowrap text-xs md:text-base"><?= $trans('home.hero.credibility') ?></p>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
   <div class="block-content min-h-dvh flex-col flex-center relative">
     <h1 class="font-title text-center uppercase bg-clip-text bg-text-white text-[7vw]">
-      <?= $trans('home.hero.titleCommon') ?>
+      <span class="es:opacity-0 es:pointer-events-none"><?= $trans('home.hero.titleCommon') ?></span>
       <span id="hero-typing-text" data-texts='<?= $heroTitles ?>'></span>
+      <span class="en:hidden es:opacity-0 es:pointer-events-none"><?= $trans('home.hero.titleCommon') ?></span>
     </h1>
     <p class="text-center md:text-xl lg:text-3xl max-w-[56ch] mb-12"><?= $trans('home.hero.text') ?></p>
-    <div class="flex items-center gap-4">
+    <div class="flex flex-col md:flex-row items-center gap-4">
       <?php foreach($content['hero_ctas'] as $cta): ?>
         <a href="<?= $cta['link'] ?>" class="button lg:text-lg rounded-full <?= (isset($cta['style']) && $cta['style'] === 'secondary') ? 'bg-secondary-100 hover:bg-secondary-200' : '' ?>"><?= $cta['text'] ?></a>
       <?php endforeach; ?>
@@ -52,7 +66,7 @@ include __DIR__ . '/../components/sideDotsNavigation.php';
 </section>
 
 <!-- Edge -->
-<section data-nav-index="2" class="nav-section relative w-full">
+<section data-nav-index="2" class="nav-section relative w-full overflow-x-hidden">
   <span class="absolute top-0 left-0 size-0" id="edge"></span>
   <?php generateBackground('black',3, true); ?>
   <div class="block-content min-h-dvh flex-center flex-col text-white">

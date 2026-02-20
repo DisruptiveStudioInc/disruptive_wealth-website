@@ -7,16 +7,16 @@ return[
   'hero_ctas' => [
     [
       'text' => Language::trans('home.hero.cta_main'),
-      'link' => '#'
+      'link' => route('strategy', Language::getCurrentLanguage()),
     ],
     [
       'text' => Language::trans('home.hero.cta_secondary1'),
-      'link' => '#',
+      'link' => route('governance', Language::getCurrentLanguage()),
       'style' => 'secondary'
     ],
     [
       'text' => Language::trans('home.hero.cta_secondary2'),
-      'link' => '#',
+      'link' => route('investors', Language::getCurrentLanguage()),
       'style' => 'secondary'
     ]
   ],

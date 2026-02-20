@@ -24,6 +24,10 @@ return function(Router $router) {
   $router->get('/investors', 'App\\Controllers\\InvestorsController', 'index');
   $router->get('/inversores', 'App\\Controllers\\InvestorsController', 'index');
 
+  // Legal Notice
+  $router->get('/legal-notice', 'App\\Controllers\\LegalController', 'index');
+  $router->get('/aviso-legal', 'App\\Controllers\\LegalController', 'index');
+
   // Blog
   // $router->get('/blog', 'App\\Controllers\\BlogController', 'index');
   // $router->get('/blog/{slug}', 'App\\Controllers\\BlogController', 'show');

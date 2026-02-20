@@ -1,6 +1,6 @@
-# Disruptive Studio Website
+# Disruptive Wealth Website
 
-A multilingual corporate website for Disruptive Studio, showcasing their services, work processes, and company information. Built with PHP 8.3, Tailwind CSS, and GSAP animations.
+A multilingual corporate website for Disruptive Wealth, showcasing their services, work processes, and company information. Built with PHP 8.3, Tailwind CSS, and GSAP animations.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ A multilingual corporate website for Disruptive Studio, showcasing their service
 
 ## Project Overview
 
-This is a professional corporate website for Disruptive Studio that features:
+This is a professional corporate website for Disruptive Wealth that features:
 
 - **Multilingual support** (Spanish and English)
 - **Dynamic service pages** with different templates
@@ -94,7 +94,7 @@ MAIL_USERNAME=your-email@example.com
 MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
 
 RECAPTCHA_SITE_KEY=your-site-key
@@ -463,12 +463,12 @@ Edit `config/services.php` and add:
   'content_file' => 'nuevo-servicio',
   'es' => [
     'slug' => 'nuevo-servicio',
-    'meta_title' => 'Nuevo Servicio | Disruptive Studio',
+    'meta_title' => 'Nuevo Servicio | Disruptive Wealth',
     'meta_description' => 'Descripción del nuevo servicio para SEO',
   ],
   'en' => [
     'slug' => 'new-service',
-    'meta_title' => 'New Service | Disruptive Studio',
+    'meta_title' => 'New Service | Disruptive Wealth',
     'meta_description' => 'New service description for SEO',
   ],
 ],
@@ -861,7 +861,7 @@ The website features a headless WordPress blog integration using WPGraphQL. Blog
 4. **Create Application Password:**
    - Go to `Users > Your Profile`
    - Scroll to "Application Passwords"
-   - Enter name (e.g., "Disruptive Studio Website")
+   - Enter name (e.g., "Disruptive Wealth Website")
    - Click "Add New Application Password"
    - Copy the generated password (format: `xxxx xxxx xxxx xxxx`)
 
@@ -1148,7 +1148,7 @@ MAIL_ENCRYPTION=tls
 
 # Sender information
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 
 # Recipient email
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
@@ -1351,7 +1351,7 @@ MAIL_USERNAME=your-email@example.com
 MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=noreply@disruptivestudio.com
-MAIL_FROM_NAME="Disruptive Studio"
+MAIL_FROM_NAME="Disruptive Wealth"
 MAIL_TO_ADDRESS=contact@disruptivestudio.com
 
 # reCAPTCHA v3
@@ -1542,4 +1542,4 @@ For questions or issues:
 
 ## License
 
-Proprietary - Disruptive Studio © 2025
+Proprietary - Disruptive Wealth © 2025
