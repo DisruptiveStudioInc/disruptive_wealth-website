@@ -125,7 +125,7 @@
 <header class="bg-white border-b border-surface-300 w-full fixed top-0 left-0 z-50">
   <nav class="w-full">
     <div class="flex justify-between items-center lg:items-stretch gap-4 lg:gap-2 lg:es:gap-0 xl:es:gap-2 w-full px-7">
-      <div class="flex items-center lg:shrink-0 border-r border-surface-300 gap-2 lg:gap-4 lg:es:gap-2 xl:es:gap-4 pr-4 lg:es:pr-2 xl:es:pr-4">
+      <div class="flex items-center lg:shrink-0 border-r border-surface-300 gap-2 lg:gap-4 pr-4 lg:es:pr-2 xl:es:pr-4">
         <!-- Logo -->
         <a href="<?= route('home', $currentLang, $config['languages']['default']) ?>" class="text-2xl font-bold text-gray-800">
           <svg width="100" height="100" class="h-8 lg:h-10 w-auto"><use href="#disruptive-favicon"/></svg>

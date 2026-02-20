@@ -6,12 +6,12 @@ return [
   // Navigation
   'nav' => [
     'home' => 'Home',
-    'platform' => 'Platform',
-    'edge' => 'Edge',
+    'platform' => 'Model',
+    'edge' => 'Our Edge',
     'portfolio' => 'Portfolio',
-    'strategy' => 'Strategy',
+    'strategy' => 'Investment Strategy',
     'governance' => 'Governance',
-    'investors' => 'Investors',
+    'investors' => 'Investor Access',
     'contact' => 'Contact Us',
   ],
 
