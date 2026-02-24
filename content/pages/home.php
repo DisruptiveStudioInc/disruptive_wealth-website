@@ -22,40 +22,40 @@ return[
   ],
   'we_do' => [
     [
-      'image' => 'hero.webp',
+      'image' => 'acquisition.webp',
       'text' => Language::trans('home.we_do.item1'),
       'containerStyle' => 'lg:row-span-2 lg:pb-6'
     ],
     [
-      'image' => 'hero.webp',
+      'image' => 'institutional.webp',
       'text' => Language::trans('home.we_do.item2'),
       'containerStyle' => 'lg:pt-0'
     ],
     [
-      'image' => 'hero.webp',
+      'image' => 'technology.webp',
       'text' => Language::trans('home.we_do.item3'),
       'containerStyle' => 'lg:pt-6 lg:pb-12'
     ]
   ],
   'edge' => [
     [
-      'image' => 'about.webp',
+      'image' => 'c-mlm.webp',
       'text' => Language::trans('home.edge.item1')
     ],
     [
-      'image' => 'about.webp',
+      'image' => 'c-propietary.webp',
       'text' => Language::trans('home.edge.item2')
     ],
     [
-      'image' => 'about.webp',
+      'image' => 'c-crypto.webp',
       'text' => Language::trans('home.edge.item3')
     ],
     [
-      'image' => 'about.webp',
+      'image' => 'c-institutional.webp',
       'text' => Language::trans('home.edge.item4')
     ],
     [
-      'image' => 'about.webp',
+      'image' => 'c-legal.webp',
       'text' => Language::trans('home.edge.item5')
     ]
   ],
