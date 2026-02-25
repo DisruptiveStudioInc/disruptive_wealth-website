@@ -4,17 +4,17 @@ use App\Models\Language;
 
 return [
   'hero_images' => [
-    'big' => 'accounting_1_big.webp',
-    'small' => 'accounting_1_small.webp'
+    'big' => 'strategy_1_big.webp',
+    'small' => 'strategy_1_small.webp'
   ],
   'about1_images' => [
-    'front' => 'accounting_2_front.webp',
-    'back' => 'accounting_2_back.webp'
+    'front' => 'strategy_2_1.webp',
+    'back' => 'strategy_2_2.webp'
   ],
   'about2_images' => [
-    'big' => 'accounting_3_big.webp',
-    'mid' => 'accounting_3_mid.webp',
-    'small' => 'accounting_3_small.webp'
+    'big' => 'strategy_3_big.webp',
+    'mid' => 'strategy_3_mid.webp',
+    'small' => 'strategy_3_small.webp'
   ],
   'areas' => [
     [
@@ -45,12 +45,12 @@ return [
   ],
   'structure' => [
     [
-      'image' => 'accounting_s1.webp',
+      'image' => 'strategy_5_1.webp',
       'title' => Language::trans("strategy.structure.item1.title"),
       'text' => Language::trans("strategy.structure.item1.text")
     ],
     [
-      'image' => 'accounting_s2.webp',
+      'image' => 'strategy_5_2.webp',
       'title' => Language::trans("strategy.structure.item2.title"),
       'list' => [
         Language::trans("strategy.structure.item2.text1"),
@@ -60,7 +60,7 @@ return [
       'list_type' => 'ol'
     ],
     [
-      'image' => 'accounting_s3.webp',
+      'image' => 'strategy_5_3.webp',
       'title' => Language::trans("strategy.structure.item3.title"),
       'list' => [
         Language::trans("strategy.structure.item3.text1"),
@@ -85,6 +85,10 @@ return [
     Language::trans("strategy.governance.item4"),
     Language::trans("strategy.governance.item5")
   ],
+  'governance_images' => [
+    'big' => 'strategy_7_big.webp',
+    'small' => 'strategy_7_small.webp'
+  ],
   'risks_list' => [
     Language::trans("strategy.risks.item1"),
     Language::trans("strategy.risks.item2"),
@@ -92,8 +96,12 @@ return [
     Language::trans("strategy.risks.item4"),
     Language::trans("strategy.risks.item5")
   ],
+  'risks_images' => [
+    'big' => 'strategy_8_big.webp',
+    'small' => 'strategy_8_small.webp'
+  ],
   'sales_images' => [
-    'big' => 'accounting_7_big.webp',
-    'small' => 'accounting_7_small.webp'
+    'big' => 'strategy_9_big.webp',
+    'small' => 'strategy_9_small.webp'
   ]
 ];
