@@ -285,7 +285,7 @@ return [
       'item2' => 'Planificación de salida desde el inicio',
       'item3' => 'Evaluación estructurada de riesgos',
       'item4' => 'Marco corporativo internacional definido',
-      'item5' => 'Evaluación estructurada de riesgos'
+      'item5' => 'Supervisión estratégica del capital'
     ],
     'private' => [
       'title' => 'Colocación Privada Exclusiva - Inversores Acreditados',

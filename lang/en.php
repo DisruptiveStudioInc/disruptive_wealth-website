@@ -285,7 +285,7 @@ return [
       'item2' => 'Exit planning from the outset',
       'item3' => 'Structured risk evaluation',
       'item4' => 'Defined international corporate framework',
-      'item5' => 'Structured risk evaluation'
+      'item5' => 'Strategic capital oversight'
     ],
     'private' => [
       'title' => 'Private Placement Only - Accredited Investors',
