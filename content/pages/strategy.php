@@ -18,28 +18,23 @@ return [
   ],
   'areas' => [
     [
-      'image' => 'gear',
-      // 'image' => 'strategy-',
+      'image' => 'strategy-infrastructure',
       'text' => Language::trans("strategy.areas.item1"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'strategy-',
+      'image' => 'strategy-logistics',
       'text' => Language::trans("strategy.areas.item2"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'strategy-',
+      'image' => 'strategy-integration',
       'text' => Language::trans("strategy.areas.item3"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'strategy-',
+      'image' => 'strategy-b2b',
       'text' => Language::trans("strategy.areas.item4"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'strategy-',
+      'image' => 'strategy-assets',
       'text' => Language::trans("strategy.areas.item5"),
     ],
   ],

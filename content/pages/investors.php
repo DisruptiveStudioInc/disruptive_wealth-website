@@ -4,87 +4,77 @@ use App\Models\Language;
 
 return [
   'hero_images' => [
-    'big' => 'accounting_1_big.webp',
-    'small' => 'accounting_1_small.webp'
+    'big' => 'investors_1_big.webp',
+    'small' => 'investors_1_small.webp'
   ],
   'about1_images' => [
-    'front' => 'accounting_2_front.webp',
-    'back' => 'accounting_2_back.webp'
+    'front' => 'investors_2_front.webp',
+    'back' => 'investors_2_back.webp'
   ],
   'about2_images' => [
-    'big' => 'accounting_3_big.webp',
-    'mid' => 'accounting_3_mid.webp',
-    'small' => 'accounting_3_small.webp'
+    'big' => 'investors_5_big.webp',
+    'mid' => 'investors_5_mid.webp',
+    'small' => 'investors_5_small.webp'
   ],
   'foundation' => [
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-shareholders',
       'text' => Language::trans("investors.foundation.item1"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-majorities',
       'text' => Language::trans("investors.foundation.item2"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-protocols',
       'text' => Language::trans("investors.foundation.item3"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-report',
       'text' => Language::trans("investors.foundation.item4"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-resolution',
       'text' => Language::trans("investors.foundation.item5"),
     ]
   ],
   'oversight' => [
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-separation',
       'text' => Language::trans("investors.oversight.item1"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-exit',
       'text' => Language::trans("investors.oversight.item2"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-risk',
       'text' => Language::trans("investors.oversight.item3"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-framework',
       'text' => Language::trans("investors.oversight.item4"),
     ],
     [
-      'image' => 'gear',
-      // 'image' => 'investors-',
+      'image' => 'investors-evaluation',
       'text' => Language::trans("investors.oversight.item5"),
     ]
   ],
   'profile' => [
     [
-      'image' => 'accounting_s1.webp',
+      'image' => 'investors_6_1.webp',
       'text' => Language::trans("investors.profile.item1")
     ],
     [
-      'image' => 'accounting_s2.webp',
+      'image' => 'investors_6_2.webp',
       'text' => Language::trans("investors.profile.item2")
     ],
     [
-      'image' => 'accounting_s3.webp',
+      'image' => 'investors_6_3.webp',
       'text' => Language::trans("investors.profile.item3")
     ],
     [
-      'image' => 'accounting_s4.webp',
+      'image' => 'investors_6_4.webp',
       'text' => Language::trans("investors.profile.item4")
     ]
   ],
@@ -110,7 +100,7 @@ return [
     Language::trans("strategy.risks.item5")
   ],
   'sales_images' => [
-    'big' => 'accounting_7_big.webp',
-    'small' => 'accounting_7_small.webp'
+    'big' => 'investors_8_big.webp',
+    'small' => 'investors_8_small.webp'
   ]
 ];
