@@ -33,7 +33,7 @@ return [
   // Home page
   'home' => [
     'title' => 'Disruptive Wealth',
-    'description' => 'Solución integral para empresas y redes multinivel.',
+    'description' => 'Plataforma de inversión privada que adquiere y escala empresas en infraestructura MLM, marcas de consumo y tecnología tradicional.',
     'hero' => [
       'titleCommon' => '|',
       'title1' => 'Adquirimos',

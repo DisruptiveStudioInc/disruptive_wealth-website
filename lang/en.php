@@ -33,7 +33,7 @@ return [
   // Home page
   'home' => [
     'title' => 'Disruptive Wealth',
-    'description' => 'Comprehensive solution for companies and multilevel networks.',
+    'description' => 'Private investment platform acquiring and scaling companies in MLM infrastructure, consumer brands, and traditional technology.',
     'hero' => [
       'titleCommon' => 'We',
       'title1' => 'Acquire.',

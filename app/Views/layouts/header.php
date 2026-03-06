@@ -15,7 +15,7 @@
   <meta property="og:type" content="<?= $ogType ?? 'website' ?>" />
   <meta property="og:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta property="og:description" content="<?= $metaDescription ?? 'Disruptive Wealth' ?>" />
-  <meta property="og:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <meta property="og:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.png' ?>" />
   <meta property="og:image:alt" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="675" />
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<?= $pageTitle ?? $trans('home.title') ?>" />
   <meta name="twitter:description" content="<?= $metaDescription ?? 'Disruptive Wealth' ?>" />
-  <meta name="twitter:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.jpg' ?>" />
+  <meta name="twitter:image" content="<?= (isset($ogImage) && !empty($ogImage)) ? $ogImage : $config['app']['url'].'/public/images/opengraph.png' ?>" />
   <link rel="canonical" href="<?= $config['app']['url'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>" />
 
   <!-- Structured data -->
